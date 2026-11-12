@@ -87,7 +87,14 @@ def build(source, output, revision="", max_bytes=MAX_SHARD_BYTES):
             matched = {scheme: [n.get("text", "") for n in values if aid in n.get("attestationIds", [])]
                        for scheme, values in notations.items()}
             matched = {k: v for k, v in matched.items() if v}
-            record = {"entry_id": entry_id, "attestation": att, "notations": matched}
+            # Compact source-backed preview: original full fields remain in the
+            # canonical gzip and complete semantic-index inspection records.
+            # Fixed positional arrays avoid repeating large field names
+            # 81k+ times in the GitHub-text-readable fallback.
+            record = [entry_id, aid, att.get("source", ""), att.get("term", ""),
+                      att.get("zh", ""), att.get("en", ""), att.get("pos", ""),
+                      att.get("dialect", ""), att.get("locator", ""),
+                      att.get("sourceRef", ""), matched]
             all_spellings = [s for values in matched.values() for s in values]
             for key in search_keys(att, all_spellings):
                 buckets[bucket_of(key)].append({"k": key, "r": record})
@@ -98,10 +105,13 @@ def build(source, output, revision="", max_bytes=MAX_SHARD_BYTES):
                 "dictionary_entries": len(entry_ids), "dictionary_attestations": len(attestation_ids),
                 "index_keys": sum(len(v) for v in buckets.values()),
                 "algorithm": "FNV-1a(normalized UTF-8), top byte; NFKC + casefold + strip",
-                "shard_limit_bytes": max_bytes, "buckets": {}}
+                "shard_limit_bytes": max_bytes,
+                "record_fields": ["entry_id", "attestation_id", "source", "term", "zh", "en",
+                                  "pos", "dialect", "locator", "source_ref", "notations"],
+                "buckets": {}}
     try:
         for bucket, rows in sorted(buckets.items()):
-            rows.sort(key=lambda x: (x["k"], x["r"]["entry_id"], x["r"]["attestation"]["id"]))
+            rows.sort(key=lambda x: (x["k"], x["r"][0], x["r"][1]))
             index, buf, size = 0, [], 0
             files = []
             def write_shard(index, buf):
