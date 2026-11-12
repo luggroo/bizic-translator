@@ -68,6 +68,16 @@ def main(argv=None):
         elif args.command == "build":
             from .embedding import BGEEncoder
             records = collect(args.repo, args.dictionary)
+            # Assert full dictionary coverage before spending CPU on embeddings.
+            dictionary_path = Path(args.dictionary or Path(args.repo) / "site/dictionary.json.gz")
+            source_words = read_json(dictionary_path)["words"]
+            expected_entries = {w["id"] for w in source_words}
+            expected_attestations = {a["id"] for w in source_words for a in w["attestations"]}
+            lexical = [rec for rec in records if rec.get("record_type") == "lexical_sense"]
+            indexed_entries = {rec["entry_id"] for rec in lexical}
+            indexed_attestations = {a["id"] for rec in lexical for a in rec["attestations"]}
+            if indexed_entries != expected_entries or indexed_attestations != expected_attestations:
+                raise ValueError("Incomplete dictionary index: entry or attestation coverage mismatch")
             encoder = BGEEncoder(args.model_path, threads=args.threads)
             dictionary = Path(args.dictionary or Path(args.repo) / "site/dictionary.json.gz")
             repo = Path(args.repo)
@@ -78,7 +88,9 @@ def main(argv=None):
             revision = subprocess.run(["git", "rev-parse", "HEAD"], cwd=repo, capture_output=True, text=True)
             out = build_index(records, encoder, args.output, args.batch_size,
                               {"dictionary_sha256": hashlib.sha256(dictionary.read_bytes()).hexdigest(),
-                               "input_files_sha256": hashes, "repository_revision": revision.stdout.strip()}, args.reuse_index)
+                               "input_files_sha256": hashes, "repository_revision": revision.stdout.strip(),
+                               "source_dictionary_entries": len(expected_entries),
+                               "source_dictionary_attestations": len(expected_attestations)}, args.reuse_index)
         else:
             index = Index(args.index)
             if args.command == "inspect":
