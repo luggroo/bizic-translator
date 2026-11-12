@@ -215,4 +215,4 @@ Use committed or authorized material within its access scope. Permission to read
 
 ## nie / niexi and an implicit head
 
-Read [nie、niexi 与独立指称](references/nie-niexi.md) when translating “……的、……的人／东西” or a purpose object. Prefer a contextually complete nominalized expression when appropriate: “开瓶子的” can use a niexi phrase without an obligatory generic “东西”. Distinguish an overt-head modifier, independent reference, and a head-internal relative; retain agent/patient/instrument roles. The reference records Feng’s actual substitution judgments and the narrower scope of the available Xiang Weihua material.
+Read [nie、niexi 与独立指称](references/nie-niexi.md) when translating “……的、……的人／东西” or a purpose object. Prefer a contextually complete nominalized expression when appropriate: “开瓶子的” can use a niexi phrase without an obligatory generic “东西”. Distinguish an overt-head modifier, independent reference, and a head-internal relative; retain agent/patient/instrument roles. The reference records Feng’s actual substitution judgments and Xiang Huawu’s (2026) journal abstract, with its scope distinguished from Feng’s directly checked examples.
