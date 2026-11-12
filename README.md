@@ -6,7 +6,7 @@ Lexical similarity supplies candidates. Translation still requires checking mean
 
 ## Translation grammar cache (TAM and constructions)
 
-The [translate-tujia Skill](skills/translate-tujia/SKILL.md) now starts with a **blocker → next action** quick router, backed by the [recovery playbook](skills/translate-tujia/references/recovery-playbook.md). Every prohibition or warning routes to a concrete retrieval method, grammar construction, controlled borrowing, or complete provisional translation. For grammar, use the **query-first router**: [grammar-index.md](skills/translate-tujia/references/grammar-index.md). Search by Chinese semantic trigger (e.g. 快要、还在、不能、做完、用……切、定语) and read **only one relevant topic**:
+The [translate-tujia Skill](skills/translate-tujia/SKILL.md) is the short entry point: task defaults, a six-step translation workflow, reference navigation and bounded recovery. Read the relevant reference when needed; setup details and grammatical evidence stay outside the entry point. The [recovery playbook](skills/translate-tujia/references/recovery-playbook.md) gives a concrete next action for failed lookups or checks. For grammar, use [grammar-index.md](skills/translate-tujia/references/grammar-index.md), search by semantic trigger (快要、还在、不能、做完、用……切、定语), and read **only the relevant topic**:
 
 - [aspect-modality.md](skills/translate-tujia/references/aspect-modality.md): aspect, prospective, still/not-yet, ability, permission, obligation, negation of modals; includes Northern source contrasts and Southern-specific examples.
 - [event-linking.md](skills/translate-tujia/references/event-linking.md): `liex` vs `mor` vs `bor`, events and sequences, manner, states, instruments, background and condition clauses.
@@ -15,7 +15,9 @@ The [translate-tujia Skill](skills/translate-tujia/SKILL.md) now starts with a *
 
 For example, Chinese "还" in "还在吃", "还没吃", "还没吃完" and "还不必睡" need **different whole-predicate constructions**, not a universal adverb. The reference distinguishes direct published examples, other Northern localities, supplemental unpublished speech data and teaching combinations. It is a translation aid, not a license to combine all suffixes freely.
 
-Packaging includes **both Markdown references by default**, without forcing an extra 16 MB of dictionary shards into every install:
+Other references cover [retrieval](skills/translate-tujia/references/retrieval.md), [source evidence](skills/translate-tujia/references/evidence.md), [complex clause analysis](skills/translate-tujia/references/translation-workflow.md), [paraphrase and borrowing](skills/translate-tujia/references/paraphrase-and-borrowing.md), and [output/audits](skills/translate-tujia/references/output.md). The companion [synonym-lite skill](skills/tujia-synonym-lite/SKILL.md) remains independently callable for static retrieval. Runtime Python code stays in `src/`, maintenance tools in `scripts/`, and experiments in `docs/evaluation/`.
+
+Packaging includes **all skill references and QA scripts by default**, without forcing the additional dictionary shards into every install:
 
 ```bash
 python scripts/package-translator.py --output /tmp/bizic-translator-package
@@ -23,7 +25,7 @@ python scripts/package-translator.py --output /tmp/bizic-translator-package
 python scripts/package-translator.py --output /tmp/bizic-translator-with-static --include-static-lexicon
 ```
 
-The small local grammar QA is `python scripts/check-grammar-skill.py`; it runs `scripts/lint-grammar-references.py` to compare **tone-marked Pinyin + IPA** for every standardized example, verify source labels, and test that all topic files ship in the packaged Skill. GitHub Actions runs it on reference/packager changes.
+Run `python scripts/check-grammar-skill.py` from the repository or full offline package. In an intentionally slim package, use `python scripts/check-grammar-skill.py --without-static-lexicon`; that mode explicitly excludes unavailable shard checks. QA validates reference links/anchors, source labels, paired spelling/IPA examples, both packaging modes and the checksums of included dictionary shards. The structural tests also verify that missing references and damaged shards fail validation. GitHub Actions runs these checks on changes to either skill, their validation tools or relevant retrieval dependencies.
 
 ## Shared semantic decomposition for both retrieval modes
 

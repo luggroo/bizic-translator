@@ -25,6 +25,7 @@ for folder in ['src', 'tests', 'docs/evaluation', 'skills/translate-tujia/refere
               and '__pycache__' not in f.parts
               and not any(s.endswith('.egg-info') for s in f.parts)]
 for name in ['download-embedding-model.py', 'evaluate-semantic-retrieval.py',
+             'check-grammar-skill.py', 'lint-grammar-references.py',
              'fetch-dictionary.py', 'render-semantic-evaluation.py',
              'tujia-lex-spelling.cjs', 'package-translator.py', 'export-readable-lexicon.py',
              'lightweight-synonym-search.py', 'evaluate-compositional-retrieval.py',

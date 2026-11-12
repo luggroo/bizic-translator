@@ -2,6 +2,7 @@
 
 适用北部／龙山翻译。**先判断 A、B 的语义关系，再选构式**，不要先替换汉语“然后、着、当、用”。所有引例都按 **调号拼音 → IPA** 显示；叶氏原记法不作展示。完整原例和页码见 [Bizic 参考语法](https://github.com/luggroo/bizic-dictionary/blob/main/docs/reference-grammar.md) §§6.4–6.5、7.3。B06 = Brassett 等（2006）。
 
+<a id="time"></a>
 ## 1. 最快判断：五种事件关系
 
 | 意义 | 构式选择 | 适用限制 |

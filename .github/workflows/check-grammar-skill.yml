@@ -1,13 +1,27 @@
 name: Check Tujia translation grammar references
 
 on:
+  pull_request:
+    paths:
+      - 'skills/**'
+      - 'src/tujia_lex/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - '.github/workflows/check-grammar-skill.yml'
   push:
     paths:
-      - 'skills/translate-tujia/SKILL.md'
-      - 'skills/translate-tujia/references/**'
+      - 'skills/translate-tujia/**'
+      - 'skills/tujia-synonym-lite/**'
+      - 'src/tujia_lex/query_plan.py'
+      - 'src/tujia_lex/static.py'
+      - 'tests/test_skill_structure.py'
+      - 'tests/conftest.py'
       - 'scripts/package-translator.py'
       - 'scripts/check-grammar-skill.py'
       - 'scripts/lint-grammar-references.py'
+      - 'scripts/lightweight-synonym-search.py'
+      - 'scripts/export-readable-lexicon.py'
+      - 'scripts/tujia-lex-spelling.cjs'
       - '.github/workflows/check-grammar-skill.yml'
   workflow_dispatch:
 
@@ -15,7 +29,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: check-tujia-grammar-skill
+  group: check-tujia-grammar-skill-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -24,5 +38,12 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install structural test runner
+        run: python -m pip install 'pytest>=8,<9'
+      - name: Test broken links, anchors, routing and shard failures
+        run: python -m pytest tests/test_skill_structure.py -q
       - name: Validate references, trigger coverage and packaged skill
         run: python scripts/check-grammar-skill.py

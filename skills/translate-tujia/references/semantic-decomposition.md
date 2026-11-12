@@ -21,7 +21,7 @@ For an unfamiliar Chinese/English/Japanese expression, identify:
 | Predicate + negative ability | 令人费解 | 人不能懂／理解 | understand + inability / negative potential |
 | Abstract noun → material stake + loss event | 经济损失 | 钱／财物损失；损失的钱 | retrieve money, lose, compensation separately; preserve loss event |
 | Idiom → ordinary event | 画地为牢 | 自己把自己关住 | reflexive + shut in + resultant state |
-| Unfamiliar person label → negative relative clause | 陌生人 | 不认识的人 | know/recognize + negation + agent nominalization |
+| Unfamiliar person label → negative relative clause | 陌生人 | 不认识的人 | recognize + negation + patient-headed relative; the head is the person not recognized |
 | Instrument noun → function | 开瓶器 | 打开瓶子的工具 | open + bottle + instrument/thing nominalization |
 | Location relation → noun + spatial relation | 河岸 | 河的旁边 | river + side, using target-dialect phrase order |
 | Property noun → property predicate | 寒意 | 冷的感觉／开始冷 | cold property, inchoative if needed |
@@ -29,6 +29,8 @@ For an unfamiliar Chinese/English/Japanese expression, identify:
 | Negative event → verb + scoped negation | 看不见 | 看＋不能 | distinguish inability from factual absence |
 
 These are **candidate construction templates**, not memorized final translations. In particular, `-ma`, `-xi`, `-ci` have different argument/reference effects; consult the grammar once for the applicable construction, then use it productively. Do not turn such a distinction into repetitive user-facing disclaimers.
+
+For explicit versus implicit heads, use [nie/niexi](nie-niexi.md): a generic thing need not become an overt `nie + ye`, while a specific noun retains its meaning. Preserve causal and result relations before nominalization; “暖和的” alone does not express “使人暖和的”.
 
 ## B. A single query plan for both engines
 
