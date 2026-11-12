@@ -58,6 +58,19 @@ def main(argv=None):
     s.add_argument("--record-type", choices=["lexical_sense", "survey_lexeme", "survey_sentence", "text_block", "grammar_section", "corpus_passage"])
     s.add_argument("--top-k", type=int, default=10)
     s.add_argument("--substring", action="store_true", help="Literal substring baseline, only with --mode exact")
+    p = sub.add_parser("plan", help="Shared semantic decomposition with constructional recomposition")
+    p.add_argument("query")
+    p.add_argument("--context", default="")
+    p.add_argument("--interpretation", type=Path, help="JSON semantic interpretation for an opaque/contextual sense")
+    p.add_argument("--dialect", choices=["north", "south", "any"], default="north")
+    p.add_argument("--route", choices=list("ABCDE"), default="C")
+    p.add_argument("--index")
+    p.add_argument("--model-path", default="BAAI/bge-base-zh-v1.5")
+    p.add_argument("--lexicon", default="skills/translate-tujia/lexicon")
+    p.add_argument("--max-queries", type=int, default=10)
+    p.add_argument("--top-k", type=int, default=20)
+    p.add_argument("--budget", choices=["natural", "matched"], default="natural")
+    p.add_argument("--dry-run", action="store_true")
     i = sub.add_parser("inspect")
     i.add_argument("--index", required=True)
     i.add_argument("record_id", nargs="?")
@@ -91,6 +104,25 @@ def main(argv=None):
                                "input_files_sha256": hashes, "repository_revision": revision.stdout.strip(),
                                "source_dictionary_entries": len(expected_entries),
                                "source_dictionary_attestations": len(expected_attestations)}, args.reuse_index)
+        elif args.command == "plan":
+            from .query_plan import plan
+            from .retrieval import RetrievalSession
+            from .static import StaticLexicon
+            from .constructions import compose
+            from .index import load_index
+            interpretation = json.loads(args.interpretation.read_text()) if args.interpretation else None
+            shared = plan(args.query, args.context, args.dialect, interpretation=interpretation, max_queries=args.max_queries)
+            if args.dry_run:
+                out = shared.to_dict()
+            else:
+                index = load_index(str(Path(args.index).resolve())) if args.index else None
+                encoder = None
+                if args.route in "BCE":
+                    from .embedding import load_encoder
+                    encoder = load_encoder(str(Path(args.model_path).resolve()) if Path(args.model_path).is_dir() else args.model_path)
+                static = StaticLexicon(args.lexicon) if args.route in "DE" else None
+                out = RetrievalSession(index, encoder, static).run(shared, args.route, budget=args.budget, top_k=args.top_k)
+                out["composition"] = compose(shared, out["candidates"])
         else:
             index = Index(args.index)
             if args.command == "inspect":

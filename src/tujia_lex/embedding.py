@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import json
+from collections import OrderedDict
+from functools import lru_cache
 import sys
 import time
 from pathlib import Path
@@ -20,6 +22,9 @@ class BGEEncoder:
         if not 8 <= max_length <= 512:
             raise ValueError("BGE max_length must be in [8, 512]")
         torch.set_num_threads(threads)
+        self.query_cache = OrderedDict()
+        self.query_encodings = 0
+        self.query_cache_hits = 0
         self.torch = torch
         self.model_path = str(model_path)
         self.max_length = max_length
@@ -52,7 +57,22 @@ class BGEEncoder:
     def encode(self, texts, batch_size=32, query=False):
         if batch_size < 1:
             raise ValueError("batch_size must be positive")
-        texts = [QUERY_INSTRUCTION + t if query else t for t in texts]
+        if query:
+            # Batch unique misses once; repeated strings never trigger inference again.
+            texts = list(texts)
+            missing = list(dict.fromkeys(t for t in texts if t not in self.query_cache))
+            fresh = self.encode([QUERY_INSTRUCTION + t for t in missing], batch_size, query=False) if missing else []
+            self.query_encodings += len(missing)
+            self.query_cache_hits += len(texts) - len(missing)
+            result = dict(zip(missing, fresh))
+            vectors = np.stack([result[t] if t in result else self.query_cache[t] for t in texts]) if texts else np.empty((0, 768), dtype="float32")
+            for t in texts:
+                self.query_cache[t] = result[t] if t in result else self.query_cache[t]
+                self.query_cache.move_to_end(t)
+            while len(self.query_cache) > 512:
+                self.query_cache.popitem(last=False)
+            return vectors.copy()
+        texts = list(texts)
         out = []
         start = time.monotonic()
         for i in range(0, len(texts), batch_size):
@@ -68,7 +88,13 @@ class BGEEncoder:
                                             for n in range(len(texts[i:i + batch_size]))])
                 vectors = self.torch.nn.functional.normalize(vectors, p=2, dim=1)
             out.append(vectors.cpu().numpy().astype("float32"))
-            if not query and (i == 0 or i // batch_size % 20 == 0):
+            if len(texts) > 32 and (i == 0 or i // batch_size % 20 == 0):
                 print(json.dumps({"encoded": min(i + batch_size, len(texts)), "total": len(texts),
                                   "seconds": round(time.monotonic() - start, 2)}), file=sys.stderr, flush=True)
         return np.concatenate(out) if out else np.empty((0, 768), dtype="float32")
+
+
+@lru_cache(maxsize=2)
+def load_encoder(model_path, max_length=512, threads=4):
+    """Process-local model reuse; explicit BGEEncoder remains available for tests."""
+    return BGEEncoder(model_path, max_length=max_length, threads=threads)

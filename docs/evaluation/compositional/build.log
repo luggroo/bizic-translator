@@ -1,0 +1,97 @@
+{"encoded": 32, "total": 12593, "seconds": 0.27}
+{"encoded": 672, "total": 12593, "seconds": 6.61}
+{"encoded": 1312, "total": 12593, "seconds": 13.6}
+{"encoded": 1952, "total": 12593, "seconds": 19.42}
+{"encoded": 2592, "total": 12593, "seconds": 25.38}
+{"encoded": 3232, "total": 12593, "seconds": 31.92}
+{"encoded": 3872, "total": 12593, "seconds": 38.57}
+{"encoded": 4512, "total": 12593, "seconds": 45.28}
+{"encoded": 5152, "total": 12593, "seconds": 51.68}
+{"encoded": 5792, "total": 12593, "seconds": 59.39}
+{"encoded": 6432, "total": 12593, "seconds": 67.04}
+{"encoded": 7072, "total": 12593, "seconds": 74.63}
+{"encoded": 7712, "total": 12593, "seconds": 82.59}
+{"encoded": 8352, "total": 12593, "seconds": 90.21}
+{"encoded": 8992, "total": 12593, "seconds": 98.52}
+{"encoded": 9632, "total": 12593, "seconds": 106.54}
+{"encoded": 10272, "total": 12593, "seconds": 111.21}
+{"encoded": 10912, "total": 12593, "seconds": 113.94}
+{"encoded": 11552, "total": 12593, "seconds": 116.6}
+{"encoded": 12192, "total": 12593, "seconds": 240.88}
+{
+  "schema_version": 2,
+  "record_count": 23694,
+  "unique_texts": 12593,
+  "dimension": 768,
+  "record_types": {
+    "lexical_sense": 11598,
+    "survey_lexeme": 10765,
+    "survey_sentence": 399,
+    "text_block": 123,
+    "grammar_section": 234,
+    "corpus_passage": 575
+  },
+  "semantic_fields": "all Chinese and English attestation-level senses; phonetic forms and provenance retained for exact search",
+  "lexical_entry_count": 9297,
+  "lexical_attestation_count": 19577,
+  "model": {
+    "model": "BAAI/bge-base-zh-v1.5",
+    "model_path": ".cache/models/bge-base-zh-v1.5",
+    "pooling": "CLS; normalized mean over overflow windows",
+    "normalize": true,
+    "query_instruction": "为这个句子生成表示以用于检索相关文章：",
+    "max_length": 512,
+    "revision": "f03589ceff5aac7111bd60cfc7d497ca17ecac65",
+    "torch": "2.7.1+cpu",
+    "transformers": "4.51.3",
+    "device": "cpu",
+    "threads": 4,
+    "weights": "pytorch_model.bin",
+    "weights_sha256": "731cf5d88ed555a21ff2f2d9fa4db43b10489173ddd9178db3eecfd7a2bae044",
+    "config_commit": null
+  },
+  "files_sha256": {
+    "records.jsonl": "328ab10e5643058efd99ffdfc7d5719a0148975c134e093bcd7246d5f412b2d7",
+    "vectors.npy": "1a13849af8d9dbbd5424335d8c90525dfa0f14c4373b56e99cbb101df93f1260"
+  },
+  "metadata": {
+    "dictionary_sha256": "c4c04aa863ab135285125fb92ea0e6951d6c044f8c7cf7804fe51647b657808d",
+    "input_files_sha256": {
+      "/workspace/bizic-dictionary/site/dictionary.json.gz": "c4c04aa863ab135285125fb92ea0e6951d6c044f8c7cf7804fe51647b657808d",
+      "/workspace/bizic-dictionary/site/data.json.gz": "2facab83217a398c5ba03de0ef70fcbef3642e8fa70e2a30a5db0e854aac58b9",
+      "/workspace/bizic-dictionary/site/longshan-texts.json": "c5dd1e4ad1382ac63a34462c5ca8c319450e4cbb259e4eada73e78b21eae4cf7",
+      "/workspace/bizic-dictionary/docs/reference-grammar.md": "b14565486da63ca9599fe829febae8385d26aacbf7bf6312bd7122892e1c0a03",
+      "/workspace/bizic-dictionary/site/yubao-manifest.json": "cb29eed737f9a085840c1cb0507da8cf97402bbf2989bb5e92dd6d7b55dfbcc0",
+      "/workspace/bizic-dictionary/site/yubao-60757-0.json": "ceeb3791aaeebeada817e5044ada1cf4c7685a63bd7891d735c9860e04fa6886",
+      "/workspace/bizic-dictionary/site/yubao-60757-1.json": "1d33f6cc3c5fcb59fd3a16e61460310e58c83a6ea92b026770807535570b8f98",
+      "/workspace/bizic-dictionary/site/yubao-60757-2.json": "255627d5542ccce6cd7227711bab5689891c5907a86960de0d7d8faaf43ea8da",
+      "/workspace/bizic-dictionary/site/yubao-60757-3.json": "ca280030d9c9a67f61d17503971c49f826128ae27e5b47a8bf8f484c8fa5eb96",
+      "/workspace/bizic-dictionary/site/yubao-60757-4.json": "ed20a1d2e4447b7f25a1efe6a9212f857ae58a976957123b02322f151dd4cbeb",
+      "/workspace/bizic-dictionary/site/yubao-60756-0.json": "8a571b5b862fd44c4164500f6999d1affac9a8da47e6583270326cd20c667df6",
+      "/workspace/bizic-dictionary/site/yubao-60756-1.json": "aebb70ceda0f4e2b8e1e7f4be91c33a21de9aa25ad9a2a9324d5ed7cc3c04ffe",
+      "/workspace/bizic-dictionary/site/yubao-60756-2.json": "9360ffc4cf24689af994a7674f2bba3baca4bc0ea020aad86c95f45c23ff3be9",
+      "/workspace/bizic-dictionary/site/yubao-60756-3.json": "2cf61ca3a37c91d550edfa1232281921828f8e4b3365f2ea78d838200d63dc70",
+      "/workspace/bizic-dictionary/site/yubao-60756-4.json": "d08f17ac2adf255788025ada5bd7906d8e41e0c528d5b790c32c410cb97399ef",
+      "/workspace/bizic-dictionary/site/yubao-60756-5.json": "a4a4635519d3f28ac4bff20fc88b744ab4a7e2ebd72acfcf3a482d56c2c736a1",
+      "/workspace/bizic-dictionary/site/yubao-60823-0.json": "f146182407dcf3a8503e8589dca94ae962e3f7fa4c49e5a51c3acee6b762cbc6",
+      "/workspace/bizic-dictionary/site/yubao-60823-1.json": "70c6d533e33712954482cbf276569826c738188841e9a07bc3d33716b35910d8",
+      "/workspace/bizic-dictionary/site/yubao-60823-2.json": "77236259bee8e49cb013ae875069044277b81d35e135e99e2222c9a90c3e2bd2",
+      "/workspace/bizic-dictionary/site/yubao-60823-3.json": "69e8354fa893c9468a9e90a142432b656158e7ec6e0e1bb05b105cfdd26b6e8b",
+      "/workspace/bizic-dictionary/site/yubao-60823-4.json": "c49a775af71ff00ae8748e283770cad83e5807fcd472dd3cd6e592aa0c488f42",
+      "/workspace/bizic-dictionary/site/yubao-60823-5.json": "a5e695c269430f8e08b5220f5d1e2962292931201e8c18e6330a5374e070a90a",
+      "/workspace/bizic-dictionary/site/yubao-60824-0.json": "4c4a5bc6bdbea17a08f688d10c0d6280bda93a3b845db2cbfc3b88e71324eb76",
+      "/workspace/bizic-dictionary/site/yubao-60824-1.json": "1e98ded1e385182921f9817da0f21804d68854adce04a9973972145c48bb1ac7",
+      "/workspace/bizic-dictionary/site/yubao-60824-2.json": "0289ebfc4818130c1d68230e08e209afeb7abdfa23fc25b09de944ba58f5f011",
+      "/workspace/bizic-dictionary/site/yubao-60824-3.json": "64288fe93675f3054bc1e8862c69ddb7996c2aba9a98ae381dbabd237c22fa41",
+      "/workspace/bizic-dictionary/site/yubao-60824-4.json": "e9ef796b2766d6c9caa8fbb4a689b9e35eb98a6909f7a3770e6729069f8c5f70",
+      "/workspace/bizic-dictionary/site/yubao-60824-5.json": "239e744c26c0e32b70587b059fb8e8fc92a36ec3fbac9ae5f09ad44ac5841ddb"
+    },
+    "repository_revision": "072046c39261cf536e0ce29f06779cd3eeb99219",
+    "source_dictionary_entries": 9297,
+    "source_dictionary_attestations": 19577
+  },
+  "reused_embeddings": 0,
+  "encoded_embeddings": 12593,
+  "build_seconds": 271.88,
+  "warning": "Cosine similarity ranks candidates; it does not establish synonymy or grammaticality."
+}

@@ -1,0 +1,3444 @@
+{
+  "source_revision": "072046c39261cf536e0ce29f06779cd3eeb99219",
+  "cases": [
+    {
+      "id": "c01",
+      "expression": "路人",
+      "pinyin_candidate": "là hxí mā",
+      "ipa_candidate": "la⁵¹ ɣɨ²⁴ ma⁵⁵",
+      "meaning": "走＋路；中心词角色：施事",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {
+        "head": "agent",
+        "agent": "head",
+        "patient": "unspecified"
+      },
+      "features": {
+        "nominalization": "person"
+      },
+      "audit": "c01.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "hxí",
+          "ipa": "ɣɨ²⁴",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "hhi²",
+              "hhi²"
+            ],
+            "ipa": [
+              "ɣɨ²⁴",
+              "ɣɨ²⁴"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "lò",
+          "ipa": "luɔ⁵¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "luo⁴",
+              "luo⁴"
+            ],
+            "ipa": [
+              "luɔ⁵¹",
+              "luɔ⁵¹"
+            ]
+          }
+        },
+        "⟪2⟫": {
+          "pinyin": "là",
+          "ipa": "la⁵¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "la⁴",
+              "la⁴"
+            ],
+            "ipa": [
+              "la⁵¹",
+              "la⁵¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-24-103",
+        "citation": "Brassett 2006:141–142 §8.1; Tian:443",
+        "pattern": "arguments + V + ma /ma⁵⁵/; human agent gap",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c02",
+      "expression": "守门人",
+      "pinyin_candidate": "lāměn kà mā",
+      "ipa_candidate": "la⁵⁵mɜŋ²¹ kʰa⁵¹ ma⁵⁵",
+      "meaning": "守＋门；中心词角色：施事",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {
+        "head": "agent",
+        "agent": "head",
+        "patient": "unspecified"
+      },
+      "features": {
+        "nominalization": "person"
+      },
+      "audit": "c02.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "lāměn",
+          "ipa": "la⁵⁵mɜŋ²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "laxmenr",
+              "laxmenr"
+            ],
+            "brassett": [
+              "la¹meng³",
+              "la¹meng³"
+            ],
+            "ipa": [
+              "la⁵⁵mɜŋ²¹",
+              "la⁵⁵mɜŋ²¹"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "lò",
+          "ipa": "luɔ⁵¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "luo⁴",
+              "luo⁴"
+            ],
+            "ipa": [
+              "luɔ⁵¹",
+              "luɔ⁵¹"
+            ]
+          }
+        },
+        "⟪2⟫": {
+          "pinyin": "kà",
+          "ipa": "kʰa⁵¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "kav",
+              "kav"
+            ],
+            "brassett": [
+              "ka⁴",
+              "ka⁴"
+            ],
+            "ipa": [
+              "kʰa⁵¹",
+              "kʰa⁵¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-24-103",
+        "citation": "Brassett 2006:141–142 §8.1; Tian:443",
+        "pattern": "arguments + V + ma /ma⁵⁵/; human agent gap",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c03",
+      "expression": "送信人",
+      "pinyin_candidate": "xín sóu mā",
+      "ipa_candidate": "ɕiŋ²⁴ sou²⁴ ma⁵⁵",
+      "meaning": "送＋信；中心词角色：施事",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {
+        "head": "agent",
+        "agent": "head",
+        "patient": "unspecified"
+      },
+      "features": {
+        "nominalization": "person"
+      },
+      "audit": "c03.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "xín",
+          "ipa": "ɕiŋ²⁴",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "xing²",
+              "xing²"
+            ],
+            "ipa": [
+              "ɕiŋ²⁴",
+              "ɕiŋ²⁴"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "sóu",
+          "ipa": "sou²⁴",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "sou²",
+              "sou²"
+            ],
+            "ipa": [
+              "sou²⁴",
+              "sou²⁴"
+            ]
+          }
+        },
+        "⟪2⟫": {
+          "pinyin": "lò",
+          "ipa": "luɔ⁵¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "luo⁴",
+              "luo⁴"
+            ],
+            "ipa": [
+              "luɔ⁵¹",
+              "luɔ⁵¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-24-103",
+        "citation": "Brassett 2006:141–142 §8.1; Tian:443",
+        "pattern": "arguments + V + ma /ma⁵⁵/; human agent gap",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c04",
+      "expression": "旁观者",
+      "pinyin_candidate": "bà mā",
+      "ipa_candidate": "pa⁵¹ ma⁵⁵",
+      "meaning": "看；中心词角色：施事",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {
+        "head": "agent",
+        "agent": "head",
+        "patient": "unspecified"
+      },
+      "features": {
+        "nominalization": "person"
+      },
+      "audit": "c04.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "lò",
+          "ipa": "luɔ⁵¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "luo⁴",
+              "luo⁴"
+            ],
+            "ipa": [
+              "luɔ⁵¹",
+              "luɔ⁵¹"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "bà",
+          "ipa": "pa⁵¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "ba⁴",
+              "ba⁴"
+            ],
+            "ipa": [
+              "pa⁵¹",
+              "pa⁵¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-24-103",
+        "citation": "Brassett 2006:141–142 §8.1; Tian:443",
+        "pattern": "arguments + V + ma /ma⁵⁵/; human agent gap",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c05",
+      "expression": "打鱼的人",
+      "pinyin_candidate": "sóng zó mā",
+      "ipa_candidate": "sɔŋ²⁴ tsuɔ²⁴ ma⁵⁵",
+      "meaning": "捉＋鱼；中心词角色：施事",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {
+        "head": "agent",
+        "agent": "head",
+        "patient": "unspecified"
+      },
+      "features": {
+        "nominalization": "person"
+      },
+      "audit": "c05.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "sóng",
+          "ipa": "sɔŋ²⁴",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "song²",
+              "song²"
+            ],
+            "ipa": [
+              "sɔŋ²⁴",
+              "sɔŋ²⁴"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "zó",
+          "ipa": "tsuɔ²⁴",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "zuo²",
+              "zuo²"
+            ],
+            "ipa": [
+              "tsuɔ²⁴",
+              "tsuɔ²⁴"
+            ]
+          }
+        },
+        "⟪2⟫": {
+          "pinyin": "lò",
+          "ipa": "luɔ⁵¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "luo⁴",
+              "luo⁴"
+            ],
+            "ipa": [
+              "luɔ⁵¹",
+              "luɔ⁵¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-24-103",
+        "citation": "Brassett 2006:141–142 §8.1; Tian:443",
+        "pattern": "arguments + V + ma /ma⁵⁵/; human agent gap",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c06",
+      "expression": "玩具",
+      "pinyin_candidate": "gěcí xí",
+      "ipa_candidate": "kɤ²¹tsʰɨ²⁴ ɕi²⁴",
+      "meaning": "玩；中心词角色：受事",
+      "status": [
+        "词汇齐全",
+        "形态／搭配待核"
+      ],
+      "roles": {
+        "head": "patient",
+        "agent": "unspecified",
+        "patient": "head"
+      },
+      "features": {
+        "nominalization": "object"
+      },
+      "audit": "c06.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "gěcí",
+          "ipa": "kɤ²¹tsʰɨ²⁴",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "gercif",
+              "gercif"
+            ],
+            "brassett": [
+              "ge³ci²",
+              "ge³ci²"
+            ],
+            "ipa": [
+              "kɤ²¹tsʰɨ²⁴",
+              "kɤ²¹tsʰɨ²⁴"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "yě",
+          "ipa": "jɤ²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "yer",
+              "yer"
+            ],
+            "brassett": [
+              "ye³",
+              "ye³"
+            ],
+            "ipa": [
+              "jɤ²¹",
+              "jɤ²¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-24-102",
+        "citation": "Tian:444; Lu et al. 2021:425; Brassett 2006:141–143",
+        "pattern": "V + ci for consumed/affected object; xi for broader associated thing",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c07",
+      "expression": "饮料",
+      "pinyin_candidate": "hǔ cǐ",
+      "ipa_candidate": "xu²¹ tsʰi²¹",
+      "meaning": "喝；中心词角色：受事",
+      "status": [
+        "词汇齐全",
+        "形态／搭配待核"
+      ],
+      "roles": {
+        "head": "patient",
+        "agent": "unspecified",
+        "patient": "head"
+      },
+      "features": {
+        "nominalization": "object"
+      },
+      "audit": "c07.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "hǔ",
+          "ipa": "xu²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "hur",
+              "hur"
+            ],
+            "brassett": [
+              "hu³",
+              "hu³"
+            ],
+            "ipa": [
+              "fu²¹",
+              "fu²¹"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "yě",
+          "ipa": "jɤ²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "yer",
+              "yer"
+            ],
+            "brassett": [
+              "ye³",
+              "ye³"
+            ],
+            "ipa": [
+              "jɤ²¹",
+              "jɤ²¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-24-102",
+        "citation": "Tian:444; Lu et al. 2021:425; Brassett 2006:141–143",
+        "pattern": "V + ci for consumed/affected object; xi for broader associated thing",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c08",
+      "expression": "食物",
+      "pinyin_candidate": "gá cī",
+      "ipa_candidate": "ka²⁴ tsʰi⁵⁵",
+      "meaning": "吃；中心词角色：受事",
+      "status": [
+        "词汇齐全",
+        "形态／搭配待核"
+      ],
+      "roles": {
+        "head": "patient",
+        "agent": "unspecified",
+        "patient": "head"
+      },
+      "features": {
+        "nominalization": "object"
+      },
+      "audit": "c08.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "gá",
+          "ipa": "ka²⁴",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "gaf",
+              "gaf"
+            ],
+            "brassett": [
+              "ga²",
+              "ga²"
+            ],
+            "ipa": [
+              "ka²⁴",
+              "ka²⁴"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "yě",
+          "ipa": "jɤ²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "yer",
+              "yer"
+            ],
+            "brassett": [
+              "ye³",
+              "ye³"
+            ],
+            "ipa": [
+              "jɤ²¹",
+              "jɤ²¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-24-102",
+        "citation": "Tian:444; Lu et al. 2021:425; Brassett 2006:141–143",
+        "pattern": "V + ci for consumed/affected object; xi for broader associated thing",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c09",
+      "expression": "坐垫",
+      "pinyin_candidate": "ǒng xí",
+      "ipa_candidate": "ɔŋ²¹ ɕi²⁴",
+      "meaning": "坐；中心词角色：受事",
+      "status": [
+        "词汇齐全",
+        "形态／搭配待核"
+      ],
+      "roles": {
+        "head": "patient",
+        "agent": "unspecified",
+        "patient": "head"
+      },
+      "features": {
+        "nominalization": "object"
+      },
+      "audit": "c09.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "ǒng",
+          "ipa": "ɔŋ²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "ong³",
+              "ong³"
+            ],
+            "ipa": [
+              "ɔŋ²¹",
+              "ɔŋ²¹"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "yě",
+          "ipa": "jɤ²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "yer",
+              "yer"
+            ],
+            "brassett": [
+              "ye³",
+              "ye³"
+            ],
+            "ipa": [
+              "jɤ²¹",
+              "jɤ²¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-24-102",
+        "citation": "Tian:444; Lu et al. 2021:425; Brassett 2006:141–143",
+        "pattern": "V + ci for consumed/affected object; xi for broader associated thing",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c10",
+      "expression": "开瓶器",
+      "pinyin_candidate": "tīkū tóng niě yě",
+      "ipa_candidate": "thi⁵⁵khu⁵⁵ tʰɔŋ²⁴ ɲie²¹ jɤ²¹",
+      "meaning": "打开＋瓶＋东西；中心词角色：用途物",
+      "status": [
+        "词汇齐全",
+        "形态／搭配待核"
+      ],
+      "roles": {
+        "head": "instrument",
+        "agent": "generic user"
+      },
+      "features": {
+        "nominalization": "purpose_object"
+      },
+      "audit": "c10.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "tīkū",
+          "ipa": "thi⁵⁵khu⁵⁵",
+          "method": "source IPA converted to display spelling",
+          "original_notations": {
+            "ipa": [
+              "thi⁵⁵khu⁵⁵",
+              "thi⁵⁵khu⁵⁵"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "tóng",
+          "ipa": "tʰɔŋ²⁴",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "tong²",
+              "tong²"
+            ],
+            "ipa": [
+              "tʰɔŋ²⁴",
+              "tʰɔŋ²⁴"
+            ]
+          }
+        },
+        "⟪2⟫": {
+          "pinyin": "yě",
+          "ipa": "jɤ²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "yer",
+              "yer"
+            ],
+            "brassett": [
+              "ye³",
+              "ye³"
+            ],
+            "ipa": [
+              "jɤ²¹",
+              "jɤ²¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
+        "citation": "Tian:623; Brassett 2006:142–147",
+        "pattern": "[arguments + V] + nie (xi) + object head; purpose need not be patient",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c11",
+      "expression": "清洁用品",
+      "pinyin_candidate": "wō niě yě",
+      "ipa_candidate": "wɔ⁵⁵ ɲie²¹ jɤ²¹",
+      "meaning": "洗＋东西；中心词角色：用途物",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {
+        "head": "instrument",
+        "agent": "generic user"
+      },
+      "features": {
+        "nominalization": "purpose_object"
+      },
+      "audit": "c11.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "wō",
+          "ipa": "wɔ⁵⁵",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "wo¹",
+              "wo¹"
+            ],
+            "ipa": [
+              "wɔ⁵⁵",
+              "wɔ⁵⁵"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "yě",
+          "ipa": "jɤ²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "yer",
+              "yer"
+            ],
+            "brassett": [
+              "ye³",
+              "ye³"
+            ],
+            "ipa": [
+              "jɤ²¹",
+              "jɤ²¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
+        "citation": "Tian:623; Brassett 2006:142–147",
+        "pattern": "[arguments + V] + nie (xi) + object head; purpose need not be patient",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c12",
+      "expression": "遮雨的东西",
+      "pinyin_candidate": "yǎn'gócě thaŋ33 niě yě",
+      "ipa_candidate": "jɛn²¹kuɔ²⁴tsʰɤ²¹ thaŋ³³ ɲie²¹ jɤ²¹",
+      "meaning": "挡＋雨＋东西；中心词角色：用途物",
+      "status": [
+        "词汇齐全",
+        "形态／搭配待核",
+        "含原记音"
+      ],
+      "roles": {
+        "head": "instrument",
+        "agent": "unspecified",
+        "patient": "head"
+      },
+      "features": {
+        "nominalization": "purpose_object"
+      },
+      "audit": "c12.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "yǎn'gócě",
+          "ipa": "jɛn²¹kuɔ²⁴tsʰɤ²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "yan³guo²ce³",
+              "yan³guo²ce³"
+            ],
+            "ipa": [
+              "jɛn²¹kuɔ²⁴tsʰɤ²¹",
+              "jɛn²¹kuɔ²⁴tsʰɤ²¹"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "thaŋ33",
+          "ipa": "thaŋ³³",
+          "method": "original notation retained",
+          "original_notations": {
+            "ipa": [
+              "thaŋ33"
+            ]
+          }
+        },
+        "⟪2⟫": {
+          "pinyin": "yě",
+          "ipa": "jɤ²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "yer",
+              "yer"
+            ],
+            "brassett": [
+              "ye³",
+              "ye³"
+            ],
+            "ipa": [
+              "jɤ²¹",
+              "jɤ²¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
+        "citation": "Tian:623; Brassett 2006:142–147",
+        "pattern": "[arguments + V] + nie (xi) + object head; purpose need not be patient",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c13",
+      "expression": "储水容器",
+      "pinyin_candidate": "cě dō niě yě",
+      "ipa_candidate": "tsʰɤ²¹ tuɔ⁵⁵ ɲie²¹ jɤ²¹",
+      "meaning": "放＋水＋东西；中心词角色：用途物",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {
+        "head": "instrument",
+        "agent": "generic user"
+      },
+      "features": {
+        "nominalization": "purpose_object"
+      },
+      "audit": "c13.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "dō",
+          "ipa": "tuɔ⁵⁵",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "dox",
+              "dox"
+            ],
+            "brassett": [
+              "duo¹",
+              "duo¹"
+            ],
+            "ipa": [
+              "tuɔ⁵⁵",
+              "tuɔ⁵⁵"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "cě",
+          "ipa": "tsʰɤ²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "ce³",
+              "ce³"
+            ],
+            "ipa": [
+              "tsʰɤ²¹",
+              "tsʰɤ²¹"
+            ]
+          }
+        },
+        "⟪2⟫": {
+          "pinyin": "yě",
+          "ipa": "jɤ²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "yer",
+              "yer"
+            ],
+            "brassett": [
+              "ye³",
+              "ye³"
+            ],
+            "ipa": [
+              "jɤ²¹",
+              "jɤ²¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
+        "citation": "Tian:623; Brassett 2006:142–147",
+        "pattern": "[arguments + V] + nie (xi) + object head; purpose need not be patient",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c14",
+      "expression": "取暖用的东西",
+      "pinyin_candidate": "lò niě yě",
+      "ipa_candidate": "luɔ⁵¹ ɲie²¹ jɤ²¹",
+      "meaning": "暖和＋东西；中心词角色：用途物",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {
+        "head": "instrument",
+        "agent": "unspecified",
+        "patient": "head"
+      },
+      "features": {
+        "nominalization": "purpose_object"
+      },
+      "audit": "c14.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "lò",
+          "ipa": "luɔ⁵¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "lov",
+              "lov"
+            ],
+            "brassett": [
+              "luo⁴",
+              "luo⁴"
+            ],
+            "ipa": [
+              "luɔ⁵¹",
+              "luɔ⁵¹"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "yě",
+          "ipa": "jɤ²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "yer",
+              "yer"
+            ],
+            "brassett": [
+              "ye³",
+              "ye³"
+            ],
+            "ipa": [
+              "jɤ²¹",
+              "jɤ²¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
+        "citation": "Tian:623; Brassett 2006:142–147",
+        "pattern": "[arguments + V] + nie (xi) + object head; purpose need not be patient",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c15",
+      "expression": "香味",
+      "pinyin_candidate": "naŋ33ŋau33pa33",
+      "ipa_candidate": "naŋ³³ŋau³³pa³³",
+      "meaning": "气味（泛指）",
+      "status": [
+        "词汇齐全",
+        "有语义泛化",
+        "含原记音"
+      ],
+      "roles": {},
+      "features": {
+        "generalization": "explicit"
+      },
+      "audit": "c15.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "naŋ33ŋau33pa33",
+          "ipa": "naŋ³³ŋau³³pa³³",
+          "method": "original notation retained",
+          "original_notations": {
+            "ipa": [
+              "naŋ33ŋau33pa33"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-6-3",
+        "citation": "property predication / semantic superordinate",
+        "pattern": "lexical superordinate; differentiating property remains a recorded meaning loss",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c16",
+      "expression": "花香",
+      "pinyin_candidate": "naŋ33ŋau33pa33",
+      "ipa_candidate": "naŋ³³ŋau³³pa³³",
+      "meaning": "气味（泛指）",
+      "status": [
+        "词汇齐全",
+        "有语义泛化",
+        "含原记音"
+      ],
+      "roles": {},
+      "features": {
+        "generalization": "explicit"
+      },
+      "audit": "c16.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "naŋ33ŋau33pa33",
+          "ipa": "naŋ³³ŋau³³pa³³",
+          "method": "original notation retained",
+          "original_notations": {
+            "ipa": [
+              "naŋ33ŋau33pa33"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-6-3",
+        "citation": "property predication / semantic superordinate",
+        "pattern": "lexical superordinate; differentiating property remains a recorded meaning loss",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c17",
+      "expression": "噪音",
+      "pinyin_candidate": "árē",
+      "ipa_candidate": "a²⁴zɤ⁵⁵",
+      "meaning": "声音（泛指）",
+      "status": [
+        "词汇齐全",
+        "有语义泛化"
+      ],
+      "roles": {},
+      "features": {
+        "generalization": "explicit"
+      },
+      "audit": "c17.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "árē",
+          "ipa": "a²⁴zɤ⁵⁵",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "a²re¹",
+              "a²re¹"
+            ],
+            "ipa": [
+              "a²⁴zɤ⁵⁵",
+              "a²⁴zɤ⁵⁵"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-6-3",
+        "citation": "property predication / semantic superordinate",
+        "pattern": "lexical superordinate; differentiating property remains a recorded meaning loss",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c18",
+      "expression": "潮气",
+      "pinyin_candidate": "kābiē",
+      "ipa_candidate": "kʰa⁵⁵piɛ⁵⁵",
+      "meaning": "湿（泛指）",
+      "status": [
+        "词汇齐全",
+        "有语义泛化"
+      ],
+      "roles": {},
+      "features": {
+        "generalization": "explicit"
+      },
+      "audit": "c18.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "kābiē",
+          "ipa": "kʰa⁵⁵piɛ⁵⁵",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "kaxbiex",
+              "kaxbiex"
+            ],
+            "brassett": [
+              "ka¹bie¹",
+              "ka¹bie¹"
+            ],
+            "ipa": [
+              "kʰa⁵⁵piɛ⁵⁵",
+              "kʰa⁵⁵piɛ⁵⁵"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-6-3",
+        "citation": "property predication / semantic superordinate",
+        "pattern": "lexical superordinate; differentiating property remains a recorded meaning loss",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c19",
+      "expression": "寒意",
+      "pinyin_candidate": "sà",
+      "ipa_candidate": "sa⁵¹",
+      "meaning": "冷（泛指）",
+      "status": [
+        "词汇齐全",
+        "有语义泛化"
+      ],
+      "roles": {},
+      "features": {
+        "generalization": "explicit"
+      },
+      "audit": "c19.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "sà",
+          "ipa": "sa⁵¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "sav",
+              "sav"
+            ],
+            "brassett": [
+              "sa⁴",
+              "sa⁴"
+            ],
+            "ipa": [
+              "sa⁵¹",
+              "sa⁵¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-6-3",
+        "citation": "property predication / semantic superordinate",
+        "pattern": "lexical superordinate; differentiating property remains a recorded meaning loss",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c20",
+      "expression": "令人费解",
+      "pinyin_candidate": "hārǐ tā tī",
+      "ipa_candidate": "xa⁵⁵zi²¹ tʰa⁵⁵ tʰi⁵⁵",
+      "meaning": "不能懂（能力否定）",
+      "status": [
+        "词汇齐全",
+        "形态／搭配待核"
+      ],
+      "roles": {
+        "experiencer": "generic person",
+        "stimulus": "source referent"
+      },
+      "features": {
+        "negation": "modal",
+        "modality": "ability"
+      },
+      "audit": "c20.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "hārǐ",
+          "ipa": "xa⁵⁵zi²¹",
+          "method": "source IPA converted to display spelling",
+          "original_notations": {
+            "ipa": [
+              "xa⁵⁵zi²¹",
+              "xa⁵⁵zi²¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-17-101",
+        "citation": "Brassett 2006:127–132",
+        "pattern": "V + ta ti /tʰa⁵⁵ tʰi⁵⁵/; inability rather than factual da",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c21",
+      "expression": "难以置信",
+      "pinyin_candidate": "xín tā tī",
+      "ipa_candidate": "ɕiŋ²⁴ tʰa⁵⁵ tʰi⁵⁵",
+      "meaning": "不能相信（能力否定）",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {
+        "experiencer": "generic person",
+        "stimulus": "source referent"
+      },
+      "features": {
+        "negation": "modal",
+        "modality": "ability"
+      },
+      "audit": "c21.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "xín",
+          "ipa": "ɕiŋ²⁴",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "xing²",
+              "xing²"
+            ],
+            "ipa": [
+              "ɕiŋ²⁴",
+              "ɕiŋ²⁴"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-17-101",
+        "citation": "Brassett 2006:127–132",
+        "pattern": "V + ta ti /tʰa⁵⁵ tʰi⁵⁵/; inability rather than factual da",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c22",
+      "expression": "无法忍受",
+      "pinyin_candidate": "sěn tā tī",
+      "ipa_candidate": "sɜŋ²¹ tʰa⁵⁵ tʰi⁵⁵",
+      "meaning": "不能忍受（能力否定）",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {
+        "experiencer": "generic person",
+        "stimulus": "source referent"
+      },
+      "features": {
+        "negation": "modal",
+        "modality": "ability"
+      },
+      "audit": "c22.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "sěn",
+          "ipa": "sɜŋ²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "senr",
+              "senr"
+            ],
+            "brassett": [
+              "seng³",
+              "seng³"
+            ],
+            "ipa": [
+              "sɜŋ²¹",
+              "sɜŋ²¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-17-101",
+        "citation": "Brassett 2006:127–132",
+        "pattern": "V + ta ti /tʰa⁵⁵ tʰi⁵⁵/; inability rather than factual da",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c23",
+      "expression": "陌生人",
+      "pinyin_candidate": "rén dá niě lò",
+      "ipa_candidate": "zɜŋ²⁴ ta²⁴ ɲie²¹ luɔ⁵¹",
+      "meaning": "认识＋人；中心词角色：受事；保留否定",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {
+        "agent": "implicit observer",
+        "head": "patient",
+        "patient": "head"
+      },
+      "features": {
+        "negation": "predicate",
+        "nominalization": "relative_patient"
+      },
+      "audit": "c23.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "rén",
+          "ipa": "zɜŋ²⁴",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "reng²",
+              "reng²"
+            ],
+            "ipa": [
+              "zɜŋ²⁴",
+              "zɜŋ²⁴"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "lò",
+          "ipa": "luɔ⁵¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "luo⁴",
+              "luo⁴"
+            ],
+            "ipa": [
+              "luɔ⁵¹",
+              "luɔ⁵¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-relative-clauses",
+        "citation": "Brassett 2006:142–147; reference grammar §6.3",
+        "pattern": "[agent + patient + V + negation] + nie + head; preserve argument gap",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c24",
+      "expression": "看不见的东西",
+      "pinyin_candidate": "yǐ tā tī niě yě",
+      "ipa_candidate": "ji²¹ tʰa⁵⁵ tʰi⁵⁵ ɲie²¹ jɤ²¹",
+      "meaning": "看见＋东西；中心词角色：受事；保留否定",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {
+        "agent": "implicit observer",
+        "head": "patient",
+        "patient": "head"
+      },
+      "features": {
+        "negation": "predicate",
+        "modality": "ability",
+        "nominalization": "object"
+      },
+      "audit": "c24.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "yǐ",
+          "ipa": "ji²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "yi³",
+              "yi³"
+            ],
+            "ipa": [
+              "ji²¹",
+              "ji²¹"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "yě",
+          "ipa": "jɤ²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "yer",
+              "yer"
+            ],
+            "brassett": [
+              "ye³",
+              "ye³"
+            ],
+            "ipa": [
+              "jɤ²¹",
+              "jɤ²¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-relative-clauses",
+        "citation": "Brassett 2006:142–147; reference grammar §6.3",
+        "pattern": "[agent + patient + V + negation] + nie + head; preserve argument gap",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c25",
+      "expression": "不认识的人",
+      "pinyin_candidate": "rén dá niě lò",
+      "ipa_candidate": "zɜŋ²⁴ ta²⁴ ɲie²¹ luɔ⁵¹",
+      "meaning": "认识＋人；中心词角色：受事；保留否定",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {
+        "agent": "implicit observer",
+        "head": "patient",
+        "patient": "head"
+      },
+      "features": {
+        "negation": "predicate",
+        "nominalization": "relative_patient"
+      },
+      "audit": "c25.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "rén",
+          "ipa": "zɜŋ²⁴",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "reng²",
+              "reng²"
+            ],
+            "ipa": [
+              "zɜŋ²⁴",
+              "zɜŋ²⁴"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "lò",
+          "ipa": "luɔ⁵¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "luo⁴",
+              "luo⁴"
+            ],
+            "ipa": [
+              "luɔ⁵¹",
+              "luɔ⁵¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-relative-clauses",
+        "citation": "Brassett 2006:142–147; reference grammar §6.3",
+        "pattern": "[agent + patient + V + negation] + nie + head; preserve argument gap",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c26",
+      "expression": "经济损失",
+      "pinyin_candidate": "tuǎn qíkuī xí",
+      "ipa_candidate": "tʰuɛn²¹ tɕʰi²⁴kʰuei⁵⁵ ɕi²⁴",
+      "meaning": "钱＋丢失",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {
+        "patient": "钱",
+        "event": "loss"
+      },
+      "features": {},
+      "audit": "c26.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "qíkuī",
+          "ipa": "tɕʰi²⁴kʰuei⁵⁵",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "qifkuix",
+              "qifkuix"
+            ],
+            "brassett": [
+              "qi²kui¹",
+              "qi²kui¹"
+            ],
+            "ipa": [
+              "tɕʰi²⁴kʰuei⁵⁵",
+              "tɕʰi²⁴kʰuei⁵⁵"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "tuǎn",
+          "ipa": "tʰuɛn²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "tuan³",
+              "tuan³"
+            ],
+            "ipa": [
+              "tʰuɛn²¹",
+              "tʰuɛn²¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-24-101",
+        "citation": "Brassett 2006:141–143; reference grammar §6.2",
+        "pattern": "resource as event argument + loss/owing/change predicate; xi may nominalize event",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c27",
+      "expression": "财产损失",
+      "pinyin_candidate": "tuǎn qíkuī xí",
+      "ipa_candidate": "tʰuɛn²¹ tɕʰi²⁴kʰuei⁵⁵ ɕi²⁴",
+      "meaning": "钱＋丢失",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {
+        "patient": "钱",
+        "event": "loss"
+      },
+      "features": {},
+      "audit": "c27.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "qíkuī",
+          "ipa": "tɕʰi²⁴kʰuei⁵⁵",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "qifkuix",
+              "qifkuix"
+            ],
+            "brassett": [
+              "qi²kui¹",
+              "qi²kui¹"
+            ],
+            "ipa": [
+              "tɕʰi²⁴kʰuei⁵⁵",
+              "tɕʰi²⁴kʰuei⁵⁵"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "tuǎn",
+          "ipa": "tʰuɛn²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "tuan³",
+              "tuan³"
+            ],
+            "ipa": [
+              "tʰuɛn²¹",
+              "tʰuɛn²¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-24-101",
+        "citation": "Brassett 2006:141–143; reference grammar §6.2",
+        "pattern": "resource as event argument + loss/owing/change predicate; xi may nominalize event",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c28",
+      "expression": "债务",
+      "pinyin_candidate": "tuǎn dà xí",
+      "ipa_candidate": "tʰuɛn²¹ ta⁵¹ ɕi²⁴",
+      "meaning": "欠＋钱",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {},
+      "features": {},
+      "audit": "c28.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "tuǎn",
+          "ipa": "tʰuɛn²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "tuan³",
+              "tuan³"
+            ],
+            "ipa": [
+              "tʰuɛn²¹",
+              "tʰuɛn²¹"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "dà",
+          "ipa": "ta⁵¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "da⁴",
+              "da⁴"
+            ],
+            "ipa": [
+              "ta⁵¹",
+              "ta⁵¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-24-101",
+        "citation": "Brassett 2006:141–143; reference grammar §6.2",
+        "pattern": "resource as event argument + loss/owing/change predicate; xi may nominalize event",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c29",
+      "expression": "收入减少",
+      "pinyin_candidate": "tuǎn tǐ xí 〔结果谓词未定〕",
+      "ipa_candidate": "tʰuɛn²¹ tʰi²¹ ɕi²⁴ 〔结果谓词未定〕",
+      "meaning": "得到＋钱＋减少",
+      "status": [
+        "未完成：change",
+        "形态／搭配待核"
+      ],
+      "roles": {},
+      "features": {},
+      "audit": "c29.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "tuǎn",
+          "ipa": "tʰuɛn²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "tuan³",
+              "tuan³"
+            ],
+            "ipa": [
+              "tʰuɛn²¹",
+              "tʰuɛn²¹"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "tǐ",
+          "ipa": "tʰi²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "tir",
+              "tir"
+            ],
+            "brassett": [
+              "ti³",
+              "ti³"
+            ],
+            "ipa": [
+              "tʰi²¹",
+              "tʰi²¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-24-101",
+        "citation": "Brassett 2006:141–143; reference grammar §6.2",
+        "pattern": "resource as event argument + loss/owing/change predicate; xi may nominalize event",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c30",
+      "expression": "河岸",
+      "pinyin_candidate": "hǔpǎ sétā",
+      "ipa_candidate": "xu²¹pʰa²¹ sɤ²⁴tʰa⁵⁵",
+      "meaning": "河＋旁边",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {},
+      "features": {
+        "spatial_relation": "旁边"
+      },
+      "audit": "c30.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "hǔpǎ",
+          "ipa": "xu²¹pʰa²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "hu³pa³",
+              "hu³pa³"
+            ],
+            "ipa": [
+              "fu²¹pʰa²¹",
+              "fu²¹pʰa²¹"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "sétā",
+          "ipa": "sɤ²⁴tʰa⁵⁵",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "se²ta¹",
+              "se²ta¹"
+            ],
+            "ipa": [
+              "sɤ²⁴tʰa⁵⁵",
+              "sɤ²⁴tʰa⁵⁵"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-14-1",
+        "citation": "Brassett 2006:84,99,102,105",
+        "pattern": "landmark + localizer; preserve numeral if present",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c31",
+      "expression": "山脚",
+      "pinyin_candidate": "kūliē bǎtǐ",
+      "ipa_candidate": "kʰu⁵⁵liɛ⁵⁵ pa²¹tʰi²¹",
+      "meaning": "山＋下面",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {},
+      "features": {
+        "spatial_relation": "下面"
+      },
+      "audit": "c31.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "kūliē",
+          "ipa": "kʰu⁵⁵liɛ⁵⁵",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "ku¹lie¹",
+              "ku¹lie¹"
+            ],
+            "ipa": [
+              "kʰu⁵⁵liɛ⁵⁵",
+              "kʰu⁵⁵liɛ⁵⁵"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "bǎtǐ",
+          "ipa": "pa²¹tʰi²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "ba³ti³",
+              "ba³ti³"
+            ],
+            "ipa": [
+              "pa²¹tʰi²¹",
+              "pa²¹tʰi²¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-14-1",
+        "citation": "Brassett 2006:84,99,102,105",
+        "pattern": "landmark + localizer; preserve numeral if present",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c32",
+      "expression": "门外",
+      "pinyin_candidate": "lāměn wòtǎ",
+      "ipa_candidate": "la⁵⁵mɜŋ²¹ wɔ⁵¹tʰa²¹",
+      "meaning": "门＋外面",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {},
+      "features": {
+        "spatial_relation": "外面"
+      },
+      "audit": "c32.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "lāměn",
+          "ipa": "la⁵⁵mɜŋ²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "laxmenr",
+              "laxmenr"
+            ],
+            "brassett": [
+              "la¹meng³",
+              "la¹meng³"
+            ],
+            "ipa": [
+              "la⁵⁵mɜŋ²¹",
+              "la⁵⁵mɜŋ²¹"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "wòtǎ",
+          "ipa": "wɔ⁵¹tʰa²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "wo⁴ta³",
+              "wo⁴ta³"
+            ],
+            "ipa": [
+              "wɔ⁵¹tʰa²¹",
+              "wɔ⁵¹tʰa²¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-14-1",
+        "citation": "Brassett 2006:84,99,102,105",
+        "pattern": "landmark + localizer; preserve numeral if present",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c33",
+      "expression": "两腿中间",
+      "pinyin_candidate": "jǐ sǐ pē 〔二＋量词未定〕 lóliū",
+      "ipa_candidate": "tɕi²¹ si²¹ pʰɯe⁵⁵ 〔二＋量词未定〕 luɔ²⁴liu⁵⁵",
+      "meaning": "腿＋中间",
+      "status": [
+        "词汇齐全",
+        "形态／搭配待核"
+      ],
+      "roles": {},
+      "features": {
+        "spatial_relation": "中间",
+        "number": "two"
+      },
+      "audit": "c33.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "jǐ sǐ pē",
+          "ipa": "tɕi²¹ si²¹ pʰɯe⁵⁵",
+          "method": "source IPA converted to display spelling",
+          "original_notations": {
+            "ipa": [
+              "tɕi²¹ si²¹ pʰɯe⁵⁵",
+              "tɕi²¹ si²¹ pʰɯe⁵⁵"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "lóliū",
+          "ipa": "luɔ²⁴liu⁵⁵",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "lofliux",
+              "lofliux"
+            ],
+            "brassett": [
+              "luo²liu¹",
+              "luo²liu¹"
+            ],
+            "ipa": [
+              "luɔ²⁴liu⁵⁵",
+              "luɔ²⁴liu⁵⁵"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-14-1",
+        "citation": "Brassett 2006:84,99,102,105",
+        "pattern": "landmark + localizer; preserve numeral if present",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c34",
+      "expression": "快要下雨",
+      "pinyin_candidate": "mézě hǔ",
+      "ipa_candidate": "mɤ²⁴tsɤ²¹ xu²¹",
+      "meaning": "快要下雨",
+      "status": [
+        "词汇齐全",
+        "形态／搭配待核"
+      ],
+      "roles": {},
+      "features": {
+        "aspect": "imminent_onset"
+      },
+      "audit": "c34.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "mézě",
+          "ipa": "mɤ²⁴tsɤ²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "me²ze³",
+              "me²ze³"
+            ],
+            "ipa": [
+              "mɤ²⁴tsɤ²¹",
+              "mɤ²⁴tsɤ²¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-9-103",
+        "citation": "Brassett 2006:109–140; Tian:526; Lu et al. 2021:431–432",
+        "pattern": "whole predicate TAM: onset hu; progressive la nie; completive ji + da nie; recent completion needs state distinction",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c35",
+      "expression": "还在吃",
+      "pinyin_candidate": "gá lā niē",
+      "ipa_candidate": "ka²⁴ la⁵⁵ ɲie⁵⁵",
+      "meaning": "还在吃",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {},
+      "features": {
+        "aspect": "progressive_continuative"
+      },
+      "audit": "c35.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "gá",
+          "ipa": "ka²⁴",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "gaf",
+              "gaf"
+            ],
+            "brassett": [
+              "ga²",
+              "ga²"
+            ],
+            "ipa": [
+              "ka²⁴",
+              "ka²⁴"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-9-103",
+        "citation": "Brassett 2006:109–140; Tian:526; Lu et al. 2021:431–432",
+        "pattern": "whole predicate TAM: onset hu; progressive la nie; completive ji + da nie; recent completion needs state distinction",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c36",
+      "expression": "尚未吃完",
+      "pinyin_candidate": "gá jī dā niē",
+      "ipa_candidate": "ka²⁴ tɕi⁵⁵ ta⁵⁵ ɲie⁵⁵",
+      "meaning": "尚未吃完",
+      "status": [
+        "词汇齐全",
+        "形态／搭配待核"
+      ],
+      "roles": {},
+      "features": {
+        "aspect": "not_yet_completed",
+        "negation": "event"
+      },
+      "audit": "c36.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "gá",
+          "ipa": "ka²⁴",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "gaf",
+              "gaf"
+            ],
+            "brassett": [
+              "ga²",
+              "ga²"
+            ],
+            "ipa": [
+              "ka²⁴",
+              "ka²⁴"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-9-103",
+        "citation": "Brassett 2006:109–140; Tian:526; Lu et al. 2021:431–432",
+        "pattern": "whole predicate TAM: onset hu; progressive la nie; completive ji + da nie; recent completion needs state distinction",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c37",
+      "expression": "刚刚回来",
+      "pinyin_candidate": "sōng 〔近期完成／结果状态形式未定〕",
+      "ipa_candidate": "sɔŋ⁵⁵ 〔近期完成／结果状态形式未定〕",
+      "meaning": "刚刚回来",
+      "status": [
+        "词汇齐全",
+        "形态／搭配待核"
+      ],
+      "roles": {},
+      "features": {
+        "aspect": "recent_completed"
+      },
+      "audit": "c37.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "sōng",
+          "ipa": "sɔŋ⁵⁵",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "song¹",
+              "song¹"
+            ],
+            "ipa": [
+              "sɔŋ⁵⁵",
+              "sɔŋ⁵⁵"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-9-103",
+        "citation": "Brassett 2006:109–140; Tian:526; Lu et al. 2021:431–432",
+        "pattern": "whole predicate TAM: onset hu; progressive la nie; completive ji + da nie; recent completion needs state distinction",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c38",
+      "expression": "画地为牢",
+      "pinyin_candidate": "gódǒ lǎ",
+      "ipa_candidate": "ko³⁵to²¹ la²¹",
+      "meaning": "把自己关住",
+      "status": [
+        "词汇齐全",
+        "形态／搭配待核"
+      ],
+      "roles": {
+        "agent": "self",
+        "patient": "self"
+      },
+      "features": {
+        "reflexive": "yes",
+        "aspect": "result_state"
+      },
+      "audit": "c38.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "gódǒ",
+          "ipa": "ko³⁵to²¹",
+          "method": "source IPA converted to display spelling",
+          "original_notations": {
+            "ipa": [
+              "ko³⁵to²¹",
+              "ko³⁵to²¹"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "lǎ",
+          "ipa": "la²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "la³",
+              "la³"
+            ],
+            "ipa": [
+              "la²¹",
+              "la²¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-xi-functions",
+        "citation": "reference grammar §§5–6; lexicalized Chinese interpretation",
+        "pattern": "ordinary event with original reflexive/existence/modal scope",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c39",
+      "expression": "束手无策",
+      "pinyin_candidate": "bánghuā tái",
+      "ipa_candidate": "paŋ²⁴xua⁵⁵ tʰai²⁴",
+      "meaning": "没有办法",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {},
+      "features": {
+        "negation": "existence"
+      },
+      "audit": "c39.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "bánghuā",
+          "ipa": "paŋ²⁴xua⁵⁵",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "bang²hua¹",
+              "bang²hua¹"
+            ],
+            "ipa": [
+              "paŋ²⁴fua⁵⁵",
+              "paŋ²⁴fua⁵⁵"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-xi-functions",
+        "citation": "reference grammar §§5–6; lexicalized Chinese interpretation",
+        "pattern": "ordinary event with original reflexive/existence/modal scope",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c40",
+      "expression": "心里有数",
+      "pinyin_candidate": "sǎ hàrǐ",
+      "ipa_candidate": "sa²¹ xa⁵¹zɨ²¹",
+      "meaning": "知道情况",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {},
+      "features": {},
+      "audit": "c40.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "hàrǐ",
+          "ipa": "xa⁵¹zɨ²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "ha⁴ri³",
+              "ha⁴ri³"
+            ],
+            "ipa": [
+              "xa⁵¹zɨ²¹",
+              "xa⁵¹zɨ²¹"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "sǎ",
+          "ipa": "sa²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "sar",
+              "sar"
+            ],
+            "brassett": [
+              "sa³",
+              "sa³"
+            ],
+            "ipa": [
+              "sa²¹",
+              "sa²¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-xi-functions",
+        "citation": "reference grammar §§5–6; lexicalized Chinese interpretation",
+        "pattern": "ordinary event with original reflexive/existence/modal scope",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c41",
+      "expression": "无路可走",
+      "pinyin_candidate": "là hxí tái",
+      "ipa_candidate": "la⁵¹ ɣɨ²⁴ tʰai²⁴",
+      "meaning": "没有路可以走",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {},
+      "features": {
+        "negation": "existence",
+        "modality": "possibility"
+      },
+      "audit": "c41.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "hxí",
+          "ipa": "ɣɨ²⁴",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "hhi²",
+              "hhi²"
+            ],
+            "ipa": [
+              "ɣɨ²⁴",
+              "ɣɨ²⁴"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "là",
+          "ipa": "la⁵¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "la⁴",
+              "la⁴"
+            ],
+            "ipa": [
+              "la⁵¹",
+              "la⁵¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-xi-functions",
+        "citation": "reference grammar §§5–6; lexicalized Chinese interpretation",
+        "pattern": "ordinary event with original reflexive/existence/modal scope",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c42",
+      "expression": "审判别人的人",
+      "pinyin_candidate": "lòdiē 〔谓词未定〕 mā",
+      "ipa_candidate": "luɔ⁵¹tiɛ⁵⁵ 〔谓词未定〕 ma⁵⁵",
+      "meaning": "审判＋别人＋人；中心词角色：施事",
+      "status": [
+        "未完成：predicate",
+        "形态／搭配待核"
+      ],
+      "roles": {
+        "patient": "别人",
+        "head": "agent",
+        "agent": "head"
+      },
+      "features": {
+        "nominalization": "person"
+      },
+      "audit": "c42.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "lòdiē",
+          "ipa": "luɔ⁵¹tiɛ⁵⁵",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "lovdiex",
+              "lovdiex"
+            ],
+            "brassett": [
+              "luo⁴die¹",
+              "luo⁴die¹"
+            ],
+            "ipa": [
+              "luɔ⁵¹tiɛ⁵⁵",
+              "luɔ⁵¹tiɛ⁵⁵"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "lò",
+          "ipa": "luɔ⁵¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "luo⁴",
+              "luo⁴"
+            ],
+            "ipa": [
+              "luɔ⁵¹",
+              "luɔ⁵¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-relative-clauses",
+        "citation": "Brassett 2006:142–147; reference grammar §6.3",
+        "pattern": "[overt arguments + V] + nie + head; agent/patient differ by gap, not a passive suffix",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c43",
+      "expression": "被别人审判的人",
+      "pinyin_candidate": "lòdiē 〔谓词未定〕 niě lò",
+      "ipa_candidate": "luɔ⁵¹tiɛ⁵⁵ 〔谓词未定〕 ɲie²¹ luɔ⁵¹",
+      "meaning": "审判＋别人＋人；中心词角色：受事",
+      "status": [
+        "未完成：predicate",
+        "形态／搭配待核"
+      ],
+      "roles": {
+        "agent": "别人",
+        "head": "patient",
+        "patient": "head"
+      },
+      "features": {
+        "nominalization": "relative_patient"
+      },
+      "audit": "c43.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "lòdiē",
+          "ipa": "luɔ⁵¹tiɛ⁵⁵",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "lovdiex",
+              "lovdiex"
+            ],
+            "brassett": [
+              "luo⁴die¹",
+              "luo⁴die¹"
+            ],
+            "ipa": [
+              "luɔ⁵¹tiɛ⁵⁵",
+              "luɔ⁵¹tiɛ⁵⁵"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "lò",
+          "ipa": "luɔ⁵¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "luo⁴",
+              "luo⁴"
+            ],
+            "ipa": [
+              "luɔ⁵¹",
+              "luɔ⁵¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-relative-clauses",
+        "citation": "Brassett 2006:142–147; reference grammar §6.3",
+        "pattern": "[overt arguments + V] + nie + head; agent/patient differ by gap, not a passive suffix",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c44",
+      "expression": "被骂的人",
+      "pinyin_candidate": "lǒ niě lò",
+      "ipa_candidate": "luɔ²¹ ɲie²¹ luɔ⁵¹",
+      "meaning": "骂＋人；中心词角色：受事",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {
+        "head": "patient",
+        "agent": "unspecified",
+        "patient": "head"
+      },
+      "features": {
+        "nominalization": "relative_patient"
+      },
+      "audit": "c44.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "lǒ",
+          "ipa": "luɔ²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "lor",
+              "lor"
+            ],
+            "brassett": [
+              "luo³",
+              "luo³"
+            ],
+            "ipa": [
+              "luɔ²¹",
+              "luɔ²¹"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "lò",
+          "ipa": "luɔ⁵¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "luo⁴",
+              "luo⁴"
+            ],
+            "ipa": [
+              "luɔ⁵¹",
+              "luɔ⁵¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-relative-clauses",
+        "citation": "Brassett 2006:142–147; reference grammar §6.3",
+        "pattern": "[overt arguments + V] + nie + head; agent/patient differ by gap, not a passive suffix",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c45",
+      "expression": "我画的画",
+      "pinyin_candidate": "ngá huá niě 〔中心词未定〕",
+      "ipa_candidate": "ŋa²⁴ xua²⁴ ɲie²¹ 〔中心词未定〕",
+      "meaning": "画＋我＋画；中心词角色：受事",
+      "status": [
+        "未完成：head",
+        "形态／搭配待核"
+      ],
+      "roles": {
+        "agent": "我",
+        "head": "patient",
+        "patient": "head"
+      },
+      "features": {
+        "nominalization": "object"
+      },
+      "audit": "c45.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "huá",
+          "ipa": "xua²⁴",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "hua²",
+              "hua²"
+            ],
+            "ipa": [
+              "fua²⁴",
+              "fua²⁴"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "ngá",
+          "ipa": "ŋa²⁴",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "nga²",
+              "nga²"
+            ],
+            "ipa": [
+              "ŋa²⁴",
+              "ŋa²⁴"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-relative-clauses",
+        "citation": "Brassett 2006:142–147; reference grammar §6.3",
+        "pattern": "[overt arguments + V] + nie + head; agent/patient differ by gap, not a passive suffix",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c46",
+      "expression": "读书的人",
+      "pinyin_candidate": "cī tū mā",
+      "ipa_candidate": "tsʰɨ⁵⁵ tʰu⁵⁵ ma⁵⁵",
+      "meaning": "读＋书；中心词角色：施事",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {
+        "head": "agent",
+        "agent": "head",
+        "patient": "unspecified"
+      },
+      "features": {
+        "nominalization": "person"
+      },
+      "audit": "c46.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "lò",
+          "ipa": "luɔ⁵¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "luo⁴",
+              "luo⁴"
+            ],
+            "ipa": [
+              "luɔ⁵¹",
+              "luɔ⁵¹"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "tū",
+          "ipa": "tʰu⁵⁵",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "tu¹",
+              "tu¹"
+            ],
+            "ipa": [
+              "tʰu⁵⁵",
+              "tʰu⁵⁵"
+            ]
+          }
+        },
+        "⟪2⟫": {
+          "pinyin": "cī",
+          "ipa": "tsʰɨ⁵⁵",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "cix",
+              "cix"
+            ],
+            "brassett": [
+              "ci¹",
+              "ci¹"
+            ],
+            "ipa": [
+              "tsʰɨ⁵⁵",
+              "tsʰɨ⁵⁵"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-24-103",
+        "citation": "Brassett 2006:141–142 §8.1; Tian:443",
+        "pattern": "arguments + V + ma /ma⁵⁵/; human agent gap",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c47",
+      "expression": "买鱼的人",
+      "pinyin_candidate": "sóng pū mā",
+      "ipa_candidate": "sɔŋ²⁴ pʰu⁵⁵ ma⁵⁵",
+      "meaning": "买＋鱼；中心词角色：施事",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {
+        "head": "agent",
+        "agent": "head",
+        "patient": "unspecified"
+      },
+      "features": {
+        "nominalization": "person"
+      },
+      "audit": "c47.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "sóng",
+          "ipa": "sɔŋ²⁴",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "song²",
+              "song²"
+            ],
+            "ipa": [
+              "sɔŋ²⁴",
+              "sɔŋ²⁴"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "lò",
+          "ipa": "luɔ⁵¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "luo⁴",
+              "luo⁴"
+            ],
+            "ipa": [
+              "luɔ⁵¹",
+              "luɔ⁵¹"
+            ]
+          }
+        },
+        "⟪2⟫": {
+          "pinyin": "pū",
+          "ipa": "pʰu⁵⁵",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "pux",
+              "pux"
+            ],
+            "brassett": [
+              "pu¹",
+              "pu¹"
+            ],
+            "ipa": [
+              "pʰu⁵⁵",
+              "pʰu⁵⁵"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-24-103",
+        "citation": "Brassett 2006:141–142 §8.1; Tian:443",
+        "pattern": "arguments + V + ma /ma⁵⁵/; human agent gap",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c48",
+      "expression": "洗衣服的人",
+      "pinyin_candidate": "sībā wō mā",
+      "ipa_candidate": "sɨ⁵⁵pa⁵⁵ wɔ⁵⁵ ma⁵⁵",
+      "meaning": "洗＋衣服；中心词角色：施事",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {
+        "head": "agent",
+        "agent": "head",
+        "patient": "unspecified"
+      },
+      "features": {
+        "nominalization": "person"
+      },
+      "audit": "c48.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "sībā",
+          "ipa": "sɨ⁵⁵pa⁵⁵",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "si¹ba¹",
+              "si¹ba¹"
+            ],
+            "ipa": [
+              "sɨ⁵⁵pa⁵⁵",
+              "sɨ⁵⁵pa⁵⁵"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "lò",
+          "ipa": "luɔ⁵¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "luo⁴",
+              "luo⁴"
+            ],
+            "ipa": [
+              "luɔ⁵¹",
+              "luɔ⁵¹"
+            ]
+          }
+        },
+        "⟪2⟫": {
+          "pinyin": "wō",
+          "ipa": "wɔ⁵⁵",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "wo¹",
+              "wo¹"
+            ],
+            "ipa": [
+              "wɔ⁵⁵",
+              "wɔ⁵⁵"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-24-103",
+        "citation": "Brassett 2006:141–142 §8.1; Tian:443",
+        "pattern": "arguments + V + ma /ma⁵⁵/; human agent gap",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c49",
+      "expression": "穿的东西",
+      "pinyin_candidate": "dǎ ci〔调未定〕",
+      "ipa_candidate": "ta²¹ tsʰi〔调未定〕",
+      "meaning": "穿；中心词角色：受事",
+      "status": [
+        "词汇齐全",
+        "形态／搭配待核"
+      ],
+      "roles": {
+        "head": "patient",
+        "agent": "unspecified",
+        "patient": "head"
+      },
+      "features": {
+        "nominalization": "object"
+      },
+      "audit": "c49.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "dǎ",
+          "ipa": "ta²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "dar",
+              "dar"
+            ],
+            "brassett": [
+              "da³",
+              "da³"
+            ],
+            "ipa": [
+              "ta²¹",
+              "ta²¹"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "yě",
+          "ipa": "jɤ²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "yer",
+              "yer"
+            ],
+            "brassett": [
+              "ye³",
+              "ye³"
+            ],
+            "ipa": [
+              "jɤ²¹",
+              "jɤ²¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-24-102",
+        "citation": "Tian:444; Lu et al. 2021:425; Brassett 2006:141–143",
+        "pattern": "V + ci for consumed/affected object; xi for broader associated thing",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c50",
+      "expression": "读的东西",
+      "pinyin_candidate": "tū ci〔调未定〕",
+      "ipa_candidate": "tʰu⁵⁵ tsʰi〔调未定〕",
+      "meaning": "读；中心词角色：受事",
+      "status": [
+        "词汇齐全",
+        "形态／搭配待核"
+      ],
+      "roles": {
+        "head": "patient",
+        "agent": "unspecified",
+        "patient": "head"
+      },
+      "features": {
+        "nominalization": "object"
+      },
+      "audit": "c50.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "tū",
+          "ipa": "tʰu⁵⁵",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "tu¹",
+              "tu¹"
+            ],
+            "ipa": [
+              "tʰu⁵⁵",
+              "tʰu⁵⁵"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "yě",
+          "ipa": "jɤ²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "yer",
+              "yer"
+            ],
+            "brassett": [
+              "ye³",
+              "ye³"
+            ],
+            "ipa": [
+              "jɤ²¹",
+              "jɤ²¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-24-102",
+        "citation": "Tian:444; Lu et al. 2021:425; Brassett 2006:141–143",
+        "pattern": "V + ci for consumed/affected object; xi for broader associated thing",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c51",
+      "expression": "洗碗用的东西",
+      "pinyin_candidate": "qiěbí wō niě yě",
+      "ipa_candidate": "tɕʰiɛ²¹pi²⁴ wɔ⁵⁵ ɲie²¹ jɤ²¹",
+      "meaning": "洗＋碗＋东西；中心词角色：用途物",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {
+        "head": "instrument",
+        "agent": "unspecified",
+        "patient": "head"
+      },
+      "features": {
+        "nominalization": "purpose_object"
+      },
+      "audit": "c51.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "qiěbí",
+          "ipa": "tɕʰiɛ²¹pi²⁴",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "qie³bi²",
+              "qie³bi²"
+            ],
+            "ipa": [
+              "tɕʰiɛ²¹pi²⁴",
+              "tɕʰiɛ²¹pi²⁴"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "wō",
+          "ipa": "wɔ⁵⁵",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "wo¹",
+              "wo¹"
+            ],
+            "ipa": [
+              "wɔ⁵⁵",
+              "wɔ⁵⁵"
+            ]
+          }
+        },
+        "⟪2⟫": {
+          "pinyin": "yě",
+          "ipa": "jɤ²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "yer",
+              "yer"
+            ],
+            "brassett": [
+              "ye³",
+              "ye³"
+            ],
+            "ipa": [
+              "jɤ²¹",
+              "jɤ²¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
+        "citation": "Tian:623; Brassett 2006:142–147",
+        "pattern": "[arguments + V] + nie (xi) + object head; purpose need not be patient",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c52",
+      "expression": "砍柴工具",
+      "pinyin_candidate": "kǎ liǎo niě yě",
+      "ipa_candidate": "kʰa²¹ liau²¹ ɲie²¹ jɤ²¹",
+      "meaning": "砍＋柴＋东西；中心词角色：用途物",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {
+        "head": "instrument",
+        "agent": "generic user"
+      },
+      "features": {
+        "nominalization": "purpose_object"
+      },
+      "audit": "c52.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "liǎo",
+          "ipa": "liau²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "liao³",
+              "liao³"
+            ],
+            "ipa": [
+              "liau²¹",
+              "liau²¹"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "kǎ",
+          "ipa": "kʰa²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "ka³",
+              "ka³"
+            ],
+            "ipa": [
+              "kʰa²¹",
+              "kʰa²¹"
+            ]
+          }
+        },
+        "⟪2⟫": {
+          "pinyin": "yě",
+          "ipa": "jɤ²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "yer",
+              "yer"
+            ],
+            "brassett": [
+              "ye³",
+              "ye³"
+            ],
+            "ipa": [
+              "jɤ²¹",
+              "jɤ²¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
+        "citation": "Tian:623; Brassett 2006:142–147",
+        "pattern": "[arguments + V] + nie (xi) + object head; purpose need not be patient",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c53",
+      "expression": "屋后面",
+      "pinyin_candidate": "〔参照物未定〕 tāniē",
+      "ipa_candidate": "〔参照物未定〕 tʰa⁵⁵ȵiɛ⁵⁵",
+      "meaning": "屋＋后面",
+      "status": [
+        "未完成：landmark",
+        "形态／搭配待核"
+      ],
+      "roles": {},
+      "features": {
+        "spatial_relation": "后面"
+      },
+      "audit": "c53.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "tāniē",
+          "ipa": "tʰa⁵⁵ȵiɛ⁵⁵",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "ta¹nie¹",
+              "ta¹nie¹"
+            ],
+            "ipa": [
+              "tʰa⁵⁵ȵiɛ⁵⁵",
+              "tʰa⁵⁵ȵiɛ⁵⁵"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-14-1",
+        "citation": "Brassett 2006:84,99,102,105",
+        "pattern": "landmark + localizer; preserve numeral if present",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c54",
+      "expression": "石头旁边",
+      "pinyin_candidate": "ǎbǎ sétā",
+      "ipa_candidate": "a²¹pa²¹ sɤ²⁴tʰa⁵⁵",
+      "meaning": "石头＋旁边",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {},
+      "features": {
+        "spatial_relation": "旁边"
+      },
+      "audit": "c54.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "sétā",
+          "ipa": "sɤ²⁴tʰa⁵⁵",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "se²ta¹",
+              "se²ta¹"
+            ],
+            "ipa": [
+              "sɤ²⁴tʰa⁵⁵",
+              "sɤ²⁴tʰa⁵⁵"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "ǎbǎ",
+          "ipa": "a²¹pa²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "a³ba³",
+              "a³ba³"
+            ],
+            "ipa": [
+              "a²¹pa²¹",
+              "a²¹pa²¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-14-1",
+        "citation": "Brassett 2006:84,99,102,105",
+        "pattern": "landmark + localizer; preserve numeral if present",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c55",
+      "expression": "还在睡",
+      "pinyin_candidate": "nié lā niē",
+      "ipa_candidate": "ȵiɛ²⁴ la⁵⁵ ɲie⁵⁵",
+      "meaning": "还在睡",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {},
+      "features": {
+        "aspect": "progressive_continuative"
+      },
+      "audit": "c55.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "nié",
+          "ipa": "ȵiɛ²⁴",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "nie²",
+              "nie²"
+            ],
+            "ipa": [
+              "ȵiɛ²⁴",
+              "ȵiɛ²⁴"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-9-103",
+        "citation": "Brassett 2006:109–140; Tian:526; Lu et al. 2021:431–432",
+        "pattern": "whole predicate TAM: onset hu; progressive la nie; completive ji + da nie; recent completion needs state distinction",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c56",
+      "expression": "快要开门",
+      "pinyin_candidate": "lāměn tóng hǔ",
+      "ipa_candidate": "la⁵⁵mɜŋ²¹ tʰɔŋ²⁴ xu²¹",
+      "meaning": "快要开门",
+      "status": [
+        "词汇齐全",
+        "形态／搭配待核"
+      ],
+      "roles": {},
+      "features": {
+        "aspect": "imminent_onset"
+      },
+      "audit": "c56.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "lāměn",
+          "ipa": "la⁵⁵mɜŋ²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "laxmenr",
+              "laxmenr"
+            ],
+            "brassett": [
+              "la¹meng³",
+              "la¹meng³"
+            ],
+            "ipa": [
+              "la⁵⁵mɜŋ²¹",
+              "la⁵⁵mɜŋ²¹"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "tóng",
+          "ipa": "tʰɔŋ²⁴",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "tong²",
+              "tong²"
+            ],
+            "ipa": [
+              "tʰɔŋ²⁴",
+              "tʰɔŋ²⁴"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-9-103",
+        "citation": "Brassett 2006:109–140; Tian:526; Lu et al. 2021:431–432",
+        "pattern": "whole predicate TAM: onset hu; progressive la nie; completive ji + da nie; recent completion needs state distinction",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c57",
+      "expression": "不能读",
+      "pinyin_candidate": "tū tā tī",
+      "ipa_candidate": "tʰu⁵⁵ tʰa⁵⁵ tʰi⁵⁵",
+      "meaning": "不能读（能力否定）",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {
+        "experiencer": "generic person",
+        "stimulus": "source referent"
+      },
+      "features": {
+        "negation": "modal",
+        "modality": "ability"
+      },
+      "audit": "c57.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "tū",
+          "ipa": "tʰu⁵⁵",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "tu¹",
+              "tu¹"
+            ],
+            "ipa": [
+              "tʰu⁵⁵",
+              "tʰu⁵⁵"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-17-101",
+        "citation": "Brassett 2006:127–132",
+        "pattern": "V + ta ti /tʰa⁵⁵ tʰi⁵⁵/; inability rather than factual da",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c58",
+      "expression": "无法看见",
+      "pinyin_candidate": "yǐ tā tī",
+      "ipa_candidate": "ji²¹ tʰa⁵⁵ tʰi⁵⁵",
+      "meaning": "不能看见（能力否定）",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {
+        "experiencer": "generic person",
+        "stimulus": "source referent"
+      },
+      "features": {
+        "negation": "modal",
+        "modality": "ability"
+      },
+      "audit": "c58.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "yǐ",
+          "ipa": "ji²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "yi³",
+              "yi³"
+            ],
+            "ipa": [
+              "ji²¹",
+              "ji²¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-17-101",
+        "citation": "Brassett 2006:127–132",
+        "pattern": "V + ta ti /tʰa⁵⁵ tʰi⁵⁵/; inability rather than factual da",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c59",
+      "expression": "被你骂的人",
+      "pinyin_candidate": "ní lǒ niě lò",
+      "ipa_candidate": "ȵi²⁴ luɔ²¹ ɲie²¹ luɔ⁵¹",
+      "meaning": "骂＋你＋人；中心词角色：受事",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {
+        "agent": "你",
+        "head": "patient",
+        "patient": "head"
+      },
+      "features": {
+        "nominalization": "relative_patient"
+      },
+      "audit": "c59.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "lǒ",
+          "ipa": "luɔ²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "lor",
+              "lor"
+            ],
+            "brassett": [
+              "luo³",
+              "luo³"
+            ],
+            "ipa": [
+              "luɔ²¹",
+              "luɔ²¹"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "lò",
+          "ipa": "luɔ⁵¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "luo⁴",
+              "luo⁴"
+            ],
+            "ipa": [
+              "luɔ⁵¹",
+              "luɔ⁵¹"
+            ]
+          }
+        },
+        "⟪2⟫": {
+          "pinyin": "ní",
+          "ipa": "ȵi²⁴",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "ni²",
+              "ni²"
+            ],
+            "ipa": [
+              "ȵi²⁴",
+              "ȵi²⁴"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-relative-clauses",
+        "citation": "Brassett 2006:142–147; reference grammar §6.3",
+        "pattern": "[overt arguments + V] + nie + head; agent/patient differ by gap, not a passive suffix",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    },
+    {
+      "id": "c60",
+      "expression": "喜欢我的人",
+      "pinyin_candidate": "ngá zě mā",
+      "ipa_candidate": "ŋa²⁴ tsɤ²¹ ma⁵⁵",
+      "meaning": "喜欢＋我＋人；中心词角色：施事",
+      "status": [
+        "词汇齐全"
+      ],
+      "roles": {
+        "patient": "我",
+        "head": "agent",
+        "agent": "head"
+      },
+      "features": {
+        "nominalization": "person"
+      },
+      "audit": "c60.md",
+      "selected_word_renderings": {
+        "⟪0⟫": {
+          "pinyin": "ngá",
+          "ipa": "ŋa²⁴",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "nga²",
+              "nga²"
+            ],
+            "ipa": [
+              "ŋa²⁴",
+              "ŋa²⁴"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "lò",
+          "ipa": "luɔ⁵¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "luo⁴",
+              "luo⁴"
+            ],
+            "ipa": [
+              "luɔ⁵¹",
+              "luɔ⁵¹"
+            ]
+          }
+        },
+        "⟪2⟫": {
+          "pinyin": "zě",
+          "ipa": "tsɤ²¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "ye": [
+              "zer",
+              "zer"
+            ],
+            "brassett": [
+              "ze³",
+              "ze³"
+            ],
+            "ipa": [
+              "tsɤ²¹",
+              "tsɤ²¹"
+            ]
+          }
+        }
+      },
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-relative-clauses",
+        "citation": "Brassett 2006:142–147; reference grammar §6.3",
+        "pattern": "[overt arguments + V] + nie + head; agent/patient differ by gap, not a passive suffix",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      }
+    }
+  ]
+}

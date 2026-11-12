@@ -59,3 +59,32 @@ In ordinary translation, output a fluent, complete **best-supported proposed tra
 ## D. Retrieval evaluation principle
 
 Compare raw-query embedding, decomposed-query embedding, the static skill route, and a combined route on the **same gold relevance targets**. Evaluate (1) source-supported lexical-component recall, (2) whether all required semantic roles are covered, (3) whether the chosen Tujia construction is licensed, and (4) meaning fidelity. A high cosine score, a vague thematic word, and a proposed but unverified assembled phrase are not interchangeable evidence.
+
+## E. Executable shared plan
+
+`src/tujia_lex/query_plan.py` supplies `plan(expression, context, dialect)` and a
+structured `Interpretation` interface. Productive frames decompose new predicates
+and arguments, relative heads, spatial relations and scoped TAM. Conventional
+opaque meanings use a small lexical bridge. A translating agent can supply a new
+interpretation without changing the planner or `concepts.json`; context text is
+retained for inspection, not presented as automatically understood.
+
+`tujia-lex plan EXPRESSION --route C --index INDEX --model-path MODEL` executes
+that plan with real BGE. Route D uses the same queries with exact static shards;
+route E combines them and checks components and source compatibility. The
+lightweight script shares the planner. Curated concepts remain explanatory seeds,
+not an exhaustive synonym dictionary. Raw `search` is available for baselines and
+basic-word evidence checks.
+
+The construction registry in `src/tujia_lex/constructions.py` cites a grammar
+section for each family. Agent `ma`, object `ci`, broad `xi` and explicit
+relative-head constructions have different roles. Candidate source notations stay
+linked to their own attestations. Drafts retain lexical gaps and unresolved
+surface choices in the evaluation; ordinary translations use complete proposed
+Pinyin/IPA text and the one general quality note.
+
+The 60-case challenge checks recoverability of verified existing words as well as
+complete semantic frames. Dictionary and survey evidence have separate IDs and
+scope; the static shards contain dictionary witnesses only. The report compares
+natural, candidate-matched and one-query budgets, and excludes unverified targets
+from recall denominators.

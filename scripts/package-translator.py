@@ -27,7 +27,9 @@ for folder in ['src', 'tests', 'docs/evaluation', 'skills/translate-tujia/refere
 for name in ['download-embedding-model.py', 'evaluate-semantic-retrieval.py',
              'fetch-dictionary.py', 'render-semantic-evaluation.py',
              'tujia-lex-spelling.cjs', 'package-translator.py', 'export-readable-lexicon.py',
-             'lightweight-synonym-search.py']:
+             'lightweight-synonym-search.py', 'evaluate-compositional-retrieval.py',
+             'verify-challenge-gold.py', 'render-compositional-evaluation.py',
+             'render-challenge-translations.py']:
     paths.append(root/'scripts'/name)
 for source in paths:
     target = out/source.relative_to(root)

@@ -25,11 +25,11 @@ def test_five_targets_expand_without_embedding():
     concepts = json.loads(CONCEPTS.read_text(encoding="utf-8"))
     expected = {
         "路人": ("路", "人"),
-        "香味": ("气味", "闻"),
+        "香味": ("气味",),
         "玩具": ("玩", "东西"),
-        "饮料": ("喝的东西", "水"),
-        "令人费解": ("不知道", "理解"),
-        "经济损失": ("钱", "赔偿"),
+        "饮料": ("喝的东西", "喝"),
+        "令人费解": ("懂", "理解"),
+        "经济损失": ("钱", "丢失"),
     }
     for original, must_include in expected.items():
         _, choices = mod.candidate_queries(original, concepts, max_queries=12)

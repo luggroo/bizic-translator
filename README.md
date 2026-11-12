@@ -163,3 +163,71 @@ printf '%s' '[{"mode":"ye","text":"ngaf"}]' | node scripts/tujia-lex-spelling.cj
 ```
 
 The result is `ngá`. For an original witness, provide `mode: "source"`, its profile ID as `source`, and its unchanged spelling as `text`. Ambiguous and incomplete mappings remain explicit. Missing tones are not filled by guessing.
+
+## Executable shared planner and compositional evaluation
+
+`plan` is the translation-facing command. `search` remains the raw-query baseline
+and a precise lookup tool for already identified basic words. Both BGE (`C`) and
+static exact retrieval (`D`) execute the same `QueryPlan`; `E` combines them with
+component and source checks. Each response retains the original neighbors,
+query-local cosine scores, witness metadata, role graph and a construction draft.
+
+```bash
+.venv/bin/tujia-lex plan '经济损失' --dry-run
+.venv/bin/tujia-lex plan '路人' --route C --index .cache/bge-index \
+  --model-path .cache/models/bge-base-zh-v1.5
+.venv/bin/tujia-lex plan '饮料' --route D
+.venv/bin/tujia-lex plan '被别人审判的人' --route E --index .cache/bge-index \
+  --model-path .cache/models/bge-base-zh-v1.5 --context '指审判的受事'
+```
+
+The deterministic planner handles productive Chinese event/participant, purpose,
+relative-clause, spatial, negation and TAM frames. A small set of conventional
+lexical and idiom meanings supplies examples. It does not understand every opaque
+compound or arbitrary context sentence. For those, a translating agent supplies
+an `Interpretation` through the Python API or `--interpretation FILE.json`:
+
+```json
+{
+  "meaning": "把困难推给别人",
+  "family": "idiom_event",
+  "components": [
+    {"key": "predicate", "query": "推", "role": "predicate"},
+    {"key": "patient", "query": "困难", "role": "patient"},
+    {"key": "recipient", "query": "别人", "role": "recipient"}
+  ],
+  "roles": {"agent": "topic", "recipient": "别人"},
+  "features": {},
+  "paraphrases": ["把困难推给别人"]
+}
+```
+
+This interpretation is engine-independent. It can express direct synonyms,
+paraphrases, required components, optional heads, argument gaps, negation, modality
+and aspect. Production sessions reuse loaded models/indexes, encoded queries and
+verified static buckets. The default cap is ten distinct planned queries; hybrid
+retrieval uses at most twenty engine searches. Missing or incompatible BGE assets
+raise an error rather than producing substitute similarity scores.
+
+Reproduce the 60-expression experiment, including inventory verification:
+
+```bash
+.venv/bin/python scripts/verify-challenge-gold.py --repo .cache/bizic-data
+.venv/bin/python scripts/evaluate-compositional-retrieval.py \
+  --index .cache/bge-index --model-path .cache/models/bge-base-zh-v1.5
+.venv/bin/python scripts/render-compositional-evaluation.py
+.venv/bin/python -m pytest tests --data-root .cache/bizic-data \
+  --model-path .cache/models/bge-base-zh-v1.5 -q
+.venv/bin/python scripts/check-grammar-skill.py
+```
+
+The [fresh compositional report](docs/evaluation/compositional/README.md) separates
+retrieval misses for existing words from unverified inventory targets, and checks
+natural, candidate-matched and single-query budgets. Its full-record catalog
+preserves dictionary witnesses and separately identified survey records. Static
+shards cover the dictionary; they do not include the additional survey vocabulary
+available to BGE. Per-case construction drafts are research traces in original
+source notation. Ordinary translations follow the skill: complete Tujia first,
+tone-marked Pinyin and IPA, with one final quality note.
+
+[逐例审阅 60 个最终候选译式（调号拼音与 IPA）](docs/evaluation/compositional/challenge-translations.md)。

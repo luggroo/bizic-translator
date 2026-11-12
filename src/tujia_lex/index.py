@@ -7,6 +7,7 @@ import shutil
 import tempfile
 import time
 import unicodedata
+from functools import lru_cache
 from collections import Counter
 from pathlib import Path
 
@@ -127,7 +128,7 @@ class Index:
         if mode == "semantic":
             if encoder is None:
                 raise ValueError("Semantic retrieval needs a real model encoder")
-            for field in ["model", "pooling", "normalize", "query_instruction", "max_length", "revision"]:
+            for field in ["model", "pooling", "normalize", "query_instruction", "max_length", "revision", "weights_sha256"]:
                 if encoder.identity.get(field) != self.manifest["model"].get(field):
                     raise ValueError(f"Model/index mismatch: {field}; use the indexing model")
             q = encoder.encode([query], query=True)[0]
@@ -158,3 +159,9 @@ class Index:
             if len(results) == top_k:
                 break
         return results
+
+
+@lru_cache(maxsize=2)
+def load_index(path):
+    """Reuse verified immutable indexes in a long-lived retrieval session."""
+    return Index(path)

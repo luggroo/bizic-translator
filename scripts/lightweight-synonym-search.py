@@ -9,9 +9,14 @@ from __future__ import annotations
 import argparse
 import importlib.util
 import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
+from tujia_lex.query_plan import plan
+from tujia_lex.static import StaticLexicon
+
 DEFAULT_LEXICON = ROOT / "skills/translate-tujia/lexicon"
 DEFAULT_CONCEPTS = ROOT / "skills/tujia-synonym-lite/concepts.json"
 
@@ -30,24 +35,10 @@ normalize = _module.normalize
 def candidate_queries(query: str, concept_map: dict, related: str = "", max_queries: int = 10):
     if not 1 <= max_queries <= 12:
         raise ValueError("max_queries must be 1..12")
-    key = normalize(query)
-    if not key:
-        raise ValueError("query cannot be empty")
-    concept = concept_map.get("concepts", {}).get(query) or concept_map.get("concepts", {}).get(key, {})
-    items = [{"q": query, "relation": "exact"}] + concept.get("candidates", [])
-    if related:
-        items += [{"q": x.strip(), "relation": "user_or_skill_generated"} for x in related.split(",")]
-    selected, seen = [], set()
-    for item in items:
-        q = item["q"].strip()
-        norm = normalize(q)
-        if not norm or norm in seen:
-            continue
-        seen.add(norm)
-        selected.append({"query": q, "relation": item.get("relation", "related")})
-        if len(selected) >= max_queries:
-            break
-    return concept, selected
+    concept = concept_map.get("concepts", {}).get(query, {})
+    shared = plan(query, related=[x.strip() for x in related.split(",") if x.strip()],
+                  max_queries=max_queries)
+    return concept, [{"query": q.query, "relation": q.relation} for q in shared.queries]
 
 
 def source_priority(canonical: str) -> int:
@@ -79,13 +70,17 @@ def run(query: str, directory: Path, concept_path: Path, related: str = "",
                 "locator", "source_ref")
     field_idx = {field: fields.index(field) for field in required}
     concept, queries = candidate_queries(query, concepts, related, max_queries)
+    shared = plan(query, dialect=dialect, related=[x.strip() for x in related.split(",") if x.strip()],
+                  max_queries=max_queries)
+    lexicon = StaticLexicon(directory)
     results = []
     for candidate in queries:
         # Exact matching; lookup validates the SHA-256 and file sizes before returning rows.
-        raw_rows = lookup(directory, candidate["query"], limit=100)
+        cached_rows = lexicon._bucket(_module.bucket_of(candidate["query"]))
+        raw_rows = cached_rows.get(normalize(candidate["query"]), [])[:100]
         matches = []
         for raw in raw_rows:
-            row = {name: raw[i] for name, i in field_idx.items()}
+            row = dict(zip(fields, raw))
             if not is_in_dialect(str(row["dialect"]), dialect):
                 continue
             meta = manifest.get("sources", {}).get(row["source"], {})
@@ -107,6 +102,7 @@ def run(query: str, directory: Path, concept_path: Path, related: str = "",
         "embedding_run": False,
         "cosine_similarity": None,
         "query": query,
+        "query_plan": shared.to_dict(),
         "concept_meaning": concept.get("meaning", ""),
         "concept_warning": concept.get("caution", ""),
         "dictionary_revision": manifest.get("revision", ""),

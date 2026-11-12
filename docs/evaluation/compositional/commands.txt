@@ -1,0 +1,28 @@
+# Fresh execution in /workspace/bizic-translator; Python 3.12.14, CPU, 4 threads.
+# Network commands used the managed proxy; model weights/index remain ignored.
+git clone https://github.com/luggroo/bizic-translator.git /workspace/bizic-translator
+git clone https://github.com/luggroo/bizic-dictionary.git /workspace/bizic-dictionary
+git -C /workspace/bizic-dictionary rev-parse HEAD
+# Source revision: 072046c39261cf536e0ce29f06779cd3eeb99219
+# For later reproduction, checkout this revision before building either asset.
+python -m venv .venv
+.venv/bin/python -m pip install 'torch==2.7.1+cpu' --index-url https://download.pytorch.org/whl/cpu
+.venv/bin/python -m pip install -r requirements-evaluation.txt 'setuptools>=68'
+.venv/bin/python -m pip install --no-build-isolation --no-deps -e .
+.venv/bin/python scripts/download-embedding-model.py
+.venv/bin/tujia-lex build --repo /workspace/bizic-dictionary --model-path .cache/models/bge-base-zh-v1.5 --output .cache/bge-index --batch-size 32 --threads 4
+# Full build: 271.88 seconds, 12,593 newly encoded texts, no reused embeddings.
+# Existing checked-in static manifest is already at the exact same revision.
+# If rebuilding the static asset elsewhere:
+# .venv/bin/python scripts/export-readable-lexicon.py build --source /workspace/bizic-dictionary/site/dictionary.json.gz --metadata-source /workspace/bizic-dictionary/site/data.json.gz --output skills/translate-tujia/lexicon --revision 072046c39261cf536e0ce29f06779cd3eeb99219
+.venv/bin/python scripts/verify-challenge-gold.py --repo /workspace/bizic-dictionary
+.venv/bin/python scripts/evaluate-compositional-retrieval.py --index .cache/bge-index --model-path .cache/models/bge-base-zh-v1.5
+.venv/bin/python scripts/render-compositional-evaluation.py
+.venv/bin/python scripts/render-challenge-translations.py --data-root /workspace/bizic-dictionary
+.venv/bin/python -m pytest tests --data-root /workspace/bizic-dictionary --model-path .cache/models/bge-base-zh-v1.5 -q
+.venv/bin/python scripts/check-grammar-skill.py
+# Production CLI checks, including original raw neighbors and plan execution:
+.venv/bin/tujia-lex plan 路人 --route C --index .cache/bge-index --model-path .cache/models/bge-base-zh-v1.5
+.venv/bin/tujia-lex plan 饮料 --route D
+.venv/bin/tujia-lex plan 经济损失 --route E --index .cache/bge-index --model-path .cache/models/bge-base-zh-v1.5
+# Verify the committed run against results.json implementation/dataset digests.

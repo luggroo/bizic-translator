@@ -1,0 +1,397 @@
+[
+  {
+    "route": "C",
+    "expression": "路人",
+    "queries": [
+      "路人",
+      "走",
+      "路",
+      "人",
+      "走路的人"
+    ],
+    "cost": {
+      "query_count": 5,
+      "unique_queries": 5,
+      "engine_calls": 5,
+      "query_encodings": 5,
+      "requested_candidates": 100,
+      "candidate_count": 100,
+      "unique_candidates": 71,
+      "seconds": 0.800665244999891
+    },
+    "composition": {
+      "family": "event_agent",
+      "draft_source_forms": "la⁴ hhi² mā",
+      "selected": {
+        "predicate": {
+          "term": "hhi²",
+          "attestation_id": "stedt-rn-454319",
+          "source": {
+            "id": "stedt-39f4cd9a6b",
+            "canonical_id": "brassett-2006",
+            "title": "STEDT · Brassett 06 Tujia",
+            "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+            "locator": "STEDT rn 454319 · 原文定位 4.3",
+            "attestation_id": "stedt-rn-454319",
+            "source_ref": "4.3"
+          },
+          "notations": {
+            "brassett": [
+              "hhi²"
+            ],
+            "ipa": [
+              "ɣɨ²⁴"
+            ]
+          },
+          "entry_id": "w949",
+          "dialect": "north",
+          "locations": [],
+          "record_id": "lex:w949:8973901d9927755c"
+        },
+        "location": {
+          "term": "la⁴",
+          "attestation_id": "stedt-rn-454662",
+          "source": {
+            "id": "stedt-39f4cd9a6b",
+            "canonical_id": "brassett-2006",
+            "title": "STEDT · Brassett 06 Tujia",
+            "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+            "locator": "STEDT rn 454662 · 原文定位 5.1",
+            "attestation_id": "stedt-rn-454662",
+            "source_ref": "5.1"
+          },
+          "notations": {
+            "brassett": [
+              "la⁴"
+            ],
+            "ipa": [
+              "la⁵¹"
+            ]
+          },
+          "entry_id": "w1224",
+          "dialect": "north",
+          "locations": [],
+          "record_id": "lex:w1224:a1efde10e9d64240"
+        },
+        "head": {
+          "term": "luo⁴",
+          "attestation_id": "stedt-rn-453974",
+          "source": {
+            "id": "stedt-39f4cd9a6b",
+            "canonical_id": "brassett-2006",
+            "title": "STEDT · Brassett 06 Tujia",
+            "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+            "locator": "STEDT rn 453974 · 原文定位 2.5",
+            "attestation_id": "stedt-rn-453974",
+            "source_ref": "2.5"
+          },
+          "notations": {
+            "brassett": [
+              "luo⁴"
+            ],
+            "ipa": [
+              "luɔ⁵¹"
+            ]
+          },
+          "entry_id": "w1421",
+          "dialect": "north",
+          "locations": [],
+          "record_id": "lex:w1421:7715588328e4c903"
+        }
+      },
+      "missing_components": [],
+      "roles": {
+        "head": "agent",
+        "agent": "head",
+        "patient": "unspecified"
+      },
+      "features": {
+        "nominalization": "person"
+      },
+      "morphology": [
+        {
+          "form": "mā",
+          "function": "human agent NMLZ /ma⁵⁵/; not an object marker"
+        }
+      ],
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-24-103",
+        "citation": "Brassett 2006:141–142 §8.1; Tian:443",
+        "pattern": "arguments + V + ma /ma⁵⁵/; human agent gap",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      },
+      "lexical_complete": true,
+      "construction_supported": true,
+      "surface_complete": true,
+      "unresolved_realization": [],
+      "meaning_losses": [],
+      "notation": "audit uses unchanged lexical source forms + labeled morphology; not synchronized Pinyin/IPA output"
+    },
+    "raw_top3": [
+      {
+        "id": "lex:w1266:6fc108bda6c3af07",
+        "zh": "修路工",
+        "score": 0.5535602569580078
+      },
+      {
+        "id": "lex:w1266:9fc664379dccd193",
+        "zh": "修路工",
+        "score": 0.5535602569580078
+      },
+      {
+        "id": "lex:stedt-rn-346957:ed10b0f267d4768b",
+        "zh": "路",
+        "score": 0.5216972231864929
+      }
+    ]
+  },
+  {
+    "route": "D",
+    "expression": "饮料",
+    "queries": [
+      "饮料",
+      "喝",
+      "东西",
+      "喝的东西"
+    ],
+    "cost": {
+      "query_count": 4,
+      "unique_queries": 4,
+      "engine_calls": 4,
+      "query_encodings": 0,
+      "requested_candidates": 80,
+      "candidate_count": 19,
+      "unique_candidates": 11,
+      "seconds": 0.0078647400000591
+    },
+    "composition": {
+      "family": "event_object",
+      "draft_source_forms": "hu³ ci",
+      "selected": {
+        "predicate": {
+          "term": "hu³",
+          "attestation_id": "stedt-rn-454324",
+          "source": {
+            "id": "stedt-39f4cd9a6b",
+            "canonical_id": "brassett-2006",
+            "title": "STEDT · Brassett 06 Tujia",
+            "attestation_id": "stedt-rn-454324",
+            "locator": "STEDT rn 454324 · 原文定位 4.3",
+            "source_ref": "4.3"
+          },
+          "notations": {
+            "ye": [
+              "hur"
+            ],
+            "brassett": [
+              "hu³"
+            ],
+            "ipa": [
+              "fu²¹"
+            ]
+          },
+          "entry_id": "stedt-rn-454324",
+          "dialect": "north",
+          "locations": [],
+          "record_id": "static:stedt-rn-454324"
+        },
+        "head": {
+          "term": "ye³",
+          "attestation_id": "stedt-rn-454259",
+          "source": {
+            "id": "stedt-39f4cd9a6b",
+            "canonical_id": "brassett-2006",
+            "title": "STEDT · Brassett 06 Tujia",
+            "attestation_id": "stedt-rn-454259",
+            "locator": "STEDT rn 454259 · 原文定位 4.2",
+            "source_ref": "4.2"
+          },
+          "notations": {
+            "ye": [
+              "yer"
+            ],
+            "brassett": [
+              "ye³"
+            ],
+            "ipa": [
+              "jɤ²¹"
+            ]
+          },
+          "entry_id": "stedt-rn-454259",
+          "dialect": "north",
+          "locations": [],
+          "record_id": "static:stedt-rn-454259"
+        }
+      },
+      "missing_components": [],
+      "roles": {
+        "head": "patient",
+        "agent": "unspecified",
+        "patient": "head"
+      },
+      "features": {
+        "nominalization": "object"
+      },
+      "morphology": [
+        {
+          "form": "ci",
+          "function": "object NMLZ /tsʰi/; lexical tone requires source-specific form"
+        }
+      ],
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-24-102",
+        "citation": "Tian:444; Lu et al. 2021:425; Brassett 2006:141–143",
+        "pattern": "V + ci for consumed/affected object; xi for broader associated thing",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      },
+      "lexical_complete": true,
+      "construction_supported": true,
+      "surface_complete": false,
+      "unresolved_realization": [
+        "nominalizer tone or predicate-specific TAM realization needs review"
+      ],
+      "meaning_losses": [],
+      "notation": "audit uses unchanged lexical source forms + labeled morphology; not synchronized Pinyin/IPA output"
+    },
+    "raw_top3": []
+  },
+  {
+    "route": "E",
+    "expression": "经济损失",
+    "queries": [
+      "经济损失",
+      "经济损失",
+      "钱",
+      "钱",
+      "丢失",
+      "丢失",
+      "钱丢失",
+      "钱丢失",
+      "财物",
+      "财物",
+      "损失",
+      "损失",
+      "失去",
+      "失去",
+      "亏损",
+      "亏损",
+      "受损失",
+      "受损失"
+    ],
+    "cost": {
+      "query_count": 18,
+      "unique_queries": 9,
+      "engine_calls": 18,
+      "query_encodings": 9,
+      "requested_candidates": 360,
+      "candidate_count": 199,
+      "unique_candidates": 104,
+      "seconds": 1.7430263500000365
+    },
+    "composition": {
+      "family": "abstract_event",
+      "draft_source_forms": "tuan³ qi²kui¹ xi",
+      "selected": {
+        "resource": {
+          "term": "tuan³",
+          "attestation_id": "stedt-rn-454681",
+          "source": {
+            "id": "stedt-39f4cd9a6b",
+            "canonical_id": "brassett-2006",
+            "title": "STEDT · Brassett 06 Tujia",
+            "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+            "locator": "STEDT rn 454681 · 原文定位 5.2",
+            "attestation_id": "stedt-rn-454681",
+            "source_ref": "5.2"
+          },
+          "notations": {
+            "brassett": [
+              "tuan³",
+              "tuan³"
+            ],
+            "ipa": [
+              "tʰuɛn²¹",
+              "tʰuɛn²¹"
+            ]
+          },
+          "entry_id": "w2331",
+          "dialect": "north",
+          "locations": [],
+          "record_id": "lex:w2331:06ec9fb9af646926"
+        },
+        "predicate": {
+          "term": "qi²kui¹",
+          "attestation_id": "stedt-rn-454677",
+          "source": {
+            "id": "stedt-39f4cd9a6b",
+            "canonical_id": "brassett-2006",
+            "title": "STEDT · Brassett 06 Tujia",
+            "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+            "locator": "STEDT rn 454677 · 原文定位 5.2",
+            "attestation_id": "stedt-rn-454677",
+            "source_ref": "5.2"
+          },
+          "notations": {
+            "ye": [
+              "qifkuix",
+              "qifkuix"
+            ],
+            "brassett": [
+              "qi²kui¹",
+              "qi²kui¹"
+            ],
+            "ipa": [
+              "tɕʰi²⁴kʰuei⁵⁵",
+              "tɕʰi²⁴kʰuei⁵⁵"
+            ]
+          },
+          "entry_id": "stedt-rn-454677",
+          "dialect": "north",
+          "locations": [],
+          "record_id": "lex:stedt-rn-454677:72215f386befd530"
+        }
+      },
+      "missing_components": [],
+      "roles": {
+        "patient": "钱",
+        "event": "loss"
+      },
+      "features": {},
+      "morphology": [
+        {
+          "form": "xi",
+          "function": "event nominalization; not substitution of resource for event"
+        }
+      ],
+      "grammar": {
+        "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-24-101",
+        "citation": "Brassett 2006:141–143; reference grammar §6.2",
+        "pattern": "resource as event argument + loss/owing/change predicate; xi may nominalize event",
+        "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      },
+      "lexical_complete": true,
+      "construction_supported": true,
+      "surface_complete": true,
+      "unresolved_realization": [],
+      "meaning_losses": [],
+      "notation": "audit uses unchanged lexical source forms + labeled morphology; not synchronized Pinyin/IPA output"
+    },
+    "raw_top3": [
+      {
+        "id": "lex:stedt-rn-288919:b78ea7aaaf5c029b",
+        "zh": "经济",
+        "score": 0.4650711715221405
+      },
+      {
+        "id": "lex:w1058:61609984cd762f20",
+        "zh": "经济",
+        "score": 0.4408387243747711
+      },
+      {
+        "id": "lex:stedt-rn-422188:97ae42cee3075ed7",
+        "zh": "房屋损坏；塌陷",
+        "score": 0.4014589190483093
+      }
+    ]
+  }
+]

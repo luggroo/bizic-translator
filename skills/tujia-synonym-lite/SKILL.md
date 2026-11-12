@@ -62,3 +62,17 @@ For a short input, query the original term, a plain paraphrase, the core predica
 ```
 
 This subskill is a fallback **retrieval workflow**; `tujia-lex` BGE remains the preferred retrieval implementation whenever its model and compatible full index can genuinely run.
+
+## Shared executable planner
+
+The lightweight script now calls `src/tujia_lex/query_plan.py`, the same planner as
+`tujia-lex plan --route C`. `tujia-lex plan --route D` provides the complete static
+route, including candidate selection and construction audit. `concepts.json`
+remains a source of examples; the executable route uses productive frames and an
+explicit `Interpretation` for new contextual meanings. Optional `--related`
+queries add lookup candidates without changing semantic roles or polarity.
+
+A no-hit compound is not a missing semantic field. Check the planned predicates
+and arguments, source gloss variations and dictionary/survey coverage separately.
+Keep the source-linked query trace internal during ordinary translation and give
+the complete proposed translation first.

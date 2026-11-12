@@ -22,3 +22,7 @@ dist/
 !/scripts/render-semantic-evaluation.py
 !/scripts/tujia-lex-spelling.cjs
 !/scripts/package-translator.py
+!/scripts/evaluate-compositional-retrieval.py
+!/scripts/verify-challenge-gold.py
+!/scripts/render-compositional-evaluation.py
+!/scripts/render-challenge-translations.py
