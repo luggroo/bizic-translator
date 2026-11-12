@@ -9,7 +9,7 @@ Build a fluent, complete translation using attested Tujia vocabulary and product
 
 ## Immediate alternatives / 每条禁令都必须有下一步
 
-**Operational rule:** A warning/prohibition in this Skill or its referenced subskills is a **routing condition**, never a stopping condition. Apply the matching row of [`references/recovery-playbook.md`](references/recovery-playbook.md) **immediately**; do not repeat the warning or run open-ended searches. Whenever adding a new *never / do not / avoid / cannot* rule, write its **`Instead →`** action (command, file, alternative construction or usable final output) in the same bullet. A bare prohibition fails Skill QA.
+**Operational rule:** A warning/prohibition in this Skill or its referenced subskills is a **routing condition**, never a stopping condition. Apply the matching row of [`references/recovery-playbook.md`](references/recovery-playbook.md) **immediately**; do not repeat the warning or run open-ended searches. Whenever adding a new *never / do not / avoid / cannot* rule, write its **`Instead →`** action (command, file, alternative construction or usable final output) in the same bullet. Treat a bare prohibition as incomplete: add its explicit alternative before shipping.
 
 | Encounter | Instead → concrete next step |
 | --- | --- |
