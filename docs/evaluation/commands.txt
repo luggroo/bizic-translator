@@ -1,0 +1,9 @@
+Actual publication verification commands, 2026-11-12 UTC
+
+.venv/bin/python scripts/evaluate-semantic-retrieval.py --index .cache/bge-index --model-path .cache/models/bge-base-zh-v1.5
+.venv/bin/python -m pytest tests --data-root .cache/bizic-data --model-path .cache/models/bge-base-zh-v1.5 -q
+.venv/bin/python scripts/render-semantic-evaluation.py
+
+The pinned public dictionary download is recorded in dictionary-fetch.json.
+The earlier full real-model encoding progress is preserved in full-build.log.
+Model weights, the external source checkout and all generated indexes remain local.

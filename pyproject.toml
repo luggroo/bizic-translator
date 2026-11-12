@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tujia-lex"
+version = "0.1.0"
+description = "Provenance-preserving Chinese semantic retrieval for Tujia translation"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26,<3", "torch>=2.6,<3", "transformers==4.51.3", "huggingface-hub==0.30.2", "safetensors>=0.5.3"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<9"]
+
+[project.scripts]
+tujia-lex = "tujia_lex.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["model: runs real pretrained inference; needs --model-path"]

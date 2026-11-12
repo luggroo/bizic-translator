@@ -1,0 +1,7 @@
+# Tested with Python 3.12.14. Install CPU torch separately using the README command.
+numpy==2.3.5
+transformers==4.51.3
+huggingface-hub==0.30.2
+tokenizers==0.21.4
+safetensors==0.5.3
+pytest==8.3.5

@@ -1,0 +1,24 @@
+.cache/
+.local/
+.venv
+__pycache__/
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+*.npy
+*.bin
+*.safetensors
+*.zip
+
+# Only the reusable evaluation is published; local case studies stay local.
+/docs/*
+!/docs/semantic-retrieval-evaluation.md
+!/docs/evaluation/
+/scripts/*
+!/scripts/download-embedding-model.py
+!/scripts/evaluate-semantic-retrieval.py
+!/scripts/fetch-dictionary.py
+!/scripts/render-semantic-evaluation.py
+!/scripts/tujia-lex-spelling.cjs
+!/scripts/package-translator.py
