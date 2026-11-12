@@ -246,7 +246,9 @@ def interpret(expression):
     if family in {'function_object', 'role_relative', 'negative_relative'}:
         for c in components:
             if c.key == 'head':
-                c.required = True
+                implicit = c.query == '东西' and family in {'function_object', 'negative_relative'}
+                c.required = not implicit
+                features['head_realization'] = 'implicit' if implicit else 'overt'
     return Interpretation(text, family, components, roles, features, list(dict.fromkeys(paraphrases)), losses)
 
 

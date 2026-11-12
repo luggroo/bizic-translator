@@ -617,9 +617,9 @@
     {
       "id": "c10",
       "expression": "开瓶器",
-      "pinyin_candidate": "tīkū tóng niě yě",
-      "ipa_candidate": "thi⁵⁵khu⁵⁵ tʰɔŋ²⁴ ɲie²¹ jɤ²¹",
-      "meaning": "打开＋瓶＋东西；中心词角色：用途物",
+      "pinyin_candidate": "tīkū tóng niexi",
+      "ipa_candidate": "thi⁵⁵khu⁵⁵ tʰɔŋ²⁴ nie ɕi",
+      "meaning": "打开＋瓶；中心词角色：用途物",
       "status": [
         "词汇齐全",
         "形态／搭配待核"
@@ -639,7 +639,6 @@
           "method": "source IPA converted to display spelling",
           "original_notations": {
             "ipa": [
-              "thi⁵⁵khu⁵⁵",
               "thi⁵⁵khu⁵⁵"
             ]
           }
@@ -658,42 +657,222 @@
               "tʰɔŋ²⁴"
             ]
           }
-        },
-        "⟪2⟫": {
-          "pinyin": "yě",
-          "ipa": "jɤ²¹",
-          "method": "source-profile conversion",
-          "original_notations": {
-            "ye": [
-              "yer",
-              "yer"
-            ],
-            "brassett": [
-              "ye³",
-              "ye³"
-            ],
-            "ipa": [
-              "jɤ²¹",
-              "jɤ²¹"
-            ]
-          }
         }
       },
       "grammar": {
         "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
-        "citation": "Tian:623; Brassett 2006:142–147",
-        "pattern": "[arguments + V] + nie (xi) + object head; purpose need not be patient",
+        "citation": "Tian:623; Brassett 2006:142–147; Feng 2025:10 ex.27; Xiang 2026:14,16",
+        "pattern": "[arguments + predicate] + niexi; implicit thing head",
         "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
-      }
+      },
+      "original_measured_composition": {
+        "family": "function_object",
+        "draft_source_forms": "thi⁵⁵khu⁵⁵ tong² niě ye³",
+        "selected": {
+          "predicate": {
+            "term": "tong²",
+            "attestation_id": "stedt-rn-454415",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 454415 · 原文定位 4.3",
+              "attestation_id": "stedt-rn-454415",
+              "source_ref": "4.3"
+            },
+            "notations": {
+              "brassett": [
+                "tong²",
+                "tong²"
+              ],
+              "ipa": [
+                "tʰɔŋ²⁴",
+                "tʰɔŋ²⁴"
+              ]
+            },
+            "entry_id": "w2293",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:w2293:9def97b18c6dcfd1"
+          },
+          "patient": {
+            "term": "thi⁵⁵khu⁵⁵",
+            "attestation_id": "stedt-rn-288840",
+            "source": {
+              "id": "stedt-cb523fc3dc",
+              "canonical_id": "stedt-cb523fc3dc",
+              "title": "STEDT · Tian 86",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 288840 · 原文定位 未标明",
+              "attestation_id": "stedt-rn-288840",
+              "source_ref": ""
+            },
+            "notations": {
+              "ipa": [
+                "thi⁵⁵khu⁵⁵",
+                "thi⁵⁵khu⁵⁵"
+              ]
+            },
+            "entry_id": "stedt-rn-288840",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:stedt-rn-288840:3382426e013839b9"
+          },
+          "head": {
+            "term": "ye³",
+            "attestation_id": "stedt-rn-454259",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 454259 · 原文定位 4.2",
+              "attestation_id": "stedt-rn-454259",
+              "source_ref": "4.2"
+            },
+            "notations": {
+              "ye": [
+                "yer",
+                "yer"
+              ],
+              "brassett": [
+                "ye³",
+                "ye³"
+              ],
+              "ipa": [
+                "jɤ²¹",
+                "jɤ²¹"
+              ]
+            },
+            "entry_id": "stedt-rn-454259",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:stedt-rn-454259:052001a25960a044"
+          }
+        },
+        "missing_components": [],
+        "roles": {
+          "head": "instrument",
+          "agent": "generic user"
+        },
+        "features": {
+          "nominalization": "purpose_object"
+        },
+        "morphology": [
+          {
+            "form": "niě",
+            "function": "relative linker; head role retained in graph"
+          }
+        ],
+        "grammar": {
+          "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
+          "citation": "Tian:623; Brassett 2006:142–147",
+          "pattern": "[arguments + V] + nie (xi) + object head; purpose need not be patient",
+          "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+        },
+        "lexical_complete": true,
+        "construction_supported": false,
+        "surface_complete": false,
+        "unresolved_realization": [
+          "source/locality compatibility needs review"
+        ],
+        "meaning_losses": [],
+        "notation": "audit uses unchanged lexical source forms + labeled morphology; not synchronized Pinyin/IPA output"
+      },
+      "reviewed_composition": {
+        "family": "function_object",
+        "draft_source_forms": "thi⁵⁵khu⁵⁵ tong² niexi",
+        "selected": {
+          "predicate": {
+            "term": "tong²",
+            "attestation_id": "stedt-rn-454415",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 454415 · 原文定位 4.3",
+              "attestation_id": "stedt-rn-454415",
+              "source_ref": "4.3"
+            },
+            "notations": {
+              "brassett": [
+                "tong²"
+              ],
+              "ipa": [
+                "tʰɔŋ²⁴"
+              ]
+            },
+            "entry_id": "w2293",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:w2293:9def97b18c6dcfd1"
+          },
+          "patient": {
+            "term": "thi⁵⁵khu⁵⁵",
+            "attestation_id": "stedt-rn-288840",
+            "source": {
+              "id": "stedt-cb523fc3dc",
+              "canonical_id": "stedt-cb523fc3dc",
+              "title": "STEDT · Tian 86",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 288840 · 原文定位 未标明",
+              "attestation_id": "stedt-rn-288840",
+              "source_ref": ""
+            },
+            "notations": {
+              "ipa": [
+                "thi⁵⁵khu⁵⁵"
+              ]
+            },
+            "entry_id": "stedt-rn-288840",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:stedt-rn-288840:3382426e013839b9"
+          }
+        },
+        "missing_components": [],
+        "roles": {
+          "head": "instrument",
+          "agent": "generic user"
+        },
+        "features": {
+          "nominalization": "purpose_object"
+        },
+        "morphology": [
+          {
+            "form": "niexi",
+            "function": "independent LNK–NMLZ; Feng 2025:10 ex.27; Xiang 2026:14,16; role supplied by predicate/context; source tone pending"
+          }
+        ],
+        "grammar": {
+          "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
+          "citation": "Tian:623; Brassett 2006:142–147; Feng 2025:10 ex.27; Xiang 2026:14,16",
+          "pattern": "[arguments + predicate] + niexi; implicit thing head",
+          "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+        },
+        "lexical_complete": true,
+        "construction_supported": false,
+        "surface_complete": false,
+        "unresolved_realization": [
+          "independent nominalization: source-specific tone and contextual role require review",
+          "source/locality compatibility needs review"
+        ],
+        "meaning_losses": [],
+        "notation": "audit uses unchanged lexical source forms + labeled morphology; not synchronized Pinyin/IPA output"
+      },
+      "review_basis": "泛称事物中心词改为独立名物化；使用原实验候选重新组合，未重新检索。niexi 保留无调形式，不跨来源补调。"
     },
     {
       "id": "c11",
       "expression": "清洁用品",
-      "pinyin_candidate": "wō niě yě",
-      "ipa_candidate": "wɔ⁵⁵ ɲie²¹ jɤ²¹",
-      "meaning": "洗＋东西；中心词角色：用途物",
+      "pinyin_candidate": "wō niexi",
+      "ipa_candidate": "wɔ⁵⁵ nie ɕi",
+      "meaning": "洗；中心词角色：用途物",
       "status": [
-        "词汇齐全"
+        "词汇齐全",
+        "形态／搭配待核"
       ],
       "roles": {
         "head": "instrument",
@@ -718,44 +897,175 @@
               "wɔ⁵⁵"
             ]
           }
-        },
-        "⟪1⟫": {
-          "pinyin": "yě",
-          "ipa": "jɤ²¹",
-          "method": "source-profile conversion",
-          "original_notations": {
-            "ye": [
-              "yer",
-              "yer"
-            ],
-            "brassett": [
-              "ye³",
-              "ye³"
-            ],
-            "ipa": [
-              "jɤ²¹",
-              "jɤ²¹"
-            ]
-          }
         }
       },
       "grammar": {
         "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
-        "citation": "Tian:623; Brassett 2006:142–147",
-        "pattern": "[arguments + V] + nie (xi) + object head; purpose need not be patient",
+        "citation": "Tian:623; Brassett 2006:142–147; Feng 2025:10 ex.27; Xiang 2026:14,16",
+        "pattern": "[arguments + predicate] + niexi; implicit thing head",
         "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
-      }
+      },
+      "original_measured_composition": {
+        "family": "function_object",
+        "draft_source_forms": "wo¹ niě ye³",
+        "selected": {
+          "predicate": {
+            "term": "wo¹",
+            "attestation_id": "stedt-rn-454423",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 454423 · 原文定位 4.3",
+              "attestation_id": "stedt-rn-454423",
+              "source_ref": "4.3"
+            },
+            "notations": {
+              "brassett": [
+                "wo¹",
+                "wo¹"
+              ],
+              "ipa": [
+                "wɔ⁵⁵",
+                "wɔ⁵⁵"
+              ]
+            },
+            "entry_id": "w2373",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:w2373:120cfeee1673cb23"
+          },
+          "head": {
+            "term": "ye³",
+            "attestation_id": "stedt-rn-454259",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 454259 · 原文定位 4.2",
+              "attestation_id": "stedt-rn-454259",
+              "source_ref": "4.2"
+            },
+            "notations": {
+              "ye": [
+                "yer",
+                "yer"
+              ],
+              "brassett": [
+                "ye³",
+                "ye³"
+              ],
+              "ipa": [
+                "jɤ²¹",
+                "jɤ²¹"
+              ]
+            },
+            "entry_id": "stedt-rn-454259",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:stedt-rn-454259:052001a25960a044"
+          }
+        },
+        "missing_components": [],
+        "roles": {
+          "head": "instrument",
+          "agent": "generic user"
+        },
+        "features": {
+          "nominalization": "purpose_object"
+        },
+        "morphology": [
+          {
+            "form": "niě",
+            "function": "relative linker; head role retained in graph"
+          }
+        ],
+        "grammar": {
+          "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
+          "citation": "Tian:623; Brassett 2006:142–147",
+          "pattern": "[arguments + V] + nie (xi) + object head; purpose need not be patient",
+          "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+        },
+        "lexical_complete": true,
+        "construction_supported": true,
+        "surface_complete": true,
+        "unresolved_realization": [],
+        "meaning_losses": [],
+        "notation": "audit uses unchanged lexical source forms + labeled morphology; not synchronized Pinyin/IPA output"
+      },
+      "reviewed_composition": {
+        "family": "function_object",
+        "draft_source_forms": "wo¹ niexi",
+        "selected": {
+          "predicate": {
+            "term": "wo¹",
+            "attestation_id": "stedt-rn-454423",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 454423 · 原文定位 4.3",
+              "attestation_id": "stedt-rn-454423",
+              "source_ref": "4.3"
+            },
+            "notations": {
+              "brassett": [
+                "wo¹",
+                "wo¹"
+              ],
+              "ipa": [
+                "wɔ⁵⁵",
+                "wɔ⁵⁵"
+              ]
+            },
+            "entry_id": "w2373",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:w2373:120cfeee1673cb23"
+          }
+        },
+        "missing_components": [],
+        "roles": {
+          "head": "instrument",
+          "agent": "generic user"
+        },
+        "features": {
+          "nominalization": "purpose_object"
+        },
+        "morphology": [
+          {
+            "form": "niexi",
+            "function": "independent LNK–NMLZ; Feng 2025:10 ex.27; Xiang 2026:14,16; role supplied by predicate/context; source tone pending"
+          }
+        ],
+        "grammar": {
+          "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
+          "citation": "Tian:623; Brassett 2006:142–147; Feng 2025:10 ex.27; Xiang 2026:14,16",
+          "pattern": "[arguments + predicate] + niexi; implicit thing head",
+          "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+        },
+        "lexical_complete": true,
+        "construction_supported": true,
+        "surface_complete": false,
+        "unresolved_realization": [
+          "independent nominalization: source-specific tone and contextual role require review"
+        ],
+        "meaning_losses": [],
+        "notation": "audit uses unchanged lexical source forms + labeled morphology; not synchronized Pinyin/IPA output"
+      },
+      "review_basis": "泛称事物中心词改为独立名物化；使用原实验候选重新组合，未重新检索。niexi 保留无调形式，不跨来源补调。"
     },
     {
       "id": "c12",
       "expression": "遮雨的东西",
-      "pinyin_candidate": "yǎn'gócě thaŋ33 niě yě",
-      "ipa_candidate": "jɛn²¹kuɔ²⁴tsʰɤ²¹ thaŋ³³ ɲie²¹ jɤ²¹",
-      "meaning": "挡＋雨＋东西；中心词角色：用途物",
+      "pinyin_candidate": "yǎn'gócě thaŋ33 niexi",
+      "ipa_candidate": "jɛn²¹kuɔ²⁴tsʰɤ²¹ thaŋ³³ nie ɕi",
+      "meaning": "雨水＋挡；拟指遮雨用品，未确认",
       "status": [
-        "词汇齐全",
-        "形态／搭配待核",
-        "含原记音"
+        "未通过：雨水／降雨语义及跨地点搭配待解决"
       ],
       "roles": {
         "head": "instrument",
@@ -773,11 +1083,9 @@
           "method": "source-profile conversion",
           "original_notations": {
             "brassett": [
-              "yan³guo²ce³",
               "yan³guo²ce³"
             ],
             "ipa": [
-              "jɛn²¹kuɔ²⁴tsʰɤ²¹",
               "jɛn²¹kuɔ²⁴tsʰɤ²¹"
             ]
           }
@@ -791,42 +1099,223 @@
               "thaŋ33"
             ]
           }
-        },
-        "⟪2⟫": {
-          "pinyin": "yě",
-          "ipa": "jɤ²¹",
-          "method": "source-profile conversion",
-          "original_notations": {
-            "ye": [
-              "yer",
-              "yer"
-            ],
-            "brassett": [
-              "ye³",
-              "ye³"
-            ],
-            "ipa": [
-              "jɤ²¹",
-              "jɤ²¹"
-            ]
-          }
         }
       },
       "grammar": {
         "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
-        "citation": "Tian:623; Brassett 2006:142–147",
-        "pattern": "[arguments + V] + nie (xi) + object head; purpose need not be patient",
+        "citation": "Tian:623; Brassett 2006:142–147; Feng 2025:10 ex.27; Xiang 2026:14,16",
+        "pattern": "[arguments + predicate] + niexi; implicit thing head",
         "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      },
+      "original_measured_composition": {
+        "family": "function_object",
+        "draft_source_forms": "yan³guo²ce³ thaŋ33 niě ye³",
+        "selected": {
+          "predicate": {
+            "term": "thaŋ33",
+            "attestation_id": "survey-word:60756:0811",
+            "source": {
+              "id": "yubao-60756",
+              "canonical_id": "yubao-60756",
+              "locator": "yubao-60756-1.json:words:0811"
+            },
+            "notations": {
+              "ipa": [
+                "thaŋ33"
+              ]
+            },
+            "entry_id": "survey-word:60756:0811",
+            "dialect": "north",
+            "locations": [
+              "仙仁（阳朝乡）"
+            ],
+            "record_id": "survey-word:60756:0811"
+          },
+          "patient": {
+            "term": "yan³guo²ce³",
+            "attestation_id": "stedt-rn-453495",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 453495 · 原文定位 1.1",
+              "attestation_id": "stedt-rn-453495",
+              "source_ref": "1.1"
+            },
+            "notations": {
+              "brassett": [
+                "yan³guo²ce³",
+                "yan³guo²ce³"
+              ],
+              "ipa": [
+                "jɛn²¹kuɔ²⁴tsʰɤ²¹",
+                "jɛn²¹kuɔ²⁴tsʰɤ²¹"
+              ]
+            },
+            "entry_id": "w2526",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:w2526:edbd7dd42dff7937"
+          },
+          "head": {
+            "term": "ye³",
+            "attestation_id": "stedt-rn-454259",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 454259 · 原文定位 4.2",
+              "attestation_id": "stedt-rn-454259",
+              "source_ref": "4.2"
+            },
+            "notations": {
+              "ye": [
+                "yer",
+                "yer"
+              ],
+              "brassett": [
+                "ye³",
+                "ye³"
+              ],
+              "ipa": [
+                "jɤ²¹",
+                "jɤ²¹"
+              ]
+            },
+            "entry_id": "stedt-rn-454259",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:stedt-rn-454259:052001a25960a044"
+          }
+        },
+        "missing_components": [],
+        "roles": {
+          "head": "instrument",
+          "agent": "unspecified",
+          "patient": "head"
+        },
+        "features": {
+          "nominalization": "purpose_object"
+        },
+        "morphology": [
+          {
+            "form": "niě",
+            "function": "relative linker; head role retained in graph"
+          }
+        ],
+        "grammar": {
+          "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
+          "citation": "Tian:623; Brassett 2006:142–147",
+          "pattern": "[arguments + V] + nie (xi) + object head; purpose need not be patient",
+          "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+        },
+        "lexical_complete": true,
+        "construction_supported": false,
+        "surface_complete": false,
+        "unresolved_realization": [
+          "source/locality compatibility needs review"
+        ],
+        "meaning_losses": [],
+        "notation": "audit uses unchanged lexical source forms + labeled morphology; not synchronized Pinyin/IPA output"
+      },
+      "reviewed_composition": {
+        "family": "function_object",
+        "draft_source_forms": "yan³guo²ce³ thaŋ33 niexi",
+        "selected": {
+          "predicate": {
+            "term": "thaŋ33",
+            "attestation_id": "survey-word:60756:0811",
+            "source": {
+              "id": "yubao-60756",
+              "canonical_id": "yubao-60756",
+              "locator": "yubao-60756-1.json:words:0811"
+            },
+            "notations": {
+              "ipa": [
+                "thaŋ33"
+              ]
+            },
+            "entry_id": "survey-word:60756:0811",
+            "dialect": "north",
+            "locations": [
+              "仙仁（阳朝乡）"
+            ],
+            "record_id": "survey-word:60756:0811"
+          },
+          "patient": {
+            "term": "yan³guo²ce³",
+            "attestation_id": "stedt-rn-453495",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 453495 · 原文定位 1.1",
+              "attestation_id": "stedt-rn-453495",
+              "source_ref": "1.1"
+            },
+            "notations": {
+              "brassett": [
+                "yan³guo²ce³"
+              ],
+              "ipa": [
+                "jɛn²¹kuɔ²⁴tsʰɤ²¹"
+              ]
+            },
+            "entry_id": "w2526",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:w2526:edbd7dd42dff7937"
+          }
+        },
+        "missing_components": [],
+        "roles": {
+          "head": "instrument",
+          "agent": "unspecified",
+          "patient": "head"
+        },
+        "features": {
+          "nominalization": "purpose_object"
+        },
+        "morphology": [
+          {
+            "form": "niexi",
+            "function": "independent LNK–NMLZ; Feng 2025:10 ex.27; Xiang 2026:14,16; role supplied by predicate/context; source tone pending"
+          }
+        ],
+        "grammar": {
+          "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
+          "citation": "Tian:623; Brassett 2006:142–147; Feng 2025:10 ex.27; Xiang 2026:14,16",
+          "pattern": "[arguments + predicate] + niexi; implicit thing head",
+          "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+        },
+        "lexical_complete": true,
+        "construction_supported": false,
+        "surface_complete": false,
+        "unresolved_realization": [
+          "independent nominalization: source-specific tone and contextual role require review",
+          "source/locality compatibility needs review"
+        ],
+        "meaning_losses": [],
+        "notation": "audit uses unchanged lexical source forms + labeled morphology; not synchronized Pinyin/IPA output"
+      },
+      "review_basis": "泛称事物中心词改为独立名物化；使用原实验候选重新组合，未重新检索。niexi 保留无调形式，不跨来源补调。",
+      "original_measured_candidate": {
+        "pinyin": "yǎn'gócě thaŋ33 niexi",
+        "ipa": "jɛn²¹kuɔ²⁴tsʰɤ²¹ thaŋ³³ nie ɕi"
       }
     },
     {
       "id": "c13",
       "expression": "储水容器",
-      "pinyin_candidate": "cě dō niě yě",
-      "ipa_candidate": "tsʰɤ²¹ tuɔ⁵⁵ ɲie²¹ jɤ²¹",
-      "meaning": "放＋水＋东西；中心词角色：用途物",
+      "pinyin_candidate": "cě dō niexi",
+      "ipa_candidate": "tsʰɤ²¹ tuɔ⁵⁵ nie ɕi",
+      "meaning": "放＋水；中心词角色：用途物",
       "status": [
-        "词汇齐全"
+        "词汇齐全",
+        "形态／搭配待核"
       ],
       "roles": {
         "head": "instrument",
@@ -870,42 +1359,237 @@
               "tsʰɤ²¹"
             ]
           }
-        },
-        "⟪2⟫": {
-          "pinyin": "yě",
-          "ipa": "jɤ²¹",
-          "method": "source-profile conversion",
-          "original_notations": {
-            "ye": [
-              "yer",
-              "yer"
-            ],
-            "brassett": [
-              "ye³",
-              "ye³"
-            ],
-            "ipa": [
-              "jɤ²¹",
-              "jɤ²¹"
-            ]
-          }
         }
       },
       "grammar": {
         "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
-        "citation": "Tian:623; Brassett 2006:142–147",
-        "pattern": "[arguments + V] + nie (xi) + object head; purpose need not be patient",
+        "citation": "Tian:623; Brassett 2006:142–147; Feng 2025:10 ex.27; Xiang 2026:14,16",
+        "pattern": "[arguments + predicate] + niexi; implicit thing head",
         "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
-      }
+      },
+      "original_measured_composition": {
+        "family": "function_object",
+        "draft_source_forms": "ce³ duo¹ niě ye³",
+        "selected": {
+          "predicate": {
+            "term": "duo¹",
+            "attestation_id": "stedt-rn-454301",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 454301 · 原文定位 4.3",
+              "attestation_id": "stedt-rn-454301",
+              "source_ref": "4.3"
+            },
+            "notations": {
+              "ye": [
+                "dox",
+                "dox"
+              ],
+              "brassett": [
+                "duo¹",
+                "duo¹"
+              ],
+              "ipa": [
+                "tuɔ⁵⁵",
+                "tuɔ⁵⁵"
+              ]
+            },
+            "entry_id": "stedt-rn-454301",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:stedt-rn-454301:377c5acf652a4ba1"
+          },
+          "patient": {
+            "term": "ce³",
+            "attestation_id": "stedt-rn-453517",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 453517 · 原文定位 1.2",
+              "attestation_id": "stedt-rn-453517",
+              "source_ref": "1.2"
+            },
+            "notations": {
+              "brassett": [
+                "ce³",
+                "ce³"
+              ],
+              "ipa": [
+                "tsʰɤ²¹",
+                "tsʰɤ²¹"
+              ]
+            },
+            "entry_id": "w395",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:w395:2257af1fba23e629"
+          },
+          "head": {
+            "term": "ye³",
+            "attestation_id": "stedt-rn-454259",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 454259 · 原文定位 4.2",
+              "attestation_id": "stedt-rn-454259",
+              "source_ref": "4.2"
+            },
+            "notations": {
+              "ye": [
+                "yer",
+                "yer"
+              ],
+              "brassett": [
+                "ye³",
+                "ye³"
+              ],
+              "ipa": [
+                "jɤ²¹",
+                "jɤ²¹"
+              ]
+            },
+            "entry_id": "stedt-rn-454259",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:stedt-rn-454259:052001a25960a044"
+          }
+        },
+        "missing_components": [],
+        "roles": {
+          "head": "instrument",
+          "agent": "generic user"
+        },
+        "features": {
+          "nominalization": "purpose_object"
+        },
+        "morphology": [
+          {
+            "form": "niě",
+            "function": "relative linker; head role retained in graph"
+          }
+        ],
+        "grammar": {
+          "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
+          "citation": "Tian:623; Brassett 2006:142–147",
+          "pattern": "[arguments + V] + nie (xi) + object head; purpose need not be patient",
+          "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+        },
+        "lexical_complete": true,
+        "construction_supported": true,
+        "surface_complete": true,
+        "unresolved_realization": [],
+        "meaning_losses": [],
+        "notation": "audit uses unchanged lexical source forms + labeled morphology; not synchronized Pinyin/IPA output"
+      },
+      "reviewed_composition": {
+        "family": "function_object",
+        "draft_source_forms": "ce³ duo¹ niexi",
+        "selected": {
+          "predicate": {
+            "term": "duo¹",
+            "attestation_id": "stedt-rn-454301",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 454301 · 原文定位 4.3",
+              "attestation_id": "stedt-rn-454301",
+              "source_ref": "4.3"
+            },
+            "notations": {
+              "ye": [
+                "dox",
+                "dox"
+              ],
+              "brassett": [
+                "duo¹",
+                "duo¹"
+              ],
+              "ipa": [
+                "tuɔ⁵⁵",
+                "tuɔ⁵⁵"
+              ]
+            },
+            "entry_id": "stedt-rn-454301",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:stedt-rn-454301:377c5acf652a4ba1"
+          },
+          "patient": {
+            "term": "ce³",
+            "attestation_id": "stedt-rn-453517",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 453517 · 原文定位 1.2",
+              "attestation_id": "stedt-rn-453517",
+              "source_ref": "1.2"
+            },
+            "notations": {
+              "brassett": [
+                "ce³",
+                "ce³"
+              ],
+              "ipa": [
+                "tsʰɤ²¹",
+                "tsʰɤ²¹"
+              ]
+            },
+            "entry_id": "w395",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:w395:2257af1fba23e629"
+          }
+        },
+        "missing_components": [],
+        "roles": {
+          "head": "instrument",
+          "agent": "generic user"
+        },
+        "features": {
+          "nominalization": "purpose_object"
+        },
+        "morphology": [
+          {
+            "form": "niexi",
+            "function": "independent LNK–NMLZ; Feng 2025:10 ex.27; Xiang 2026:14,16; role supplied by predicate/context; source tone pending"
+          }
+        ],
+        "grammar": {
+          "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
+          "citation": "Tian:623; Brassett 2006:142–147; Feng 2025:10 ex.27; Xiang 2026:14,16",
+          "pattern": "[arguments + predicate] + niexi; implicit thing head",
+          "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+        },
+        "lexical_complete": true,
+        "construction_supported": true,
+        "surface_complete": false,
+        "unresolved_realization": [
+          "independent nominalization: source-specific tone and contextual role require review"
+        ],
+        "meaning_losses": [],
+        "notation": "audit uses unchanged lexical source forms + labeled morphology; not synchronized Pinyin/IPA output"
+      },
+      "review_basis": "泛称事物中心词改为独立名物化；使用原实验候选重新组合，未重新检索。niexi 保留无调形式，不跨来源补调。"
     },
     {
       "id": "c14",
       "expression": "取暖用的东西",
-      "pinyin_candidate": "lò niě yě",
-      "ipa_candidate": "luɔ⁵¹ ɲie²¹ jɤ²¹",
-      "meaning": "暖和＋东西；中心词角色：用途物",
+      "pinyin_candidate": "lò niexi",
+      "ipa_candidate": "luɔ⁵¹ nie ɕi",
+      "meaning": "暖和的；取暖工具读法未确认",
       "status": [
-        "词汇齐全"
+        "待核：暖和是否足以表达取暖用途"
       ],
       "roles": {
         "head": "instrument",
@@ -923,44 +1607,185 @@
           "method": "source-profile conversion",
           "original_notations": {
             "ye": [
-              "lov",
               "lov"
             ],
             "brassett": [
-              "luo⁴",
               "luo⁴"
             ],
             "ipa": [
-              "luɔ⁵¹",
               "luɔ⁵¹"
-            ]
-          }
-        },
-        "⟪1⟫": {
-          "pinyin": "yě",
-          "ipa": "jɤ²¹",
-          "method": "source-profile conversion",
-          "original_notations": {
-            "ye": [
-              "yer",
-              "yer"
-            ],
-            "brassett": [
-              "ye³",
-              "ye³"
-            ],
-            "ipa": [
-              "jɤ²¹",
-              "jɤ²¹"
             ]
           }
         }
       },
       "grammar": {
         "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
-        "citation": "Tian:623; Brassett 2006:142–147",
-        "pattern": "[arguments + V] + nie (xi) + object head; purpose need not be patient",
+        "citation": "Tian:623; Brassett 2006:142–147; Feng 2025:10 ex.27; Xiang 2026:14,16",
+        "pattern": "[arguments + predicate] + niexi; implicit thing head",
         "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+      },
+      "original_measured_composition": {
+        "family": "function_object",
+        "draft_source_forms": "luo⁴ niě ye³",
+        "selected": {
+          "predicate": {
+            "term": "luo⁴",
+            "attestation_id": "stedt-rn-454769",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 454769 · 原文定位 6.1",
+              "attestation_id": "stedt-rn-454769",
+              "source_ref": "6.1"
+            },
+            "notations": {
+              "ye": [
+                "lov",
+                "lov"
+              ],
+              "brassett": [
+                "luo⁴",
+                "luo⁴"
+              ],
+              "ipa": [
+                "luɔ⁵¹",
+                "luɔ⁵¹"
+              ]
+            },
+            "entry_id": "stedt-rn-454769",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:stedt-rn-454769:29a69400bf77080e"
+          },
+          "head": {
+            "term": "ye³",
+            "attestation_id": "stedt-rn-454259",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 454259 · 原文定位 4.2",
+              "attestation_id": "stedt-rn-454259",
+              "source_ref": "4.2"
+            },
+            "notations": {
+              "ye": [
+                "yer",
+                "yer"
+              ],
+              "brassett": [
+                "ye³",
+                "ye³"
+              ],
+              "ipa": [
+                "jɤ²¹",
+                "jɤ²¹"
+              ]
+            },
+            "entry_id": "stedt-rn-454259",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:stedt-rn-454259:052001a25960a044"
+          }
+        },
+        "missing_components": [],
+        "roles": {
+          "head": "instrument",
+          "agent": "unspecified",
+          "patient": "head"
+        },
+        "features": {
+          "nominalization": "purpose_object"
+        },
+        "morphology": [
+          {
+            "form": "niě",
+            "function": "relative linker; head role retained in graph"
+          }
+        ],
+        "grammar": {
+          "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
+          "citation": "Tian:623; Brassett 2006:142–147",
+          "pattern": "[arguments + V] + nie (xi) + object head; purpose need not be patient",
+          "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+        },
+        "lexical_complete": true,
+        "construction_supported": true,
+        "surface_complete": true,
+        "unresolved_realization": [],
+        "meaning_losses": [],
+        "notation": "audit uses unchanged lexical source forms + labeled morphology; not synchronized Pinyin/IPA output"
+      },
+      "reviewed_composition": {
+        "family": "function_object",
+        "draft_source_forms": "luo⁴ niexi",
+        "selected": {
+          "predicate": {
+            "term": "luo⁴",
+            "attestation_id": "stedt-rn-454769",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 454769 · 原文定位 6.1",
+              "attestation_id": "stedt-rn-454769",
+              "source_ref": "6.1"
+            },
+            "notations": {
+              "ye": [
+                "lov"
+              ],
+              "brassett": [
+                "luo⁴"
+              ],
+              "ipa": [
+                "luɔ⁵¹"
+              ]
+            },
+            "entry_id": "stedt-rn-454769",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:stedt-rn-454769:29a69400bf77080e"
+          }
+        },
+        "missing_components": [],
+        "roles": {
+          "head": "instrument",
+          "agent": "unspecified",
+          "patient": "head"
+        },
+        "features": {
+          "nominalization": "purpose_object"
+        },
+        "morphology": [
+          {
+            "form": "niexi",
+            "function": "independent LNK–NMLZ; Feng 2025:10 ex.27; Xiang 2026:14,16; role supplied by predicate/context; source tone pending"
+          }
+        ],
+        "grammar": {
+          "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
+          "citation": "Tian:623; Brassett 2006:142–147; Feng 2025:10 ex.27; Xiang 2026:14,16",
+          "pattern": "[arguments + predicate] + niexi; implicit thing head",
+          "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+        },
+        "lexical_complete": true,
+        "construction_supported": true,
+        "surface_complete": false,
+        "unresolved_realization": [
+          "independent nominalization: source-specific tone and contextual role require review"
+        ],
+        "meaning_losses": [],
+        "notation": "audit uses unchanged lexical source forms + labeled morphology; not synchronized Pinyin/IPA output"
+      },
+      "review_basis": "泛称事物中心词改为独立名物化；使用原实验候选重新组合，未重新检索。niexi 保留无调形式，不跨来源补调。",
+      "original_measured_candidate": {
+        "pinyin": "lò niexi",
+        "ipa": "luɔ⁵¹ nie ɕi"
       }
     },
     {
@@ -1346,11 +2171,12 @@
     {
       "id": "c24",
       "expression": "看不见的东西",
-      "pinyin_candidate": "yǐ tā tī niě yě",
-      "ipa_candidate": "ji²¹ tʰa⁵⁵ tʰi⁵⁵ ɲie²¹ jɤ²¹",
-      "meaning": "看见＋东西；中心词角色：受事；保留否定",
+      "pinyin_candidate": "yǐ tā tī niexi",
+      "ipa_candidate": "ji²¹ tʰa⁵⁵ tʰi⁵⁵ nie ɕi",
+      "meaning": "看见；中心词角色：受事；保留否定",
       "status": [
-        "词汇齐全"
+        "词汇齐全",
+        "形态／搭配待核"
       ],
       "roles": {
         "agent": "implicit observer",
@@ -1378,33 +2204,178 @@
               "ji²¹"
             ]
           }
-        },
-        "⟪1⟫": {
-          "pinyin": "yě",
-          "ipa": "jɤ²¹",
-          "method": "source-profile conversion",
-          "original_notations": {
-            "ye": [
-              "yer",
-              "yer"
-            ],
-            "brassett": [
-              "ye³",
-              "ye³"
-            ],
-            "ipa": [
-              "jɤ²¹",
-              "jɤ²¹"
-            ]
-          }
         }
       },
       "grammar": {
         "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-relative-clauses",
-        "citation": "Brassett 2006:142–147; reference grammar §6.3",
-        "pattern": "[agent + patient + V + negation] + nie + head; preserve argument gap",
+        "citation": "Brassett 2006:142–147; reference grammar §6.3; Feng 2025:10 ex.27; Xiang 2026:14,16",
+        "pattern": "[arguments + predicate] + niexi; implicit thing head",
         "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
-      }
+      },
+      "original_measured_composition": {
+        "family": "negative_relative",
+        "draft_source_forms": "yi³ tā tī niě ye³",
+        "selected": {
+          "predicate": {
+            "term": "yi³",
+            "attestation_id": "stedt-rn-453835",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 453835 · 原文定位 2.2",
+              "attestation_id": "stedt-rn-453835",
+              "source_ref": "2.2"
+            },
+            "notations": {
+              "brassett": [
+                "yi³",
+                "yi³"
+              ],
+              "ipa": [
+                "ji²¹",
+                "ji²¹"
+              ]
+            },
+            "entry_id": "w2576",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:w2576:8682a1b51dcc8826"
+          },
+          "head": {
+            "term": "ye³",
+            "attestation_id": "stedt-rn-454259",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 454259 · 原文定位 4.2",
+              "attestation_id": "stedt-rn-454259",
+              "source_ref": "4.2"
+            },
+            "notations": {
+              "ye": [
+                "yer",
+                "yer"
+              ],
+              "brassett": [
+                "ye³",
+                "ye³"
+              ],
+              "ipa": [
+                "jɤ²¹",
+                "jɤ²¹"
+              ]
+            },
+            "entry_id": "stedt-rn-454259",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:stedt-rn-454259:052001a25960a044"
+          }
+        },
+        "missing_components": [],
+        "roles": {
+          "agent": "implicit observer",
+          "head": "patient",
+          "patient": "head"
+        },
+        "features": {
+          "negation": "predicate",
+          "modality": "ability",
+          "nominalization": "object"
+        },
+        "morphology": [
+          {
+            "form": "tā tī",
+            "function": "negative ability /tʰa⁵⁵ tʰi⁵⁵/; B06"
+          },
+          {
+            "form": "niě",
+            "function": "relative linker; head role retained in graph"
+          }
+        ],
+        "grammar": {
+          "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-relative-clauses",
+          "citation": "Brassett 2006:142–147; reference grammar §6.3",
+          "pattern": "[agent + patient + V + negation] + nie + head; preserve argument gap",
+          "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+        },
+        "lexical_complete": true,
+        "construction_supported": true,
+        "surface_complete": true,
+        "unresolved_realization": [],
+        "meaning_losses": [],
+        "notation": "audit uses unchanged lexical source forms + labeled morphology; not synchronized Pinyin/IPA output"
+      },
+      "reviewed_composition": {
+        "family": "negative_relative",
+        "draft_source_forms": "yi³ tā tī niexi",
+        "selected": {
+          "predicate": {
+            "term": "yi³",
+            "attestation_id": "stedt-rn-453835",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 453835 · 原文定位 2.2",
+              "attestation_id": "stedt-rn-453835",
+              "source_ref": "2.2"
+            },
+            "notations": {
+              "brassett": [
+                "yi³"
+              ],
+              "ipa": [
+                "ji²¹"
+              ]
+            },
+            "entry_id": "w2576",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:w2576:8682a1b51dcc8826"
+          }
+        },
+        "missing_components": [],
+        "roles": {
+          "agent": "implicit observer",
+          "head": "patient",
+          "patient": "head"
+        },
+        "features": {
+          "negation": "predicate",
+          "modality": "ability",
+          "nominalization": "object"
+        },
+        "morphology": [
+          {
+            "form": "tā tī",
+            "function": "negative ability /tʰa⁵⁵ tʰi⁵⁵/; B06"
+          },
+          {
+            "form": "niexi",
+            "function": "independent LNK–NMLZ; Feng 2025:10 ex.27; Xiang 2026:14,16; role supplied by predicate/context; source tone pending"
+          }
+        ],
+        "grammar": {
+          "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-relative-clauses",
+          "citation": "Brassett 2006:142–147; reference grammar §6.3; Feng 2025:10 ex.27; Xiang 2026:14,16",
+          "pattern": "[arguments + predicate] + niexi; implicit thing head",
+          "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+        },
+        "lexical_complete": true,
+        "construction_supported": true,
+        "surface_complete": false,
+        "unresolved_realization": [
+          "independent nominalization: source-specific tone and contextual role require review"
+        ],
+        "meaning_losses": [],
+        "notation": "audit uses unchanged lexical source forms + labeled morphology; not synchronized Pinyin/IPA output"
+      },
+      "review_basis": "泛称事物中心词改为独立名物化；使用原实验候选重新组合，未重新检索。niexi 保留无调形式，不跨来源补调。"
     },
     {
       "id": "c25",
@@ -2873,11 +3844,12 @@
     {
       "id": "c51",
       "expression": "洗碗用的东西",
-      "pinyin_candidate": "qiěbí wō niě yě",
-      "ipa_candidate": "tɕʰiɛ²¹pi²⁴ wɔ⁵⁵ ɲie²¹ jɤ²¹",
-      "meaning": "洗＋碗＋东西；中心词角色：用途物",
+      "pinyin_candidate": "qiěbí wō niexi",
+      "ipa_candidate": "tɕʰiɛ²¹pi²⁴ wɔ⁵⁵ nie ɕi",
+      "meaning": "洗＋碗；中心词角色：用途物",
       "status": [
-        "词汇齐全"
+        "词汇齐全",
+        "形态／搭配待核"
       ],
       "roles": {
         "head": "instrument",
@@ -2895,11 +3867,9 @@
           "method": "source-profile conversion",
           "original_notations": {
             "brassett": [
-              "qie³bi²",
               "qie³bi²"
             ],
             "ipa": [
-              "tɕʰiɛ²¹pi²⁴",
               "tɕʰiɛ²¹pi²⁴"
             ]
           }
@@ -2918,42 +3888,230 @@
               "wɔ⁵⁵"
             ]
           }
-        },
-        "⟪2⟫": {
-          "pinyin": "yě",
-          "ipa": "jɤ²¹",
-          "method": "source-profile conversion",
-          "original_notations": {
-            "ye": [
-              "yer",
-              "yer"
-            ],
-            "brassett": [
-              "ye³",
-              "ye³"
-            ],
-            "ipa": [
-              "jɤ²¹",
-              "jɤ²¹"
-            ]
-          }
         }
       },
       "grammar": {
         "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
-        "citation": "Tian:623; Brassett 2006:142–147",
-        "pattern": "[arguments + V] + nie (xi) + object head; purpose need not be patient",
+        "citation": "Tian:623; Brassett 2006:142–147; Feng 2025:10 ex.27; Xiang 2026:14,16",
+        "pattern": "[arguments + predicate] + niexi; implicit thing head",
         "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
-      }
+      },
+      "original_measured_composition": {
+        "family": "function_object",
+        "draft_source_forms": "qie³bi² wo¹ niě ye³",
+        "selected": {
+          "predicate": {
+            "term": "wo¹",
+            "attestation_id": "stedt-rn-454423",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 454423 · 原文定位 4.3",
+              "attestation_id": "stedt-rn-454423",
+              "source_ref": "4.3"
+            },
+            "notations": {
+              "brassett": [
+                "wo¹",
+                "wo¹"
+              ],
+              "ipa": [
+                "wɔ⁵⁵",
+                "wɔ⁵⁵"
+              ]
+            },
+            "entry_id": "w2373",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:w2373:120cfeee1673cb23"
+          },
+          "patient": {
+            "term": "qie³bi²",
+            "attestation_id": "stedt-rn-454548",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 454548 · 原文定位 4.5",
+              "attestation_id": "stedt-rn-454548",
+              "source_ref": "4.5"
+            },
+            "notations": {
+              "brassett": [
+                "qie³bi²",
+                "qie³bi²"
+              ],
+              "ipa": [
+                "tɕʰiɛ²¹pi²⁴",
+                "tɕʰiɛ²¹pi²⁴"
+              ]
+            },
+            "entry_id": "w1833",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:w1833:1b3da0eb7eaa4118"
+          },
+          "head": {
+            "term": "ye³",
+            "attestation_id": "stedt-rn-454259",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 454259 · 原文定位 4.2",
+              "attestation_id": "stedt-rn-454259",
+              "source_ref": "4.2"
+            },
+            "notations": {
+              "ye": [
+                "yer",
+                "yer"
+              ],
+              "brassett": [
+                "ye³",
+                "ye³"
+              ],
+              "ipa": [
+                "jɤ²¹",
+                "jɤ²¹"
+              ]
+            },
+            "entry_id": "stedt-rn-454259",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:stedt-rn-454259:052001a25960a044"
+          }
+        },
+        "missing_components": [],
+        "roles": {
+          "head": "instrument",
+          "agent": "unspecified",
+          "patient": "head"
+        },
+        "features": {
+          "nominalization": "purpose_object"
+        },
+        "morphology": [
+          {
+            "form": "niě",
+            "function": "relative linker; head role retained in graph"
+          }
+        ],
+        "grammar": {
+          "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
+          "citation": "Tian:623; Brassett 2006:142–147",
+          "pattern": "[arguments + V] + nie (xi) + object head; purpose need not be patient",
+          "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+        },
+        "lexical_complete": true,
+        "construction_supported": true,
+        "surface_complete": true,
+        "unresolved_realization": [],
+        "meaning_losses": [],
+        "notation": "audit uses unchanged lexical source forms + labeled morphology; not synchronized Pinyin/IPA output"
+      },
+      "reviewed_composition": {
+        "family": "function_object",
+        "draft_source_forms": "qie³bi² wo¹ niexi",
+        "selected": {
+          "predicate": {
+            "term": "wo¹",
+            "attestation_id": "stedt-rn-454423",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 454423 · 原文定位 4.3",
+              "attestation_id": "stedt-rn-454423",
+              "source_ref": "4.3"
+            },
+            "notations": {
+              "brassett": [
+                "wo¹",
+                "wo¹"
+              ],
+              "ipa": [
+                "wɔ⁵⁵",
+                "wɔ⁵⁵"
+              ]
+            },
+            "entry_id": "w2373",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:w2373:120cfeee1673cb23"
+          },
+          "patient": {
+            "term": "qie³bi²",
+            "attestation_id": "stedt-rn-454548",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 454548 · 原文定位 4.5",
+              "attestation_id": "stedt-rn-454548",
+              "source_ref": "4.5"
+            },
+            "notations": {
+              "brassett": [
+                "qie³bi²"
+              ],
+              "ipa": [
+                "tɕʰiɛ²¹pi²⁴"
+              ]
+            },
+            "entry_id": "w1833",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:w1833:1b3da0eb7eaa4118"
+          }
+        },
+        "missing_components": [],
+        "roles": {
+          "head": "instrument",
+          "agent": "unspecified",
+          "patient": "head"
+        },
+        "features": {
+          "nominalization": "purpose_object"
+        },
+        "morphology": [
+          {
+            "form": "niexi",
+            "function": "independent LNK–NMLZ; Feng 2025:10 ex.27; Xiang 2026:14,16; role supplied by predicate/context; source tone pending"
+          }
+        ],
+        "grammar": {
+          "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
+          "citation": "Tian:623; Brassett 2006:142–147; Feng 2025:10 ex.27; Xiang 2026:14,16",
+          "pattern": "[arguments + predicate] + niexi; implicit thing head",
+          "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+        },
+        "lexical_complete": true,
+        "construction_supported": true,
+        "surface_complete": false,
+        "unresolved_realization": [
+          "independent nominalization: source-specific tone and contextual role require review"
+        ],
+        "meaning_losses": [],
+        "notation": "audit uses unchanged lexical source forms + labeled morphology; not synchronized Pinyin/IPA output"
+      },
+      "review_basis": "泛称事物中心词改为独立名物化；使用原实验候选重新组合，未重新检索。niexi 保留无调形式，不跨来源补调。"
     },
     {
       "id": "c52",
       "expression": "砍柴工具",
-      "pinyin_candidate": "kǎ liǎo niě yě",
-      "ipa_candidate": "kʰa²¹ liau²¹ ɲie²¹ jɤ²¹",
-      "meaning": "砍＋柴＋东西；中心词角色：用途物",
+      "pinyin_candidate": "kǎ liǎo niexi",
+      "ipa_candidate": "kʰa²¹ liau²¹ nie ɕi",
+      "meaning": "砍＋柴；中心词角色：用途物",
       "status": [
-        "词汇齐全"
+        "词汇齐全",
+        "形态／搭配待核"
       ],
       "roles": {
         "head": "instrument",
@@ -2970,11 +4128,9 @@
           "method": "source-profile conversion",
           "original_notations": {
             "brassett": [
-              "liao³",
               "liao³"
             ],
             "ipa": [
-              "liau²¹",
               "liau²¹"
             ]
           }
@@ -2993,33 +4149,218 @@
               "kʰa²¹"
             ]
           }
-        },
-        "⟪2⟫": {
-          "pinyin": "yě",
-          "ipa": "jɤ²¹",
-          "method": "source-profile conversion",
-          "original_notations": {
-            "ye": [
-              "yer",
-              "yer"
-            ],
-            "brassett": [
-              "ye³",
-              "ye³"
-            ],
-            "ipa": [
-              "jɤ²¹",
-              "jɤ²¹"
-            ]
-          }
         }
       },
       "grammar": {
         "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
-        "citation": "Tian:623; Brassett 2006:142–147",
-        "pattern": "[arguments + V] + nie (xi) + object head; purpose need not be patient",
+        "citation": "Tian:623; Brassett 2006:142–147; Feng 2025:10 ex.27; Xiang 2026:14,16",
+        "pattern": "[arguments + predicate] + niexi; implicit thing head",
         "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
-      }
+      },
+      "original_measured_composition": {
+        "family": "function_object",
+        "draft_source_forms": "ka3 liao³ niě ye³",
+        "selected": {
+          "predicate": {
+            "term": "liao³",
+            "attestation_id": "stedt-rn-454348",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 454348 · 原文定位 4.3",
+              "attestation_id": "stedt-rn-454348",
+              "source_ref": "4.3"
+            },
+            "notations": {
+              "brassett": [
+                "liao³",
+                "liao³"
+              ],
+              "ipa": [
+                "liau²¹",
+                "liau²¹"
+              ]
+            },
+            "entry_id": "w1368",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:w1368:fbd20ff83235c4e5"
+          },
+          "patient": {
+            "term": "ka3",
+            "attestation_id": "stedt-rn-456572",
+            "source": {
+              "id": "stedt-07898ef938",
+              "canonical_id": "brassett-2004",
+              "title": "STEDT · Brassett 04 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 456572 · 原文定位 未标明",
+              "attestation_id": "stedt-rn-456572",
+              "source_ref": ""
+            },
+            "notations": {
+              "brassett": [
+                "ka³",
+                "ka³"
+              ],
+              "ipa": [
+                "kʰa²¹",
+                "kʰa²¹"
+              ]
+            },
+            "entry_id": "w1076",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:w1076:313d589ec7a1f89d"
+          },
+          "head": {
+            "term": "ye³",
+            "attestation_id": "stedt-rn-454259",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 454259 · 原文定位 4.2",
+              "attestation_id": "stedt-rn-454259",
+              "source_ref": "4.2"
+            },
+            "notations": {
+              "ye": [
+                "yer",
+                "yer"
+              ],
+              "brassett": [
+                "ye³",
+                "ye³"
+              ],
+              "ipa": [
+                "jɤ²¹",
+                "jɤ²¹"
+              ]
+            },
+            "entry_id": "stedt-rn-454259",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:stedt-rn-454259:052001a25960a044"
+          }
+        },
+        "missing_components": [],
+        "roles": {
+          "head": "instrument",
+          "agent": "generic user"
+        },
+        "features": {
+          "nominalization": "purpose_object"
+        },
+        "morphology": [
+          {
+            "form": "niě",
+            "function": "relative linker; head role retained in graph"
+          }
+        ],
+        "grammar": {
+          "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
+          "citation": "Tian:623; Brassett 2006:142–147",
+          "pattern": "[arguments + V] + nie (xi) + object head; purpose need not be patient",
+          "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+        },
+        "lexical_complete": true,
+        "construction_supported": true,
+        "surface_complete": true,
+        "unresolved_realization": [],
+        "meaning_losses": [],
+        "notation": "audit uses unchanged lexical source forms + labeled morphology; not synchronized Pinyin/IPA output"
+      },
+      "reviewed_composition": {
+        "family": "function_object",
+        "draft_source_forms": "ka3 liao³ niexi",
+        "selected": {
+          "predicate": {
+            "term": "liao³",
+            "attestation_id": "stedt-rn-454348",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 454348 · 原文定位 4.3",
+              "attestation_id": "stedt-rn-454348",
+              "source_ref": "4.3"
+            },
+            "notations": {
+              "brassett": [
+                "liao³"
+              ],
+              "ipa": [
+                "liau²¹"
+              ]
+            },
+            "entry_id": "w1368",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:w1368:fbd20ff83235c4e5"
+          },
+          "patient": {
+            "term": "ka3",
+            "attestation_id": "stedt-rn-456572",
+            "source": {
+              "id": "stedt-07898ef938",
+              "canonical_id": "brassett-2004",
+              "title": "STEDT · Brassett 04 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 456572 · 原文定位 未标明",
+              "attestation_id": "stedt-rn-456572",
+              "source_ref": ""
+            },
+            "notations": {
+              "brassett": [
+                "ka³",
+                "ka³"
+              ],
+              "ipa": [
+                "kʰa²¹",
+                "kʰa²¹"
+              ]
+            },
+            "entry_id": "w1076",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:w1076:313d589ec7a1f89d"
+          }
+        },
+        "missing_components": [],
+        "roles": {
+          "head": "instrument",
+          "agent": "generic user"
+        },
+        "features": {
+          "nominalization": "purpose_object"
+        },
+        "morphology": [
+          {
+            "form": "niexi",
+            "function": "independent LNK–NMLZ; Feng 2025:10 ex.27; Xiang 2026:14,16; role supplied by predicate/context; source tone pending"
+          }
+        ],
+        "grammar": {
+          "url": "https://github.com/luggroo/bizic-dictionary/blob/072046c39261cf536e0ce29f06779cd3eeb99219/docs/reference-grammar.md#north-25-101",
+          "citation": "Tian:623; Brassett 2006:142–147; Feng 2025:10 ex.27; Xiang 2026:14,16",
+          "pattern": "[arguments + predicate] + niexi; implicit thing head",
+          "evidence_level": "secondary reference grammar; productive application, not whole-phrase attestation"
+        },
+        "lexical_complete": true,
+        "construction_supported": true,
+        "surface_complete": false,
+        "unresolved_realization": [
+          "independent nominalization: source-specific tone and contextual role require review"
+        ],
+        "meaning_losses": [],
+        "notation": "audit uses unchanged lexical source forms + labeled morphology; not synchronized Pinyin/IPA output"
+      },
+      "review_basis": "泛称事物中心词改为独立名物化；使用原实验候选重新组合，未重新检索。niexi 保留无调形式，不跨来源补调。"
     },
     {
       "id": "c53",

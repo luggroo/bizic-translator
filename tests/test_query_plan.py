@@ -28,6 +28,28 @@ def test_result_state_is_realized_not_only_recorded_in_plan():
     assert any('maintained result state' in m['function'] for m in result['morphology'])
 
 
+def test_generic_thing_heads_do_not_require_a_word_for_thing():
+    # Uncurated purpose-object frames must work without retrieving 东西.
+    for expression in ['洗鞋工具','洗衣服用品','开门用的东西','看不见的东西']:
+        p=plan(expression)
+        assert p.analysis.features['head_realization']=='implicit'
+        records=[witness(c.query,c.key,pos='n' if c.role!='predicate' else 'v')
+                 for c in p.analysis.components if c.role!='head']
+        result=compose(p,records)
+        assert result['lexical_complete']
+        assert result['draft_source_forms'].endswith(' niexi')
+        assert 'head' not in result['selected']
+        if expression=='看不见的东西':
+            assert 'tā tī niexi' in result['draft_source_forms']
+            assert result['roles']['head']=='patient'
+        p.analysis.features['head_realization']='overt'
+        next(c for c in p.analysis.components if c.role=='head').required=True
+        assert not compose(p,records)['lexical_complete']
+    specific=compose(plan('我画的画'),[witness('我','agent',pos='pron'),witness('画','draw')])
+    assert not specific['draft_source_forms'].endswith('niexi')
+    assert '[head]' in specific['draft_source_forms']
+
+
 def test_new_frames_are_composed_from_arguments_not_expression_table():
     # Generated combinations absent from concepts.json AND the challenge data.
     for verb in ['买','卖','读','写']:
@@ -147,7 +169,7 @@ def test_challenge_has_independent_verified_targets_and_holdouts():
 
 
 def test_required_relative_heads_and_abstract_change_order():
-    for phrase in ['被骂的人', '清洁用品', '不认识的人']:
+    for phrase in ['被骂的人', '我画的画', '不认识的人']:
         p=plan(phrase)
         assert next(c for c in p.analysis.components if c.key=='head').required
     p=plan('收入减少')

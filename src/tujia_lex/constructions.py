@@ -45,10 +45,24 @@ def lexical_form(record):
             'record_id': record['id']}
 
 
+def implicit_thing_head(analysis):
+    """Generic thing heads may be nominalized; specific nouns remain overt.
+
+    Explicit interpretations can request an overt head when context needs it.
+    The default also applies to stored plans predating head_realization.
+    """
+    return (analysis.family in {'function_object', 'negative_relative'}
+            and analysis.features.get('head_realization') != 'overt'
+            and any(c.role == 'head' and c.query == '东西' for c in analysis.components))
+
+
 def compose(plan, candidates):
     analysis = plan.analysis
+    implicit_head = implicit_thing_head(analysis)
     selected, missing = {}, []
     for c in analysis.components:
+        if implicit_head and c.role == 'head':
+            continue
         options = [r for r in candidates if supports(r, c) and not rejected_reason(r, plan)]
         if options:
             selected[c.key] = lexical_form(min(options, key=lambda r: (source_priority(r), -r.get('rrf', 0), r['id'])))
@@ -92,9 +106,13 @@ def compose(plan, candidates):
         draft += ' ' + suffix
         morphology.append({'form': suffix, 'function': 'associated thing xi' if suffix == 'xí' else 'object NMLZ /tsʰi/; lexical tone requires source-specific form'})
     elif family in {'role_relative', 'negative_relative', 'function_object'}:
-        head = terms.get('head', '[head]')
-        draft += ' niě ' + head
-        morphology.append({'form': 'niě', 'function': 'relative linker; head role retained in graph'})
+        if implicit_head:
+            draft += ' niexi'
+            morphology.append({'form': 'niexi', 'function': 'independent LNK–NMLZ; Feng 2025:10 ex.27; Xiang 2026:14,16; role supplied by predicate/context; source tone pending'})
+        else:
+            head = terms.get('head', '[head]')
+            draft += ' niě ' + head
+            morphology.append({'form': 'niě', 'function': 'relative linker; head role retained in graph'})
     elif family == 'spatial_composition':
         draft = ' '.join(x for x in [terms.get('landmark', '[landmark]'),
                     '[two + classifier]' if f.get('number') else '', terms.get('relation', '[relation]')] if x)
@@ -113,6 +131,8 @@ def compose(plan, candidates):
     if family in {'direct', 'semantic_generalization'} and len(source_ids) == 1:
         compatible = True
     unresolved_features = []
+    if implicit_head:
+        unresolved_features.append('independent nominalization: source-specific tone and contextual role require review')
     if not dialect_supported:
         unresolved_features.append('Northern registry does not license Southern morphology')
     if not compatible:
@@ -128,7 +148,7 @@ def compose(plan, candidates):
     licensed = lexical_complete and dialect_supported and compatible
     return {'family': family, 'draft_source_forms': draft, 'selected': selected,
         'missing_components': sorted(set(missing)), 'roles': analysis.roles, 'features': f,
-        'morphology': morphology, 'grammar': {'url': BASE + anchor, 'citation': citation, 'pattern': pattern,
+        'morphology': morphology, 'grammar': {'url': BASE + anchor, 'citation': citation + ('; Feng 2025:10 ex.27; Xiang 2026:14,16' if implicit_head else ''), 'pattern': '[arguments + predicate] + niexi; implicit thing head' if implicit_head else pattern,
             'evidence_level': 'secondary reference grammar; productive application, not whole-phrase attestation'},
         'lexical_complete': lexical_complete, 'construction_supported': licensed,
         'surface_complete': licensed and not unresolved_features and '[' not in draft,
