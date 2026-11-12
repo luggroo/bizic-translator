@@ -7,6 +7,7 @@ on:
       - 'skills/translate-tujia/references/**'
       - 'scripts/package-translator.py'
       - 'scripts/check-grammar-skill.py'
+      - 'scripts/lint-grammar-references.py'
       - '.github/workflows/check-grammar-skill.yml'
   workflow_dispatch:
 
