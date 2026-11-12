@@ -38,6 +38,12 @@ jobs:
             --source "${RUNNER_TEMP}/dictionary.json.gz" \
             --output skills/translate-tujia/lexicon \
             --revision "${REVISION}"
+      - name: Test shard coverage, source isolation, and bilingual embedding indexing
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet "numpy>=1.26,<3" "pytest>=8,<9"
+          PYTHONPATH=src python -m pytest -q tests/test_static_and_embedding_coverage.py
       - name: Smoke test static exact lookup
         shell: bash
         run: |
