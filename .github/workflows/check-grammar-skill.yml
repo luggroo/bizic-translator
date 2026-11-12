@@ -1,0 +1,27 @@
+name: Check Tujia translation grammar references
+
+on:
+  push:
+    paths:
+      - 'skills/translate-tujia/SKILL.md'
+      - 'skills/translate-tujia/references/**'
+      - 'scripts/package-translator.py'
+      - 'scripts/check-grammar-skill.py'
+      - '.github/workflows/check-grammar-skill.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-tujia-grammar-skill
+  cancel-in-progress: true
+
+jobs:
+  grammar-skill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate references, trigger coverage and packaged skill
+        run: python scripts/check-grammar-skill.py
