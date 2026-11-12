@@ -39,6 +39,11 @@ def run(root):
     lite_text = (lite_root / "SKILL.md").read_text(encoding="utf-8")
     seed = json.loads((lite_root / "concepts.json").read_text(encoding="utf-8"))
     assert "../tujia-synonym-lite/SKILL.md" in main_text
+    assert "references/semantic-decomposition.md" in main_text
+    shared = (references / "semantic-decomposition.md").read_text(encoding="utf-8")
+    assert "shared" in shared.lower() and "geci-xi" in shared and "hu-ci" in shared
+    assert "semantic-decomposition.md" in lite_text
+    assert "one overall quality note" in main_text
     assert "检索模式：Embedding" in main_text and "检索模式：Skill-based" in main_text
     for word, expected_form in (
         ("路人", "la hxi ma"), ("香味", "气味"), ("玩具", "geci-xi"),
@@ -66,7 +71,7 @@ def run(root):
         subprocess.run([sys.executable, str(root / "scripts/package-translator.py"),
                         "--output", str(target)], cwd=root, check=True, capture_output=True)
         assert (target / "skills/translate-tujia/SKILL.md").is_file()
-        for name in NAMES:
+        for name in (*NAMES, "semantic-decomposition.md"):
             assert (target / "skills/translate-tujia/references" / name).is_file(), (
                 "Packaging lost reference " + name)
         assert not (target / "skills/translate-tujia/lexicon").exists(), (

@@ -25,6 +25,10 @@ python scripts/package-translator.py --output /tmp/bizic-translator-with-static 
 
 The small local grammar QA is `python scripts/check-grammar-skill.py`; it runs `scripts/lint-grammar-references.py` to compare **tone-marked Pinyin + IPA** for every standardized example, verify source labels, and test that all topic files ship in the packaged Skill. GitHub Actions runs it on reference/packager changes.
 
+## Shared semantic decomposition for both retrieval modes
+
+**Both BGE and the static skill route use [the same semantic decomposition and constructional recomposition rules](skills/translate-tujia/references/semantic-decomposition.md).** The only difference is whether planned queries are sent to real BGE cosine retrieval or to the versioned exact-match shards. In normal translation, give a fluent complete draft, with one overall quality note at the end. The dedicated [Codex evaluation plan](docs/embedding-route-evaluation-plan.md) specifies reproducible baselines, withheld challenges and failure analysis.
+
 ## Two retrieval modes (always disclose which ran)
 
 `translate-tujia` chooses **real BGE embedding retrieval** in a local/Codex environment that can actually provision Python, the pinned model and a full schema-compatible index. The first run may install/build according to this README, but subsequent queries should **reuse** those assets. A real model query must return actual scores, IDs and source witnesses.
