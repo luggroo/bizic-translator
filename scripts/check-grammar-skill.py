@@ -34,9 +34,25 @@ def run(root):
               '<a id="ability">', '<a id="volition">', '<a id="south">'):
         assert a in tam, f"Missing index anchor: {a}"
     assert "No web search actions." in main_text
+    # Every prohibition is a routing cue; the master skill and lite mode must
+    # expose alternatives before a translator begins a long exploration.
+    recovery = references / "recovery-playbook.md"
+    assert recovery.is_file(), "Missing blocker-to-action playbook"
+    recovery_text = recovery.read_text(encoding="utf-8")
+    assert "references/recovery-playbook.md" in main_text
+    assert "Instead →" in main_text and "**Stop rule:**" in main_text
+    assert len([line for line in recovery_text.splitlines()
+                if line.startswith("| ") and " | " in line]) >= 20, (
+        "Recovery playbook is missing action routes")
+    for concept in ("BGE", "gzip", "nominal", "liex", "tone",
+                    "web", "Longshan", "source", "Chinese insertion"):
+        assert concept.lower() in recovery_text.lower(), (
+            "Recovery playbook lacks action for " + concept)
     # The companion no-model semantic bridge must remain routable and honestly labeled.
     lite_root = root / "skills/tujia-synonym-lite"
     lite_text = (lite_root / "SKILL.md").read_text(encoding="utf-8")
+    assert "translate-tujia/references/recovery-playbook.md" in lite_text
+    assert "Instead →" in lite_text
     seed = json.loads((lite_root / "concepts.json").read_text(encoding="utf-8"))
     assert "../tujia-synonym-lite/SKILL.md" in main_text
     assert "references/semantic-decomposition.md" in main_text
@@ -71,7 +87,7 @@ def run(root):
         subprocess.run([sys.executable, str(root / "scripts/package-translator.py"),
                         "--output", str(target)], cwd=root, check=True, capture_output=True)
         assert (target / "skills/translate-tujia/SKILL.md").is_file()
-        for name in (*NAMES, "semantic-decomposition.md"):
+        for name in (*NAMES, "semantic-decomposition.md", "recovery-playbook.md"):
             assert (target / "skills/translate-tujia/references" / name).is_file(), (
                 "Packaging lost reference " + name)
         assert not (target / "skills/translate-tujia/lexicon").exists(), (
