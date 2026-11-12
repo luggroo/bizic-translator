@@ -68,9 +68,23 @@ Source: `docs/reference-grammar.md` §§2.1–2.3, 4.8.
 
 Source: `docs/reference-grammar.md` §§6.5, 7.4 and §3.3.
 
+## 8. Aspect and modality: Chinese adverbs often require predicate morphology
+
+**Load [aspect-modality.md](aspect-modality.md)** whenever the source contains **快要、要、马上、正在、已经、还、还没、刚、曾经、过、不再、先、能、会、可以、该、必须、想、不想、愿意、恐怕** or English equivalents. That reference provides a semantic-choice table, source-specific full examples, and ordering constraints; use it before another corpus query.
+
+| Ambiguous Chinese cue | Direct disambiguation, not word-for-word insertion |
+| --- | --- |
+| 快要／马上／就要 | An imminent start may use V + /xu/, a prospective form may involve stem + /i/, and approaching completion may use V + /tɕi xu/. See the separately attested examples in the reference. |
+| 还／仍然 | “还在做” V + /la ɲie/; “还没做” V + /ta ɲie/; “还没做完” V + /tɕi ta ɲie/; “还不必做” has its own complex modal scope. No universal gloss for /ɲie/. |
+| 已经／了／过／刚刚 | A completed event (/lie/), current-result relevance (/liau/), reached endpoint (/tɕi/ combinations), past experience (/po la/), and a maintained post-event state (/po xi/ in the cited context) are distinct. |
+| 能／会／可以 | General ability, learned skill, bodily strength, sufficient time, and permission use different modal forms and negation patterns. |
+| 该／必须／不必／不许／不想 | Distinguish obligation, authorization, prohibition, volition, and factual negation; the aspect/modality template constrains suffix cooccurrence. |
+
+**Evidence policy:** the detailed file marks Brassett quotations, Chen/Tian/other-variety forms, unpublished supplementary dinner examples, and constructed teaching examples distinctly. Reuse licensed examples without repeated research, but do not silently fuse different local varieties or treat a pedagogical form as a corpus quotation.
+
 ## Applying this subskill
 
-1. Identify predicate class, polarity, semantic roles and the precise event relation.
+1. Identify predicate class, polarity, semantic roles, the precise event relation, **and any aspect/modality meanings that Chinese or English might express with adverbs or auxiliaries**. Route those cues to `aspect-modality.md` before lexicalizing them as standalone words.
 2. Select a matching documented construction above with its source and limits; do not spend another retrieval round proving the same canonical example.
 3. Confirm only **new lexemes** and special constraints through the local database. Escalate to corpus construction retrieval for genuinely different predicate classes, competing analyses, complex scope or Southern locality.
 4. Reuse this section as the baseline and mark unsupported new generalizations as provisional; never pretend that an analogous example is an exact attestation.
