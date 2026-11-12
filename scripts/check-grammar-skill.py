@@ -1,63 +1,54 @@
 #!/usr/bin/env python3
-"""Fast dependency/packaging QA for the reusable translation grammar subskill."""
+"""Offline QA for the fast Tujia grammar router, references and packaged skill."""
 import argparse
-import re
 import subprocess
 import sys
 import tempfile
 from pathlib import Path
 
 
+NAMES = ("grammar-index.md", "event-linking.md", "clause-patterns.md",
+         "aspect-modality.md", "notation-audit.md")
+
+
 def run(root):
     skill_root = root / "skills" / "translate-tujia"
     main = skill_root / "SKILL.md"
-    constructions = skill_root / "references" / "construction-choices.md"
-    tam = skill_root / "references" / "aspect-modality.md"
-    for path in (main, constructions, tam):
-        if not path.is_file() or not path.read_text(encoding="utf-8").strip():
-            raise AssertionError(f"Missing or empty skill file: {path}")
+    references = skill_root / "references"
+    assert main.is_file(), "Missing main SKILL.md"
     main_text = main.read_text(encoding="utf-8")
-    con_text = constructions.read_text(encoding="utf-8")
-    tam_text = tam.read_text(encoding="utf-8")
-    assert "references/construction-choices.md" in main_text
-    assert "references/aspect-modality.md" in main_text
-    assert "aspect-modality.md" in con_text
-    assert "Brassett" in con_text and "Brassett" in tam_text
-    assert "[补充]" in tam_text and "[教学]" in tam_text
-    assert "南部土家语" in tam_text
-    # Common Chinese auxiliary/adverb ambiguities should be decidable from
-    # a local example/reference, not an unbounded fresh web search.
-    for cue in ("快要", "还在", "还没", "已经", "不再", "能", "会", "可以", "必须", "想", "恐怕"):
-        assert cue in tam_text, f"Unaddressed aspect/modal ambiguity: {cue}"
-    for marker in ("gafhur", "savlaxniex", "tɕi⁵⁵ ta⁵⁵", "niefbortaxdornief",
-                   "tʰa⁵⁵ pie⁵⁵", "ɣie³⁵ha³⁵tsi²¹tsʰie⁵⁵"):
-        assert marker in tam_text, f"Missing prechecked example: {marker}"
+    for name in NAMES:
+        reference = references / name
+        assert reference.is_file() and reference.read_text(encoding="utf-8").strip(), name
+        assert f"references/{name}" in main_text or name == "notation-audit.md", (
+            "Main skill lacks route for " + name)
+    idx = (references / NAMES[0]).read_text(encoding="utf-8")
+    for name in NAMES[1:]:
+        assert name in idx, f"Missing index route to {name}"
+    tam = (references / "aspect-modality.md").read_text(encoding="utf-8")
+    for term in ("快要", "还在", "还没", "已经", "不再", "能", "会",
+                 "可以", "必须", "想", "恐怕"):
+        assert term in tam or term in idx, f"Missing semantic search route: {term}"
+    for a in ('<a id="prospective">', '<a id="still">', '<a id="completion">',
+              '<a id="ability">', '<a id="volition">', '<a id="south">'):
+        assert a in tam, f"Missing index anchor: {a}"
     assert "No web search actions." in main_text
-    assert "../tujia-synonym-lite/SKILL.md" in main_text
-    assert "检索模式：Embedding" in main_text and "检索模式：Skill-based" in main_text
-    synonym_dir = root / "skills" / "tujia-synonym-lite"
-    synonym_text = (synonym_dir / "SKILL.md").read_text(encoding="utf-8")
-    concepts = (synonym_dir / "concepts.json").read_text(encoding="utf-8")
-    for cue in ("路人", "香味", "玩具", "饮料", "令人费解", "经济损失"):
-        assert cue in concepts, f"Missing semantic bridge: {cue}"
-    assert "not embedding" in synonym_text.lower()
+    assert "调号拼音 + IPA" in main_text
+    assert "叶氏拼音" in main_text and "only when the user explicitly" in main_text
 
-
-    with tempfile.TemporaryDirectory(prefix="qa-tujia-skill-") as tmp:
-        target = Path(tmp) / "bundle"
+    subprocess.run([sys.executable, str(root / "scripts/lint-grammar-references.py"),
+                    "--root", str(root)], cwd=root, check=True)
+    with tempfile.TemporaryDirectory(prefix="qa-tujia-grammar-") as tmp:
+        target = Path(tmp) / "package"
         subprocess.run([sys.executable, str(root / "scripts/package-translator.py"),
-                        "--output", str(target)], cwd=root, check=True, capture_output=True, text=True)
-        for name in ("SKILL.md", "references/construction-choices.md", "references/aspect-modality.md"):
-            path = target / "skills" / "translate-tujia" / name
-            assert path.is_file(), f"Packaging lost required reference: {name}"
-        assert (target / "scripts" / "export-readable-lexicon.py").is_file()
-        assert (target / "scripts" / "lightweight-synonym-search.py").is_file()
-        assert (target / "skills" / "tujia-synonym-lite" / "SKILL.md").is_file()
-        assert (target / "skills" / "tujia-synonym-lite" / "concepts.json").is_file()
+                        "--output", str(target)], cwd=root, check=True, capture_output=True)
+        assert (target / "skills/translate-tujia/SKILL.md").is_file()
+        for name in NAMES:
+            assert (target / "skills/translate-tujia/references" / name).is_file(), (
+                "Packaging lost reference " + name)
         assert not (target / "skills/translate-tujia/lexicon").exists(), (
-            "Static lexicon is optional; avoid forcing 16 MB into every bundle"
-        )
-    print("Grammar subskill QA passed: references, bilingual trigger table, and minimal bundle")
+            "Static lexicon must remain optional")
+    print("Grammar router QA passed: all routes, notation rules and bundled references")
 
 
 if __name__ == "__main__":
