@@ -4,6 +4,25 @@
 
 Lexical similarity supplies candidates. Translation still requires checking meaning, predicate class, argument structure, modality, negation and source compatibility. The reusable [translate-tujia Skill](skills/translate-tujia/SKILL.md) describes that workflow.
 
+## Translation grammar cache (TAM and constructions)
+
+The [translate-tujia Skill](skills/translate-tujia/SKILL.md) uses two **prechecked, example-backed references** before launching new searches:
+
+- [construction-choices.md](skills/translate-tujia/references/construction-choices.md): `liex` vs `mor` vs `bor`, event relations, negation, nominalization, word order, instruments and classifiers.
+- [aspect-modality.md](skills/translate-tujia/references/aspect-modality.md): translate Chinese/English *adverbs and auxiliaries* by their **meaning** (prospective, imminent, still in progress, not yet, experiential, currently relevant, ability vs permission/obligation), using attested predicate morphology and documented source limits. Includes Northern source contrasts and a separate Southern section.
+
+For example, Chinese "还" in "还在吃", "还没吃", "还没吃完" and "还不必睡" need **different whole-predicate constructions**, not a universal adverb. The reference distinguishes direct published examples, other Northern localities, supplemental unpublished speech data and teaching combinations. It is a translation aid, not a license to combine all suffixes freely.
+
+Packaging includes **both Markdown references by default**, without forcing an extra 16 MB of dictionary shards into every install:
+
+```bash
+python scripts/package-translator.py --output /tmp/bizic-translator-package
+# For offline exact dictionary lookup in the packaged output:
+python scripts/package-translator.py --output /tmp/bizic-translator-with-static --include-static-lexicon
+```
+
+The small local grammar QA is `python scripts/check-grammar-skill.py`; GitHub Actions runs it when a skill reference or packager changes.
+
 ## Install
 
 Tested with Python 3.12.14, CPU PyTorch and four inference threads. Node.js 18+ supports the original site's spelling converters and their tests.
