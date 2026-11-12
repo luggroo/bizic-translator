@@ -34,8 +34,13 @@ jobs:
             --max-filesize 12000000 \
             "https://raw.githubusercontent.com/luggroo/bizic-dictionary/${REVISION}/site/dictionary.json.gz" \
             -o "${RUNNER_TEMP}/dictionary.json.gz"
+          curl --fail --silent --show-error --location --retry 2 --max-time 60 \
+            --max-filesize 12000000 \
+            "https://raw.githubusercontent.com/luggroo/bizic-dictionary/${REVISION}/site/data.json.gz" \
+            -o "${RUNNER_TEMP}/data.json.gz"
           python scripts/export-readable-lexicon.py build \
             --source "${RUNNER_TEMP}/dictionary.json.gz" \
+            --metadata-source "${RUNNER_TEMP}/data.json.gz" \
             --output skills/translate-tujia/lexicon \
             --revision "${REVISION}"
       - name: Test shard coverage, source isolation, and bilingual embedding indexing
