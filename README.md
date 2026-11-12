@@ -6,10 +6,12 @@ Lexical similarity supplies candidates. Translation still requires checking mean
 
 ## Translation grammar cache (TAM and constructions)
 
-The [translate-tujia Skill](skills/translate-tujia/SKILL.md) uses two **prechecked, example-backed references** before launching new searches:
+The [translate-tujia Skill](skills/translate-tujia/SKILL.md) now starts with a **query-first grammar router**: [grammar-index.md](skills/translate-tujia/references/grammar-index.md). Search by Chinese semantic trigger (e.g. 快要、还在、不能、做完、用……切、定语) and read **only one relevant topic**:
 
-- [construction-choices.md](skills/translate-tujia/references/construction-choices.md): `liex` vs `mor` vs `bor`, event relations, negation, nominalization, word order, instruments and classifiers.
-- [aspect-modality.md](skills/translate-tujia/references/aspect-modality.md): translate Chinese/English *adverbs and auxiliaries* by their **meaning** (prospective, imminent, still in progress, not yet, experiential, currently relevant, ability vs permission/obligation), using attested predicate morphology and documented source limits. Includes Northern source contrasts and a separate Southern section.
+- [aspect-modality.md](skills/translate-tujia/references/aspect-modality.md): aspect, prospective, still/not-yet, ability, permission, obligation, negation of modals; includes Northern source contrasts and Southern-specific examples.
+- [event-linking.md](skills/translate-tujia/references/event-linking.md): `liex` vs `mor` vs `bor`, events and sequences, manner, states, instruments, background and condition clauses.
+- [clause-patterns.md](skills/translate-tujia/references/clause-patterns.md): predicate forms, negation/prohibition, nominalization, property words, classifiers and noun phrase order.
+- [notation-audit.md](skills/translate-tujia/references/notation-audit.md): how to check **tone-marked Pinyin against IPA**, keep source IPA unchanged when inconsistent, and register missing tones or source conflicts.
 
 For example, Chinese "还" in "还在吃", "还没吃", "还没吃完" and "还不必睡" need **different whole-predicate constructions**, not a universal adverb. The reference distinguishes direct published examples, other Northern localities, supplemental unpublished speech data and teaching combinations. It is a translation aid, not a license to combine all suffixes freely.
 
@@ -21,7 +23,7 @@ python scripts/package-translator.py --output /tmp/bizic-translator-package
 python scripts/package-translator.py --output /tmp/bizic-translator-with-static --include-static-lexicon
 ```
 
-The small local grammar QA is `python scripts/check-grammar-skill.py`; GitHub Actions runs it when a skill reference or packager changes.
+The small local grammar QA is `python scripts/check-grammar-skill.py`; it runs `scripts/lint-grammar-references.py` to compare **tone-marked Pinyin + IPA** for every standardized example, verify source labels, and test that all topic files ship in the packaged Skill. GitHub Actions runs it on reference/packager changes.
 
 ## Two retrieval modes (always disclose which ran)
 
