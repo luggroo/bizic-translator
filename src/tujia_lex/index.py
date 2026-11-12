@@ -12,7 +12,20 @@ from pathlib import Path
 
 import numpy as np
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
+
+
+def semantic_texts(record):
+    """Embed each attested sense in both available gloss languages.
+
+    Phonetic forms, IPA, citations, dialect, and source metadata stay in the
+    fully inspectable record and exact-match fields: embedding IPA would not
+    confer reliable lexical semantics. Never silently discard English glosses.
+    """
+    if record.get("record_type") == "lexical_sense":
+        return list(dict.fromkeys(x for x in [record.get("zh", ""), record.get("en", "")] if x and x.strip()))
+    return [record["text"]]
+
 
 
 def normalized(text):
@@ -27,7 +40,9 @@ def build_index(records, encoder, output, batch_size=32, metadata=None, reuse_in
     stage = Path(tempfile.mkdtemp(prefix=".index-", dir=output.parent))
     start = time.monotonic()
     try:
-        texts = list(dict.fromkeys(r["text"] for r in records))
+        texts = list(dict.fromkeys(t for r in records for t in semantic_texts(r)))
+        if not texts:
+            raise ValueError("No texts to embed")
         cached = None
         cache_rows = {}
         if reuse_index:
@@ -35,7 +50,9 @@ def build_index(records, encoder, output, batch_size=32, metadata=None, reuse_in
             for field in ["model", "revision", "weights_sha256", "pooling", "normalize", "query_instruction", "max_length"]:
                 if cached.manifest["model"].get(field) != encoder.identity.get(field):
                     raise ValueError(f"Embedding cache model mismatch: {field}")
-            cache_rows = {r["text"]: r["vector_row"] for r in cached.records}
+            cache_rows = {t: row for r in cached.records
+                          for t, row in zip(semantic_texts(r), r.get("vector_rows", [r.get("vector_row")]))
+                          if row is not None}
         missing = [t for t in texts if t not in cache_rows]
         fresh = encoder.encode(missing, batch_size=batch_size)
         fresh_rows = {t:i for i,t in enumerate(missing)}
@@ -48,11 +65,14 @@ def build_index(records, encoder, output, batch_size=32, metadata=None, reuse_in
         offsets = {t: i for i, t in enumerate(texts)}
         with (stage / "records.jsonl").open("w") as stream:
             for r in records:
-                stream.write(json.dumps({**r, "vector_row": offsets[r["text"]]}, ensure_ascii=False) + "\n")
+                stream.write(json.dumps({**r, "vector_rows": [offsets[t] for t in semantic_texts(r)]}, ensure_ascii=False) + "\n")
         np.save(stage / "vectors.npy", embeddings, allow_pickle=False)
         files = {name: hashlib.sha256((stage / name).read_bytes()).hexdigest() for name in ["records.jsonl", "vectors.npy"]}
         manifest = {"schema_version": SCHEMA_VERSION, "record_count": len(records), "unique_texts": len(texts),
                     "dimension": embeddings.shape[1], "record_types": dict(Counter(r["record_type"] for r in records)),
+                    "semantic_fields": "all Chinese and English attestation-level senses; phonetic forms and provenance retained for exact search",
+                    "lexical_entry_count": len({r["entry_id"] for r in records if r.get("record_type") == "lexical_sense"}),
+                    "lexical_attestation_count": len({a["id"] for r in records if r.get("record_type") == "lexical_sense" for a in r["attestations"]}),
                     "model": encoder.identity, "files_sha256": files, "metadata": metadata or {},
                     "reused_embeddings": len(texts) - len(missing), "encoded_embeddings": len(missing),
                     "build_seconds": round(time.monotonic() - start, 2),
@@ -111,9 +131,13 @@ class Index:
                 if encoder.identity.get(field) != self.manifest["model"].get(field):
                     raise ValueError(f"Model/index mismatch: {field}; use the indexing model")
             q = encoder.encode([query], query=True)[0]
-            rows = np.array([r["vector_row"] for r in selected], dtype=int)
-            scores = self.vectors[rows] @ q
-            ordered = sorted(zip(selected, scores.tolist()), key=lambda x: (-x[1], x[0]["id"]))
+            if not selected:
+                return []
+            rows = sorted({row for r in selected for row in r["vector_rows"]})
+            scored_rows = self.vectors[np.array(rows, dtype=int)] @ q
+            score_by_row = dict(zip(rows, scored_rows.tolist()))
+            ordered = sorted(((r, max(score_by_row[row] for row in r["vector_rows"])) for r in selected),
+                             key=lambda x: (-x[1], x[0]["id"]))
         else:
             q = normalized(query)
             def matches(r):
