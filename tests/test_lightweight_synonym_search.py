@@ -39,6 +39,22 @@ def test_five_targets_expand_without_embedding():
             assert candidate in queries, (original, candidate, queries)
 
 
+def test_five_user_constructions_are_explicitly_provisional():
+    concepts = json.loads(CONCEPTS.read_text(encoding="utf-8"))
+    expected = {
+        "路人": ("la hxi ma", "event_to_agent_nominalization"),
+        "香味": ("气味", "semantic_generalization"),
+        "玩具": ("geci-xi", "event_to_object_nominalization"),
+        "饮料": ("hu-ci", "event_to_object_nominalization"),
+        "令人费解": ("懂得 + 不能", "negative_ability_predicate"),
+    }
+    for original, (form, strategy) in expected.items():
+        row = concepts["concepts"][original]["proposed_composition"]
+        assert row["construction"].startswith(form), original
+        assert row["strategy"] == strategy
+        assert "evidence_level" in row and row["evidence_level"]
+
+
 def test_source_priority_and_dialect():
     m = load_module()
     assert m.source_priority("brassett-2006") < m.source_priority("brassett-2004")

@@ -68,7 +68,29 @@
           "relation": "component_action"
         }
       ],
-      "caution": "路 + 人 is not automatically an attested compound. Verify participial/relative-clause morphology and who moves."
+      "caution": "路 + 人 is not automatically an attested compound. Verify participial/relative-clause morphology and who moves.",
+      "proposed_composition": {
+        "analysis": "在路上走的人 / 走路的人",
+        "construction": "la hxi ma",
+        "strategy": "event_to_agent_nominalization",
+        "parts": [
+          {
+            "meaning": "路",
+            "role": "location"
+          },
+          {
+            "meaning": "走",
+            "role": "predicate"
+          },
+          {
+            "meaning": "人",
+            "role": "nominalized_agent",
+            "candidate_morphology": "-ma"
+          }
+        ],
+        "evidence_level": "user-proposed full composition; validate head movement/predicate, locality and suffix",
+        "scope_warning": "May describe a walker generally rather than an incidental passerby."
+      }
     },
     "香味": {
       "meaning": "pleasant scent, not incense sticks or the act of smelling",
@@ -102,7 +124,24 @@
           "relation": "paraphrase"
         }
       ],
-      "caution": "Brassett 香 may mean incense, not fragrance; 闻 is a verb, not scent; verify pleasing property and nominalization."
+      "caution": "Brassett 香 may mean incense, not fragrance; 闻 is a verb, not scent; verify pleasing property and nominalization.",
+      "proposed_composition": {
+        "analysis": "气味（必要时加愉悦性质）",
+        "construction": "气味（上位义，不预设未核土家语拼音）",
+        "strategy": "semantic_generalization",
+        "parts": [
+          {
+            "meaning": "气味",
+            "role": "superordinate"
+          },
+          {
+            "meaning": "香",
+            "role": "optional_positive_valence"
+          }
+        ],
+        "evidence_level": "semantic generalization, not an exact synonym",
+        "scope_warning": "Original positive scent nuance is absent from generic smell; do not confuse incense."
+      }
     },
     "玩具": {
       "meaning": "an object used for play, not play event",
@@ -132,7 +171,26 @@
           "relation": "context_participant"
         }
       ],
-      "caution": "玩 is a verb and 小孩 a participant. To mean toy, check action-to-object nominalization (such as ci/xi); don't concatenate forms blindly."
+      "caution": "玩 is a verb and 小孩 a participant. To mean toy, check action-to-object nominalization (such as ci/xi); don't concatenate forms blindly.",
+      "proposed_composition": {
+        "analysis": "玩的东西 / 用来玩的东西",
+        "construction": "geci-xi",
+        "strategy": "event_to_object_nominalization",
+        "parts": [
+          {
+            "meaning": "玩",
+            "role": "predicate",
+            "candidate_morphology": "geci"
+          },
+          {
+            "meaning": "玩的东西",
+            "role": "nominalized_associated_object",
+            "candidate_morphology": "-xi"
+          }
+        ],
+        "evidence_level": "user-proposed composition; check xi's participant/object/event interpretations in context",
+        "scope_warning": "-xi is not automatically interchangeable with -ci. Check constituent and tone alignment."
+      }
     },
     "饮料": {
       "meaning": "something for drinking; includes water/tea but not identical to either",
@@ -170,7 +228,26 @@
           "relation": "component_head"
         }
       ],
-      "caution": "水/茶/酒 are beverage examples, NOT synonyms of beverage. Prefer attested object nominalization for 喝的东西."
+      "caution": "水/茶/酒 are beverage examples, NOT synonyms of beverage. Prefer attested object nominalization for 喝的东西.",
+      "proposed_composition": {
+        "analysis": "喝的东西",
+        "construction": "hu-ci",
+        "strategy": "event_to_object_nominalization",
+        "parts": [
+          {
+            "meaning": "喝",
+            "role": "predicate",
+            "candidate_morphology": "hu"
+          },
+          {
+            "meaning": "喝的东西",
+            "role": "nominalized_object",
+            "candidate_morphology": "-ci"
+          }
+        ],
+        "evidence_level": "user-proposed application of documented object nominalization; full lexicalization unverified",
+        "scope_warning": "Water/tea/wine are kinds of drinks, not synonyms of the generic nominal."
+      }
     },
     "令人费解": {
       "meaning": "hard for someone to understand, not merely unknown or strange",
@@ -212,7 +289,25 @@
           "relation": "related_not_equivalent"
         }
       ],
-      "caution": "不知道 (not knowing) and 奇怪 (strange) are not necessarily 令人费解; verify who fails to understand and negation/scope."
+      "caution": "不知道 (not knowing) and 奇怪 (strange) are not necessarily 令人费解; verify who fails to understand and negation/scope.",
+      "proposed_composition": {
+        "analysis": "不能理解 / 不能懂得",
+        "construction": "懂得 + 不能（结构示意，非固定语序）",
+        "strategy": "negative_ability_predicate",
+        "parts": [
+          {
+            "meaning": "理解、懂",
+            "role": "cognitive_predicate"
+          },
+          {
+            "meaning": "不能",
+            "role": "negative_ability",
+            "scope": "cognitive predicate"
+          }
+        ],
+        "evidence_level": "user-proposed semantic construction; exact Tujia negative modal morphology still to inspect",
+        "scope_warning": "Don't substitute simple 'not know', ignorance, or strange for an inability to understand."
+      }
     },
     "画地为牢": {
       "meaning": "figuratively shutting oneself in, not necessarily drawing or legal imprisonment",

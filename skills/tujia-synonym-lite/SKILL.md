@@ -17,6 +17,29 @@ Use this subskill **only when actual BGE vector retrieval is unavailable** (or w
 6. **Show the trace before translating:** query and relation for each expansion; actual matches / no hits; up to 3–5 useful witness IDs, source, original term, original sense; why each helps or is rejected. Then deliver *every* requested translated sentence even if some spans require explicit Chinese lexical insertions and localized uncertainty markers.
 7. **Bound cost:** up to eight carefully chosen query strings for an ordinary short phrase (twelve for genuinely complex items), prioritize decompositions over unbounded exploration, reuse queried shards, never enumerate all buckets. If none of the tested candidates are attested, explain the limited evidence and use a clearly marked paraphrase/borrowing; do not invent Tujia words, tones, cosine scores or unattested source claims.
 
+## Semantic decomposition → constructional recomposition (preferred over mechanical synonym replacement)
+
+The goal is to recover **a semantically faithful, compositionally licensed Tujia expression**, not a Chinese synonym with the same word class. After a no-hit exact lookup, identify the underlying predicate, its arguments, and its possible nominalized roles; then search the **real** lexicon for each building block and grammar for the derivation. These are productive hypotheses, not automatic attested phrases. User-supplied proposals below are *candidate analyses for testing*, **not independently verified full-form attestations**.
+
+| Chinese input | First semantic rewrite | Candidate Tujia construction | Operation | Must verify |
+| --- | --- | --- | --- | --- |
+| 路人 | 在路上走的人 / 走路的人 | `la hxi ma` = road + go/walk + human nominalizer | event → participant; locative / activity relative to agent | `la` is 'road', `hxi` is 'walk/go' in the selected variety; `-ma` nominalizes this intransitive predicate and means an incidental passerby rather than any walker |
+| 香味 | 气味 | use verified generic 'smell/odor' sense before finding 'pleasant' modifier | semantic generalization to a superordinate | Generic odor includes bad smell; original favorable valence may need restoring; do not use incense or the verb 'smell' as if they were the noun fragrance |
+| 玩具 | 用来玩的东西 / 玩的东西 | `geci-xi` = 'play' + nominalizer | event → associated object, with contextual object reading | `-xi` here can denote the plaything and not the act of playing or a person; verify actual word boundary and tone; **do not silently replace -xi with -ci** |
+| 饮料 | 喝的东西 | `hu-ci` = 'drink' + object nominalizer | event → object/theme | `-ci` in this lexical/dialect context denotes something to drink; not water/tea/wine alone; identify actual phonology of the verb |
+| 令人费解 | 不能懂得 / 不能理解 | cognitive predicate 'understand' + inability/negative potential | complex property → negative ability predicate | Keep ability vs factual 'not know', and distinguish experiencer from thing misunderstood; negation/ability order must be attested |
+
+**These are four reusable transformations**, not five independent synonym recipes:
+
+1. **Event/participant reconstruction:** turn a lexicalized entity label into a relative or agent-nominalized event (路人 → road + walk + person). A participant can be introduced by the predicate without a special stand-alone noun.
+2. **Event-to-thing nominalization:** reduce artifacts and substances to their function (玩具 → something to play with; 饮料 → something to drink). Check the **specific** available nominalizer and reading in context: person `-ma`, generic `-xi`, object `-ci` are not freely interchangeable.
+3. **Controlled semantic generalization:** look up a broader category when a marked concept has no exact sense (香味 → 气味), **record the lost feature** (pleasantness) and restore it with an attested modifier when needed.
+4. **Predicate + modality/negation composition:** express a complex evaluative adjective via a simple predicate plus inability/negative potential (令人费解 → understand + cannot); check polarity, scope, argument structure, and actual modal morphology before composing.
+
+**Query protocol:** for each source word, include the original phrase, semantic rewrite(s), the predicate, the head / participant, and the relevant nominalizer or ability pattern. Record each expansion relation as `paraphrase`, `superordinate`, `component_action`, `component_participant`, or `construction_proposal`. A construction proposal is not a lexical hit. Never represent a model's suggested phrase as found in the dictionary unless an attestation or quoted grammar example proves it.
+
+**Diagnostics:** query `路人` + `路` + `走` + `人`, `香味` + `气味`, `玩具` + `玩` + `东西`, `饮料` + `喝` + `东西`, `令人费解` + `理解` + `不能`. Search the specific witness shards; then separately check relational/nominalization evidence from `../translate-tujia/references/construction-choices.md` and the reference grammar. Report whether the **full** construction is directly attested, safely compositional, or provisional.
+
 ## Five diagnostic cases (verified static witness examples, not whole-phrase translations)
 
 | Input | Candidate path | Attested example | Watch out for |

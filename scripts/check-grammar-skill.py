@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Offline QA for the fast Tujia grammar router, references and packaged skill."""
 import argparse
+import json
 import subprocess
 import sys
 import tempfile
@@ -33,6 +34,28 @@ def run(root):
               '<a id="ability">', '<a id="volition">', '<a id="south">'):
         assert a in tam, f"Missing index anchor: {a}"
     assert "No web search actions." in main_text
+    # The companion no-model semantic bridge must remain routable and honestly labeled.
+    lite_root = root / "skills/tujia-synonym-lite"
+    lite_text = (lite_root / "SKILL.md").read_text(encoding="utf-8")
+    seed = json.loads((lite_root / "concepts.json").read_text(encoding="utf-8"))
+    assert "../tujia-synonym-lite/SKILL.md" in main_text
+    assert "检索模式：Embedding" in main_text and "检索模式：Skill-based" in main_text
+    for word, expected_form in (
+        ("路人", "la hxi ma"), ("香味", "气味"), ("玩具", "geci-xi"),
+        ("饮料", "hu-ci"), ("令人费解", "懂得 + 不能"),
+    ):
+        assert word in lite_text
+        assert seed["concepts"][word]["proposed_composition"]["construction"].startswith(expected_form)
+        if (root / "skills/translate-tujia/lexicon/manifest.json").is_file():
+            completed = subprocess.run(
+                [sys.executable, str(root / "scripts/lightweight-synonym-search.py"),
+                 word, "--max-queries", "10", "--limit-per-query", "1"],
+                cwd=root, check=True, capture_output=True, text=True
+            )
+            report = json.loads(completed.stdout)
+            assert report["mode"] == "skill_based" and report["embedding_run"] is False
+            assert report["candidate_results"][0]["query"] == word
+
     assert "调号拼音 + IPA" in main_text
     assert "叶氏拼音" in main_text and "only when the user explicitly" in main_text
 
