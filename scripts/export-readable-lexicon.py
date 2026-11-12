@@ -50,7 +50,7 @@ def search_keys(att, spellings):
     return {s for s in result if 0 < len(s) <= MAX_QUERY_CHARS}
 
 
-def read_dictionary(path):
+def read_gzip_json(path):
     path = Path(path)
     if path.stat().st_size > MAX_COMPRESSED:
         raise ValueError("Compressed dictionary exceeds safety size limit")
@@ -58,17 +58,41 @@ def read_dictionary(path):
         raw = handle.read(MAX_DECOMPRESSED + 1)
     if len(raw) > MAX_DECOMPRESSED:
         raise ValueError("Decompressed dictionary exceeds safety size limit")
-    data = json.loads(raw)
+    return json.loads(raw)
+
+
+def read_dictionary(path):
+    data = read_gzip_json(path)
     if not isinstance(data, dict) or not isinstance(data.get("words"), list):
         raise ValueError("Expected Bizic dictionary with words")
     return data
 
 
-def build(source, output, revision="", max_bytes=MAX_SHARD_BYTES):
+def source_catalog(metadata_source):
+    if metadata_source is None:
+        return {}
+    metadata = read_gzip_json(metadata_source)
+    if not isinstance(metadata, dict):
+        raise ValueError("Invalid source metadata file")
+    aliases = metadata.get("sourceAliases", {})
+    return {
+        s["id"]: {
+            "canonical_id": aliases.get(s["id"], s["id"]),
+            "title": s.get("title", ""),
+            "dialect": s.get("dialect", ""),
+            "locations": s.get("locations", s.get("location", []))
+        }
+        for s in metadata.get("sources", []) + metadata.get("sourceVariants", [])
+        if s.get("id")
+    }
+
+
+def build(source, output, revision="", max_bytes=MAX_SHARD_BYTES, metadata_source=None):
     source, output = Path(source), Path(output)
     if not 4_096 <= max_bytes <= MAX_SHARD_BYTES:
         raise ValueError("max_bytes outside safe bounds")
     data = read_dictionary(source)
+    catalog = source_catalog(metadata_source)
     buckets = defaultdict(list)
     attestation_ids = set()
     entry_ids = set()
@@ -102,6 +126,9 @@ def build(source, output, revision="", max_bytes=MAX_SHARD_BYTES):
     stage = Path(tempfile.mkdtemp(prefix=".static-lexicon-", dir=output.parent))
     manifest = {"format": 1, "source": "luggroo/bizic-dictionary/site/dictionary.json.gz",
                 "revision": revision, "source_sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
+                "metadata_source_sha256": hashlib.sha256(Path(metadata_source).read_bytes()).hexdigest()
+                    if metadata_source else None,
+                "sources": catalog,
                 "dictionary_entries": len(entry_ids), "dictionary_attestations": len(attestation_ids),
                 "index_keys": sum(len(v) for v in buckets.values()),
                 "algorithm": "FNV-1a(normalized UTF-8), top byte; NFKC + casefold + strip",
@@ -180,6 +207,7 @@ def main():
     b.add_argument("--source", required=True)
     b.add_argument("--output", required=True)
     b.add_argument("--revision", default="")
+    b.add_argument("--metadata-source", help="Matching versioned site/data.json.gz source catalog")
     b.add_argument("--max-bytes", type=int, default=MAX_SHARD_BYTES)
     q = sub.add_parser("lookup")
     q.add_argument("--directory", required=True)
@@ -187,7 +215,7 @@ def main():
     q.add_argument("--limit", type=int, default=20)
     args = parser.parse_args()
     if args.command == "build":
-        manifest = build(args.source, args.output, args.revision, args.max_bytes)
+        manifest = build(args.source, args.output, args.revision, args.max_bytes, args.metadata_source)
         print(json.dumps({k: manifest[k] for k in ("dictionary_entries", "dictionary_attestations", "index_keys")}))
     else:
         print(json.dumps(lookup(args.directory, args.query, args.limit), ensure_ascii=False, indent=2))
