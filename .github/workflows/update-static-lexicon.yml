@@ -43,6 +43,29 @@ jobs:
             --metadata-source "${RUNNER_TEMP}/data.json.gz" \
             --output skills/translate-tujia/lexicon \
             --revision "${REVISION}"
+      - name: Audit EVERY real dictionary entry and attestation before embedding
+        shell: bash
+        run: |
+          set -euo pipefail
+          PYTHONPATH=src python - <<'PY'
+          from pathlib import Path
+          import os
+          from tujia_lex.data import lexical_records, read_json
+          from tujia_lex.index import semantic_texts
+          source = Path(os.environ["RUNNER_TEMP"]) / "dictionary.json.gz"
+          words = read_json(source)["words"]
+          lexical = lexical_records(source)
+          source_entries = {w["id"] for w in words}
+          source_witnesses = {a["id"] for w in words for a in w["attestations"]}
+          actual_entries = {r["entry_id"] for r in lexical}
+          actual_witnesses = {a["id"] for r in lexical for a in r["attestations"]}
+          assert source_entries == actual_entries, "Missing dictionary entries in semantic input"
+          assert source_witnesses == actual_witnesses, "Missing dictionary attestations in semantic input"
+          assert all(semantic_texts(r) for r in lexical)
+          assert all(r["en"] in semantic_texts(r) for r in lexical if r.get("en"))
+          print(f"Verified {len(source_entries)} entries, {len(source_witnesses)} attestations, "
+                f"{len(lexical)} distinct senses with all available Chinese/English semantic fields")
+          PY
       - name: Test shard coverage, source isolation, and bilingual embedding indexing
         shell: bash
         run: |
