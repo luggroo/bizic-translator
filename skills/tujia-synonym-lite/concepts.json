@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "description": "Curated query-decomposition seeds, not synonym assertions or vector similarity; exact-match each query against public dictionary witnesses.",
+  "concepts": {
+    "经济损失": {
+      "meaning": "financial losses suffered, not simply wealth",
+      "candidates": [
+        {
+          "q": "经济损失",
+          "relation": "exact"
+        },
+        {
+          "q": "损失",
+          "relation": "near_expression"
+        },
+        {
+          "q": "亏损",
+          "relation": "related_result"
+        },
+        {
+          "q": "钱",
+          "relation": "component_resource"
+        },
+        {
+          "q": "赔偿",
+          "relation": "related_remedy"
+        },
+        {
+          "q": "经济",
+          "relation": "component_domain"
+        },
+        {
+          "q": "丢失",
+          "relation": "related_event"
+        }
+      ],
+      "caution": "钱 alone drops the notion of harm; 赔偿 is a remedy, not the loss itself."
+    },
+    "路人": {
+      "meaning": "an incidental passerby, not necessarily a stranger or guest",
+      "candidates": [
+        {
+          "q": "路人",
+          "relation": "exact"
+        },
+        {
+          "q": "行人",
+          "relation": "near_expression"
+        },
+        {
+          "q": "过路人",
+          "relation": "near_expression"
+        },
+        {
+          "q": "经过",
+          "relation": "component_action"
+        },
+        {
+          "q": "路",
+          "relation": "component_location"
+        },
+        {
+          "q": "人",
+          "relation": "component_head"
+        },
+        {
+          "q": "走",
+          "relation": "component_action"
+        }
+      ],
+      "caution": "路 + 人 is not automatically an attested compound. Verify participial/relative-clause morphology and who moves."
+    },
+    "香味": {
+      "meaning": "pleasant scent, not incense sticks or the act of smelling",
+      "candidates": [
+        {
+          "q": "香味",
+          "relation": "exact"
+        },
+        {
+          "q": "香气",
+          "relation": "near_expression"
+        },
+        {
+          "q": "芳香",
+          "relation": "near_expression"
+        },
+        {
+          "q": "气味",
+          "relation": "semantic_supertype"
+        },
+        {
+          "q": "闻",
+          "relation": "component_perception"
+        },
+        {
+          "q": "香",
+          "relation": "ambiguous_related"
+        },
+        {
+          "q": "好闻",
+          "relation": "paraphrase"
+        }
+      ],
+      "caution": "Brassett 香 may mean incense, not fragrance; 闻 is a verb, not scent; verify pleasing property and nominalization."
+    },
+    "玩具": {
+      "meaning": "an object used for play, not play event",
+      "candidates": [
+        {
+          "q": "玩具",
+          "relation": "exact"
+        },
+        {
+          "q": "玩意",
+          "relation": "near_expression"
+        },
+        {
+          "q": "玩的东西",
+          "relation": "paraphrase"
+        },
+        {
+          "q": "玩",
+          "relation": "component_action"
+        },
+        {
+          "q": "东西",
+          "relation": "component_head"
+        },
+        {
+          "q": "小孩",
+          "relation": "context_participant"
+        }
+      ],
+      "caution": "玩 is a verb and 小孩 a participant. To mean toy, check action-to-object nominalization (such as ci/xi); don't concatenate forms blindly."
+    },
+    "饮料": {
+      "meaning": "something for drinking; includes water/tea but not identical to either",
+      "candidates": [
+        {
+          "q": "饮料",
+          "relation": "exact"
+        },
+        {
+          "q": "饮品",
+          "relation": "near_expression"
+        },
+        {
+          "q": "喝的东西",
+          "relation": "paraphrase"
+        },
+        {
+          "q": "喝",
+          "relation": "component_action"
+        },
+        {
+          "q": "水",
+          "relation": "example_hyponym"
+        },
+        {
+          "q": "茶",
+          "relation": "example_hyponym"
+        },
+        {
+          "q": "酒",
+          "relation": "example_hyponym"
+        },
+        {
+          "q": "东西",
+          "relation": "component_head"
+        }
+      ],
+      "caution": "水/茶/酒 are beverage examples, NOT synonyms of beverage. Prefer attested object nominalization for 喝的东西."
+    },
+    "令人费解": {
+      "meaning": "hard for someone to understand, not merely unknown or strange",
+      "candidates": [
+        {
+          "q": "令人费解",
+          "relation": "exact"
+        },
+        {
+          "q": "难懂",
+          "relation": "near_expression"
+        },
+        {
+          "q": "不明白",
+          "relation": "paraphrase"
+        },
+        {
+          "q": "不懂",
+          "relation": "paraphrase"
+        },
+        {
+          "q": "理解",
+          "relation": "component_cognition"
+        },
+        {
+          "q": "知道",
+          "relation": "related_cognition"
+        },
+        {
+          "q": "不知道",
+          "relation": "related_negative_state"
+        },
+        {
+          "q": "难",
+          "relation": "component_difficulty"
+        },
+        {
+          "q": "奇怪",
+          "relation": "related_not_equivalent"
+        }
+      ],
+      "caution": "不知道 (not knowing) and 奇怪 (strange) are not necessarily 令人费解; verify who fails to understand and negation/scope."
+    },
+    "画地为牢": {
+      "meaning": "figuratively shutting oneself in, not necessarily drawing or legal imprisonment",
+      "candidates": [
+        {
+          "q": "画地为牢",
+          "relation": "exact"
+        },
+        {
+          "q": "关起来",
+          "relation": "paraphrase"
+        },
+        {
+          "q": "关",
+          "relation": "component_predicate"
+        },
+        {
+          "q": "自己",
+          "relation": "component_reflexive"
+        },
+        {
+          "q": "困住",
+          "relation": "near_expression"
+        },
+        {
+          "q": "限制",
+          "relation": "related_result"
+        }
+      ],
+      "caution": "Do not translate each Hanzi or treat confinement terms as interchangeable."
+    }
+  }
+}

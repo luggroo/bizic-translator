@@ -18,7 +18,7 @@ paths = [root / name for name in [
     '.gitignore', 'README.md', 'pyproject.toml', 'requirements-evaluation.txt',
     'skills/translate-tujia/SKILL.md', 'docs/semantic-retrieval-evaluation.md',
 ]]
-for folder in ['src', 'tests', 'docs/evaluation', 'skills/translate-tujia/references'] + (
+for folder in ['src', 'tests', 'docs/evaluation', 'skills/translate-tujia/references', 'skills/tujia-synonym-lite'] + (
     ['skills/translate-tujia/lexicon'] if a.include_static_lexicon else []
 ):
     paths += [f for f in (root/folder).rglob('*') if f.is_file()
@@ -26,7 +26,8 @@ for folder in ['src', 'tests', 'docs/evaluation', 'skills/translate-tujia/refere
               and not any(s.endswith('.egg-info') for s in f.parts)]
 for name in ['download-embedding-model.py', 'evaluate-semantic-retrieval.py',
              'fetch-dictionary.py', 'render-semantic-evaluation.py',
-             'tujia-lex-spelling.cjs', 'package-translator.py', 'export-readable-lexicon.py']:
+             'tujia-lex-spelling.cjs', 'package-translator.py', 'export-readable-lexicon.py',
+             'lightweight-synonym-search.py']:
     paths.append(root/'scripts'/name)
 for source in paths:
     target = out/source.relative_to(root)

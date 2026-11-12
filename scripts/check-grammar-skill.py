@@ -33,6 +33,15 @@ def run(root):
                    "tʰa⁵⁵ pie⁵⁵", "ɣie³⁵ha³⁵tsi²¹tsʰie⁵⁵"):
         assert marker in tam_text, f"Missing prechecked example: {marker}"
     assert "No web search actions." in main_text
+    assert "../tujia-synonym-lite/SKILL.md" in main_text
+    assert "检索模式：Embedding" in main_text and "检索模式：Skill-based" in main_text
+    synonym_dir = root / "skills" / "tujia-synonym-lite"
+    synonym_text = (synonym_dir / "SKILL.md").read_text(encoding="utf-8")
+    concepts = (synonym_dir / "concepts.json").read_text(encoding="utf-8")
+    for cue in ("路人", "香味", "玩具", "饮料", "令人费解", "经济损失"):
+        assert cue in concepts, f"Missing semantic bridge: {cue}"
+    assert "not embedding" in synonym_text.lower()
+
 
     with tempfile.TemporaryDirectory(prefix="qa-tujia-skill-") as tmp:
         target = Path(tmp) / "bundle"
@@ -42,6 +51,9 @@ def run(root):
             path = target / "skills" / "translate-tujia" / name
             assert path.is_file(), f"Packaging lost required reference: {name}"
         assert (target / "scripts" / "export-readable-lexicon.py").is_file()
+        assert (target / "scripts" / "lightweight-synonym-search.py").is_file()
+        assert (target / "skills" / "tujia-synonym-lite" / "SKILL.md").is_file()
+        assert (target / "skills" / "tujia-synonym-lite" / "concepts.json").is_file()
         assert not (target / "skills/translate-tujia/lexicon").exists(), (
             "Static lexicon is optional; avoid forcing 16 MB into every bundle"
         )

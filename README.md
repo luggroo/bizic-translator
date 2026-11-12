@@ -23,6 +23,29 @@ python scripts/package-translator.py --output /tmp/bizic-translator-with-static 
 
 The small local grammar QA is `python scripts/check-grammar-skill.py`; GitHub Actions runs it when a skill reference or packager changes.
 
+## Two retrieval modes (always disclose which ran)
+
+`translate-tujia` chooses **real BGE embedding retrieval** in a local/Codex environment that can actually provision Python, the pinned model and a full schema-compatible index. The first run may install/build according to this README, but subsequent queries should **reuse** those assets. A real model query must return actual scores, IDs and source witnesses.
+
+When the environment cannot run/install BGE, it invokes the separate [tujia-synonym-lite skill](skills/tujia-synonym-lite/SKILL.md), backed by [a bounded concept-expansion map](skills/tujia-synonym-lite/concepts.json) and the existing static dictionary shards. This is **human/skill guided near-synonym/paraphrase/component expansion plus exact attestation lookup**, never embedding. Both the first substantive progress update and final translation explicitly say which retrieval mode was used.
+
+Run the lightweight mode locally, without ML dependencies:
+
+```bash
+python scripts/lightweight-synonym-search.py '经济损失' --dialect north
+python scripts/lightweight-synonym-search.py '路人' --dialect north
+python scripts/lightweight-synonym-search.py '香味' --dialect north
+python scripts/lightweight-synonym-search.py '玩具' --dialect north
+python scripts/lightweight-synonym-search.py '饮料' --dialect north
+python scripts/lightweight-synonym-search.py '令人费解' --dialect north
+# Non-curated phrase: add contextual candidate meanings, not just string segmentation
+python scripts/lightweight-synonym-search.py '困难的想法' --related '难懂,理解,想,难'
+```
+
+The static shard files must be present (they are tracked in this repo; the default small package excludes them unless `--include-static-lexicon` is passed). A text-only GitHub agent can run the same skill by reading the manifest and only the FNV-1a-selected JSONL shards. Each result includes actual witness IDs, source aliases, original forms and senses; no fake cosine similarities. In particular, `经济损失` should expand to `钱`, `赔偿`, `经济` and other related candidates before deciding whether a Chinese lexical insertion is necessary.
+
+
+
 ## Install
 
 Tested with Python 3.12.14, CPU PyTorch and four inference threads. Node.js 18+ supports the original site's spelling converters and their tests.
