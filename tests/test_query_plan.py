@@ -50,6 +50,22 @@ def test_generic_thing_heads_do_not_require_a_word_for_thing():
     assert '[head]' in specific['draft_source_forms']
 
 
+def test_warming_requires_causation_not_bare_property_or_fire_synonym():
+    for expression in ['取暖用的东西', '让孩子暖和用的东西', '使人干净用的东西']:
+        p=plan(expression)
+        assert p.analysis.features['causative']=='yes'
+        assert p.analysis.roles['head']=='causer'
+        records=[witness(c.query,c.key,pos='n' if c.role=='causee' else 'v')
+                 for c in p.analysis.components if c.role!='head']
+        result=compose(p,records)
+        assert 'form:causee dǒ form:predicate niexi' in result['draft_source_forms']
+        assert not compose(p,[r for r in records if r['entry_id']!='causee'])['lexical_complete']
+    p=plan('取暖用的东西')
+    pred=next(c for c in p.analysis.components if c.role=='predicate')
+    assert not supports(witness('烤火'),pred)
+    assert not compose(p,[witness('暖和')])['lexical_complete']
+
+
 def test_new_frames_are_composed_from_arguments_not_expression_table():
     # Generated combinations absent from concepts.json AND the challenge data.
     for verb in ['买','卖','读','写']:

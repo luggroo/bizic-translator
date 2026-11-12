@@ -1585,19 +1585,23 @@
     {
       "id": "c14",
       "expression": "取暖用的东西",
-      "pinyin_candidate": "lò niexi",
-      "ipa_candidate": "luɔ⁵¹ nie ɕi",
-      "meaning": "暖和的；取暖工具读法未确认",
+      "pinyin_candidate": "lò dǒ lò niexi",
+      "ipa_candidate": "luɔ⁵¹ tuɔ²¹ luɔ⁵¹ nie ɕi",
+      "meaning": "使人暖和的（取暖用途）",
       "status": [
-        "待核：暖和是否足以表达取暖用途"
+        "使役构式拟译；搭配待审校"
       ],
       "roles": {
-        "head": "instrument",
+        "head": "causer",
         "agent": "unspecified",
-        "patient": "head"
+        "causee": "人",
+        "causer": "head",
+        "experiencer": "人"
       },
       "features": {
-        "nominalization": "purpose_object"
+        "nominalization": "purpose_object",
+        "head_realization": "implicit",
+        "causative": "yes"
       },
       "audit": "c14.md",
       "selected_word_renderings": {
@@ -1607,12 +1611,30 @@
           "method": "source-profile conversion",
           "original_notations": {
             "ye": [
+              "lov",
               "lov"
             ],
             "brassett": [
+              "luo⁴",
               "luo⁴"
             ],
             "ipa": [
+              "luɔ⁵¹",
+              "luɔ⁵¹"
+            ]
+          }
+        },
+        "⟪1⟫": {
+          "pinyin": "lò",
+          "ipa": "luɔ⁵¹",
+          "method": "source-profile conversion",
+          "original_notations": {
+            "brassett": [
+              "luo⁴",
+              "luo⁴"
+            ],
+            "ipa": [
+              "luɔ⁵¹",
               "luɔ⁵¹"
             ]
           }
@@ -1721,7 +1743,7 @@
       },
       "reviewed_composition": {
         "family": "function_object",
-        "draft_source_forms": "luo⁴ niexi",
+        "draft_source_forms": "luo⁴ dǒ luo⁴ niexi",
         "selected": {
           "predicate": {
             "term": "luo⁴",
@@ -1737,12 +1759,15 @@
             },
             "notations": {
               "ye": [
+                "lov",
                 "lov"
               ],
               "brassett": [
+                "luo⁴",
                 "luo⁴"
               ],
               "ipa": [
+                "luɔ⁵¹",
                 "luɔ⁵¹"
               ]
             },
@@ -1750,18 +1775,53 @@
             "dialect": "north",
             "locations": [],
             "record_id": "lex:stedt-rn-454769:29a69400bf77080e"
+          },
+          "causee": {
+            "term": "luo⁴",
+            "attestation_id": "stedt-rn-453974",
+            "source": {
+              "id": "stedt-39f4cd9a6b",
+              "canonical_id": "brassett-2006",
+              "title": "STEDT · Brassett 06 Tujia",
+              "url": "https://stedtdb.johnblowe.com/gnis?lg=tujia",
+              "locator": "STEDT rn 453974 · 原文定位 2.5",
+              "attestation_id": "stedt-rn-453974",
+              "source_ref": "2.5"
+            },
+            "notations": {
+              "brassett": [
+                "luo⁴",
+                "luo⁴"
+              ],
+              "ipa": [
+                "luɔ⁵¹",
+                "luɔ⁵¹"
+              ]
+            },
+            "entry_id": "w1421",
+            "dialect": "north",
+            "locations": [],
+            "record_id": "lex:w1421:7715588328e4c903"
           }
         },
         "missing_components": [],
         "roles": {
-          "head": "instrument",
+          "head": "causer",
           "agent": "unspecified",
-          "patient": "head"
+          "causee": "人",
+          "causer": "head",
+          "experiencer": "人"
         },
         "features": {
-          "nominalization": "purpose_object"
+          "nominalization": "purpose_object",
+          "head_realization": "implicit",
+          "causative": "yes"
         },
         "morphology": [
+          {
+            "form": "dǒ",
+            "function": "CAUS /tuɔ²¹/ before embedded predicate; B06:155–156 ex.47; not postverbal necessity"
+          },
           {
             "form": "niexi",
             "function": "independent LNK–NMLZ; Feng 2025:10 ex.27; Xiang 2026:14,16; role supplied by predicate/context; source tone pending"
@@ -1782,11 +1842,12 @@
         "meaning_losses": [],
         "notation": "audit uses unchanged lexical source forms + labeled morphology; not synchronized Pinyin/IPA output"
       },
-      "review_basis": "泛称事物中心词改为独立名物化；使用原实验候选重新组合，未重新检索。niexi 保留无调形式，不跨来源补调。",
+      "review_basis": "撤销 lò niexi：性质不等于取暖用途。新运行 E 检索 人、暖和；B06:155–156 ex.47 的 causee + dǒ + predicate 实现使役；烤火仅适用于明确火源情境。",
       "original_measured_candidate": {
-        "pinyin": "lò niexi",
-        "ipa": "luɔ⁵¹ nie ɕi"
-      }
+        "pinyin": "lò dǒ lò niexi",
+        "ipa": "luɔ⁵¹ tuɔ²¹ luɔ⁵¹ nie ɕi"
+      },
+      "reviewed_run": "c14-causative-rerun.json"
     },
     {
       "id": "c15",

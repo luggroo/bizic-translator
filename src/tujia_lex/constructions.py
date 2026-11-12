@@ -74,7 +74,7 @@ def compose(plan, candidates):
     terms = {k: v['term'] for k,v in selected.items()}
     pred = terms.get('predicate', '[predicate]')
     args = ' '.join(terms[c.key] for c in analysis.components
-                    if c.key in terms and c.role not in {'predicate', 'head', 'result'})
+                    if c.key in terms and c.role not in {'predicate', 'head', 'result', 'causee'})
     f = analysis.features
     predicate = pred
     morphology = []
@@ -97,6 +97,9 @@ def compose(plan, candidates):
     elif f.get('aspect') == 'result_state':
         add('bǒ', 'maintained result state /pɔ²¹/; B06:90 exx.110–111; productive extension')
     family = analysis.family
+    if f.get('causative') == 'yes':
+        predicate = terms.get('causee', '[causee]') + ' dǒ ' + predicate
+        morphology.append({'form': 'dǒ', 'function': 'CAUS /tuɔ²¹/ before embedded predicate; B06:155–156 ex.47; not postverbal necessity'})
     draft = ' '.join(x for x in [args, predicate] if x)
     if family == 'event_agent' or (family == 'role_relative' and analysis.roles.get('head') == 'agent' and f.get('nominalization') == 'person'):
         draft += ' mā'

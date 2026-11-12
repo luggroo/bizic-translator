@@ -27,6 +27,13 @@ def main():
     inventory=None
     for d in docs:
         r=next(r for r in d['routes'] if r['route']=='E' and r['budget']=='natural')
+        reviewed_run=reviews.get(d['case']['id'],{}).get('reviewed_run')
+        if reviewed_run:
+            revisions[d['case']['id']]=r['composition']
+            fresh=json.loads((root/reviewed_run).read_text())
+            r['composition']=fresh['composition']
+            r['plan']=fresh['plan']
+            continue
         analysis=Interpretation.from_dict(r['plan']['analysis'])
         if not implicit_thing_head(analysis):
             continue
@@ -66,7 +73,7 @@ def main():
     morph={
       'mā':('mā','ma⁵⁵'),'xí':('xí','ɕi²⁴'),'xi':('xí','ɕi²⁴'),
       'niě':('niě','ɲie²¹'),'niexi':('niexi','nie ɕi'),'tā tī':('tā tī','tʰa⁵⁵ tʰi⁵⁵'),
-      'dá':('dá','ta²⁴'),'lā niē':('lā niē','la⁵⁵ ɲie⁵⁵'),
+      'dá':('dá','ta²⁴'),'dǒ':('dǒ','tuɔ²¹'),'lā niē':('lā niē','la⁵⁵ ɲie⁵⁵'),
       'hǔ':('hǔ','xu²¹'),'jī dā niē':('jī dā niē','tɕi⁵⁵ ta⁵⁵ ɲie⁵⁵'),
       'tái':('tái','tʰai²⁴')}
     lines=['# 60 例挑战集：候选译式（含审阅更正）','',

@@ -16,9 +16,11 @@
     "meaning": "雨水＋挡；拟指遮雨用品，未确认"
   },
   "c14": {
+    "reviewed_run": "c14-causative-rerun.json",
     "status": [
-      "待核：暖和是否足以表达取暖用途"
+      "使役构式拟译；搭配待审校"
     ],
-    "meaning": "暖和的；取暖工具读法未确认"
+    "meaning": "使人暖和的（取暖用途）",
+    "review_basis": "撤销 lò niexi：性质不等于取暖用途。新运行 E 检索 人、暖和；B06:155–156 ex.47 的 causee + dǒ + predicate 实现使役；烤火仅适用于明确火源情境。"
   }
 }

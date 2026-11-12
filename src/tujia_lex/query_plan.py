@@ -73,7 +73,7 @@ LEXICAL = {
     '债务': '欠钱', '收入减少': '得到的钱减少',
 }
 # Verb lexical semantics, shared across every productive frame.
-VERBS = {'清洁': ('洗', ['清洗']), '取暖': ('暖和', ['烤火']),
+VERBS = {'清洁': ('洗', ['清洗']), '取暖': ('使人暖和', []),
          '遮': ('挡', ['遮挡']), '开': ('打开', ['开']),
          '懂得': ('懂', ['理解', '懂得', '明白']),
          '认识': ('认识', ['认', '认得']), '送': ('送', ['递']), '守': ('守', ['看守', '守卫']),
@@ -92,6 +92,10 @@ PREDICATES = sorted(set(VERBS) | {
 def event(text):
     """Return predicate + its overt patient/location; no Hanzi-by-Hanzi synonymy."""
     text = text.removeprefix('用来').removeprefix('用以').removesuffix('用')
+    causative = re.fullmatch(r'(?:使|让)(人|孩子|我|你|他)(.+)', text)
+    if causative:
+        causee, state = causative.groups()
+        return event(state) + [Component('causee', causee, 'causee')]
     if text == '走路':
         return [Component('predicate', '走', 'predicate'), Component('location', '路', 'location')]
     if text == '打鱼':
@@ -99,6 +103,8 @@ def event(text):
     pred = next((p for p in PREDICATES if text.startswith(p)), text)
     tail = text[len(pred):].removeprefix('住')
     basic, alternatives = VERBS.get(pred, (pred, []))
+    if basic.startswith(('使人', '让人')):
+        return event(basic + tail)
     out = [Component('predicate', basic, 'predicate', alternatives)]
     if tail:
         out.append(Component('patient', tail, 'patient'))
@@ -249,6 +255,14 @@ def interpret(expression):
                 implicit = c.query == '东西' and family in {'function_object', 'negative_relative'}
                 c.required = not implicit
                 features['head_realization'] = 'implicit' if implicit else 'overt'
+    if any(c.role == 'causee' for c in components):
+        features['causative'] = 'yes'
+        roles['causee'] = next(c.query for c in components if c.role == 'causee')
+        if family == 'function_object':
+            roles['head'] = 'causer'
+            roles['causer'] = 'head'
+            roles['experiencer'] = roles['causee']
+            roles.pop('patient', None)
     return Interpretation(text, family, components, roles, features, list(dict.fromkeys(paraphrases)), losses)
 
 
