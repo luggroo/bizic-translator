@@ -64,5 +64,13 @@ jobs:
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git commit -m "Update static text lexicon from public dictionary"
-            git push
+            # Reconcile unrelated edits made during a running export; never force-push.
+            for attempt in 1 2 3; do
+              git fetch origin main
+              git rebase origin/main
+              if git push origin HEAD:main; then
+                break
+              fi
+              if [ "$attempt" -eq 3 ]; then exit 1; fi
+            done
           fi
