@@ -16,6 +16,8 @@ def main():
     p.add_argument('--data-root',required=True)
     p.add_argument('--directory',default='docs/evaluation/compositional')
     a=p.parse_args();root=Path(a.directory)
+    review_path=root/'candidate-reviews.json'
+    reviews=json.loads(review_path.read_text()) if review_path.exists() else {}
     docs=[json.loads(path.read_text()) for path in sorted(root.glob('c[0-9][0-9].json'))]
     selected={v['record_id']:v for d in docs for r in d['routes'] if r['route']=='E' and r['budget']=='natural' for v in r['composition']['selected'].values()}
     keys=list(selected)
@@ -50,7 +52,8 @@ def main():
       'dá':('dá','ta²⁴'),'lā niē':('lā niē','la⁵⁵ ɲie⁵⁵'),
       'hǔ':('hǔ','xu²¹'),'jī dā niē':('jī dā niē','tɕi⁵⁵ ta⁵⁵ ɲie⁵⁵'),
       'tái':('tái','tʰai²⁴')}
-    lines=['# 60 例挑战集：最终候选译式','',
+    lines=['# 60 例挑战集：候选译式（含审阅更正）','',
+      '审阅更正：开瓶器可考虑 `tīkū tóng niexi` 独立指称，不要求补“东西”。c12 的 yǎn’gócě 是“雨水”，且“挡”来自仙仁；该草案未获确认。c42、c43 均缺“审判”谓词，只有结构骨架，不能当作完整翻译。c38 已补结果状态；审阅后的形式与原实验候选分别保存，检索分数未改。参见 [本次核读与更正](nie-niexi-review.md)。','',
       '下面是本次混合路线 E 在自然预算下选出的最终候选，供逐例判断。每行给出完整草案、IPA 和所表达的组合意思；未完成项直接保留在候选中。原词形、声调、见证及模型分数见对应审计。','',
       '“词汇齐全”只表示所需词汇槽位均有候选；“形态待核”表示词干、后缀、数量或来源搭配尚未落实。带 33 等当前转换器不能可靠区分的调值保留原记音，不把它改写成 21。泛化后的气味、声音不包含原文所有性质。','',
       '|编号／原文|最终候选（调号拼音；不能可靠转换的词保留原记音）|IPA|组合意思|核验状态|','|---|---|---|---|---|---|']
@@ -97,6 +100,10 @@ def main():
         row={'id':c['id'],'expression':c['expression'],'pinyin_candidate':pin,'ipa_candidate':ipa,
              'meaning':display_meaning,'status':status,'roles':co['roles'],'features':co['features'],
              'audit':c['id']+'.md','selected_word_renderings':tokens,'grammar':co['grammar']}
+        if c['id'] in reviews:
+            row['original_measured_candidate']={'pinyin':pin,'ipa':ipa}
+            row.update(reviews[c['id']])
+            pin,ipa,status=row['pinyin_candidate'],row['ipa_candidate'],row['status']
         all_rows.append(row)
         cells=[f"[{c['id']} {c['expression']}]({c['id']}.md)",pin,'/'+ipa+'/',row['meaning'],'；'.join(status)]
         lines.append('|'+ '|'.join(str(x).replace('|','／').replace('\n',' ') for x in cells)+'|')

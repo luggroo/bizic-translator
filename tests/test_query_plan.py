@@ -20,6 +20,14 @@ def witness(zh, eid='test', *, pos='v', en='', source='brassett-2006'):
         'attestations':[{'id':eid,'term':'form:'+eid}], 'score':0.25}
 
 
+def test_result_state_is_realized_not_only_recorded_in_plan():
+    p=plan('画地为牢')
+    result=compose(p,[witness('关','close'),witness('自己','self',pos='pron')])
+    assert p.analysis.features['aspect']=='result_state'
+    assert result['draft_source_forms'].endswith(' bǒ')
+    assert any('maintained result state' in m['function'] for m in result['morphology'])
+
+
 def test_new_frames_are_composed_from_arguments_not_expression_table():
     # Generated combinations absent from concepts.json AND the challenge data.
     for verb in ['买','卖','读','写']:

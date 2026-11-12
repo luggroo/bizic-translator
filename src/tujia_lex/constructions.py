@@ -80,6 +80,8 @@ def compose(plan, candidates):
         add('jī dā niē', 'COMPL+NEG+CONT; Tian:526; other Northern locality')
     elif f.get('aspect') == 'recent_completed':
         add('[recent completion/state choice]', 'Lu et al. 2021:431–432; not a universal just suffix')
+    elif f.get('aspect') == 'result_state':
+        add('bǒ', 'maintained result state /pɔ²¹/; B06:90 exx.110–111; productive extension')
     family = analysis.family
     draft = ' '.join(x for x in [args, predicate] if x)
     if family == 'event_agent' or (family == 'role_relative' and analysis.roles.get('head') == 'agent' and f.get('nominalization') == 'person'):
