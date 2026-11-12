@@ -6,7 +6,7 @@ Lexical similarity supplies candidates. Translation still requires checking mean
 
 ## Translation grammar cache (TAM and constructions)
 
-The [translate-tujia Skill](skills/translate-tujia/SKILL.md) now starts with a **query-first grammar router**: [grammar-index.md](skills/translate-tujia/references/grammar-index.md). Search by Chinese semantic trigger (e.g. 快要、还在、不能、做完、用……切、定语) and read **only one relevant topic**:
+The [translate-tujia Skill](skills/translate-tujia/SKILL.md) now starts with a **blocker → next action** quick router, backed by the [recovery playbook](skills/translate-tujia/references/recovery-playbook.md). Every prohibition or warning routes to a concrete retrieval method, grammar construction, controlled borrowing, or complete provisional translation. For grammar, use the **query-first router**: [grammar-index.md](skills/translate-tujia/references/grammar-index.md). Search by Chinese semantic trigger (e.g. 快要、还在、不能、做完、用……切、定语) and read **only one relevant topic**:
 
 - [aspect-modality.md](skills/translate-tujia/references/aspect-modality.md): aspect, prospective, still/not-yet, ability, permission, obligation, negation of modals; includes Northern source contrasts and Southern-specific examples.
 - [event-linking.md](skills/translate-tujia/references/event-linking.md): `liex` vs `mor` vs `bor`, events and sequences, manner, states, instruments, background and condition clauses.
