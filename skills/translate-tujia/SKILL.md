@@ -212,3 +212,7 @@ For a long mixed-language draft, audit each proposed Chinese content-word insert
 For an audit, identify the affected span, the specific issue, supporting evidence, and a correction or unresolved choice. Report what was actually checked. Reserve “native-speaker reviewed” for an actual documented review; corpus support alone does not establish naturalness.
 
 Use committed or authorized material within its access scope. Permission to read source material for research does not authorize publishing it. Keep staged progress updates separate from the final translation text, so they do not interrupt its sentence alignment.
+
+## nie / niexi and an implicit head
+
+Read [nie、niexi 与独立指称](references/nie-niexi.md) when translating “……的、……的人／东西” or a purpose object. Prefer a contextually complete nominalized expression when appropriate: “开瓶子的” can use a niexi phrase without an obligatory generic “东西”. Distinguish an overt-head modifier, independent reference, and a head-internal relative; retain agent/patient/instrument roles. The reference records Feng’s actual substitution judgments and the narrower scope of the available Xiang Weihua material.
