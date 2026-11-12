@@ -69,17 +69,18 @@ def lint(root: Path) -> tuple[int, int]:
                 column_indices = None
                 continue
             parts = cells(line)
-            if "IPA" in parts:
-                if "调号拼音" not in parts and "调号拼音（拟转写，待独立核）" not in parts:
+            if any(p.startswith("IPA") for p in parts):
+                if not any(p.startswith("调号拼音") for p in parts):
                     problems.append(f"{name}:{i}: IPA example table lacks tone-marked Pinyin column")
                     continue
                 pi = next(j for j, p in enumerate(parts) if p.startswith("调号拼音"))
-                ia = parts.index("IPA")
-                column_indices = (pi, ia)
+                ia = next(j for j, p in enumerate(parts) if p.startswith("IPA"))
+                provisional_table = any("拟转写" in p or "待独立核" in p for p in parts)
+                column_indices = (pi, ia, provisional_table)
                 continue
             if column_indices is None or all(re.fullmatch(r":?-+:?", c) for c in parts):
                 continue
-            pi, ia = column_indices
+            pi, ia, provisional_table = column_indices
             if len(parts) <= max(pi, ia):
                 problems.append(f"{name}:{i}: unaligned example table row")
                 continue
@@ -88,10 +89,7 @@ def lint(root: Path) -> tuple[int, int]:
                 problems.append(f"{name}:{i}: missing Pinyin or IPA: {line[:130]}")
                 continue
             examples += 1
-            if "待独立核" in p or "待核" in p or (
-                name == "event-linking.md" and
-                "调号拼音（拟转写，待独立核）" in lines[max(i - 3, 0):i]
-            ):
+            if provisional_table or "待独立核" in p or "待核" in p:
                 provisional += 1
             a, b = pinyin_tones(p), ipa_tones(ipa, southern=southern)
             if a != b:
@@ -103,7 +101,7 @@ def lint(root: Path) -> tuple[int, int]:
                 problems.append(f"{name}:{i}: missing explicit source provenance")
     if problems:
         raise AssertionError("\n".join(problems))
-    if examples < 45:
+    if examples < 65:
         raise AssertionError(f"Too few example pairs: {examples}")
     return examples, provisional
 
