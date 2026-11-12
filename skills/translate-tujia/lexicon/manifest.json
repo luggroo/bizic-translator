@@ -2054,6 +2054,7 @@
   "dictionary_entries": 9297,
   "format": 1,
   "index_keys": 81730,
+  "metadata_source_sha256": "2facab83217a398c5ba03de0ef70fcbef3642e8fa70e2a30a5db0e854aac58b9",
   "record_fields": [
     "entry_id",
     "attestation_id",
@@ -2070,5 +2071,995 @@
   "revision": "072046c39261cf536e0ce29f06779cd3eeb99219",
   "shard_limit_bytes": 110000,
   "source": "luggroo/bizic-dictionary/site/dictionary.json.gz",
-  "source_sha256": "c4c04aa863ab135285125fb92ea0e6951d6c044f8c7cf7804fe51647b657808d"
+  "source_sha256": "c4c04aa863ab135285125fb92ea0e6951d6c044f8c7cf7804fe51647b657808d",
+  "sources": {
+    "1-dr9QHHpr4zjN1OZDN9PmoTxNa7hSt7G": {
+      "canonical_id": "1-dr9QHHpr4zjN1OZDN9PmoTxNa7hSt7G",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语人称代词的格_张军.caj"
+    },
+    "1-yanXC2oFP6VbffTpDdA7KUvSMlyw7CS": {
+      "canonical_id": "1-yanXC2oFP6VbffTpDdA7KUvSMlyw7CS",
+      "dialect": "北部",
+      "locations": [
+        "坡脚"
+      ],
+      "title": "坡脚土家语鼻音韵尾的来源_田恒金.caj"
+    },
+    "103ZhIHJ8HXfdGRz6_u4DFuDMRYCWzAy2": {
+      "canonical_id": "103ZhIHJ8HXfdGRz6_u4DFuDMRYCWzAy2",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "语音4.wav"
+    },
+    "10leuJ9c6SVcpyLSW_ALNGC97gAul5RKE": {
+      "canonical_id": "10leuJ9c6SVcpyLSW_ALNGC97gAul5RKE",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "19 - 5.3 其他哭嫁歌词.mp3"
+    },
+    "11KC4SUbDqrRFeh9T1szyCotowgArwErk": {
+      "canonical_id": "11KC4SUbDqrRFeh9T1szyCotowgArwErk",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "Tujia_global_processed.txt"
+    },
+    "11fF3xsZMuWfg73KBVZ42sZawy_i1EvLT": {
+      "canonical_id": "11fF3xsZMuWfg73KBVZ42sZawy_i1EvLT",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "12 - 3.1 童年回忆.mp3"
+    },
+    "12STOD0SR4ji3UUHli4yzEgsVHViNSFqN": {
+      "canonical_id": "12STOD0SR4ji3UUHli4yzEgsVHViNSFqN",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "1-5.png"
+    },
+    "132XHlYtUthNvnGdsM7ls99Sv78QG6QTU": {
+      "canonical_id": "132XHlYtUthNvnGdsM7ls99Sv78QG6QTU",
+      "dialect": "未标明",
+      "locations": [
+        "仙仁"
+      ],
+      "title": "仙仁土家语研究.pdf"
+    },
+    "144oGVB8T0iWNYEDn0SzYS_J94e5CB_M-": {
+      "canonical_id": "144oGVB8T0iWNYEDn0SzYS_J94e5CB_M-",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语形容词的级简论.pdf"
+    },
+    "14LY2BDfDkOgyDEH0_0S_cywl2JB-gy4t": {
+      "canonical_id": "14LY2BDfDkOgyDEH0_0S_cywl2JB-gy4t",
+      "dialect": "未标明",
+      "locations": [
+        "恩施"
+      ],
+      "title": "恩施地区汉语方言中的土家族词语_罗姝芳.pdf"
+    },
+    "15hgNztDGzK22XFSM26p2uJkftxyyG80I": {
+      "canonical_id": "15hgNztDGzK22XFSM26p2uJkftxyyG80I",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语文库 网站原版（拼音版）.pdf"
+    },
+    "163cu9mBBKkwtflWeRznFP0TV9pEEQrIc": {
+      "canonical_id": "163cu9mBBKkwtflWeRznFP0TV9pEEQrIc",
+      "dialect": "北部",
+      "locations": [
+        "永顺"
+      ],
+      "title": "永顺县民族文化系列丛书 土家语言纪实暨歌谣.pdf"
+    },
+    "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO": {
+      "canonical_id": "brassett-2004",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语英语词表 Brassett.xlsx"
+    },
+    "170glVxth2J7i5G8Orjk9LTNCE7wK7NPZ": {
+      "canonical_id": "170glVxth2J7i5G8Orjk9LTNCE7wK7NPZ",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语文库 orthography.docx"
+    },
+    "17VX5eNOrbjqF7x_00GqjQBqJxihv-RWl": {
+      "canonical_id": "17VX5eNOrbjqF7x_00GqjQBqJxihv-RWl",
+      "dialect": "南部",
+      "locations": [],
+      "title": "南部土家语中汉语借词的特点_徐世璇.caj"
+    },
+    "17Yw6WFa5afGVsvbulXKB28_Glv06sWka": {
+      "canonical_id": "17Yw6WFa5afGVsvbulXKB28_Glv06sWka",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "20 - 6.1 对唱.mp3"
+    },
+    "17ai1eQo6GAGmNQz9Ju2Il_H_sAHDM6bRQPZIKt5E8u8": {
+      "canonical_id": "17ai1eQo6GAGmNQz9Ju2Il_H_sAHDM6bRQPZIKt5E8u8",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "Submitted Version"
+    },
+    "17hYkNIl6aaJGKbYQRqAM8FGuCsHxfpfk": {
+      "canonical_id": "17hYkNIl6aaJGKbYQRqAM8FGuCsHxfpfk",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "A Phonological Study of the Tujia Language.pdf"
+    },
+    "182YCb7XsLrvRE-0M7mdZ69EqEKP7_fBo": {
+      "canonical_id": "182YCb7XsLrvRE-0M7mdZ69EqEKP7_fBo",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语、汉语对译速记读本.pdf"
+    },
+    "18iHWivTdM-XSTZCB6XYOqIK5ncD_b7a1": {
+      "canonical_id": "18iHWivTdM-XSTZCB6XYOqIK5ncD_b7a1",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "03 - 1.3 田好汉与彭公爵主的故事.mp3"
+    },
+    "18nnBvgQ1Hs618CoE3N4wWeEBglKvF37H": {
+      "canonical_id": "18nnBvgQ1Hs618CoE3N4wWeEBglKvF37H",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语舌尖擦音声母的来源_田恒金.pdf"
+    },
+    "18uP9vgVj3V1g9d_SF4wQ1s5zQ0oEH0KM": {
+      "canonical_id": "18uP9vgVj3V1g9d_SF4wQ1s5zQ0oEH0KM",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "语音5.wav"
+    },
+    "19vcOueG7mqv5CWZlvfClZcz5XV2iuMZ7": {
+      "canonical_id": "19vcOueG7mqv5CWZlvfClZcz5XV2iuMZ7",
+      "dialect": "北部",
+      "locations": [
+        "龙山",
+        "靛房"
+      ],
+      "title": "湖南省龙山县靛房镇百型村土家语个案研究_周安现.caj"
+    },
+    "1AIcBlvmYpWlQTvME1YrPjIHmMQK03RA0": {
+      "canonical_id": "1AIcBlvmYpWlQTvME1YrPjIHmMQK03RA0",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家族土司简史，王承尧着，中央民族学院出版社，1991年7月第1版，176页.pdf"
+    },
+    "1BgoqXMeO2_EnCx_iKiiFO1cOMkwk5mEa": {
+      "canonical_id": "1BgoqXMeO2_EnCx_iKiiFO1cOMkwk5mEa",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语多音节词的一个来源_田恒金.pdf"
+    },
+    "1CA3LWWeMBP_0Ku6DH9OJsgqvV6YC46zz": {
+      "canonical_id": "1CA3LWWeMBP_0Ku6DH9OJsgqvV6YC46zz",
+      "dialect": "南北比较",
+      "locations": [],
+      "title": "土家语_thai_35_及相关否定词词性与语法功能辨析_向亮.caj"
+    },
+    "1CQW3dzj1d4-7QxbndWYYEGimXIuG-gtK": {
+      "canonical_id": "1CQW3dzj1d4-7QxbndWYYEGimXIuG-gtK",
+      "dialect": "南北比较",
+      "locations": [],
+      "title": "土家语三种句式的类型学特征_向亮.pdf"
+    },
+    "1CntE7POVnydcAVwnj7bZ-lGrdKQqe5ZU": {
+      "canonical_id": "1CntE7POVnydcAVwnj7bZ-lGrdKQqe5ZU",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "02 - 1.2 向老官人的故事.mp3"
+    },
+    "1D8Nckff7xvN2lvfSQKwqMSIl6h5EZsJd": {
+      "canonical_id": "1D8Nckff7xvN2lvfSQKwqMSIl6h5EZsJd",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "析土家语“小”-田德生.pdf"
+    },
+    "1DQgVI6FBmOP5ySuPx4tnb342bcOvN8Fn": {
+      "canonical_id": "1DQgVI6FBmOP5ySuPx4tnb342bcOvN8Fn",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语简志.pdf"
+    },
+    "1DkXLnEMGGmYsPfgyyaSQeFG6KX5JTk1h": {
+      "canonical_id": "1DkXLnEMGGmYsPfgyyaSQeFG6KX5JTk1h",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "kj-pj.zip"
+    },
+    "1Dta-81F2GDiYXI2bw-4RM-Jr7iF1ZZZb": {
+      "canonical_id": "1Dta-81F2GDiYXI2bw-4RM-Jr7iF1ZZZb",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "1-4.png"
+    },
+    "1EI105TqYoFw5WcdAKJW00YK5B9ttM3Tn": {
+      "canonical_id": "1EI105TqYoFw5WcdAKJW00YK5B9ttM3Tn",
+      "dialect": "北部",
+      "locations": [
+        "永顺"
+      ],
+      "title": "11 - 2.7 来自永顺县的故事.mp3"
+    },
+    "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE": {
+      "canonical_id": "brassett-2004",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语汉语词表.htm"
+    },
+    "1GeVUhLLOpecJEJhOYUU6MEzC_hBgBQso": {
+      "canonical_id": "1GeVUhLLOpecJEJhOYUU6MEzC_hBgBQso",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "湘西乡话来母读擦音塞擦音的研究_瞿建慧.pdf"
+    },
+    "1HWScOziFC6a8jUt1dsUZdejDJYU4WZK8": {
+      "canonical_id": "1HWScOziFC6a8jUt1dsUZdejDJYU4WZK8",
+      "dialect": "北部",
+      "locations": [
+        "永顺"
+      ],
+      "title": "永顺土家语常用词汇附录.pdf"
+    },
+    "1Hpb96NTMsqomhsz1DvSJvjdjXUa0BxWt": {
+      "canonical_id": "1Hpb96NTMsqomhsz1DvSJvjdjXUa0BxWt",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "密基语中关于军事的词语.txt"
+    },
+    "1I0-fJXv7WLVGQI89Zczl0cJK4EeXZcV4": {
+      "canonical_id": "1I0-fJXv7WLVGQI89Zczl0cJK4EeXZcV4",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "共同保留_共同创新与共同脱轨_张光宇.pdf"
+    },
+    "1J95AVT2fIACYFWt_BuZvoNafST3kFKce": {
+      "canonical_id": "1J95AVT2fIACYFWt_BuZvoNafST3kFKce",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语的类型学描写_魏翠翠.caj"
+    },
+    "1JG-zYcBEgDewBRKcTItG4fr4lNISypcq": {
+      "canonical_id": "1JG-zYcBEgDewBRKcTItG4fr4lNISypcq",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "第四章 早期共同土家语韵母系统.pdf"
+    },
+    "1Jbyw-BnNXebjfA4MnyQpeBsB7Tj2iSQ9": {
+      "canonical_id": "1Jbyw-BnNXebjfA4MnyQpeBsB7Tj2iSQ9",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "kj-sd.zip"
+    },
+    "1Jg3e4ScDtPbE60mtlpuW_gQp7sr7MrMd": {
+      "canonical_id": "1Jg3e4ScDtPbE60mtlpuW_gQp7sr7MrMd",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语研究 陈康.pdf"
+    },
+    "1JhsRRnu6Jc1T7zzchn9Uqyt98wQYUXQN": {
+      "canonical_id": "1JhsRRnu6Jc1T7zzchn9Uqyt98wQYUXQN",
+      "dialect": "北部",
+      "locations": [
+        "坡脚"
+      ],
+      "title": "13 - 3.2 坡脚乡的日常生活.mp3"
+    },
+    "1KAE3oYiFMAaQrscqxySXmUDwCAP3oZjs": {
+      "canonical_id": "1KAE3oYiFMAaQrscqxySXmUDwCAP3oZjs",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "08 - 2.4 有关老虎的故事.mp3"
+    },
+    "1KRnrE9Tt1eSuJ0CwJ0-6iY7_yJbrJPJY": {
+      "canonical_id": "1KRnrE9Tt1eSuJ0CwJ0-6iY7_yJbrJPJY",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "22 - 6.3 谚语.mp3"
+    },
+    "1KVD8rLGl-nfTPH6c97USWUrB36LM6Kyt": {
+      "canonical_id": "1KVD8rLGl-nfTPH6c97USWUrB36LM6Kyt",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "1-2.png"
+    },
+    "1KWgX6NN-ZmxsvlbtUYFkVKlGjbUB2GiK": {
+      "canonical_id": "1KWgX6NN-ZmxsvlbtUYFkVKlGjbUB2GiK",
+      "dialect": "未标明",
+      "locations": [
+        "他砂"
+      ],
+      "title": "14 - 3.3 他砂乡的日常生活.mp3"
+    },
+    "1KzWEWXuY4CoZ7iVeOYcukKF42nv7HM4x": {
+      "canonical_id": "1KzWEWXuY4CoZ7iVeOYcukKF42nv7HM4x",
+      "dialect": "南北比较",
+      "locations": [],
+      "title": "Zhou (2020) · Computer Friendly Version (with typographical corrections).pdf"
+    },
+    "1LVvUoQEMW7VYxKMKtm0Ivw-Uy-D6AWiY": {
+      "canonical_id": "1LVvUoQEMW7VYxKMKtm0Ivw-Uy-D6AWiY",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "2013_2014土家语调查札记_谢建猷.pdf"
+    },
+    "1M-R0SnVI2n0HnqU_ClIVaOX1niG2VC2G": {
+      "canonical_id": "1M-R0SnVI2n0HnqU_ClIVaOX1niG2VC2G",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "1-1.png"
+    },
+    "1M2JutWOtUzgIGyDf21SB-FmqV3gwtIWk": {
+      "canonical_id": "1M2JutWOtUzgIGyDf21SB-FmqV3gwtIWk",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语的形态.pdf"
+    },
+    "1MhVR3TGa2qPZmYv95tsqbBRtpyFYKXKO": {
+      "canonical_id": "1MhVR3TGa2qPZmYv95tsqbBRtpyFYKXKO",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "彭军土家语教学.mp4"
+    },
+    "1Muc296ybWnyvfIcU5QcKOqVnR_okcZXK": {
+      "canonical_id": "1Muc296ybWnyvfIcU5QcKOqVnR_okcZXK",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "26 - 7.4 两篇演说词.mp3"
+    },
+    "1MvanbjUJo22v0Dgh5LsJI6hVE7KQSfeJ": {
+      "canonical_id": "1MvanbjUJo22v0Dgh5LsJI6hVE7KQSfeJ",
+      "dialect": "未标明",
+      "locations": [
+        "来凤"
+      ],
+      "title": "试用_双六选点_解析来凤土家族原生民歌的唱词音声地域性特点_以_直嘎多里嘎多_为.pdf"
+    },
+    "1NswFuB2Ev16STvD9U0RLe1jnLqxeCD7I": {
+      "canonical_id": "1NswFuB2Ev16STvD9U0RLe1jnLqxeCD7I",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "17 - 5.1 哭嫁歌（第一部分）.mp3"
+    },
+    "1OIjsxEvY96h4etFr9T3IO9NDdYPvmHSz": {
+      "canonical_id": "1OIjsxEvY96h4etFr9T3IO9NDdYPvmHSz",
+      "dialect": "南部",
+      "locations": [],
+      "title": "南部土家语高元音的舌位后移现象_以_i_韵的地域分化为例_向亮.pdf"
+    },
+    "1O_tb8YaR2bUfk_QrBhdlbUPEQ6TfWEEz": {
+      "canonical_id": "1O_tb8YaR2bUfk_QrBhdlbUPEQ6TfWEEz",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "24 - 7.2 土家族过年的传统风俗.mp3"
+    },
+    "1P2bXMP0H_W0kbxQPx1jE6QzkWrFYsRZQ": {
+      "canonical_id": "1P2bXMP0H_W0kbxQPx1jE6QzkWrFYsRZQ",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语定名结构研究.pdf"
+    },
+    "1PUnNOraGdgbIzgyRTZKSiXpbCYQy1SSC": {
+      "canonical_id": "1PUnNOraGdgbIzgyRTZKSiXpbCYQy1SSC",
+      "dialect": "北部",
+      "locations": [
+        "龙山",
+        "坡脚"
+      ],
+      "title": "书籍：母语存留区龙山坡脚土家语口语.pdf"
+    },
+    "1Q9LWXBaSrltpIZif_I3aZFJMuDSxx31l": {
+      "canonical_id": "1Q9LWXBaSrltpIZif_I3aZFJMuDSxx31l",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "21 - 6.2 小曲.mp3"
+    },
+    "1QKYqtmyoElxnRP-Y5-9TwscbTVTuwEm_": {
+      "canonical_id": "1QKYqtmyoElxnRP-Y5-9TwscbTVTuwEm_",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语动词将行体形态音位的变化_陈康.caj"
+    },
+    "1QTpqdS2Hpb-fWw9tHRVfk1zFv8forSoRbnqKURn6tOI": {
+      "canonical_id": "1QTpqdS2Hpb-fWw9tHRVfk1zFv8forSoRbnqKURn6tOI",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "Proto-Bizic Gloss"
+    },
+    "1QWOC573wqfy7_i-oGILjQrjfkCH8VJrN": {
+      "canonical_id": "1QWOC573wqfy7_i-oGILjQrjfkCH8VJrN",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语常用口语半月通.pdf"
+    },
+    "1QfzLrmdtwg9JuxnKPkEuVvTT8cinAwLV": {
+      "canonical_id": "1QfzLrmdtwg9JuxnKPkEuVvTT8cinAwLV",
+      "dialect": "北部",
+      "locations": [
+        "龙山",
+        "靛房"
+      ],
+      "title": "龙山靛房乡双语调查报告.pdf"
+    },
+    "1RJShB0SN-_wHj5bEhbbDbJHalRG3fDaN": {
+      "canonical_id": "1RJShB0SN-_wHj5bEhbbDbJHalRG3fDaN",
+      "dialect": "南部",
+      "locations": [
+        "泸溪"
+      ],
+      "title": "泸溪土家语.pdf"
+    },
+    "1RQrqHL3RmSpHRu9C5xvahLTE2pFcLgMG": {
+      "canonical_id": "1RQrqHL3RmSpHRu9C5xvahLTE2pFcLgMG",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "[] Diachronic and synchronic overview of the Tujia language of Central South China.pdf"
+    },
+    "1Rk5NMHiJC6kXLQJWpd9uLNPQCLmyJGLX": {
+      "canonical_id": "1Rk5NMHiJC6kXLQJWpd9uLNPQCLmyJGLX",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "试探土家语语源_胡经挦.pdf"
+    },
+    "1Rz5teTP6yj7r-bZ0t9t_MsTLXRaN2sA7": {
+      "canonical_id": "1Rz5teTP6yj7r-bZ0t9t_MsTLXRaN2sA7",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "清代改土归流时期土家族与汉族音乐文化的交流.pdf"
+    },
+    "1TUD96Lyo7t7RdJCSC4joMdiWB5cJQDOu": {
+      "canonical_id": "1TUD96Lyo7t7RdJCSC4joMdiWB5cJQDOu",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "湘西土家五句子山歌音乐特征探析.pdf"
+    },
+    "1T_4lWorPPoYPvtxt37vhsaIXfBOSsXCl": {
+      "canonical_id": "1T_4lWorPPoYPvtxt37vhsaIXfBOSsXCl",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "新建 Microsoft Office Word 97 - 2003 文档 (2).doc"
+    },
+    "1UDD6WkwQt5KKDaRdMswg4t9y37NfxYT1": {
+      "canonical_id": "1UDD6WkwQt5KKDaRdMswg4t9y37NfxYT1",
+      "dialect": "北部",
+      "locations": [],
+      "title": "土家语空间概念的语法和语义表征_徐世璇.pdf"
+    },
+    "1UXt0dNJ8HbgQe_8o9RdhgvfpBG8fzS9I": {
+      "canonical_id": "1UXt0dNJ8HbgQe_8o9RdhgvfpBG8fzS9I",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "敬酒歌（土家语）.mp3"
+    },
+    "1UkZt3YcvKGzVvEcOkIUlUUWHyrxLhJYj": {
+      "canonical_id": "1UkZt3YcvKGzVvEcOkIUlUUWHyrxLhJYj",
+      "dialect": "北部",
+      "locations": [
+        "龙山",
+        "靛房"
+      ],
+      "title": "龙山靛房乡双语调查报告.pdf"
+    },
+    "1V9pT_iH8OnvUHZ4-iAyw_ZEtrMWRHW0W": {
+      "canonical_id": "1V9pT_iH8OnvUHZ4-iAyw_ZEtrMWRHW0W",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语文库 （汉字+片假名，标声调）.docx"
+    },
+    "1VRbmgi_kJEfyeJBmoKJCVu76ieWHLOKN": {
+      "canonical_id": "1VRbmgi_kJEfyeJBmoKJCVu76ieWHLOKN",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "古代土家人名训释_叶德书.pdf"
+    },
+    "1Vy6G7hrUANe1OAlXE5Y8JK_ZL5PnaQwJ": {
+      "canonical_id": "1Vy6G7hrUANe1OAlXE5Y8JK_ZL5PnaQwJ",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "18 - 5.2 哭嫁歌（第二部分）.mp3"
+    },
+    "1WPC0TqNsqW6FTushvagAf2A95tKtIq0i": {
+      "canonical_id": "1WPC0TqNsqW6FTushvagAf2A95tKtIq0i",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "07 - 2.3 打猎对话.mp3"
+    },
+    "1Wc1-MpBoKR70ZwQPUGKMt7QQOBJOrPqy": {
+      "canonical_id": "1Wc1-MpBoKR70ZwQPUGKMt7QQOBJOrPqy",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语汉语词典.pdf"
+    },
+    "1WgcAZ11LI9wbov4-EQmY9dxaasmr-GIL": {
+      "canonical_id": "1WgcAZ11LI9wbov4-EQmY9dxaasmr-GIL",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "dlz-sd.zip"
+    },
+    "1X53xkKrlICLxNhVLtnfRtVJ7-fKa58Nt": {
+      "canonical_id": "1X53xkKrlICLxNhVLtnfRtVJ7-fKa58Nt",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "tm-sd.zip"
+    },
+    "1X8ixsLa-r0Cyo9qNpPAV_l62E8SzCY6X": {
+      "canonical_id": "1X8ixsLa-r0Cyo9qNpPAV_l62E8SzCY6X",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "溪州竹枝词中的土家语词释义_陈廷亮.pdf"
+    },
+    "1XSDqBd4M1RI5nLde8I-InGD-AwLFeJcc": {
+      "canonical_id": "1XSDqBd4M1RI5nLde8I-InGD-AwLFeJcc",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "06 - 2.2 庆祝舍巴节（第二部分）.mp3"
+    },
+    "1Xj75XmgXqmtnW0XucpAFWnhkF3T1Xscf": {
+      "canonical_id": "1Xj75XmgXqmtnW0XucpAFWnhkF3T1Xscf",
+      "dialect": "未标明",
+      "locations": [
+        "恩施"
+      ],
+      "title": "恩施地区汉语方言中的土家语底层_罗姝芳.caj"
+    },
+    "1Xxdqi_BQeajuDzCYBl1hqcBWMjC-6VWx": {
+      "canonical_id": "1Xxdqi_BQeajuDzCYBl1hqcBWMjC-6VWx",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语教与学-田志慧.pdf"
+    },
+    "1YZToKfE2QCbJCvs4AuxY8uLfd76BArt3": {
+      "canonical_id": "1YZToKfE2QCbJCvs4AuxY8uLfd76BArt3",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语汉借词类别及对词汇系统的影响_张海燕.pdf"
+    },
+    "1_QORoDI5Q0Ct_Gt_1qbdrQdZkQ-Djk2K": {
+      "canonical_id": "1_QORoDI5Q0Ct_Gt_1qbdrQdZkQ-Djk2K",
+      "dialect": "北部",
+      "locations": [
+        "坡脚"
+      ],
+      "title": "坡脚土家语鼻音韵尾的来源_田恒金.pdf"
+    },
+    "1_TeDq68CmPyRn5uniEjL8X-kGRHA_J1u": {
+      "canonical_id": "1_TeDq68CmPyRn5uniEjL8X-kGRHA_J1u",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家語的關係子句.pdf"
+    },
+    "1_rXGGi5I5NOFJ27m_Q4mXFd_HFFLBQxG": {
+      "canonical_id": "1_rXGGi5I5NOFJ27m_Q4mXFd_HFFLBQxG",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "15 - 3.4 有关土匪的回忆.mp3"
+    },
+    "1a3tS7qCU9ByRueSBSkcPUgrBUPB-20VJ": {
+      "canonical_id": "1a3tS7qCU9ByRueSBSkcPUgrBUPB-20VJ",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "从借词看汉语对土家语的影响_邓佑玲.pdf"
+    },
+    "1a5k-8h7ZWLI2nZtJGIec5JWSznl4e9Tk": {
+      "canonical_id": "1a5k-8h7ZWLI2nZtJGIec5JWSznl4e9Tk",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "藏缅语族语言词汇-土家语20160303.xls"
+    },
+    "1bZktSp7Y3Ig7oMTFjqDymtvcGRjgwWcP": {
+      "canonical_id": "1bZktSp7Y3Ig7oMTFjqDymtvcGRjgwWcP",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语 Bizic Languages"
+    },
+    "1cEyKjiuDxhNXrsJBN9ZlHuJcC8DQyxNa": {
+      "canonical_id": "1cEyKjiuDxhNXrsJBN9ZlHuJcC8DQyxNa",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "汉语土家语词典.pdf"
+    },
+    "1cJXVrURGc3PqQ4jAs6Nr7nKMnX8IHltl": {
+      "canonical_id": "brassett-2004",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "wordlist.htm"
+    },
+    "1cOVGw1q1__jViLGcMgOTRSNyha05twVn": {
+      "canonical_id": "1cOVGw1q1__jViLGcMgOTRSNyha05twVn",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "16 - 4.1 照片的描述.mp3"
+    },
+    "1eCAsyWBlIg3NpRCK3hunsYfTrcndyQBH": {
+      "canonical_id": "1eCAsyWBlIg3NpRCK3hunsYfTrcndyQBH",
+      "dialect": "北部",
+      "locations": [
+        "龙山"
+      ],
+      "title": "09 - 2.5 龙山县土匪（第一部分）.mp3"
+    },
+    "1eUj1v2NhLVxg1932yk_4gx9OwCwCP-8H": {
+      "canonical_id": "1eUj1v2NhLVxg1932yk_4gx9OwCwCP-8H",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家族古籍之1-3.pdf"
+    },
+    "1fBRYzBsELajio9hB903odZz8DVO8H0-1": {
+      "canonical_id": "1fBRYzBsELajio9hB903odZz8DVO8H0-1",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "Differences between two versions.pdf"
+    },
+    "1i8v2_VKzdJ0rCV41s4gJzLsIEJqPCQF3": {
+      "canonical_id": "1i8v2_VKzdJ0rCV41s4gJzLsIEJqPCQF3",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "25 - 7.3 如何做糖馓.mp3"
+    },
+    "1iDAd5OU85Xuxj1318w4shyiFv5XQ9Org": {
+      "canonical_id": "1iDAd5OU85Xuxj1318w4shyiFv5XQ9Org",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "中国土家族语言研究 田志慧.pdf"
+    },
+    "1ib9S5cmABbMgw_SLgDwEl4VlcCnWW2av": {
+      "canonical_id": "1ib9S5cmABbMgw_SLgDwEl4VlcCnWW2av",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语探微.pdf"
+    },
+    "1kA-JGDaNnaEFE1HpT4Esth8WqEjO5W9-": {
+      "canonical_id": "1kA-JGDaNnaEFE1HpT4Esth8WqEjO5W9-",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "踩瓦泥-田隆信-土家梯玛调.mp3"
+    },
+    "1kBWkZs4uVmvjENkpk_emIkVJSwVWU8w8": {
+      "canonical_id": "1kBWkZs4uVmvjENkpk_emIkVJSwVWU8w8",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "马桑树儿搭灯台.flv"
+    },
+    "1kfXMLlbFqqDp751esfJPHoC0WBK-KNC0": {
+      "canonical_id": "1kfXMLlbFqqDp751esfJPHoC0WBK-KNC0",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语时令字词.pdf"
+    },
+    "1lDUSesrqC5kySC993hZhfM9XAEXWCdWX": {
+      "canonical_id": "1lDUSesrqC5kySC993hZhfM9XAEXWCdWX",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语否定范畴研究_杨溢.caj"
+    },
+    "1lOElRCQhQw8JOfy7gm0naMZzdhb0sYyy": {
+      "canonical_id": "1lOElRCQhQw8JOfy7gm0naMZzdhb0sYyy",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语的支属问题.pdf"
+    },
+    "1lxtpxVdnSjRWWsfPdGdSyErwTgO3oCNh": {
+      "canonical_id": "1lxtpxVdnSjRWWsfPdGdSyErwTgO3oCNh",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家文山歌文本文档.txt"
+    },
+    "1mf-uy84AEJfLHEurlgmCzf4rUu3MDgAX": {
+      "canonical_id": "1mf-uy84AEJfLHEurlgmCzf4rUu3MDgAX",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "ddk-bx.zip"
+    },
+    "1mk-ILAquuFwh6q1MAN0YClHsYNy-TyXH": {
+      "canonical_id": "1mk-ILAquuFwh6q1MAN0YClHsYNy-TyXH",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "《土家语研究》-叶德书1995年p244 .PDF"
+    },
+    "1mquxuSt21wP6GHsD6BH5XZhGH_Ix1L6C": {
+      "canonical_id": "1mquxuSt21wP6GHsD6BH5XZhGH_Ix1L6C",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家人和土家语.pdf"
+    },
+    "1mxCYZQWiZncFB73HZrJjsYwoT2QnThB6": {
+      "canonical_id": "1mxCYZQWiZncFB73HZrJjsYwoT2QnThB6",
+      "dialect": "南北比较",
+      "locations": [],
+      "title": "土家语比较句的方言差异.pdf"
+    },
+    "1nKei4I0oLiReJOrOU2YtUUsBInOyq8ZU": {
+      "canonical_id": "1nKei4I0oLiReJOrOU2YtUUsBInOyq8ZU",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "[] Introduction- language policy and language endangerment in China.pdf"
+    },
+    "1oNGfCaarlgK3SAIf0Ga16fdluFNoawBZ": {
+      "canonical_id": "1oNGfCaarlgK3SAIf0Ga16fdluFNoawBZ",
+      "dialect": "北部",
+      "locations": [
+        "保靖"
+      ],
+      "title": "保靖县土家语实录.pdf"
+    },
+    "1q9PmEBAW4qBdoLLB8M2kTsEmqPDZZBVh": {
+      "canonical_id": "1q9PmEBAW4qBdoLLB8M2kTsEmqPDZZBVh",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "04 - 1.4 八部大王的故事.mp3"
+    },
+    "1rUdwiSW5OqwAd4dYZnjVABre-Er9rTo4": {
+      "canonical_id": "1rUdwiSW5OqwAd4dYZnjVABre-Er9rTo4",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "参考封面：日式土家语文库.doc"
+    },
+    "1raTTFJoPQymcmjXKesVRl8pllYZ4X9gs": {
+      "canonical_id": "1raTTFJoPQymcmjXKesVRl8pllYZ4X9gs",
+      "dialect": "北部",
+      "locations": [
+        "龙山"
+      ],
+      "title": "10 - 2.6 龙山县土匪（第二部分）.mp3"
+    },
+    "1reIKozs4JTWWLV7TgTduVLva5yUH6fIN": {
+      "canonical_id": "1reIKozs4JTWWLV7TgTduVLva5yUH6fIN",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "1-3.png"
+    },
+    "1saT_KPVEgy-zQkhIMZDlIPXZpQOHr3ht": {
+      "canonical_id": "brassett-2004",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "wordlistr.zip"
+    },
+    "1sgyTKzt-nAcefdBROYGTcgrJWMZ3bgdz": {
+      "canonical_id": "1sgyTKzt-nAcefdBROYGTcgrJWMZ3bgdz",
+      "dialect": "南部",
+      "locations": [
+        "泸溪"
+      ],
+      "title": "泸溪土家语 (1).pdf"
+    },
+    "1t-vk3WFqAhIo-sbMrWbw0Dynbn1MyE6x": {
+      "canonical_id": "1t-vk3WFqAhIo-sbMrWbw0Dynbn1MyE6x",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "23 - 7.1 如何制造咚咚喹.mp3"
+    },
+    "1tuYcWj13QhTMGgh0kF4ElAhQXrdW8SuB": {
+      "canonical_id": "brassett-2004",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "wordlisth.zip"
+    },
+    "1uDLfAx4P93qvk4_wahmPKTZhftOgr3qJ": {
+      "canonical_id": "1uDLfAx4P93qvk4_wahmPKTZhftOgr3qJ",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "ddk-sd.zip"
+    },
+    "1uar2kjwON289pzSe_9EmT9GgvVOQyLTC": {
+      "canonical_id": "1uar2kjwON289pzSe_9EmT9GgvVOQyLTC",
+      "dialect": "北部",
+      "locations": [],
+      "title": "土家语北部方言中特殊的名词后缀_田恒金.pdf"
+    },
+    "1ucuAxv8IpGlsKebrYZUwUlcasBaFNexZ": {
+      "canonical_id": "1ucuAxv8IpGlsKebrYZUwUlcasBaFNexZ",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "语音3.wav"
+    },
+    "1uqWiRup2XjIRoDwuyV2mb_6rGgM1RnO4": {
+      "canonical_id": "1uqWiRup2XjIRoDwuyV2mb_6rGgM1RnO4",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "01 - 1.1 自我介绍.mp3"
+    },
+    "1v-EH2Vl2YAdLyQvPSik6qDIJwRZn1egS": {
+      "canonical_id": "1v-EH2Vl2YAdLyQvPSik6qDIJwRZn1egS",
+      "dialect": "北部",
+      "locations": [],
+      "title": "土家语空间概念语法和语义表征.pdf"
+    },
+    "1vH6y_aQk430PJm97ecS1xp8PmLHJnrK-": {
+      "canonical_id": "1vH6y_aQk430PJm97ecS1xp8PmLHJnrK-",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语名量词研究.pdf"
+    },
+    "1vdZZ4NEnPi_0D5c6eg-GllEazPIPbgEt": {
+      "canonical_id": "1vdZZ4NEnPi_0D5c6eg-GllEazPIPbgEt",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语动词体标记-i的来源和语法化过程_徐世璇 鲁美艳.caj"
+    },
+    "1vziQ5drY5-xAfzIKgc-GDfy_kC3dJzrW": {
+      "canonical_id": "1vziQ5drY5-xAfzIKgc-GDfy_kC3dJzrW",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "参考封面：土家语文库.doc"
+    },
+    "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF": {
+      "canonical_id": "brassett-2004",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "Brassett (2006) to Ye orthography.xlsx"
+    },
+    "1xKy0DTQTNNtKEfyzDBkyr5wmg0mz5oIi": {
+      "canonical_id": "1xKy0DTQTNNtKEfyzDBkyr5wmg0mz5oIi",
+      "dialect": "南北比较",
+      "locations": [],
+      "title": "土家语近义词语义的方言差异_向亮.pdf"
+    },
+    "1xQmOKFq0XFpardkW2rn3G5OFmZnUT6pY": {
+      "canonical_id": "1xQmOKFq0XFpardkW2rn3G5OFmZnUT6pY",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语研究及实录.pdf"
+    },
+    "1xRAxjCjZLfbGm-OAuXct3856uKrfB3UZ": {
+      "canonical_id": "1xRAxjCjZLfbGm-OAuXct3856uKrfB3UZ",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语文库 （汉字+平假名，不标声调）推荐.docx"
+    },
+    "1x_Z6rDYNx5vYnTj9frZcXmH-6gL6_CWp": {
+      "canonical_id": "1x_Z6rDYNx5vYnTj9frZcXmH-6gL6_CWp",
+      "dialect": "南北比较",
+      "locations": [],
+      "title": "土家语词汇的方言差异及其理据探析_向亮.pdf"
+    },
+    "1xrA5tj-_QS3aJR5SGtzwU25kY77MaOP1": {
+      "canonical_id": "1xrA5tj-_QS3aJR5SGtzwU25kY77MaOP1",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语的能愿动词.pdf"
+    },
+    "1y1XLYTiwJheHR4Ib8wbd1vyqlSfvt9Ny": {
+      "canonical_id": "1y1XLYTiwJheHR4Ib8wbd1vyqlSfvt9Ny",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土语对话.wav"
+    },
+    "1y4T2tiaS5odWs5KMURKKMrP5wP1Ivbts": {
+      "canonical_id": "1y4T2tiaS5odWs5KMURKKMrP5wP1Ivbts",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "05 - 2.1 庆祝舍巴节（第一部分）.mp3"
+    },
+    "1y71qINiZ1znY3UBGFg_M20k6ZT6AmL-4": {
+      "canonical_id": "1y71qINiZ1znY3UBGFg_M20k6ZT6AmL-4",
+      "dialect": "北部",
+      "locations": [
+        "龙山",
+        "坡脚"
+      ],
+      "title": "龙山坡脚土家语词汇研究_李平.caj"
+    },
+    "1yKwGpjdjJvkXXiOEM6RYVnCsj95MSLh2": {
+      "canonical_id": "1yKwGpjdjJvkXXiOEM6RYVnCsj95MSLh2",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语纵横谈.pdf"
+    },
+    "1zEFpU9C2VIi7ag4idwSVvxoU88FRWSq8": {
+      "canonical_id": "1zEFpU9C2VIi7ag4idwSVvxoU88FRWSq8",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "语音2.wav"
+    },
+    "1zcGeWoc7oQtml73Zg27qvi_iHmqCQuka": {
+      "canonical_id": "1zcGeWoc7oQtml73Zg27qvi_iHmqCQuka",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "湘西乡话来母读擦音塞擦音的研究.pdf"
+    },
+    "1zjB6Hq_PHqqsid3Mw3guLfXJKDykEYom": {
+      "canonical_id": "1zjB6Hq_PHqqsid3Mw3guLfXJKDykEYom",
+      "dialect": "南北比较",
+      "locations": [],
+      "title": "Zhou (2020) · Submitted Version.pdf"
+    },
+    "1zohWDnMc9hTyHMxhFeq-Ts7SF0eNEkX-": {
+      "canonical_id": "1zohWDnMc9hTyHMxhFeq-Ts7SF0eNEkX-",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "土家语话语材料 - 西兰卡普.pdf"
+    },
+    "1zum0JuCeQwIWWMMzJ9UeymyITiRQFMUp": {
+      "canonical_id": "1zum0JuCeQwIWWMMzJ9UeymyITiRQFMUp",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "鲁美艳语音.wav"
+    },
+    "bizic-code-cognates": {
+      "canonical_id": "bizic-code-cognates",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "仓库版 Proto-Bizic 重建清单"
+    },
+    "bizic-repo": {
+      "canonical_id": "bizic-repo",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "bizic-dictionary · 仓库资源与导入说明"
+    },
+    "brassett-2004": {
+      "canonical_id": "brassett-2004",
+      "dialect": "北部",
+      "locations": [],
+      "title": "Brassett 04"
+    },
+    "brassett-2006": {
+      "canonical_id": "brassett-2006",
+      "dialect": "北部",
+      "locations": [
+        "龙山",
+        "坡脚",
+        "他砂",
+        "靛房"
+      ],
+      "title": "Brassett 06"
+    },
+    "stedt-07898ef938": {
+      "canonical_id": "brassett-2004",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "STEDT · Brassett 04 Tujia"
+    },
+    "stedt-24cc5bbb03": {
+      "canonical_id": "stedt-24cc5bbb03",
+      "dialect": "北部",
+      "locations": [],
+      "title": "STEDT · Chen 86 TuBQ"
+    },
+    "stedt-39f4cd9a6b": {
+      "canonical_id": "brassett-2006",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "STEDT · Brassett 06 Tujia"
+    },
+    "stedt-4fdbdbf516": {
+      "canonical_id": "stedt-4fdbdbf516",
+      "dialect": "南部",
+      "locations": [],
+      "title": "STEDT · Chen 86 TuMQ"
+    },
+    "stedt-610ab69a37": {
+      "canonical_id": "stedt-610ab69a37",
+      "dialect": "北部",
+      "locations": [],
+      "title": "STEDT · Huang and Dai 92 TBL"
+    },
+    "stedt-7d44caef06": {
+      "canonical_id": "stedt-7d44caef06",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "STEDT · Matisoff PC"
+    },
+    "stedt-7fd6565400": {
+      "canonical_id": "stedt-7fd6565400",
+      "dialect": "北部",
+      "locations": [],
+      "title": "STEDT · Sun H 91 ZMYY"
+    },
+    "stedt-cb523fc3dc": {
+      "canonical_id": "stedt-cb523fc3dc",
+      "dialect": "未标明",
+      "locations": [],
+      "title": "STEDT · Tian 86"
+    },
+    "wiktionary-proto-tujia": {
+      "canonical_id": "wiktionary-proto-tujia",
+      "dialect": "南北比较",
+      "locations": [],
+      "title": "Wiktionary · Proto-Tujia 重建表"
+    }
+  }
 }
