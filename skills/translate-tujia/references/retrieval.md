@@ -4,13 +4,29 @@ Read when starting lexical retrieval, checking runtime availability, or diagnosi
 
 ## Choose the executable route
 
+Complete the runtime verification below before applying this table. An explicit user request for static retrieval takes precedence; record that choice as the reason for using Skill-based retrieval.
+
 | Available environment | Action | Disclosure |
 | --- | --- | --- |
 | Python runtime with a compatible full index and BGE model, or feasible one-time setup | Follow the repository's pinned setup, run a current query, and reuse loaded assets | 检索模式：Embedding（BGE 实际运行） |
-| Read-only, tool-only, offline, missing model execution, or setup fails | Use [tujia-synonym-lite](../../tujia-synonym-lite/SKILL.md) and execute exact queries against versioned shards | 检索模式：Skill-based（概念扩展＋静态词典精确查询；没有运行 embedding） |
+| Verification establishes a concrete execution/setup blocker, or the single feasible setup/query attempt fails | Record the blocker and use [tujia-synonym-lite](../../tujia-synonym-lite/SKILL.md) against versioned shards | 检索模式：Skill-based（概念扩展＋静态词典精确查询；没有运行 embedding） |
 | Both engines actually execute | Keep the engine and query provenance for each result | 检索模式：Mixed |
 
 Verify availability before claiming a mode. While checking, say `正在验证检索模式`; announce the actual mode at the first substantive update and again after the translation. A package installation, remembered synonym, static JSON file or historical evaluation is not a current embedding run; use the executable fallback when no current encoding/search succeeds. Keep model troubleshooting to one feasible setup attempt during ordinary translation.
+
+<a id="runtime-verification"></a>
+## Mandatory runtime verification before fallback
+
+Perform these checks once per environment and reuse the evidence while conditions remain unchanged. Distinguish **not checked**, **missing but installable**, **verified usable**, and **blocked/failed**. Only the last state justifies an environment-based fallback.
+
+1. **Execution and dependencies.** Inspect the available execution tools. With a shell, check Python and the repository's required dependency imports/versions. If no execution tool exists, record that tool limitation; do not claim an attempted model run. A missing Python package triggers the setup check, not immediate fallback.
+2. **Reusable assets.** Check the repository's configured cache/model/index paths and any known reusable locations. Inspect existing model and index manifests for revision, schema, source coverage and compatibility. Missing weights, an absent index or incompatible assets trigger the setup check.
+3. **Setup feasibility.** For missing requirements, check a writable environment/cache location, available disk and RAM against the setup requirements, and access to the specific pinned package/model/data downloads. CPU execution is supported; lack of a GPU is not a blocker. Offline access is not a blocker if compatible assets are already local. A failed GitHub request does not establish that every model/package endpoint is inaccessible. After an authorized network route succeeds, reassess the earlier access failure.
+4. **One setup attempt when feasible.** Follow the README's pinned dependencies, model revision and source snapshot; install missing components in an isolated environment, obtain the model/data, and build or repair the compatible full index once. Continue without asking for permission for already authorized setup. If a concrete resource/access restriction prevents setup, record the observed restriction instead of starting an impossible download/build. Do not skip feasible setup merely because the translation is short or static lookup is easier.
+5. **A current-task query.** Run a real BGE query using an expression from the user's current text. Check that query encoding and vector retrieval actually executed and returned a valid result with inspectable IDs/scores where matches exist. Imports, model loading, planner output and old evaluation files alone do not pass this check. Zero matches from a successful scoped query are a retrieval result, not an execution failure.
+6. **Record the decision.** Retain commands/tool checks, relevant results, asset paths/revisions and the selected mode in the internal task trace. If falling back, name the specific failed check or setup/query error in one short progress update, then continue with Skill-based retrieval. Never describe an unattempted query as a failed run. If the user selected static retrieval, report that choice instead of inventing a runtime blocker.
+
+Bound recovery to one feasible setup/build attempt; this limit does not waive the initial verification. If a material condition changes (for example, network access is restored or a compatible cache becomes available), reassess the affected check before reusing a fallback decision.
 
 ## Executable semantic plan
 

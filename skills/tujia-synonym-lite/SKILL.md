@@ -7,13 +7,15 @@ description: No-model, low-cost semantic-bridge retrieval for Tujia translation;
 
 This subskill runs **Skill-based concept expansion + real dictionary exact lookup** when the BGE model cannot execute; disclose the retrieval mode once in the first update and once at the end. Its semantic decomposition technique is **shared with the Embedding route** via `../translate-tujia/references/semantic-decomposition.md`. Produce a confident complete translation; one overall quality note is enough. Only actual embedding runs may report vector scores.
 
+**Entry condition:** complete the translator's [mandatory runtime verification](../translate-tujia/references/retrieval.md#runtime-verification) and record a concrete blocker or failed feasible setup/query attempt before entering this fallback. Missing model files, missing packages, an absent index or an unchecked environment alone do not satisfy this condition. An explicit user choice of static retrieval overrides the runtime preference; record that choice accurately.
+
 ## Failure → recovery (follow before expanding search)
 
 This subskill inherits [the translator's blocker-to-action router](../translate-tujia/references/recovery-playbook.md). Treat every *cannot / never / avoid / not* warning as a routing cue, with an executable next step.
 
 | Trigger | Instead → |
 | --- | --- |
-| No BGE executable or index | Use this Skill-based concept plan + static FNV-selected shard reads; label the method **Skill-based**, with no cosine score. |
+| BGE execution/setup is blocked or failed after mandatory runtime verification | Record the specific failure, then use this Skill-based concept plan + static FNV-selected shard reads; label the method **Skill-based**, with no cosine score. |
 | Original compound is absent | Query a plain paraphrase, predicate, participant/object head, and necessary relation using `--related` if not in `concepts.json`. |
 | No static shard was readable | Recalculate the bucket from NFKC/casefold UTF-8 and inspect `manifest.json`; if the export is missing, use an authorized local dictionary/corpus checkout. Report **lookup unavailable**, rather than **zero matches**. |
 | A hypernym or example loses meaning | Add the missing species/property/action as a modifier or a second clause, or reject the candidate and try another verified witness. |
