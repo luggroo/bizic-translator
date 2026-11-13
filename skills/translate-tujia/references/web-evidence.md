@@ -40,7 +40,9 @@ For Northern evidence, inspect Brassett 2006 then 2004 where available, followed
 | A successful scoped query explicitly returns zero matches | `no_match` | One bounded semantic expansion. |
 | No applicable retrieval performed | `not_executed` | Already supplied evidence, or visible evidence gaps. |
 
-Do not retry the same failed URL without a changed condition. If the reader reports the domain itself inaccessible, stop trying its dynamic anchors and archives in that task; raw skill references already known to exist may still work. A generic failure of one path alone does not prove the whole domain is blocked. Preserve successful grammar/reference retrieval separately from failed dictionary access. Use source-specific statuses in the [evidence pack](evidence-pack.md).
+Do not retry the same failed URL without a changed condition. If two distinct static endpoints fail in the same reader, stop this route for the task and use available reference/supplied evidence; this is a request budget, not proof of a domain-wide outage. If the reader reports the domain itself inaccessible, stop trying its dynamic anchors and archives immediately. Raw skill references already known to exist may still work. A generic failure of one path alone does not prove the whole domain is blocked. Preserve successful grammar/reference retrieval separately from failed dictionary access. Use source-specific statuses in the [evidence pack](evidence-pack.md).
+
+When a tool returns only the start of a reference, open the relevant section/line range before declaring its example missing. Reader `find` can miss visible strings; inspect the routed section itself. Do not reread unrelated sections to compensate.
 
 ## Composition and notation
 

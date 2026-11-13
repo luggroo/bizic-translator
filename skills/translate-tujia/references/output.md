@@ -29,6 +29,8 @@ Keep quotations in their source notation. Form new surface words from source-lin
 
 Without conversion, a complete source-supported IPA clause may stand as the main output when target spelling is missing. Label the missing representation once; do not call the whole translation incomplete solely for that display gap. Reusing published paired/derived spellings does not claim a conversion was executed in this task. Preserve their attribution in the [evidence pack](evidence-pack.md).
 
+Identify citation-tone notation separately from connected-speech realization. If a composition simply retains source forms, label its IPA as `来源基记` and, where relevant, state `连读实现未核`. A published example's base tone is not a claim of verified surface pronunciation. Check documented sandhi/fusion conditions before offering a surface reading; in the no-execution route, follow the realization limits in [web evidence](web-evidence.md#composition-and-notation).
+
 - Preserve source tones, phonemes, syllable boundaries, nasalization and untoned particles. For future `i`, render the source-licensed surface form with an untoned **-i** boundary after its verb stem or DIR host, preserving the source's [fusion](aspect-modality.md#predicate-fusion), syllabification and tones. Original quotations retain their notation.
 - Pair spelling and IPA through their attestation links. Use verified forms for the translated spans and Chinese characters for selected insertions.
 - Keep original quotations, derived spellings, productive compositions and established loans identifiable in the evidence record.

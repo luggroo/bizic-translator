@@ -1,0 +1,70 @@
+HOST-CAPTURED EVIDENCE; participant transport = supplied
+{
+  "url": "https://tujia.biz/text/entry/stedt-rn-290272.html",
+  "request_url": "https://tujia.biz/text/entry/stedt-rn-290272.html",
+  "fetched_at": "2026-11-13T23:46:02.682630+00:00",
+  "host_transport": "python_urllib_https",
+  "participant_transport": "supplied",
+  "page_js": "not_executed",
+  "http_status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 3429,
+  "html_sha256": "930f4decbdbcbc2ad44899034564f65719c490cd341bde7f3f92eba756cdf82e",
+  "status": "retrieved",
+  "extraction": "host_visible_text",
+  "text_sha256": "65a95b4f85df6f236f5e31dc26b7564693d60622e61bb2f93a3029ead7d16258"
+}
+
+BEGIN ORIGINAL PAGE TEXT
+你 · stedt-rn-290272跳到正文 · 文本目录
+你 · stedt-rn-290272
+Entry ID: stedt-rn-290272 · 2 条见证
+{"id":"site-pos-inference","kind":"词性","text":"带虚线的词性由本站借助 AI 根据现有释义和资料推测，可能有误。原文献标签保留在词性说明中。"}
+来源见证
+Attestation ID: stedt-rn-290272
+Source ID: stedt-cb523fc3dc
+原记音: ni³³
+English: you (sg.)
+汉语: 你
+原记音方案: STEDT 原始记音
+文献定位: STEDT rn 290272 · 原文定位 未标明
+来源说明: 英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。
+方言: 南部
+资料集: STEDT
+来源分类: Pronouns
+来源语言: Tujia (Southern)
+引文: Tian 86
+STEDT rn: 290272
+汉译依据: {"method":"英语释义编辑补译，未作田野核验"}
+来源汉语: 未提供
+来源语义编号: 4.1
+调查点: 未记录
+Attestation ID: yubao-60824-v-1130
+Source ID: yubao-60824
+原记音: ni33
+汉语: 你
+English: you
+来源英语: 未提供
+英译依据: {"method":"editorial-translation","basis":"语保汉语调查词目与提示","evidence":[]}
+原记音方案: IPA
+文献定位: 词汇 1130
+来源说明: ～也姓王
+方言: 南部
+资料集: 中国语保
+来源语言: 土家语
+调查点: 未记录
+关联记音
+ipa: ni³³
+关联见证: stedt-rn-290272, yubao-60824-v-1130
+记录说明: {"method":"source","profile":"stedt-cb523fc3dc:south","sourceProfiles":["stedt-cb523fc3dc:south","yubao-60824"],"sourceMethods":["source"],"originalTexts":[]}
+同形记录合并了多种处理依据；未逐条分配到见证。
+来源
+Source ID: stedt-cb523fc3dc
+文献: Tian 86
+https://stedtdb.johnblowe.com/gnis?lg=tujia
+Source ID: yubao-60824
+文献: 中国语保 · 泸溪潭溪
+文献调查范围: 泸溪潭溪
+https://zhongguoyuyan.cn/point/60824
+资料版本 22cb01c6881a6922
+END ORIGINAL PAGE TEXT

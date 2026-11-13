@@ -1,0 +1,62 @@
+HOST-CAPTURED EVIDENCE; participant transport = supplied
+{
+  "url": "https://tujia.biz/text/entry/yubao-60824-v-0440.html",
+  "request_url": "https://tujia.biz/text/entry/yubao-60824-v-0440.html",
+  "fetched_at": "2026-11-13T23:46:03.027534+00:00",
+  "host_transport": "python_urllib_https",
+  "participant_transport": "supplied",
+  "page_js": "not_executed",
+  "http_status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 2932,
+  "html_sha256": "874b9ee9d2f4e47eb5e783674ebb1f4f3c74df071b45ce1da4973d924faf31b9",
+  "status": "retrieved",
+  "extraction": "host_visible_text",
+  "text_sha256": "e3cc0d16f746e787669a3e4b93ccaf970d5e890b0c87decea3bd4fc7be1ab642"
+}
+
+BEGIN ORIGINAL PAGE TEXT
+喝 · yubao-60824-v-0440跳到正文 · 文本目录
+喝 · yubao-60824-v-0440
+Entry ID: yubao-60824-v-0440 · 2 条见证
+{"id":"site-pos-inference","kind":"词性","text":"带虚线的词性由本站借助 AI 根据现有释义和资料推测，可能有误。原文献标签保留在词性说明中。"}
+来源见证
+Attestation ID: yubao-60824-v-0440
+Source ID: yubao-60824
+原记音: dzʉ55
+汉语: 喝
+English: drink
+来源英语: 未提供
+英译依据: {"method":"editorial-translation","basis":"语保汉语调查词目与提示","evidence":[]}
+原记音方案: IPA
+文献定位: 词汇 0440
+来源说明: ～酒
+方言: 南部
+资料集: 中国语保
+来源语言: 土家语
+调查点: 未记录
+Attestation ID: yubao-60824-v-0441
+Source ID: yubao-60824
+原记音: dzʉ55
+汉语: 喝
+English: drink
+来源英语: 未提供
+英译依据: {"method":"editorial-translation","basis":"语保汉语调查词目与提示","evidence":[]}
+原记音方案: IPA
+文献定位: 词汇 0441
+来源说明: ～茶
+方言: 南部
+资料集: 中国语保
+来源语言: 土家语
+调查点: 未记录
+关联记音
+ipa: dzʉ⁵⁵
+关联见证: yubao-60824-v-0440, yubao-60824-v-0441
+记录说明: {"method":"source","profile":"yubao-60824","sourceProfiles":["yubao-60824"],"sourceMethods":["source"]}
+来源
+Source ID: yubao-60824
+文献: 中国语保 · 泸溪潭溪
+文献调查范围: 泸溪潭溪
+https://zhongguoyuyan.cn/point/60824
+资料版本 22cb01c6881a6922
+END ORIGINAL PAGE TEXT
