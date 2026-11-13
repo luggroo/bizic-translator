@@ -1,0 +1,8 @@
+{
+  "skill_revision": "3ecafe77d2b276aa0ca3ba5330f80d9d22e8d848",
+  "filename": "translate-tujia-nojs-tested.zip",
+  "bytes": 89251,
+  "sha256": "e955f28a6831fdd566351fdc703acd898cbafa668c1fd8c364caf373e878eea1",
+  "files": 25,
+  "contents": "Both sibling skills; readable references and concepts; no static lexicon shards, model or evaluation fixtures"
+}

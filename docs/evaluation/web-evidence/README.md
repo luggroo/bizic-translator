@@ -1,5 +1,7 @@
 # Webpage evidence experiment
 
+Historical four-page prototype. The current agent-based skill iterations and expanded dictionary evidence are recorded in [nojs-agent](../nojs-agent/README.md). Coverage, artifacts and counts below describe this earlier snapshot.
+
 This experiment adds a URL-reader route to `translate-tujia` while preserving
 the existing CLI/BGE routes. It starts at `https://tujia.biz/text/`, discovers
 published queries and detail URLs, and retains witness-specific evidence.

@@ -1,0 +1,145 @@
+{
+  "skill_revision": "207d3e31ac4c89a82c73dcb363656eaf26763a7c",
+  "producer": "nojs_candidate_1",
+  "reviewer": "nojs_benchmark_review",
+  "score": 24,
+  "maximum": 24,
+  "criteria": [
+    "semantic_coverage",
+    "construction",
+    "notation_provenance",
+    "evidence_traceability"
+  ],
+  "scope": "Compiled-reference support; no original-book or native-speaker validation. Reviewer assessed actual output and citation-tone qualifications.",
+  "outputs": [
+    {
+      "id": "N1",
+      "dialect": "north",
+      "source_text": "你没有说话。",
+      "pinyin": "ní sǎ lǐ dá",
+      "ipa": "ɲi²⁴ sa²¹ li²¹ ta²⁴",
+      "kind": "compiled_example",
+      "citation": "Brassett 2006:90 ex116",
+      "reference": "clause-patterns.md §4",
+      "evidence_kind": "compiled_reference",
+      "original_publication_read": false,
+      "locality": null,
+      "conversion": "not_executed",
+      "connected_speech_verified": false,
+      "review_score": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "N2",
+      "dialect": "north",
+      "source_text": "我不想回家。",
+      "pinyin": "ngá cū hxí cá dá",
+      "ipa": "ŋa²⁴ tsʰu⁵⁵ ɣɨ²⁴ tsʰa²⁴ ta²⁴",
+      "kind": "productive_composition",
+      "citation": "Brassett 2006:129–130",
+      "reference": "aspect-modality.md#volition",
+      "evidence_kind": "compiled_reference",
+      "original_publication_read": false,
+      "locality": null,
+      "conversion": "not_executed",
+      "connected_speech_verified": false,
+      "review_score": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "qualification": "Published IPA-derived display, retaining citation tones. Group2 sandhi is documented; this is not verified connected-speech IPA."
+    },
+    {
+      "id": "N3",
+      "dialect": "north",
+      "source_text": "我的衣服脏。",
+      "pinyin": "ngá niě sībā hxēsē",
+      "ipa": "ŋa²⁴ ɲie²¹ sɿ⁵⁵pa⁵⁵ ɣɤ⁵⁵sɤ⁵⁵",
+      "kind": "productive_composition",
+      "citation": "Brassett 2006:107 ex3; 101 ex70",
+      "reference": "clause-patterns.md#case-frames and §4",
+      "evidence_kind": "compiled_reference",
+      "original_publication_read": false,
+      "locality": null,
+      "conversion": "not_executed",
+      "connected_speech_verified": false,
+      "review_score": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "qualification": "Only possessor changes; preserve property predicate and possessive relation."
+    },
+    {
+      "id": "S1",
+      "dialect": "south",
+      "source_text": "我会写字。（已经掌握的技能）",
+      "pinyin": "ngo mcǐ wāggè",
+      "ipa": "ŋo³¹ m³³tsʰɿ¹³ wa⁵³ge²¹",
+      "kind": "compiled_example",
+      "citation": "向亮 2017:98",
+      "reference": "aspect-modality.md#south",
+      "evidence_kind": "compiled_reference",
+      "original_publication_read": false,
+      "locality": null,
+      "conversion": "not_executed",
+      "connected_speech_verified": false,
+      "review_score": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "S2",
+      "dialect": "south",
+      "source_text": "我在这里住了十年。",
+      "pinyin": "jjiàdiè ngo hì niú 'údùdù",
+      "ipa": "dʑia²¹tie²¹ ŋo³³ hi²¹ ȵiu³⁵ ʔu³⁵tu²¹tu²¹",
+      "kind": "compiled_example",
+      "citation": "李敬忠 2000:116",
+      "reference": "aspect-modality.md#south",
+      "evidence_kind": "compiled_reference",
+      "original_publication_read": false,
+      "locality": null,
+      "conversion": "not_executed",
+      "connected_speech_verified": false,
+      "review_score": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "S3",
+      "dialect": "south",
+      "source_text": "今天我打算写字。",
+      "pinyin": "mùniàn ngo mcǐ wāddè",
+      "ipa": "mu²¹ȵian²¹ ŋo³¹ m³³tsʰɿ¹³ wa⁵³de²¹",
+      "kind": "productive_composition",
+      "citation": "向亮 2017:96,98",
+      "reference": "aspect-modality.md#south",
+      "evidence_kind": "compiled_reference",
+      "original_publication_read": false,
+      "locality": null,
+      "conversion": "not_executed",
+      "connected_speech_verified": false,
+      "review_score": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "qualification": "Productive same-source planning composition. No new sandhi inferred; complete phonetic realization has not been independently checked."
+    }
+  ]
+}
