@@ -2,14 +2,16 @@
 
 Read when choosing a source, resolving conflicting witnesses, or investigating a lexical/corpus gap. [Return to the translation workflow](../SKILL.md). Retrieval commands are in [retrieval.md](retrieval.md).
 
-Start with the committed, locally available repository materials and the designated Tujia retrieval database. User-supplied materials may also be used with their provenance and access restrictions. For any missing external source, use Bizic's designated dictionary/corpus/grammar, static shards, or user-provided authorized materials; continue with an attested native paraphrase or localized insertion rather than searching external sites during translation.
+Start with the committed, locally available repository materials and the designated Tujia retrieval database. Use user-supplied materials with their provenance and access scope. Complete ordinary translations with this evidence, supported native paraphrase and Chinese insertions; reserve outside literature discovery for a separately requested research task.
 
-### Default source priority for Northern / Longshan (mandatory)
+## Source selection for Northern / Longshan
 
-- **Check Brassett first for every Northern/Longshan translation**, including songs and short phrases. Consult Brassett et al. (2006) as the primary lexical and grammatical reference and Brassett (2004) as a supplementary witness **before** selecting forms from YuBao survey points, other Northern collections, or machine-generated glosses. This is the default, not an optional source preference. Explicit user source requirements and reliable evidence specific to the requested locality take precedence; do not silently mix different varieties.
-- Search both Brassett sources for the actual intended sense, related senses, collocations, and example constructions, not merely a Chinese headword. Inspect attestation-linked spellings, original glosses, source citations, tone, and grammatical behavior. A high-ranked semantic match from another source must not displace an appropriate Brassett form without a concrete reason. If 2004 and 2006 differ, compare the original witnesses; favor the better-supported, more mature 2006 analysis rather than mechanically adopting an older transcription.
-- Expand to explicitly localized Longshan evidence, continuous texts, and other Northern surveys **only after** Brassett has been checked or when they supply a better-documented local form or construction. Record which spans are Brassett-based and which come from another source; explain meaningful conflicts, gaps, and dialect differences. "Northern" without an attested locality is not automatically "Longshan".
-- **Never manufacture a word from the apparent tail of a sentence or its gloss alignment.** An isolated symbol or segment such as /ɸ⁵⁵/ is not independently verified as a lexical syllable or a component of "love"; confirm the full source transcription, segment boundaries, and lexical meaning before reuse. If attestation, tone, or alignment remains doubtful, use a verified paraphrase or a clearly identified Chinese insertion; if even the structure is uncertain, provide a marked provisional rendering and localize the uncertainty in a note. Never leave the corresponding source clause without a proposed translation. Rhythmic constraints do not override this check.
+1. **Retrieve Brassett 2006, then 2004.** Search the intended sense, related Chinese and English senses, collocations and example constructions in each source. Record useful candidates and the actual coverage of each search. Apply this order to songs and short phrases as well as prose. An explicit user source request sets a different priority; a locality request such as Longshan sets the target variety for this comparison.
+2. **Resolve individual witnesses.** Inspect each candidate's `attestations`, original gloss, full form, linked notations, locality and source citation. For canonical data, resolve the witness source through `site/data.json.gz` and `sourceAliases`; for static shards, resolve `manifest.sources[r[2]].canonical_id`. Treat a merged entry's top-level source as entry metadata and inspect all relevant witnesses within it.
+3. **Compare supplementary evidence.** After recording the Brassett findings, consult explicitly localized Longshan materials, continuous texts and other Northern surveys for remaining gaps or conflicting local usage. When a local witness fits better, record its concrete advantage in meaning, construction or locality and the corresponding Brassett comparison. Describe an unlocalized Northern witness at its recorded scope. If a Brassett source is inaccessible, retain that availability status and continue with the available evidence.
+4. **Select a complete form or construction.** Prefer the supported 2006 analysis when the original witnesses justify it; retain source-specific differences when 2004 or localized evidence supplies a different form. Confirm syllable boundaries and lexical meaning from the full attestation. Use a verified paraphrase or plain Chinese insertion for an unresolved lexical slot, and finish the proposed clause with a concise note about essential construction uncertainty.
+
+Keep a compact internal record per intended sense: **2006 evidence or search status; 2004 evidence or search status; supplementary evidence; selected attestation; reason for selection**. Reuse records for repeated senses and show this detail in requested audits.
 
 In the standalone `bizic-translator` project, the paths below are relative to the public-data checkout supplied as `--repo` (normally `.cache/bizic-data`), rather than the application directory. Follow the README to fetch that fixed source snapshot.
 
@@ -33,6 +35,22 @@ with gzip.open("site/dictionary.json.gz", "rt", encoding="utf-8") as f:
 ```
 
 Search both lexical records and sentences; inspect complete records rather than taking the first gloss match. A missing search result establishes a retrieval gap. Machine glosses, OCR, editorial analyses, and a source cited by the grammar retain their limitations; cite a secondary quotation honestly when the original has not been checked. Record the repository commit for a reproducible audit.
+
+## Retrieval status and draft reconciliation
+
+Track retrieval and candidate use separately:
+
+| Observed status | Next action and audit wording |
+| --- | --- |
+| A relevant source or sense remains unsearched | Run the targeted query; describe the previous coverage as incomplete. |
+| A source or transcription is unavailable or unreadable | Try a same-source witness or locally available original; record the access or extraction limitation. |
+| A completed scoped search returned no suitable candidate | Record the source, query coverage and sense; say “在已查资料中未找到合适表达”. Compose from available components or use a Chinese slot. |
+| A candidate was found with a different sense or grammatical use | Record the mismatch and select a suitable candidate or construction. |
+| A suitable attested candidate was missed by earlier retrieval | Record the earlier miss and incorporate the recovered form. |
+| A suitable candidate was retrieved but left unused in the draft | Reconcile it with the draft and use it, or record a specific contextual or stylistic reason for the existing choice. |
+| Components are available while the complete phrase is unattested | Check the productive construction, compose the phrase and record the basis for the composition. |
+
+Before delivery, compare remaining Chinese content words with this record. In an audit, assess lexical retrieval, word order, marker function and literary paraphrase independently; a single span can have findings on several dimensions. Query counts describe effort, while the checked sources and senses describe coverage.
 
 When a likely source has broken extraction, inspect relevant original pages or images **if already locally available**; otherwise query other same-source attestations and the versioned static lexicon, then compose from verified components rather than fetching the scan via web search.
 

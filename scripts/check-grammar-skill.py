@@ -182,15 +182,14 @@ def run(root, *, without_static_lexicon=False):
     for a in ('<a id="prospective">', '<a id="still">', '<a id="completion">',
               '<a id="ability">', '<a id="volition">', '<a id="south">'):
         assert a in tam, f"Missing index anchor: {a}"
-    assert any(rule in all_text.lower() for rule in ('no web search', 'do not invoke web search',
-                                                    'do not use web search', '禁止网页搜索'))
-    # Every prohibition is a routing cue; the master skill and lite mode must
-    # expose alternatives before a translator begins a long exploration.
+    # Check actionable source/retrieval routes independently of whether the
+    # prose states them as positive steps or restrictions.
+    main_targets = {target for target, _ in local_links(main)}
+    for name in ('evidence.md', 'retrieval.md', 'recovery-playbook.md'):
+        assert (references / name).resolve() in main_targets, f'Missing workflow route: {name}'
     recovery = references / "recovery-playbook.md"
     assert recovery.is_file(), "Missing blocker-to-action playbook"
     recovery_text = recovery.read_text(encoding="utf-8")
-    assert "references/recovery-playbook.md" in main_text
-    assert "Instead →" in all_text and "Stop rule" in all_text
     assert len([line for line in recovery_text.splitlines()
                 if line.startswith("| ") and " | " in line]) >= 20, (
         "Recovery playbook is missing action routes")
@@ -201,8 +200,7 @@ def run(root, *, without_static_lexicon=False):
     # The companion no-model semantic bridge must remain routable and honestly labeled.
     lite_root = root / "skills/tujia-synonym-lite"
     lite_text = (lite_root / "SKILL.md").read_text(encoding="utf-8")
-    assert "translate-tujia/references/recovery-playbook.md" in lite_text
-    assert "Instead →" in lite_text
+    assert recovery.resolve() in {target for target, _ in local_links(lite_root / 'SKILL.md')}
     seed = json.loads((lite_root / "concepts.json").read_text(encoding="utf-8"))
     assert "../tujia-synonym-lite/SKILL.md" in main_text
     assert "references/semantic-decomposition.md" in main_text

@@ -2,7 +2,7 @@
 
 **Shared by BOTH routes:** real BGE embedding search and `tujia-synonym-lite` static lookup. The difference is the retrieval engine; the **query-planning strategy is identical**.
 
-## A. Translate the underlying situation, not the source word shape
+## A. Translate the intended situation and image
 
 For an unfamiliar Chinese/English/Japanese expression, identify:
 - What is being referred to: entity, person, action, instrument, substance, location, state, result, event, or judgment?
@@ -10,7 +10,7 @@ For an unfamiliar Chinese/English/Japanese expression, identify:
 - What relations are essential (negation, possibility, modality, aspect, comparison, direction)?
 - What information may safely be generalized, and what contrast must be preserved?
 
-**Generate a compact, labeled query plan** before searching an unfamiliar compound: original expression → everyday paraphrase(s) → component predicates / heads / participants → required construction. Prefer a few discriminative queries. Source-word components are not themselves the translation.
+**Generate a compact, labeled query plan** before searching an unfamiliar compound: original expression → everyday paraphrase(s) → component predicates / heads / participants → required construction. Prefer a few discriminative queries across Chinese and English senses, and use the retrieved components in the selected Tujia construction. For literary imagery, include an expressive paraphrase that preserves the passage's emotional relation.
 
 | Operation | Chinese input | Semantic bridge | Candidate construction / test |
 | --- | --- | --- | --- |
@@ -28,7 +28,7 @@ For an unfamiliar Chinese/English/Japanese expression, identify:
 | Temporal adverb → predicate morphology | 快要下雨 | 雨将下／正要下 | prospective/inchoative; see aspect-modality |
 | Negative event → verb + scoped negation | 看不见 | 看＋不能 | distinguish inability from factual absence |
 
-These are **candidate construction templates**, not memorized final translations. In particular, `-ma`, `-xi`, `-ci` have different argument/reference effects; consult the grammar once for the applicable construction, then use it productively. Do not turn such a distinction into repetitive user-facing disclaimers.
+Use these **candidate construction templates** to plan retrieval and grammatical checks. In particular, `-ma`, `-xi`, `-ci` have different argument/reference effects; consult the grammar for the applicable construction, then use it productively. Keep the detailed reasoning available for an explicit audit.
 
 For explicit versus implicit heads, use [nie/niexi](nie-niexi.md): a generic thing need not become an overt `nie + ye`, while a specific noun retains its meaning. Preserve causal and result relations before nominalization; “暖和的” alone does not express “使人暖和的”.
 
@@ -50,13 +50,13 @@ A suggested structured internal representation:
 }
 ```
 
-For **Embedding**: first run the raw original query. If no directly useful complete candidate appears, run the **same plan** through actual BGE query encoding and similarity search; retain raw results as baseline and display actual cosine scores only in test/debug mode. Combine **candidate sets**, not scores from unrelated search pipelines. For **Skill-based**: run the same labeled queries through FNV-sharded exact dictionary lookup and keep attestation IDs. Both modes inspect evidence and compose via the same grammar reference router. Do not hard-code all query plans: seed cases are examples; handle unseen compounds by deriving meaning and grammatical roles.
+For **Embedding**: first run the raw original query. If no directly useful complete candidate appears, run the **same plan** through actual BGE query encoding and similarity search; retain raw results as baseline and display actual cosine scores only in test/debug mode. Combine **candidate sets**, not scores from unrelated search pipelines. For **Skill-based**: run the same labeled queries through FNV-sharded exact dictionary lookup and keep attestation IDs. Both modes inspect evidence and compose via the same grammar reference router. Use seed cases as examples and derive plans for unseen compounds from their meaning and grammatical roles.
 
 ## C. Completion-first policy
 
-In ordinary translation, output a fluent, complete **best-supported proposed translation** rather than a refusal or lengthy methodological preface. Trust an attested productive construction when its roles and meaning match. Prefer a native compositional paraphrase over leaving an abstract Chinese compound untranslated.
+Apply the [complete-version requirement](../SKILL.md#minimum-deliverable-a-complete-version). Use an attested productive construction when its roles and meaning match, develop a native compositional paraphrase where appropriate, and fill remaining lexical slots with plain Chinese characters. In poetry and songs, judge expressive paraphrase by the intended imagery, voice and emotional force.
 
-**One brief quality notice per finished translation is enough**, e.g. `质量说明：以下为基于现有词典及语法材料的拟译，尚未经母语者审校。` Do not repeat caveats after every word, suffix or line. Still preserve genuine source attribution and keep all scores/results inspectable in explicit audit or QA mode. Never invent pronunciations or claim a model/query ran when it did not.
+Use the [output format](output.md) for the completed text and its overall quality note. Keep source attribution, query execution and scores available for an explicit audit or QA. Supply pronunciations from their source witnesses and record retrieval modes from actual executed queries.
 
 ## D. Retrieval evaluation principle
 
