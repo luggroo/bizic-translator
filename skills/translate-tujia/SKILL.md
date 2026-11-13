@@ -14,7 +14,7 @@ Follow the requested dialect, locality, audience and register; otherwise use Nor
 ## Translation workflow
 
 1. **Analyze each clause.** Identify its participants, reference, time, quantity, negation, modality, result and direction. Distinguish event sequence, background, condition, purpose and manner; locate focus and question scope. Use [clause analysis](references/translation-workflow.md#scope-and-semantic-roles) for complex syntax.
-2. **Retrieve by meaning.** Run [environment preflight](references/runtime-lifecycle.md), reuse compatible assets and the loaded session, then execute [retrieval](references/retrieval.md) or [synonym-lite](../tujia-synonym-lite/SKILL.md). Build the shared plan through [semantic decomposition](references/semantic-decomposition.md): original expression, ordinary paraphrase, predicates, participants and construction. Supply an explicit `Interpretation` for contextual senses.
+2. **Retrieve by meaning.** Run [environment preflight](references/runtime-lifecycle.md). With webpage reading and no execution tool, use [text dictionary evidence](references/web-evidence.md): read published coverage and follow actual links. With a compatible runtime, reuse assets and the loaded session through [retrieval](references/retrieval.md) or [synonym-lite](../tujia-synonym-lite/SKILL.md). Build the shared plan through [semantic decomposition](references/semantic-decomposition.md): original expression, ordinary paraphrase, predicates, participants and construction. Supply an explicit `Interpretation` for contextual senses.
 3. **Choose words and constructions.** Enter the relevant [grammar topic](references/grammar-index.md), read its rules and examples, and follow its matching site links. Match predicate class, semantic roles, scope, attachment and order. Use the [verb index](references/source-lexical-notes.md) for basic word forms; preserve book-only findings through the source rules.
 4. **Compose the complete predicate.** Follow [predicate economy](references/predicate-economy.md). Express every required meaning with a supported word or construction; complete remaining gaps through [native paraphrase or a Chinese insertion](references/paraphrase-and-borrowing.md). Apply productive constructions under their documented conditions.
 5. **Check and deliver.** Read the actual wording against every source clause. Check [meaning coverage](references/sense-and-coverage.md), [candidate use](references/evidence.md#retrieval-status-and-draft-reconciliation) and [reference alignment](references/reference-first-check.md), then deliver the complete translation under the single [output policy](references/output.md).
@@ -23,6 +23,7 @@ Follow the requested dialect, locality, audience and register; otherwise use Nor
 
 | Need | Reference |
 | --- | --- |
+| Webpage-only retrieval, published coverage and partial reads | [Text dictionary evidence](references/web-evidence.md) |
 | Aspect, modality, direction, predicate combinations | [Grammar index](references/grammar-index.md) |
 | Event sequence, manner, state, tools, time/condition and causal connectives | [Event linking](references/event-linking.md) |
 | Negation, sentence types, property predicates, noun phrases and classifiers | [Clause patterns](references/clause-patterns.md) |

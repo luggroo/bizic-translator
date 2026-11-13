@@ -4,6 +4,8 @@ Read **before installing, downloading or building**. Decide from cheap environme
 
 ## Preflight
 
+Check `exec`, `file_read`, `url_read` and `supplied_evidence` from actual tools as available, unavailable or unchecked. With no execution tool, record local execution as **not available** and skip shell/version/resource probes. If URL reading exists, use [text dictionary evidence](web-evidence.md) immediately; otherwise use readable supplied/static evidence. The registry/resource checks below apply when their tools exist. For an explicit webpage-only request with CLI available, record CLI as **not executed**, not unavailable.
+
 1. Inspect available execution tools and the provider's environment/storage description. Check Python and installed dependencies without loading model weights. A text-only connector is sufficient for static lookup, not local inference.
 2. Read an existing `.local/tujia-runtime.json` registry, if present, and inspect its paths. Otherwise check configured asset locations and the existing repository `.venv`, `.cache/models` and `.cache/bge-index`. Use file existence, model metadata and index manifest to identify reusable compatible assets before considering downloads. A registry is a discovery hint; validate its current files and versions.
 3. Check CPU availability, available RAM, free disk and write permissions. Compare with the documented model/index requirements or measured footprint of existing assets, leaving room for dependencies, extraction and a new index. Missing GPU is not a blocker for the supported CPU model. Test required download access only if assets are missing; an offline environment can reuse a complete local installation.
@@ -15,7 +17,7 @@ Retain commands/tool observations and distinguish unchecked, missing-but-install
 | --- | --- |
 | **reuse-ready**: execution works and compatible assets already exist | Use them in place, including offline. Validate through the loader and a current query; retain the loaded session for a batch. If their storage lifetime is unclear, record that and seek a durable destination without delaying this usable query. |
 | **provisionable**: missing assets, but execution/resources/download access and a suitable durable destination are established | Install only missing dependencies, download only missing model/data, and build only a missing or incompatible index at that destination. Record paths and identity for later tasks. |
-| **static-only**: execution is unsupported, a required resource/access check fails, or new setup would have only temporary/unknown-lifetime storage | Go directly to [synonym-lite](../../tujia-synonym-lite/SKILL.md). Do not download weights or build an index to confirm a known blocker. Seek durable storage separately if that would enable future BGE use. |
+| **static-only**: execution is unsupported, a required resource/access check fails, or new setup would have only temporary/unknown-lifetime storage | With URL reading, use [text dictionary evidence](web-evidence.md); otherwise use readable static/supplied evidence and [synonym-lite](../../tujia-synonym-lite/SKILL.md). Do not download weights or build an index to confirm a known blocker. Seek durable storage separately if that would enable future BGE use. |
 
 ## Persistence and restoration
 

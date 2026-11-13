@@ -17,6 +17,8 @@ In Chinese-language explanations, use the full name 汉语, including 汉语—�
 
 Report 检索模式：Embedding after current BGE inference, 检索模式：Skill-based after static lookup, or Mixed when both ran. Keep scores, rejected alternatives and verification logs for requested translation reviews or evidence audits.
 
+For [webpage-only evidence](web-evidence.md), distinguish actual page reads from CLI checks or supplied excerpts: `检索模式：Skill-based（网页静态词典；本地未执行）`. If no retrieval succeeded, report `检索状态：未取得证据` with the access/coverage gap. Keep unsupported spans visible as `⟦汉语插入：…⟧` or `⟦待核：…⟧`; if the whole construction is unsupported, label the complete Chinese structural draft rather than implying a completed Tujia translation.
+
 Explain a material paraphrase or Chinese insertion briefly when it helps the reader understand the translation. Write selected Chinese insertions directly in Chinese characters. For an unsupported lexical choice, use an attested synonym, productive native paraphrase or Chinese insertion. Present findings established by the materials and the work performed.
 
 When the user requests a quality statement or a specific limitation affects use, give **one overall quality note** with the relevant facts. Ordinary translations follow the format above.

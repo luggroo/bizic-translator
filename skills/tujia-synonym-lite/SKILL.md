@@ -17,7 +17,7 @@ This subskill inherits [the translator's blocker-to-action router](../translate-
 
 | Trigger | Instead → |
 | --- | --- |
-| Environment preflight selects static-only | Use this Skill-based concept plan + static FNV-selected shard reads directly; label the method **Skill-based**, with no cosine score. Missing assets alone do not require fallback when capability and durable provisioning are established. |
+| Environment preflight selects static-only | Use the [text dictionary route](../translate-tujia/references/web-evidence.md) when URL reading exists; otherwise use readable static/supplied evidence. Label actual lookup **Skill-based**, with no cosine score. Missing assets alone do not require fallback when capability and durable provisioning are established. |
 | Original compound is absent | Query a plain paraphrase, predicate, participant/object head, and necessary relation using `--related` if not in `concepts.json`. |
 | No static shard was readable | Recalculate the bucket from NFKC/casefold UTF-8 and inspect `manifest.json`; if the export is missing, use an authorized local dictionary/corpus checkout. Report **lookup unavailable**, rather than **zero matches**. |
 | A hypernym or example loses meaning | Add the missing species/property/action as a modifier or a second clause, or reject the candidate and try another verified witness. |
@@ -27,6 +27,8 @@ This subskill inherits [the translator's blocker-to-action router](../translate-
 | More than 8–12 repeated queries are still returning broad related words | Stop expanding; compare the best verified candidates and deliver a complete native paraphrase or transparent Chinese insertion. |
 
 ## How it works
+
+In a webpage-only environment, apply expansion through the [text dictionary route](../translate-tujia/references/web-evidence.md), using only advertised queries/details. The FNV procedure below applies when a tool resolves the bucket or an exact path is supplied. Keep unpublished coverage, failed access and a real zero-match response distinct; do not invent hashes or static URLs. No successful lookup means no claim of executed Skill-based retrieval.
 
 1. **Separate the sense from the characters.** Identify referent, predicate, roles, polarity, modality and context before querying. Expand *the intended sense* even if a compound has no literal entry.
 2. **Generate a bounded candidate lattice, not an automatic synonym list** (see `concepts.json` for examples): (A) original phrase; (B) true paraphrase/near synonym; (C) hypernym or common specific examples, explicitly labeled; (D) components such as head noun, action, property, participant and result; (E) possible compositional Tujia construction. A specific example of a category is **not** a translation of the category.

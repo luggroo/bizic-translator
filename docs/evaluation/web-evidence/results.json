@@ -1,0 +1,74 @@
+{
+  "recorded_at": "2026-11-13T15:32:59.909904-06:00",
+  "website_commit": "1e527796a62f4ef2ed95a9e9991dafed5f938656",
+  "deployment": "https://github.com/luggroo/bizic-dictionary/actions/runs/43510976548",
+  "deployment_conclusion": "success",
+  "skill_base_commit": "ae6d20e70078a700799b836f3056f219a97faf4c",
+  "browser_no_js": {
+    "result": "PASS",
+    "text_discovery": {
+      "seed": "/text/",
+      "query": "https://tujia.biz/text/lookup/zh/%E5%90%83.html",
+      "details": [
+        {
+          "url": "https://tujia.biz/text/entry/w684.html",
+          "witnesses": 18
+        },
+        {
+          "url": "https://tujia.biz/text/entry/stedt-rn-43584.html",
+          "witnesses": 3
+        }
+      ],
+      "source": "visible body text with JavaScript disabled"
+    },
+    "accessibility_cases": 12
+  },
+  "live_http": {
+    "result": "PASS",
+    "documents": 4,
+    "bytes": 87521,
+    "byte_match_to_qa_build": true,
+    "candidate_count": 4,
+    "witness_counts": {
+      "stedt-rn-43584": 3,
+      "w684": 18
+    },
+    "transport": "Python urllib HTTP harness",
+    "hosted_model_test": false
+  },
+  "current_webpage_reader": {
+    "status": "unavailable",
+    "seed": "https://tujia.biz/text/",
+    "full_chain_completed": false
+  },
+  "skill_walkthrough": {
+    "kind": "manual rule application to supplied HTTP evidence",
+    "result": "preserved source forms and identified target-notation gaps",
+    "independent_model_eval": false
+  },
+  "regression": {
+    "tests_passed": 44,
+    "tests_skipped": 1,
+    "skip_reason": "model-dependent test; no BGE inference",
+    "full_skill_qa": "PASS",
+    "actual_slim_export_qa": "PASS",
+    "reader_copy": "PASS",
+    "normal_web_loading": "PASS",
+    "cli_mode": "skill_based",
+    "cli_embedding_run": false,
+    "cli_dictionary_revision": "072046c39261cf536e0ce29f06779cd3eeb99219",
+    "cli_exact_hits": 12,
+    "cli_north_hits": 9
+  },
+  "storage": {
+    "text_html_bytes": 87521,
+    "added_bytes_over_previous_text_release": 1171,
+    "homepage_text_routes_referenced": 0
+  },
+  "not_verified": [
+    "Fresh Gemini or DeepSeek execution with the new skill",
+    "General dictionary coverage outside the published subset",
+    "Hosted-model latency speedup",
+    "Native-speaker translation review"
+  ]
+}

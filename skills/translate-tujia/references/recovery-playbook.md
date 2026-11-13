@@ -7,7 +7,9 @@ Use this page to select the next action when retrieval, grammar or transcription
 
 | Situation | Action | Continue with |
 | --- | --- | --- |
-| Text-only tools with a gzip dictionary | Read the versioned UTF-8 lexicon shards through the [retrieval route](retrieval.md). | Exact source-linked witnesses. |
+| Webpage reading but no execution | Follow [text dictionary evidence](web-evidence.md) from its directory and actual URLs. | Inspected witnesses or a specific access/coverage gap; local execution remains unexecuted. |
+| Partial directory, unpublished query, or interactive-only candidate | Distinguish `partial`, `not_published` and `unavailable`; use another available evidence source. | A supported phrase or visible Chinese span, without guessing static URLs or claiming zero matches. |
+| Text-only tools with a gzip dictionary | Prefer [published text pages](web-evidence.md); read UTF-8 shards through [retrieval](retrieval.md) when their paths can actually be resolved. | Exact source-linked witnesses. |
 | Source or web material unavailable | Read the matching local source record or authorized supplied material; inspect its citation and full attestation. | Available source-linked words and constructions. |
 | Book-only grammar | Prepare a reference-grammar addition proposal or add a reusable skill entry with forms, conditions, examples and citations; follow [source maintenance](evidence.md#book-only-findings). | A rule future translations can use directly. |
 | Missing BGE assets | Run [environment preflight](runtime-lifecycle.md), inspect existing assets and select reuse, setup or static retrieval. | The available retrieval engine. |

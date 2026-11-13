@@ -11,9 +11,10 @@ Retain observed checks, paths and reasons. Distinguish **not checked**, **missin
 
 | Available environment | Action | Disclosure |
 | --- | --- | --- |
+| Webpage reader with no execution, or explicit webpage-only task | Read the [text dictionary and its actual links](web-evidence.md); keep coverage separate from access failure | 检索模式：Skill-based（网页静态词典；本地未执行） after successful lookup |
 | Executable runtime with compatible existing model/index, including offline or read-only assets | Validate and query the existing installation; reuse loaded assets | 检索模式：Embedding（BGE 实际运行） |
 | Missing assets; preflight confirms execution/resources/download access and durable storage | Provision only what is missing at the durable destination, register it, then query | 检索模式：Embedding only after successful current inference |
-| Tool-only, unsupported execution, insufficient resources/access, or no durable destination for new setup | Go directly to [tujia-synonym-lite](../../tujia-synonym-lite/SKILL.md); execute exact queries, without first trying the full BGE pipeline | 检索模式：Skill-based（概念扩展＋静态词典精确查询；没有运行 embedding） |
+| Readable static export/supplied evidence, insufficient resources/access, or no durable destination for new setup | Use [synonym-lite](../../tujia-synonym-lite/SKILL.md) with an actually available lookup route, without first trying the full BGE pipeline | 检索模式：Skill-based after real lookup; identify supplied evidence separately |
 | Both engines actually execute | Keep the engine and query provenance for each result | 检索模式：Mixed |
 
 Verify availability before claiming a mode. Report the observed engine and current query result; mode placement and final presentation follow the output policy. Base the mode label on the current query result. If a later operation encounters an unforeseen blocker, stop at that stage and use static lookup; preserve reusable files and record the reason rather than restarting setup.
@@ -39,6 +40,8 @@ For scoped `search` queries, `--point` selects a survey point, `--location` matc
 Inspect the index manifest for the exact model/revision, pooling, dimensions, checksum, schema and source snapshot. Full coverage means all entries and attestations from that revision; grouping compatible senses must retain their witnesses. Both Chinese and English glosses receive semantic vectors. Forms, IPA, tones, notation links, locality and source remain in inspectable exact fields. Verify completeness through manifest counts and actual query records. For an incompatible index, first apply the preflight/storage gate; rebuild only the affected index when justified, retaining the working version until validation.
 
 ## Text-only dictionary lookup
+
+For a URL-only reader, first use [published HTML](web-evidence.md). Coverage is limited to actual listings. Use the shard procedure below when a tool can resolve the bucket or its exact path has been supplied; otherwise report that route unavailable rather than inventing FNV results.
 
 Use the [static manifest](../lexicon/manifest.json) and its UTF-8 shards when a text-only connector cannot decompress the canonical gzip. The UTF-8 shards provide the text-only lookup route. For an unfamiliar compound, first expand its sense through [synonym-lite](../../tujia-synonym-lite/SKILL.md).
 
