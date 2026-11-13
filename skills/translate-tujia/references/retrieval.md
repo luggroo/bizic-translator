@@ -63,7 +63,9 @@ The export is versioned, not live by assumption. Check revision, SHA-256 and ent
 <a id="read-grammar-section"></a>
 ## Read a linked grammar section
 
-Open the tujia.biz link beside the relevant rule in a grammar topic. For text-only access to the dynamic page, fetch [grammar-reviewed-data.js](https://tujia.biz/grammar-reviewed-data.js): `REVIEWED_GRAMMAR` groups chapters under `north` and `south`, and `GRAMMAR_ANCHORS` maps each anchor to its chapter. Read the target chapter's `html` and locate the linked anchor's passage. Reuse the retrieved chapter for related questions.
+First read the relevant bundled grammar topic and reuse its cited rules and complete examples. Follow the matching tujia.biz link for a named missing condition or conflict; reading the original site again is not a prerequisite for using a compiled quotation. If the page is unreadable, retain that status and continue with supported bundled evidence. The [raw reference grammar](https://raw.githubusercontent.com/luggroo/bizic-dictionary/main/docs/reference-grammar.md) is a larger fallback for a specific anchor, not a default download for every sentence. Preserve its revision separately if known. A reader search miss or truncated excerpt does not prove that a construction is absent.
+
+With a tool that can actually inspect serialized chapter data, [grammar-reviewed-data.js](https://tujia.biz/grammar-reviewed-data.js) is another route: `REVIEWED_GRAMMAR` groups chapters under `north` and `south`, and `GRAMMAR_ANCHORS` maps anchors to chapters. This is optional and does not require executing JavaScript in the webpage-only route. Reuse any successfully retrieved chapter.
 
 ## Misses, scores and cost
 
