@@ -182,14 +182,18 @@ def run(root, *, without_static_lexicon=False):
     for a in ('<a id="prospective">', '<a id="still">', '<a id="completion">',
               '<a id="ability">', '<a id="volition">', '<a id="south">'):
         assert a in tam, f"Missing index anchor: {a}"
-    # Check actionable source/retrieval routes independently of whether the
-    # prose states them as positive steps or restrictions.
+    evidence = (references / 'evidence.md').read_text(encoding='utf-8')
+    assert 'tujia.biz' in evidence and 'user-supplied' in evidence, (
+        'Missing designated-source and supplied-material route')
+    # Check actionable routes independently of positive or restrictive wording.
     main_targets = {target for target, _ in local_links(main)}
     for name in ('evidence.md', 'retrieval.md', 'recovery-playbook.md'):
         assert (references / name).resolve() in main_targets, f'Missing workflow route: {name}'
     recovery = references / "recovery-playbook.md"
     assert recovery.is_file(), "Missing blocker-to-action playbook"
     recovery_text = recovery.read_text(encoding="utf-8")
+    assert 'retrieval.md' in recovery_text and 'runtime-lifecycle.md' in recovery_text, (
+        'Recovery must route to execution and environment decisions')
     assert len([line for line in recovery_text.splitlines()
                 if line.startswith("| ") and " | " in line]) >= 20, (
         "Recovery playbook is missing action routes")
@@ -205,7 +209,7 @@ def run(root, *, without_static_lexicon=False):
     assert "../tujia-synonym-lite/SKILL.md" in main_text
     assert "references/semantic-decomposition.md" in main_text
     shared = (references / "semantic-decomposition.md").read_text(encoding="utf-8")
-    assert "shared" in shared.lower() and "geci-xi" in shared and "hu-ci" in shared
+    assert "shared" in shared.lower() and "retrieval.md" in shared and "nie-niexi.md" in shared
     assert "semantic-decomposition.md" in lite_text
     assert "one overall quality note" in all_text
     assert "检索模式：Embedding" in all_text and "检索模式：Skill-based" in all_text

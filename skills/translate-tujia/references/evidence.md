@@ -2,8 +2,25 @@
 
 Read when choosing a source, resolving conflicting witnesses, or investigating a lexical/corpus gap. [Return to the translation workflow](../SKILL.md). Retrieval commands are in [retrieval.md](retrieval.md).
 
-Start with the committed, locally available repository materials and the designated Tujia retrieval database. Use user-supplied materials with their provenance and access scope. Complete ordinary translations with this evidence, supported native paraphrase and Chinese insertions; reserve outside literature discovery for a separately requested research task.
+Use the designated dictionary, corpus and reference grammar at [tujia.biz](https://tujia.biz/), the committed local materials, and the Tujia retrieval database. Enter through the relevant grammar topic, which groups the working rules, examples and matching site links; reuse retrieved records. Retain the provenance of user-supplied materials.
 
+## Topic-based grammar lookup
+
+Use the [grammar index](grammar-index.md) to select the construction's topic. Read its working rules and examples, then follow the site links at the relevant subsection for the matching discussion and context. Keep links beside the rule or choice they support. Text-only access to a linked section follows the [page-reading procedure](retrieval.md#read-grammar-section).
+
+<a id="book-only-findings"></a>
+### Preserve book-only findings
+
+Choose a destination by the content's purpose:
+
+- **Reference-grammar addition proposal:** use for language facts useful across tasks, such as a paradigm, construction, ordering rule or combination restriction. Identify the target grammar section and supply the proposed text.
+- **Skill reference:** use for translation decisions, working tables and construction choices needed during execution. Add the entry to the relevant topic, alongside its examples and matching site links, and link that topic from the grammar index.
+
+Keep lexical entries in the dictionary. The basic-verb index collects common forms attested in multiple independent contexts and points to their records; complete construction and fusion examples belong to the corresponding grammar topic.
+
+Include the usable forms, meaning, predicate or phrase class, scope, attachment and order, relevant combination conditions, and a complete example. Preserve the source notation, provide the paired display notation through its converter, and cite the work, locality, page, table or example number. Record whether the passage was read directly or quoted through the reference grammar. Capture the general rule and its application conditions so future translations can use the entry directly.
+
+<a id="source-selection"></a>
 ## Source selection for Northern / Longshan
 
 1. **Retrieve Brassett 2006, then 2004.** Search the intended sense, related Chinese and English senses, collocations and example constructions in each source. Record useful candidates and the actual coverage of each search. Apply this order to songs and short phrases as well as prose. An explicit user source request sets a different priority; a locality request such as Longshan sets the target variety for this comparison.
@@ -15,7 +32,7 @@ Keep a compact internal record per intended sense: **2006 evidence or search sta
 
 In the standalone `bizic-translator` project, the paths below are relative to the public-data checkout supplied as `--repo` (normally `.cache/bizic-data`), rather than the application directory. Follow the README to fetch that fixed source snapshot.
 
-For a story, craft, custom, or other identifiable topic, first locate related continuous texts by title, alternate names, and subject in both the structured corpus and source metadata. A source can be present even when it has not been segmented into corpus entries. Read relevant passages alongside the dictionary: continuous text can establish a contextual sense, a conventional name, a collocation, or a complete predicate that isolated headwords miss.
+For a story, craft, custom, or other identifiable topic, first locate related continuous texts by title, alternate names, and subject in both the structured corpus and source metadata. Inspect source metadata as well as segmented corpus entries. Read relevant passages alongside the dictionary: continuous text can establish a contextual sense, a conventional name, a collocation, or a complete predicate that isolated headwords miss.
 
 | Material | Use |
 | --- | --- |
@@ -34,7 +51,9 @@ with gzip.open("site/dictionary.json.gz", "rt", encoding="utf-8") as f:
     words = json.load(f)["words"]
 ```
 
-Search both lexical records and sentences; inspect complete records rather than taking the first gloss match. A missing search result establishes a retrieval gap. Machine glosses, OCR, editorial analyses, and a source cited by the grammar retain their limitations; cite a secondary quotation honestly when the original has not been checked. Record the repository commit for a reproducible audit.
+Search lexical records and sentences. Read complete relevant records and source sections in bounded excerpts, continuing a truncated passage before judging its construction. A missing search result establishes a retrieval gap. Identify machine glosses, OCR, editorial analyses and secondary quotations by their actual provenance. Record the repository commit for a reproducible audit.
+
+Assess semantic fit, construction support and pronunciation as separate evidence fields. Select the expression that preserves the meaning and participant relations, then resolve its source-specific pronunciation.
 
 ## Retrieval status and draft reconciliation
 
@@ -52,8 +71,10 @@ Track retrieval and candidate use separately:
 
 Before delivery, compare remaining Chinese content words with this record. In an audit, assess lexical retrieval, word order, marker function and literary paraphrase independently; a single span can have findings on several dimensions. Query counts describe effort, while the checked sources and senses describe coverage.
 
-When a likely source has broken extraction, inspect relevant original pages or images **if already locally available**; otherwise query other same-source attestations and the versioned static lexicon, then compose from verified components rather than fetching the scan via web search.
+When a likely source has broken extraction, inspect the corresponding tujia.biz record, same-source attestations and relevant original pages or images. Preserve newly recovered book-only material through the procedure above, then compose from the verified components.
 
-Common construction decisions should be resolved from the prechecked subskill before launching fresh database retrieval; reserve the latter for missing or conflicting evidence. Interleaved transcription and glosses may extract in the wrong order. Record the printed page and PDF page separately. In parallel texts, distinguish the original sentence, its word glosses, and its free translation; literary expansions in the free translation need not correspond to individual original words. Extract a construction with its arguments, predicate, suffixes, and immediate context, rather than collecting disconnected equivalents.
+Resolve common construction decisions from the relevant skill topic or tujia.biz section and reuse the result. Retrieve additional examples for a missing construction or a concrete source conflict. Interleaved transcription and glosses may extract in the wrong order. Record the printed page and PDF page separately. In parallel texts, distinguish the original sentence, its word glosses, and its free translation; literary expansions in the free translation need not correspond to individual original words. Extract a construction with its arguments, predicate, suffixes, and immediate context, rather than collecting disconnected equivalents.
 
-Check source scope and version. For a Northern source without locality, treat it as **provisional Northern evidence**; compare the matching Brassett/Longshan source form and attach the correct locality label before choosing it. A related legend can supply expressions for shared scenes while differing in names, relationships, causes, or ending. Preserve the requested version and identify which spans the comparison actually supports. Keep source transcriptions separate until locality and notation compatibility have been checked.
+Check source scope and version. For a Northern source without locality, treat it as **provisional Northern evidence**; compare the matching Brassett/Longshan source form and attach the correct locality label before choosing it. A related legend can supply expressions for shared scenes while differing in names, relationships, causes, or ending. Preserve the requested version and identify which spans the comparison actually supports. Select compatible source transcriptions after checking locality and notation.
+
+Use restricted materials within their authorized task scope and retain their citation or attestation ID. Public packages contain scripts and pointers to authorized public sources; reproducing restricted material requires explicit authorization.
