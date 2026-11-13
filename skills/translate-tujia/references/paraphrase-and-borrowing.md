@@ -1,8 +1,13 @@
 # Paraphrase and Chinese insertions
 
-Read when composing a paraphrase or filling a lexical gap. Follow the [complete-version requirement](../SKILL.md#minimum-deliverable-a-complete-version), the [shared semantic plan](semantic-decomposition.md), [source evidence](evidence.md) and the [grammar index](grammar-index.md).
+Read when composing a paraphrase or filling a lexical gap. Follow the [complete-version format](output.md#deliver-the-requested-result), the [shared semantic plan](semantic-decomposition.md), [source evidence](evidence.md) and the [grammar index](grammar-index.md).
 
 ## Express the intended meaning
+
+Prefer an attested equivalent native word or productive native construction; use established same-dialect loans with their recorded forms and usage. Preserve event type, participant roles, polarity, scope, clause relations and central contrast.
+
+<a id="noun-descriptions"></a>
+When replacing a noun with a descriptive phrase, check its category, semantic range and added properties. Preserve the intended class and referent, with the same breadth and only the restrictions supported by the source.
 
 Search Chinese and English glosses, everyday synonyms, appropriate broader or narrower senses, and familiar paired or opposing terms. Inspect each candidate's arguments and collocations; a short headword gloss may cover the intended sense under different wording. Incorporate user-supplied lexical information with its stated provenance and investigate the corresponding construction.
 
