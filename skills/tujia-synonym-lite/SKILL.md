@@ -7,7 +7,9 @@ description: No-model, low-cost semantic-bridge retrieval for Tujia translation;
 
 This subskill runs **Skill-based concept expansion + real dictionary exact lookup** when the BGE model cannot execute; disclose the retrieval mode once in the first update and once at the end. Its semantic decomposition technique is **shared with the Embedding route** via `../translate-tujia/references/semantic-decomposition.md`. Produce a confident complete translation; one overall quality note is enough. Only actual embedding runs may report vector scores.
 
-**Entry condition:** complete the translator's [mandatory runtime verification](../translate-tujia/references/retrieval.md#runtime-verification) and record a concrete blocker or failed feasible setup/query attempt before entering this fallback. Missing model files, missing packages, an absent index or an unchecked environment alone do not satisfy this condition. An explicit user choice of static retrieval overrides the runtime preference; record that choice accurately.
+Choose this route directly from the [environment preflight](../translate-tujia/references/runtime-lifecycle.md) when local inference or durable provisioning is unavailable; a failed BGE installation/build is not required first. If compatible BGE assets already exist, reuse them even offline. A capable environment missing assets should seek a verified durable destination and record reusable paths before provisioning.
+
+Record the specific observed blocker or the user's explicit choice of static retrieval. Missing packages/model/index or an unchecked environment alone are not evidence of inability; inspect the relevant setup/storage conditions first. Reassess the affected condition if access or available assets change.
 
 ## Failure → recovery (follow before expanding search)
 
@@ -15,7 +17,7 @@ This subskill inherits [the translator's blocker-to-action router](../translate-
 
 | Trigger | Instead → |
 | --- | --- |
-| BGE execution/setup is blocked or failed after mandatory runtime verification | Record the specific failure, then use this Skill-based concept plan + static FNV-selected shard reads; label the method **Skill-based**, with no cosine score. |
+| Environment preflight selects static-only | Use this Skill-based concept plan + static FNV-selected shard reads directly; label the method **Skill-based**, with no cosine score. Missing assets alone do not require fallback when capability and durable provisioning are established. |
 | Original compound is absent | Query a plain paraphrase, predicate, participant/object head, and necessary relation using `--related` if not in `concepts.json`. |
 | No static shard was readable | Recalculate the bucket from NFKC/casefold UTF-8 and inspect `manifest.json`; if the export is missing, use an authorized local dictionary/corpus checkout. Report **lookup unavailable**, rather than **zero matches**. |
 | A hypernym or example loses meaning | Add the missing species/property/action as a modifier or a second clause, or reject the candidate and try another verified witness. |

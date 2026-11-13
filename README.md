@@ -20,9 +20,9 @@ Other references cover [retrieval](skills/translate-tujia/references/retrieval.m
 Packaging includes **all skill references and QA scripts by default**, without forcing the additional dictionary shards into every install:
 
 ```bash
-python scripts/package-translator.py --output /tmp/bizic-translator-package
+python scripts/package-translator.py --output dist/bizic-translator-package
 # For offline exact dictionary lookup in the packaged output:
-python scripts/package-translator.py --output /tmp/bizic-translator-with-static --include-static-lexicon
+python scripts/package-translator.py --output dist/bizic-translator-with-static --include-static-lexicon
 ```
 
 Run `python scripts/check-grammar-skill.py` from the repository or full offline package. In an intentionally slim package, use `python scripts/check-grammar-skill.py --without-static-lexicon`; that mode explicitly excludes unavailable shard checks. QA validates reference links/anchors, source labels, paired spelling/IPA examples, both packaging modes and the checksums of included dictionary shards. The structural tests also verify that missing references and damaged shards fail validation. GitHub Actions runs these checks on changes to either skill, their validation tools or relevant retrieval dependencies.
@@ -33,7 +33,7 @@ Run `python scripts/check-grammar-skill.py` from the repository or full offline 
 
 ## Two retrieval modes (always disclose which ran)
 
-`translate-tujia` chooses **real BGE embedding retrieval** in a local/Codex environment that can actually provision Python, the pinned model and a full schema-compatible index. The first run may install/build according to this README, but subsequent queries should **reuse** those assets. A real model query must return actual scores, IDs and source witnesses.
+`translate-tujia` first performs an [environment and persistence preflight](skills/translate-tujia/references/runtime-lifecycle.md), before installing packages, downloading weights or building an index. Reuse a compatible existing installation first, including offline. Provision missing assets only when execution, resources, download access and a durable destination are established; otherwise go directly to static lookup. A real model query must return actual scores, IDs and source witnesses.
 
 When the environment cannot run/install BGE, it invokes the separate [tujia-synonym-lite skill](skills/tujia-synonym-lite/SKILL.md), backed by [a bounded concept-expansion map](skills/tujia-synonym-lite/concepts.json) and the existing static dictionary shards. This is **human/skill guided near-synonym/paraphrase/component expansion plus exact attestation lookup**, never embedding. Both the first substantive progress update and final translation explicitly say which retrieval mode was used.
 
@@ -55,6 +55,10 @@ The static shard files must be present (they are tracked in this repo; the defau
 
 
 ## Install
+
+Before running these commands, inspect existing application/model/index paths and their manifests. A complete compatible installation needs a query, not another install. For missing assets, confirm Python/CPU/RAM/free disk and required download access, then select provider-documented persistent storage. Record asset paths, versions and retention evidence in the Git-ignored `.local/tujia-runtime.json`; future agents read it first. See the [runtime lifecycle](skills/translate-tujia/references/runtime-lifecycle.md) for the reuse-ready / provisionable / static-only decision.
+
+The relative `.venv` and `.cache` paths below are appropriate only inside a retained checkout or with an established durable backup/restore route. Directory names do not prove persistence. If a cloud workspace's lifetime is unclear, seek a persistent volume, reusable environment snapshot or authorized artifact destination before a new large setup. Use `/tmp` only for scratch/probes/tests, not as the sole home of reusable models, data, indexes or the application. An offline environment with all assets present can still run; an unsupported environment should use static retrieval without attempting this pipeline.
 
 Tested with Python 3.12.14, CPU PyTorch and four inference threads. Node.js 18+ supports the original site's spelling converters and their tests.
 

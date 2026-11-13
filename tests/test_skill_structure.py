@@ -17,6 +17,58 @@ def test_checked_in_skill_navigation():
     qa.validate_structure(ROOT)
 
 
+def test_checked_in_runtime_lifecycle():
+    qa.validate_runtime_lifecycle(ROOT)
+
+
+@pytest.fixture
+def runtime_tree(tmp_path):
+    """Use the shipped instructions so removals exercise the real contract."""
+    for relative in ('skills/translate-tujia/SKILL.md',
+                     'skills/translate-tujia/references/retrieval.md',
+                     'skills/translate-tujia/references/runtime-lifecycle.md'):
+        target = tmp_path / relative
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text((ROOT / relative).read_text())
+    return tmp_path, tmp_path / 'skills/translate-tujia/references/runtime-lifecycle.md'
+
+
+@pytest.mark.parametrize('removed', ['reuse-ready', 'provisionable', 'static-only',
+                                    '.local/tujia-runtime.json'])
+def test_runtime_contract_cannot_lose_an_outcome_or_registry(runtime_tree, removed):
+    root, lifecycle = runtime_tree
+    lifecycle.write_text(lifecycle.read_text().replace(removed, 'REMOVED'))
+    with pytest.raises(AssertionError, match='Missing runtime outcome|runtime registry'):
+        qa.validate_runtime_lifecycle(root)
+
+
+@pytest.mark.parametrize('entry', ['SKILL.md', 'references/retrieval.md'])
+def test_preflight_must_be_routed_before_execution(runtime_tree, entry):
+    root, _ = runtime_tree
+    path = root / 'skills/translate-tujia' / entry
+    path.write_text(path.read_text().replace('runtime-lifecycle.md', 'removed.md'))
+    with pytest.raises(AssertionError, match='Missing preflight route'):
+        qa.validate_runtime_lifecycle(root)
+
+
+@pytest.mark.parametrize('removed', [
+    'before installing, downloading or building',
+    'without loading model weights',
+    'suitable durable destination are established',
+    'temporary/unknown-lifetime storage',
+    'scratch/probes/tests only',
+    'Do not claim long-term retention',
+    '`workspace_only` or `unknown`',
+    'restore instructions',
+])
+def test_preflight_and_persistence_rules_cannot_silently_disappear(runtime_tree, removed):
+    root, lifecycle = runtime_tree
+    assert removed in lifecycle.read_text()
+    lifecycle.write_text(lifecycle.read_text().replace(removed, 'REMOVED'))
+    with pytest.raises(AssertionError, match='Missing runtime rule'):
+        qa.validate_runtime_lifecycle(root)
+
+
 @pytest.fixture
 def skill_tree(tmp_path):
     main = tmp_path / 'skills/translate-tujia'

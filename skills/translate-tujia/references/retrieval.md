@@ -2,31 +2,21 @@
 
 Read when starting lexical retrieval, checking runtime availability, or diagnosing a missing word. Both engines use the [same semantic plan](semantic-decomposition.md). Source selection follows [evidence.md](evidence.md); ordinary output follows [output.md](output.md).
 
+<a id="runtime-verification"></a>
 ## Choose the executable route
 
-Complete the runtime verification below before applying this table. An explicit user request for static retrieval takes precedence; record that choice as the reason for using Skill-based retrieval.
+First perform the [environment and storage preflight](runtime-lifecycle.md). Installation/build is an outcome of that assessment, not a probe to discover whether the environment is suitable. Find existing assets and their registry before creating anything.
+
+Retain observed checks, paths and reasons. Distinguish **not checked**, **missing but provisionable**, **verified usable**, and **blocked**; missing files alone do not establish inability. A concrete capability/access/storage blocker is sufficient for direct static retrieval without a failed full setup. An explicit user choice of static retrieval overrides the BGE preference. Reassess only affected checks when access or assets change. A successful scoped query with zero matches is a retrieval result, not an execution failure.
 
 | Available environment | Action | Disclosure |
 | --- | --- | --- |
-| Python runtime with a compatible full index and BGE model, or feasible one-time setup | Follow the repository's pinned setup, run a current query, and reuse loaded assets | 检索模式：Embedding（BGE 实际运行） |
-| Verification establishes a concrete execution/setup blocker, or the single feasible setup/query attempt fails | Record the blocker and use [tujia-synonym-lite](../../tujia-synonym-lite/SKILL.md) against versioned shards | 检索模式：Skill-based（概念扩展＋静态词典精确查询；没有运行 embedding） |
+| Executable runtime with compatible existing model/index, including offline or read-only assets | Validate and query the existing installation; reuse loaded assets | 检索模式：Embedding（BGE 实际运行） |
+| Missing assets; preflight confirms execution/resources/download access and durable storage | Provision only what is missing at the durable destination, register it, then query | 检索模式：Embedding only after successful current inference |
+| Tool-only, unsupported execution, insufficient resources/access, or no durable destination for new setup | Go directly to [tujia-synonym-lite](../../tujia-synonym-lite/SKILL.md); execute exact queries, without first trying the full BGE pipeline | 检索模式：Skill-based（概念扩展＋静态词典精确查询；没有运行 embedding） |
 | Both engines actually execute | Keep the engine and query provenance for each result | 检索模式：Mixed |
 
-Verify availability before claiming a mode. While checking, say `正在验证检索模式`; announce the actual mode at the first substantive update and again after the translation. A package installation, remembered synonym, static JSON file or historical evaluation is not a current embedding run; use the executable fallback when no current encoding/search succeeds. Keep model troubleshooting to one feasible setup attempt during ordinary translation.
-
-<a id="runtime-verification"></a>
-## Mandatory runtime verification before fallback
-
-Perform these checks once per environment and reuse the evidence while conditions remain unchanged. Distinguish **not checked**, **missing but installable**, **verified usable**, and **blocked/failed**. Only the last state justifies an environment-based fallback.
-
-1. **Execution and dependencies.** Inspect the available execution tools. With a shell, check Python and the repository's required dependency imports/versions. If no execution tool exists, record that tool limitation; do not claim an attempted model run. A missing Python package triggers the setup check, not immediate fallback.
-2. **Reusable assets.** Check the repository's configured cache/model/index paths and any known reusable locations. Inspect existing model and index manifests for revision, schema, source coverage and compatibility. Missing weights, an absent index or incompatible assets trigger the setup check.
-3. **Setup feasibility.** For missing requirements, check a writable environment/cache location, available disk and RAM against the setup requirements, and access to the specific pinned package/model/data downloads. CPU execution is supported; lack of a GPU is not a blocker. Offline access is not a blocker if compatible assets are already local. A failed GitHub request does not establish that every model/package endpoint is inaccessible. After an authorized network route succeeds, reassess the earlier access failure.
-4. **One setup attempt when feasible.** Follow the README's pinned dependencies, model revision and source snapshot; install missing components in an isolated environment, obtain the model/data, and build or repair the compatible full index once. Continue without asking for permission for already authorized setup. If a concrete resource/access restriction prevents setup, record the observed restriction instead of starting an impossible download/build. Do not skip feasible setup merely because the translation is short or static lookup is easier.
-5. **A current-task query.** Run a real BGE query using an expression from the user's current text. Check that query encoding and vector retrieval actually executed and returned a valid result with inspectable IDs/scores where matches exist. Imports, model loading, planner output and old evaluation files alone do not pass this check. Zero matches from a successful scoped query are a retrieval result, not an execution failure.
-6. **Record the decision.** Retain commands/tool checks, relevant results, asset paths/revisions and the selected mode in the internal task trace. If falling back, name the specific failed check or setup/query error in one short progress update, then continue with Skill-based retrieval. Never describe an unattempted query as a failed run. If the user selected static retrieval, report that choice instead of inventing a runtime blocker.
-
-Bound recovery to one feasible setup/build attempt; this limit does not waive the initial verification. If a material condition changes (for example, network access is restored or a compatible cache becomes available), reassess the affected check before reusing a fallback decision.
+Verify availability before claiming a mode. While checking, say `正在验证检索模式`; announce the actual mode at the first substantive update and again after the translation. A package installation, remembered synonym, static JSON file or historical evaluation is not a current embedding run. If a later operation encounters an unforeseen blocker, stop at that stage and use static lookup; preserve reusable files and record the reason rather than restarting setup.
 
 ## Executable semantic plan
 
@@ -46,7 +36,7 @@ Commands below run from the **bizic-translator repository/package root**, not th
 
 For scoped `search` queries, `--point` selects a survey point, `--location` matches explicitly recorded locality, and `--pos` matches the source's own POS label rather than a universal category. Use `--record-type` to distinguish a lexical sense, survey sentence, grammar section or corpus passage; a bilingual paragraph or grammar summary has different evidential scope from an aligned sentence. Compare source-filtered Brassett 2006 and 2004 witnesses before broadening Northern/Longshan selection.
 
-Inspect the index manifest for the exact model/revision, pooling, dimensions, checksum, schema and source snapshot. Full coverage means all entries and attestations from that revision; grouping compatible senses must retain their witnesses. Both Chinese and English glosses receive semantic vectors. Forms, IPA, tones, notation links, locality and source remain in inspectable exact fields. A successful process exit alone does not prove completeness: compare manifest counts and the actual query records. Rebuild once with pinned compatible assets if feasible; otherwise use the static route.
+Inspect the index manifest for the exact model/revision, pooling, dimensions, checksum, schema and source snapshot. Full coverage means all entries and attestations from that revision; grouping compatible senses must retain their witnesses. Both Chinese and English glosses receive semantic vectors. Forms, IPA, tones, notation links, locality and source remain in inspectable exact fields. A successful process exit alone does not prove completeness: compare manifest counts and actual query records. For an incompatible index, first apply the preflight/storage gate; rebuild only the affected index when justified, retaining the working version until validation.
 
 ## Text-only dictionary lookup
 

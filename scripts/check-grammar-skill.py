@@ -118,6 +118,45 @@ def validate_lexicon(directory):
         assert hashlib.sha256(data).hexdigest() == shard['sha256'], f'Shard checksum changed: {path}'
 
 
+def validate_runtime_lifecycle(root):
+    """Keep environment and storage decisions ahead of the retrieval pipeline.
+
+    This checks the operational contract in the skill, not the persistence or
+    readiness of the machine running QA. Those need actual environment evidence.
+    """
+    skill = root / 'skills/translate-tujia'
+    lifecycle = (skill / 'references/runtime-lifecycle.md').resolve()
+    assert lifecycle.is_file(), 'Missing runtime lifecycle reference'
+    for entry in (skill / 'SKILL.md', skill / 'references/retrieval.md'):
+        assert lifecycle in {target for target, _ in local_links(entry)}, (
+            f'Missing preflight route in {entry.name}')
+    text = lifecycle.read_text(encoding='utf-8').lower()
+    for outcome in ('reuse-ready', 'provisionable', 'static-only'):
+        assert outcome in text, f'Missing runtime outcome: {outcome}'
+    assert '.local/tujia-runtime.json' in text, 'Missing reusable runtime registry'
+    # These explicit contracts are scoped to the lifecycle reference. Matching
+    # generic words anywhere in the package could hide a removed decision rule.
+    rules = {
+        'cheap preflight before expensive setup': ('before installing, downloading or building',
+                                                  'without loading model weights'),
+        'offline asset reuse': ('including offline', 'read the registry first'),
+        'durable provisioning gate': ('suitable durable destination are established',
+                                     'temporary/unknown-lifetime storage'),
+        'no trial pipeline after a known blocker': ('do not download weights or build an index',),
+        'temporary storage only for scratch': ('outside `/tmp`, `/var/tmp`',
+                                              'scratch/probes/tests only'),
+        'verified storage lifetime': ('does not by itself prove persistence',
+                                      'do not claim long-term retention',
+                                      '`workspace_only` or `unknown`'),
+        'durable recovery path': ('environment-snapshot or artifact', 'restore instructions'),
+        'bounded rebuild and real execution': ('rebuild only the incompatible index',
+                                               'after a current real query succeeds'),
+    }
+    for name, fragments in rules.items():
+        assert all(fragment in text for fragment in fragments), f'Missing runtime rule: {name}'
+    return text
+
+
 def run(root, *, without_static_lexicon=False):
     skill_root = root / "skills" / "translate-tujia"
     main = skill_root / "SKILL.md"
@@ -128,6 +167,7 @@ def run(root, *, without_static_lexicon=False):
     assert manifest.is_file() or without_static_lexicon, (
         'Missing static lexicon manifest; use --without-static-lexicon only for an intentional slim export')
     docs = validate_structure(root, optional_lexicon=without_static_lexicon)
+    validate_runtime_lifecycle(root)
     all_text = '\n'.join(path.read_text(encoding='utf-8') for path in sorted(docs))
     for name in NAMES:
         reference = references / name
