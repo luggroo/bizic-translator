@@ -1,0 +1,43 @@
+HOST-CAPTURED EVIDENCE; participant transport = supplied
+{
+  "url": "https://tujia.biz/text/lookup/zh/水.html",
+  "request_url": "https://tujia.biz/text/lookup/zh/%E6%B0%B4.html",
+  "fetched_at": "2026-11-13T23:44:39.973044+00:00",
+  "host_transport": "python_urllib_https",
+  "participant_transport": "supplied",
+  "page_js": "not_executed",
+  "http_status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 2589,
+  "html_sha256": "e03de665820c881dd3dff93e222124a6e927c53049561ff668bc78ed9f00c9c5",
+  "status": "retrieved",
+  "extraction": "host_visible_text",
+  "text_sha256": "5a6b245c15d809056bf4b7c5b177771b65e71f7b42ebdf0c07e988f4415f66e7"
+}
+
+BEGIN ORIGINAL PAGE TEXT
+水 · 汉语义项跳到正文 · 文本目录
+水 · 汉语义项
+3 个词条。按本目录来源范围匹配汉语义项；具体用法见原始见证。
+Brassett 04、06
+Brassett 04 · brassett-2004
+ce3 · ce2 · cer
+w395 https://tujia.biz/text/entry/w395.html
+Brassett 06 · brassett-2006
+ce³
+w395 https://tujia.biz/text/entry/w395.html
+龙山语保
+中国语保 · 龙山 · yubao-60757
+tshɘ21
+w395 https://tujia.biz/text/entry/w395.html
+南部土家语
+Tian 86 · stedt-cb523fc3dc
+tshe³⁵
+stedt-rn-289399 https://tujia.biz/text/entry/stedt-rn-289399.html
+tɕiaɨ⁵⁵
+stedt-rn-289931 https://tujia.biz/text/entry/stedt-rn-289931.html
+中国语保 · 泸溪潭溪 · yubao-60824
+tshe35
+stedt-rn-289399 https://tujia.biz/text/entry/stedt-rn-289399.html
+资料版本 22cb01c6881a6922
+END ORIGINAL PAGE TEXT

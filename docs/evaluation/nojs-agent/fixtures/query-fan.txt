@@ -1,0 +1,36 @@
+HOST-CAPTURED EVIDENCE; participant transport = supplied
+{
+  "url": "https://tujia.biz/text/lookup/zh/饭.html",
+  "request_url": "https://tujia.biz/text/lookup/zh/%E9%A5%AD.html",
+  "fetched_at": "2026-11-13T23:44:39.713469+00:00",
+  "host_transport": "python_urllib_https",
+  "participant_transport": "supplied",
+  "page_js": "not_executed",
+  "http_status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 2055,
+  "html_sha256": "cdce13a1699ea6cc01a662537addea2792d60135322835e201bd6f7ac3b91146",
+  "status": "retrieved",
+  "extraction": "host_visible_text",
+  "text_sha256": "5e63fd63051eaf661e84bbd98d0be6d656d47bfe8ee8990162acbaa7f7ceb8ae"
+}
+
+BEGIN ORIGINAL PAGE TEXT
+饭 · 汉语义项跳到正文 · 文本目录
+饭 · 汉语义项
+3 个词条。按本目录来源范围匹配汉语义项；具体用法见原始见证。
+Brassett 04、06
+Brassett 04 · brassett-2004
+mang1mang1 · mang1 mang1 · mangxmangx
+w1476 https://tujia.biz/text/entry/w1476.html
+ye3 · ye2 · yer
+w2548 https://tujia.biz/text/entry/w2548.html
+zi3 · zi2 · zir
+w2693 https://tujia.biz/text/entry/w2693.html
+Brassett 06 · brassett-2006
+mang¹mang¹
+w1476 https://tujia.biz/text/entry/w1476.html
+ye³
+w2548 https://tujia.biz/text/entry/w2548.html
+资料版本 22cb01c6881a6922
+END ORIGINAL PAGE TEXT

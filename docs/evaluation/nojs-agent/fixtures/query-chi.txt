@@ -1,0 +1,44 @@
+HOST-CAPTURED EVIDENCE; participant transport = supplied
+{
+  "url": "https://tujia.biz/text/lookup/zh/吃.html",
+  "request_url": "https://tujia.biz/text/lookup/zh/%E5%90%83.html",
+  "fetched_at": "2026-11-13T23:44:39.926379+00:00",
+  "host_transport": "python_urllib_https",
+  "participant_transport": "supplied",
+  "page_js": "not_executed",
+  "http_status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 2660,
+  "html_sha256": "7716080033af5c218eb443616e7fff9705534cde55267714ae43e8ae857a7ed4",
+  "status": "retrieved",
+  "extraction": "host_visible_text",
+  "text_sha256": "7f5aa69dff4813c23a2d8fadfe1c125dc5a872ca0d9654ea6472d9cf4b77029c"
+}
+
+BEGIN ORIGINAL PAGE TEXT
+吃 · 汉语义项跳到正文 · 文本目录
+吃 · 汉语义项
+2 个词条。按本目录来源范围匹配汉语义项；具体用法见原始见证。
+Brassett 04、06
+Brassett 04 · brassett-2004
+ga2 · ga4 · gaf
+w684 https://tujia.biz/text/entry/w684.html
+Brassett 06 · brassett-2006
+ga²
+w684 https://tujia.biz/text/entry/w684.html
+龙山语保
+中国语保 · 龙山 · yubao-60757
+ka24
+w684 https://tujia.biz/text/entry/w684.html
+南部土家语
+Chen 86 TuMQ · stedt-4fdbdbf516
+ɣɯe³⁵
+stedt-rn-43584 https://tujia.biz/text/entry/stedt-rn-43584.html
+Tian 86 · stedt-cb523fc3dc
+ɣɨe³⁵
+stedt-rn-43584 https://tujia.biz/text/entry/stedt-rn-43584.html
+中国语保 · 泸溪潭溪 · yubao-60824
+ɣe35
+stedt-rn-43584 https://tujia.biz/text/entry/stedt-rn-43584.html
+资料版本 22cb01c6881a6922
+END ORIGINAL PAGE TEXT

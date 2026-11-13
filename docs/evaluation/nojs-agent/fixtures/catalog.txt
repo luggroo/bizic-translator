@@ -1,0 +1,21 @@
+HOST-CAPTURED EVIDENCE; participant transport = supplied
+{
+  "url": "https://tujia.biz/text/catalog.json",
+  "request_url": "https://tujia.biz/text/catalog.json",
+  "fetched_at": "2026-11-13T23:43:19.650084+00:00",
+  "host_transport": "python_urllib_https",
+  "participant_transport": "supplied",
+  "page_js": "not_executed",
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "bytes": 2414,
+  "html_sha256": "7472e10d66e462884c51e635443ef5ea58cb1c2ae4ee33a02101733219c7ba6f",
+  "status": "retrieved",
+  "extraction": "host_visible_text",
+  "text_sha256": "7472e10d66e462884c51e635443ef5ea58cb1c2ae4ee33a02101733219c7ba6f"
+}
+
+BEGIN ORIGINAL PAGE TEXT
+{"schema_version":1,"data_version":"22cb01c6881a6922","all_entries":"https://tujia.biz/text/all.html","templates":{"exact_zh":"https://tujia.biz/text/lookup/zh/{query}.html","initial_zh":"https://tujia.biz/text/initial/zh/{initial}.html","entry":"https://tujia.biz/text/entry/{entry_id}.html"},"normalization":"NFKC, lowercase, collapse whitespace, trim; then URL-encode the path parameter. initial is the first Unicode character of the normalized query.","missing":"A missing route means no published key in this export, not absence from the language or all source material.","exceptional_queries":{},"sources":[{"id":"brassett-2004","title":"Brassett 04","page":"https://tujia.biz/text/source/brassett-2004/index.html","entries":3142,"witnesses":11775,"query_keys":2340,"original_source_ids":["165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO","1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE","1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF","stedt-07898ef938"],"query_anchor":"source-brassett-2004"},{"id":"brassett-2006","title":"Brassett 06","page":"https://tujia.biz/text/source/brassett-2006/index.html","entries":1867,"witnesses":1877,"query_keys":1773,"original_source_ids":["stedt-39f4cd9a6b"],"query_anchor":"source-brassett-2006"},{"id":"stedt-4fdbdbf516","title":"Chen 86 TuMQ","page":"https://tujia.biz/text/source/stedt-4fdbdbf516/index.html","entries":141,"witnesses":143,"query_keys":171,"original_source_ids":["stedt-4fdbdbf516"],"query_anchor":"source-stedt-4fdbdbf516"},{"id":"stedt-cb523fc3dc","title":"Tian 86","page":"https://tujia.biz/text/source/stedt-cb523fc3dc/index.html","entries":1033,"witnesses":1051,"query_keys":1208,"original_source_ids":["stedt-cb523fc3dc"],"query_anchor":"source-stedt-cb523fc3dc"},{"id":"yubao-60757","title":"中国语保 · 龙山","page":"https://tujia.biz/text/source/yubao-60757/index.html","entries":1937,"witnesses":2008,"query_keys":1944,"original_source_ids":["yubao-60757"],"query_anchor":"source-yubao-60757"},{"id":"yubao-60824","title":"中国语保 · 泸溪潭溪","page":"https://tujia.biz/text/source/yubao-60824/index.html","entries":2836,"witnesses":2884,"query_keys":2802,"original_source_ids":["yubao-60824"],"query_anchor":"source-yubao-60824"}],"dialect_indexes":{"north":{"dialect":"北部","page":"https://tujia.biz/text/all/north.html","entries":5175,"bytes":348367},"south":{"dialect":"南部","page":"https://tujia.biz/text/all/south.html","entries":3763,"bytes":217319}}}
+
+END ORIGINAL PAGE TEXT
