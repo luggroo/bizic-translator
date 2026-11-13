@@ -12,6 +12,7 @@
 | 会、能、可以、得、没空、来不及 | [体貌与情态 → 能力](aspect-modality.md#ability) | 一般能力、熟练、体力、时间、许可 |
 | 想、愿意、必须、该、不必、不许、恐怕 | [体貌与情态 → 意愿／必要](aspect-modality.md#volition) | 意愿、义务、允许、判断、推测、否定 |
 | 一边……一边、……着……、……后、接着、然后、用…… | [事件与从句链接](event-linking.md) | `liex` 完整体、`mor` 方式、`bor` 状态、时间背景、工具 |
+| 因为、所以、因此、然后、不然、否则；不用汉语借入连词 | [事件链接 → 连接词](event-linking.md#connectives) | āimǒ 因果、āiliē 先后、āitā 否定条件；另提建议须另核 |
 | 当……时、如果……就、虽然……但是 | [事件与从句链接](event-linking.md#time) | 时间从句 vs 条件／让步 vs 无连接词 |
 | 不、没、别、不是、没有、禁止 | [谓词与名词短语](clause-patterns.md#negation) | 事实／意愿否定、禁止、否定判断、存在否定 |
 | 是、有、在、给、宾语、话题、SOV | [谓词与名词短语](clause-patterns.md#clause-types) | 判断句、存在句、事件句、论元关系 |

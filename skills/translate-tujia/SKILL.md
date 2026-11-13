@@ -41,7 +41,7 @@ For an uncertain construction, provide the best-supported proposed rendering and
 | Complex clause analysis, classifiers, predicate applicability | [Translation workflow](references/translation-workflow.md) |
 | Choose the grammar topic by semantic trigger | [Grammar index](references/grammar-index.md) |
 | 快要、还、已经、能、想; aspect, modality and predicate order | [Aspect and modality](references/aspect-modality.md) |
-| Event sequence, manner, maintained state, tools, time/condition | [Event linking](references/event-linking.md) |
+| Event sequence, manner, state, tools, time/condition; 所以、然后、不然 | [Event linking](references/event-linking.md) |
 | Negation, sentence types, property predicates, noun phrases | [Clause patterns](references/clause-patterns.md) |
 | ……的／人／东西; nie vs niexi; implicit heads; warming causation | [Nominalization](references/nie-niexi.md) |
 | IPA/tone mismatch, missing pronunciation, source conversion | [Notation audit](references/notation-audit.md) |

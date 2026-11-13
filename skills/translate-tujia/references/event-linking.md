@@ -45,6 +45,25 @@
 - **使用工具**：名词（工具）放在“用”之前，最后是切、拿、写等主动作。不要把汉语“用刀切菜”的语序直接照搬。
 - **单纯叙事**：上下文清楚时可以并列小句或省略已知主语；不必每次加传统别名 `liex`、`mor`。
 
-## 4. 何时才继续搜索
+<a id="connectives"></a>
+## 4. 所以、然后、不然：北部连接词
+
+翻译因果、先后和否定条件时，优先检查下列已有词项，再决定是否用分句直接相接。以下是北部 Brassett 材料；南部译文须另查南部证据。
+
+| 汉义 | 调号拼音 | IPA（词条派生转写） | 检索别名 | 词条与来源 |
+| --- | --- | --- | --- | --- |
+| 所以、因此 | āimǒ | /ai⁵⁵mɔ²¹/ | `aixmor` | [w174](https://luggroo.github.io/bizic-dictionary/?lang=zh&id=w174#words)，Brassett 2004，原记 ai1mo3；Brassett 2006 §7.6 的 STEDT 见证 rn 455293 |
+| 然后、接着 | āiliē | /ai⁵⁵liɛ⁵⁵/ | `aixliex` | [w172](https://luggroo.github.io/bizic-dictionary/?lang=zh&id=w172#words)，Brassett 2004，原记 ai1lie1；Brassett 2006 §7.6 的 STEDT 见证 rn 455291；完整用例见上表 B06:69, ex.86 |
+| 否则、不然 | āitā | /ai⁵⁵tʰa⁵⁵/ | `aixtax` | [w175](https://luggroo.github.io/bizic-dictionary/?lang=zh&id=w175#words)，Brassett 2004，原记 ai1ta1；Brassett 2006 §7.6 的 STEDT 见证 rn 455295，释 otherwise, if not |
+
+- **因为 A，所以 B**：先表达原因 A，再以 **āimǒ** 承接结果 B；上下文明确时，也可直接连接原因和结果分句。无需为了对应汉语的成对连词而插入“因为”。这些词条没有提供一个可确证的本族专门“因为”词，不能据此断言该词不存在。
+- **A，然后 B**：用 **āiliē** 表先后；若需明确 A 已完成，再按事件性质选择完成体 **liē**。完成体与连接词各有作用。
+- **A，不然 B**：当“不然”表示“否则／若不如此”时选 **āitā**。“不然我们明天去吧”一类另提建议的用法，须另核语境和例句，不仅凭 otherwise 的词义推广。
+
+用户要求不用汉语借入的连词时，优先采用这组三个已有形式或有据的分句构式，不直接套用汉语音借词。词条的释义和形式支持这里的选词；它们本身不构成完整的历史词源论证，也不保证任意新搭配均已见于语料。
+
+证据快照：`luggroo/bizic-dictionary` commit `3c28f08ab78fc54a719f7f0d660e0fb5717f6fff`，`site/dictionary.json.gz`。调号拼音由该版转换器从有对应见证的叶式词形生成（w7742、w6250、w7161）；IPA 是词条所列 Brassett 派生转写，未独立核听。上方完整例句保留其 /lie⁵⁵/ 原记，不将两种转写冒充同一原始记音。Brassett 2006 的词项定位来自 STEDT 转录，未逐页重核原书。
+
+## 5. 何时才继续搜索
 
 仅在没有相同**事件关系、词类及参加者**的现成例子时，检索同一方言的完整小句，优先 Brassett（2006）→2004，再扩展其他北部调查点。动作完成／正在／“还”等体貌/情态问题另查 [aspect-modality.md](aspect-modality.md)，否定和名词短语另查 [clause-patterns.md](clause-patterns.md)。不要访问外部网页，也不为再找到同一句例句重复请求。
