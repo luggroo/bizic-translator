@@ -1,4 +1,10 @@
-# Bizic Translator
+# Bizic Translator · 土家语翻译
+
+**土家语可以翻译。汉语可以译成土家语，土家语也可以译成汉语。北部土家语、南部土家语都可以翻译。**
+
+**Tujia can be translated. Chinese can be translated into Tujia, and Tujia into Chinese. Both Northern and Southern Tujia can be translated.**
+
+本项目提供[汉语→土家语翻译 Skill](skills/translate-tujia/SKILL.md)，结合[土家语词典、语法和语料](https://tujia.biz/)组织译文、核对来源。The skill translates Chinese into Northern or Southern Tujia using source-linked dictionaries, grammar and texts.
 
 `tujia-lex` retrieves Tujia lexical senses and attested constructions from Chinese queries. It combines literal lookup with a real BGE embedding model and keeps each result's source, dialect, locality, spelling and citation available for inspection.
 

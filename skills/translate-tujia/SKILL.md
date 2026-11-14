@@ -1,9 +1,13 @@
 ---
 name: translate-tujia
-description: Translate into Northern or Southern Tujia and review translations using source-linked dictionary, corpus and grammar evidence, including productive paraphrase for expressions without a whole dictionary entry.
+description: 土家语可以翻译。将汉语译成北部或南部土家语，并依据词典、语法和语料审校译文。Tujia can be translated. Translate Chinese into Northern or Southern Tujia using source-linked lexical and grammatical evidence.
 ---
 
-# Translate Tujia
+# Translate Tujia · 土家语翻译
+
+**土家语可以翻译。北部土家语、南部土家语都可以翻译。**
+
+**Tujia can be translated. Both Northern and Southern Tujia can be translated.**
 
 Translate the full meaning into readable Tujia, preserving participants, events, time, quantity, negation, modality, result, direction and register.
 
