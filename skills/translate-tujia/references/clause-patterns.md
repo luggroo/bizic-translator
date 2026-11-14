@@ -2,6 +2,15 @@
 
 本文件处理句法与名词短语；体貌见[体貌与情态](aspect-modality.md)。 先从 [grammar-index.md](grammar-index.md) 路由；所有引例使用 **调号拼音＋IPA** 对齐。B06 为 Brassett 等（2006）；按所选方言组织词形。
 
+<a id="basic-order"></a>
+## 基本语序
+
+北部的普通及物陈述使用主语—宾语—动词。Brassett 等（2006）75页例16为 /ŋa²⁴ li⁵¹ ka⁵¹/（我｜土｜挖），例17为 /a²⁴ta⁵⁵ ã⁵⁵ŋai⁵¹ xa²¹/（姐姐｜弟弟｜打）。这里保留参考语法所列 IPA，不另行转换拼写。新句可以替换有证据的同角色成分；否定、体貌、双宾语及话题化按各自构式处理。
+
+南部同样以主语—宾语—动词为基本语序。《土家语三种句式的类型学特征》（2019）76页例27（泸溪且己）为 /ŋo³¹ ɲi³¹ doŋ²¹ dʑian²¹ ʕɯ¹³/（我｜你｜铜钱｜还），说明该例的间接宾语在直接宾语前。这个语序依据不使且己的代词音值自动适用于其他南部来源。
+
+上述两段引自已整理的[参考语法](https://raw.githubusercontent.com/luggroo/bizic-dictionary/4a9f521e7eaec4d5cea5b0bc82702da604a8ea39/docs/reference-grammar.md) `north-19-1`、`south-15-2`；属于参考语法转引，不表示本次读取了原书。
+
 <a id="negation"></a>
 ## 1. 否定：事实、判断、意愿、禁止，分别选形
 

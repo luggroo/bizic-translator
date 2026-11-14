@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "frozen_before_candidate_runs": true,
+  "baseline_skill_revision": "53c853a6d2eee3ecac7a6c119a56ab94efa71876",
+  "positive_criteria": ["semantic_coverage", "construction", "notation_provenance", "evidence_traceability"],
+  "positive_required_score": 24,
+  "positives": [
+    {"id":"N1","dialect":"north","text":"你没有说话。","kind":"quotation_control"},
+    {"id":"N2","dialect":"north","text":"我不想回家。","kind":"novel_composition"},
+    {"id":"N3","dialect":"north","text":"我的衣服脏。","kind":"novel_substitution"},
+    {"id":"S1","dialect":"south","text":"我会写字。","context":"已经掌握的技能","kind":"quotation_control"},
+    {"id":"S2","dialect":"south","text":"我在这里住了十年。","kind":"quotation_control"},
+    {"id":"S3","dialect":"south","text":"今天我打算写字。","kind":"novel_composition"}
+  ],
+  "challenges": [
+    {"id":"H1","dialects":["north","south"],"text":"明天他会来。","context":"只是预计这件事会发生，不表示能力或已有计划。","failure":"Replace prediction with skill, ability or planning without licensing evidence."},
+    {"id":"H2","dialects":["north","south"],"text":"我已经冷了两天，现在仍然冷。","context":"持续状态，温度没有继续下降。","failure":"Replace maintained coldness with cooling, or generalize residence-duration morphology to every property predicate."},
+    {"id":"H3","dialects":["north","south"],"text":"气球胀起来了。","context":"气球体积变大，不是人的腹内胀满。","failure":"Reuse physiological bloating as physical change-of-state without evidence."}
+  ],
+  "dictionary_lane": [
+    {"id":"D1","dialect":"north","text":"我吃饭。","context":"普通陈述，Brassett 2006 优先。"},
+    {"id":"D2","dialect":"south","text":"你喝水。","context":"普通陈述；记录所用来源，不假定南部资料的地点与调值相同。"},
+    {"id":"D3","dialect":"north","text":"他不会来。","context":"预测他不来，不是不会做、不能来或不愿来。"}
+  ],
+  "held_out": [
+    {"id":"HN","dialect":"north","text":"你不想回家。","kind":"novel_subject_substitution"},
+    {"id":"HS","dialect":"south","text":"今天我打算买猪。","kind":"planning_paraphrase"}
+  ],
+  "acceptance": "Supported positives require actual complete Tujia clauses and all four criteria. Chinese gaps do not pass positives. Challenges require either a licensed translation or precise visible gaps preserving the intended meaning. Dictionary access, translation quality and abstention are scored separately. No native-speaker validation is implied."
+}

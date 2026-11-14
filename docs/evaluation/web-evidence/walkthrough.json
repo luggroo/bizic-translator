@@ -1,0 +1,80 @@
+{
+  "execution": "manual rule walkthrough on supplied HTTP evidence; not hosted-model inference",
+  "retrieval": {
+    "mode": "Skill-based",
+    "transport": "supplied",
+    "source_transport": "Python urllib HTTP harness",
+    "embedding_run": false,
+    "data_version": "22cb01c6881a6922"
+  },
+  "conversion": {
+    "execution": "not_executed"
+  },
+  "selected_witnesses": [
+    {
+      "fields": {
+        "Witness ID": "stedt-rn-454305",
+        "Entry ID": "w684",
+        "Chinese sense": "吃",
+        "English sense": "eat",
+        "Original notation": "Brassett 原文调号（STEDT）",
+        "Source POS": "v",
+        "Witness dialect": "北部",
+        "Witness locality": "未记录 / Not recorded",
+        "Source": "Brassett 06",
+        "Source ID": "stedt-39f4cd9a6b",
+        "Canonical source ID": "brassett-2006",
+        "Locator": "STEDT rn 454305 · 原文定位 4.3",
+        "Source reference": "4.3",
+        "Citation": "Brassett 06 Tujia",
+        "Source-wide geography": "龙山、坡脚、他砂、靛房",
+        "Original Chinese gloss": "未提供 / Not supplied",
+        "Chinese gloss provenance": "{\"method\":\"英语释义编辑补译，未作田野核验\"}"
+      },
+      "text": "见证 / Attestation stedt-rn-454305 ga² 见证编号 / Witness ID stedt-rn-454305 词条编号 / Entry ID w684 汉语义项 / Chinese sense 吃 英语义项 / English sense eat 原记音方案 / Original notation Brassett 原文调号（STEDT） 词性（来源标签） / Source POS v 方言（该见证） / Witness dialect 北部 调查点（该见证） / Witness locality 未记录 / Not recorded 来源 / Source Brassett 06 来源编号 / Source ID stedt-39f4cd9a6b 文献编号 / Canonical source ID brassett-2006 文献定位 / Locator STEDT rn 454305 · 原文定位 4.3 原文定位 / Source reference 4.3 原引文 / Citation Brassett 06 Tujia 文献调查范围 / Source-wide geography 龙山、坡脚、他砂、靛房 来源汉语释义 / Original Chinese gloss 未提供 / Not supplied 汉译依据 / Chinese gloss provenance {\"method\":\"英语释义编辑补译，未作田野核验\"} 来源原件 / Source document ↗ 英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。 本见证关联记音 / Notations linked to this witness 叶氏拼音 / Ye spelling gaf 记音记录处理 / Notation-record processing : 推导形式 / Derived form · brassett-to-ye Brassett 记音 / Brassett notation ga² 记音记录处理 / Notation-record processing : 来源形式规范化 / Normalized source form · stedt-39f4cd9a6b IPA ka²⁴ 记音记录处理 / Notation-record processing : 推导形式 / Derived form · brassett-phonetic 同形记音的合并记录包含多种处理依据；此元数据未逐条指定到见证。 / This merged notation record has multiple processing origins; its metadata does not assign an origin to each witness. 处理依据 / Methods : 推导形式 / Derived form · 来源原记音 / Source transcription 记音配置 / Profiles : brassett-phonetic · yubao-60757",
+      "url": "https://tujia.biz/text/entry/w684.html",
+      "data_version": "22cb01c6881a6922"
+    },
+    {
+      "fields": {
+        "Witness ID": "stedt-rn-43584",
+        "Entry ID": "stedt-rn-43584",
+        "Chinese sense": "吃",
+        "English sense": "eat",
+        "Original notation": "STEDT 原始记音",
+        "Source POS": "未记录 / Not recorded",
+        "Witness dialect": "南部",
+        "Witness locality": "未记录 / Not recorded",
+        "Source": "Tian 86",
+        "Source ID": "stedt-cb523fc3dc",
+        "Locator": "STEDT rn 43584 · 原文定位 未标明",
+        "Citation": "Tian 86",
+        "Original Chinese gloss": "未提供 / Not supplied",
+        "Chinese gloss provenance": "{\"method\":\"英语释义编辑补译，未作田野核验\"}"
+      },
+      "text": "见证 / Attestation stedt-rn-43584 ɣɨe³⁵ 见证编号 / Witness ID stedt-rn-43584 词条编号 / Entry ID stedt-rn-43584 汉语义项 / Chinese sense 吃 英语义项 / English sense eat 原记音方案 / Original notation STEDT 原始记音 词性（来源标签） / Source POS 未记录 / Not recorded 方言（该见证） / Witness dialect 南部 调查点（该见证） / Witness locality 未记录 / Not recorded 来源 / Source Tian 86 来源编号 / Source ID stedt-cb523fc3dc 文献定位 / Locator STEDT rn 43584 · 原文定位 未标明 原引文 / Citation Tian 86 来源汉语释义 / Original Chinese gloss 未提供 / Not supplied 汉译依据 / Chinese gloss provenance {\"method\":\"英语释义编辑补译，未作田野核验\"} 来源原件 / Source document ↗ 英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。 本见证关联记音 / Notations linked to this witness IPA ɣɨe³⁵ 记音记录处理 / Notation-record processing : 来源原记音 / Source transcription · stedt-cb523fc3dc:south 处理依据 / Methods : 来源原记音 / Source transcription 记音配置 / Profiles : stedt-cb523fc3dc:south",
+      "url": "https://tujia.biz/text/entry/stedt-rn-43584.html",
+      "data_version": "22cb01c6881a6922"
+    }
+  ],
+  "gaps": [
+    "Headline tone-marked spellings lack witness linkage in the published prepared summary.",
+    "Witness-level locality remains unknown.",
+    "苹果 is outside published text-route coverage."
+  ],
+  "draft": {
+    "north": {
+      "original_form": "ga²",
+      "linked_ipa": "ka²⁴",
+      "tone_marked_spelling": null,
+      "witness_id": "stedt-rn-454305"
+    },
+    "south": {
+      "original_form": "ɣɨe³⁵",
+      "linked_ipa": "ɣɨe³⁵",
+      "tone_marked_spelling": null,
+      "witness_id": "stedt-rn-43584"
+    },
+    "unpublished_case": "⟦汉语插入：苹果⟧"
+  }
+}

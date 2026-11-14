@@ -1,0 +1,143 @@
+HOST-CAPTURED EVIDENCE; participant transport = supplied
+{
+  "url": "https://tujia.biz/text/entry/w2548.html",
+  "request_url": "https://tujia.biz/text/entry/w2548.html",
+  "fetched_at": "2026-11-13T23:46:02.858943+00:00",
+  "host_transport": "python_urllib_https",
+  "participant_transport": "supplied",
+  "page_js": "not_executed",
+  "http_status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 7207,
+  "html_sha256": "b10aa965885af095ce3e43a7d1f73804b81acb3889c8802dfd7bcbbaa355170f",
+  "status": "retrieved",
+  "extraction": "host_visible_text",
+  "text_sha256": "bd2f98529893e7f0549786919cc03f65c17b609332599a49f8faabab6f66d602"
+}
+
+BEGIN ORIGINAL PAGE TEXT
+饭; 食物；饭 · w2548跳到正文 · 文本目录
+饭; 食物；饭 · w2548
+Entry ID: w2548 · 5 条见证
+来源见证
+Attestation ID: w2548
+Source ID: 1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE
+原记音: ye3
+English: cooked rice, meal
+汉语: 饭
+来源词性: n.
+原记音方案: Brassett 数字调号
+文献定位: 词条 2548
+方言: 北部
+资料集: Drive 词表
+来源汉语: 饭
+调查点: 未记录
+Attestation ID: w5652
+Source ID: 165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO
+原记音: ye2
+English: cooked rice, meal
+汉语: 饭
+来源词性: n.
+原记音方案: Brassett 数字调号（英语表）
+文献定位: Sheet1!A2882:C2882
+方言: 北部
+资料集: Drive 词表
+汉译依据: {"method":"同词形同义项来源释义","evidence":"w2548"}
+来源汉语: 未提供
+调查点: 未记录
+Attestation ID: stedt-rn-458211
+Source ID: stedt-07898ef938
+原记音: ye3
+English: cooked rice, meal
+汉语: 饭
+来源词性: n.
+原记音方案: Brassett 原文调号（STEDT）
+文献定位: STEDT rn 458211 · 原文定位 未标明
+来源说明: 英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。
+方言: 北部
+资料集: STEDT
+来源分类: Cooking Implements
+来源语言: Tujia (Northern)
+引文: Brassett 04 Tujia
+STEDT rn: 458211
+汉译依据: {"method":"同词形同义项来源释义","evidence":"w2548"}
+来源汉语: 未提供
+来源语义编号: 5.5
+调查点: 未记录
+Attestation ID: w7318
+Source ID: 1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF
+原记音: yer
+English: cooked rice, meal
+汉语: 饭
+来源词性: n.
+原记音方案: 叶氏拼写（转换表）
+文献定位: Sheet1!C1436:G1436
+来源说明: 叶式拼音与 Brassett 数字调号按转换表 A 列原词条编号对应，英语和汉语释义已逐行核对。此对应不是任意 IPA 的自动转换规则。
+方言: 北部
+资料集: Drive 词表
+来源汉语: 饭
+调查点: 未记录
+Attestation ID: stedt-rn-454514
+Source ID: stedt-39f4cd9a6b
+原记音: ye³
+English: food, meal
+汉语: 食物；饭
+原记音方案: Brassett 原文调号（STEDT）
+文献定位: STEDT rn 454514 · 原文定位 4.4
+来源说明: 英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。
+方言: 北部
+资料集: STEDT
+来源分类: Cooking Implements
+来源语言: Tujia (Northern)
+引文: Brassett 06 Tujia
+原文定位: 4.4
+STEDT rn: 454514
+汉译依据: {"method":"英语释义编辑补译，未作田野核验"}
+来源汉语: 未提供
+来源语义编号: 5.5
+调查点: 未记录
+关联记音
+ye: yer
+关联见证: w7318
+记录说明: {"method":"source","profile":"1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF"}
+ye: yer
+关联见证: stedt-rn-454514
+记录说明: {"method":"derived","profile":"brassett-to-ye"}
+brassett: ye³
+关联见证: w2548, w5652, stedt-rn-458211
+记录说明: {"method":"source-normalized","profile":"1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE"}
+brassett: ye³
+关联见证: stedt-rn-454514
+记录说明: {"method":"source-normalized","profile":"stedt-39f4cd9a6b"}
+ipa: jɤ²¹
+关联见证: w2548, w5652, stedt-rn-458211, stedt-rn-454514
+记录说明: {"method":"derived","profile":"brassett-phonetic","sourceProfiles":["brassett-phonetic"],"sourceMethods":["derived"]}
+来源
+Source ID: 1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE
+文献: Brassett 04
+Canonical source ID: brassett-2004
+来源记录: 土家语汉语词表.htm
+https://drive.google.com/file/d/1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE/view?usp=drivesdk
+Source ID: 165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO
+文献: Brassett 04
+Canonical source ID: brassett-2004
+来源记录: 土家语英语词表 Brassett.xlsx
+https://docs.google.com/spreadsheets/d/165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO/edit?usp=drivesdk&ouid=111681826190682025602&rtpof=true&sd=true
+Source ID: stedt-07898ef938
+文献: Brassett 04
+Canonical source ID: brassett-2004
+来源记录: STEDT · Brassett 04 Tujia
+https://stedtdb.johnblowe.com/gnis?lg=tujia
+Source ID: 1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF
+文献: Brassett 04
+Canonical source ID: brassett-2004
+来源记录: Brassett (2006) to Ye orthography.xlsx
+https://docs.google.com/spreadsheets/d/1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF/edit?usp=drivesdk&ouid=111681826190682025602&rtpof=true&sd=true
+Source ID: stedt-39f4cd9a6b
+文献: Brassett 06
+Canonical source ID: brassett-2006
+来源记录: STEDT · Brassett 06 Tujia
+文献调查范围: 龙山、坡脚、他砂、靛房
+https://stedtdb.johnblowe.com/gnis?lg=tujia
+资料版本 22cb01c6881a6922
+END ORIGINAL PAGE TEXT

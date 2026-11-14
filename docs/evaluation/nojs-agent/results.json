@@ -1,0 +1,51 @@
+{
+  "date_utc": "2026-11-13",
+  "test_restrictions": "Instruction-enforced; participants retain the platform tool inventory. Only reader dispatch allowed; no local execution, computation, page JavaScript, conversion or archives.",
+  "fresh_context": true,
+  "model_identity": null,
+  "hosted_deepseek_test": false,
+  "hosted_gemini_test": false,
+  "native_speaker_review": false,
+  "original_publications_inspected": false,
+  "positive_inputs": 10,
+  "positive_review_points": 40,
+  "positive_review_points_maximum": 40,
+  "challenge_handling_passes": 6,
+  "challenge_full_translations": 0,
+  "live_dictionary_reader_status": "unavailable on tested endpoints; no HTTP code or cause returned",
+  "supplied_dictionary_capture": {
+    "documents": 14,
+    "http_200": 14,
+    "page_js": "not_executed",
+    "participant_transport": "supplied",
+    "data_version": "22cb01c6881a6922"
+  },
+  "comparison": {
+    "inputs": "N1–S3 identical Chinese inputs",
+    "baseline_revision": "53c853a6d2eee3ecac7a6c119a56ab94efa71876",
+    "candidate_revision": "207d3e31ac4c89a82c73dcb363656eaf26763a7c",
+    "baseline_web_calls": 10,
+    "candidate_web_calls": 4,
+    "baseline_document_reads": 28,
+    "candidate_document_reads": 13,
+    "baseline_complete_ipa_clauses": 6,
+    "candidate_complete_ipa_clauses": 6,
+    "baseline_pinyin_gaps": 2,
+    "candidate_pinyin_gaps": 0,
+    "wall_clock_latency": null,
+    "repetitions": 1
+  },
+  "final_skill_revision": "3ecafe77d2b276aa0ca3ba5330f80d9d22e8d848",
+  "validation": {
+    "pytest_passed": 58,
+    "pytest_skipped": 3,
+    "pytest_skip_reason": "Real encoder/model assets not requested or available",
+    "full_grammar_check": "passed",
+    "slim_grammar_check": "passed",
+    "packaged_slim_check": "passed",
+    "notation_pairs_checked": 105,
+    "notation_pairs_independently_unverified": 30,
+    "ci_url": "https://github.com/luggroo/bizic-translator/actions/runs/43529628303"
+  },
+  "cloud_installed_skill_replaced": false
+}

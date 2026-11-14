@@ -1,0 +1,44 @@
+HOST-CAPTURED EVIDENCE; participant transport = supplied
+{
+  "url": "https://tujia.biz/text/lookup/zh/我.html",
+  "request_url": "https://tujia.biz/text/lookup/zh/%E6%88%91.html",
+  "fetched_at": "2026-11-13T23:44:39.689909+00:00",
+  "host_transport": "python_urllib_https",
+  "participant_transport": "supplied",
+  "page_js": "not_executed",
+  "http_status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 2637,
+  "html_sha256": "214edab6ad2ee914d71ed72116e412efde09af6036db9ada0bb558d95cacc882",
+  "status": "retrieved",
+  "extraction": "host_visible_text",
+  "text_sha256": "12fb2e3d07e3b0d76d9dc2a3e5798f6087b9d27a1f4b2118bb9b19ba056d8b34"
+}
+
+BEGIN ORIGINAL PAGE TEXT
+我 · 汉语义项跳到正文 · 文本目录
+我 · 汉语义项
+5 个词条。按本目录来源范围匹配汉语义项；具体用法见原始见证。
+Brassett 04、06
+Brassett 04 · brassett-2004
+nga2 · nga4 · ngaf
+w1585 https://tujia.biz/text/entry/w1585.html
+ngo1 · ngox
+w1648 https://tujia.biz/text/entry/w1648.html
+wo1 · wox
+w2374 https://tujia.biz/text/entry/w2374.html
+ngo4 · ngo2
+w4586 https://tujia.biz/text/entry/w4586.html
+龙山语保
+中国语保 · 龙山 · yubao-60757
+ŋa24
+w1585 https://tujia.biz/text/entry/w1585.html
+南部土家语
+Tian 86 · stedt-cb523fc3dc
+ŋo³³
+stedt-rn-290269 https://tujia.biz/text/entry/stedt-rn-290269.html
+中国语保 · 泸溪潭溪 · yubao-60824
+ŋo33
+stedt-rn-290269 https://tujia.biz/text/entry/stedt-rn-290269.html
+资料版本 22cb01c6881a6922
+END ORIGINAL PAGE TEXT

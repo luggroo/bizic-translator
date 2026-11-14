@@ -17,6 +17,8 @@ In Chinese-language explanations, use the full name 汉语, including 汉语—�
 
 Report 检索模式：Embedding after current BGE inference, 检索模式：Skill-based after static lookup, or Mixed when both ran. Keep scores, rejected alternatives and verification logs for requested translation reviews or evidence audits.
 
+For [webpage-only evidence](web-evidence.md), disclose the evidence actually used: `Skill-based（网页静态词典；本地未执行）`, `Skill-based（技能参考；本地未执行）`, or `Skill-based（提供的页面文本；本地未执行）`. Combine these descriptions when appropriate. Keep failed dictionary access separate from successfully read grammar. If no applicable evidence was obtained, report `检索状态：未取得证据` with the access/coverage gap. Keep unsupported spans visible as `⟦汉语插入：…⟧` or `⟦待核：…⟧`; if the whole construction is unsupported, label the complete Chinese structural draft rather than implying a completed Tujia translation.
+
 Explain a material paraphrase or Chinese insertion briefly when it helps the reader understand the translation. Write selected Chinese insertions directly in Chinese characters. For an unsupported lexical choice, use an attested synonym, productive native paraphrase or Chinese insertion. Present findings established by the materials and the work performed.
 
 When the user requests a quality statement or a specific limitation affects use, give **one overall quality note** with the relevant facts. Ordinary translations follow the format above.
@@ -24,6 +26,10 @@ When the user requests a quality statement or a specific limitation affects use,
 ## Source-aligned transcription
 
 Keep quotations in their source notation. Form new surface words from source-linked stems and licensed morphological rules, marking rule-derived forms separately from recorded quotations. Follow [notation audit](notation-audit.md).
+
+Without conversion, a complete source-supported IPA clause may stand as the main output when target spelling is missing. Label the missing representation once; do not call the whole translation incomplete solely for that display gap. Reusing published paired/derived spellings does not claim a conversion was executed in this task. Preserve their attribution in the [evidence pack](evidence-pack.md).
+
+Identify citation-tone notation separately from connected-speech realization. If a composition simply retains source forms, label its IPA as `来源基记` and, where relevant, state `连读实现未核`. A published example's base tone is not a claim of verified surface pronunciation. Check documented sandhi/fusion conditions before offering a surface reading; in the no-execution route, follow the realization limits in [web evidence](web-evidence.md#composition-and-notation).
 
 - Preserve source tones, phonemes, syllable boundaries, nasalization and untoned particles. For future `i`, render the source-licensed surface form with an untoned **-i** boundary after its verb stem or DIR host, preserving the source's [fusion](aspect-modality.md#predicate-fusion), syllabification and tones. Original quotations retain their notation.
 - Pair spelling and IPA through their attestation links. Use verified forms for the translated spans and Chinese characters for selected insertions.

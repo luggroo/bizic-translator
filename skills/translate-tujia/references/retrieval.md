@@ -11,9 +11,10 @@ Retain observed checks, paths and reasons. Distinguish **not checked**, **missin
 
 | Available environment | Action | Disclosure |
 | --- | --- | --- |
+| Webpage reader with no execution, or explicit webpage-only task | Read the [text dictionary and its actual links](web-evidence.md); keep coverage separate from access failure | 检索模式：Skill-based（网页静态词典；本地未执行） after successful lookup |
 | Executable runtime with compatible existing model/index, including offline or read-only assets | Validate and query the existing installation; reuse loaded assets | 检索模式：Embedding（BGE 实际运行） |
 | Missing assets; preflight confirms execution/resources/download access and durable storage | Provision only what is missing at the durable destination, register it, then query | 检索模式：Embedding only after successful current inference |
-| Tool-only, unsupported execution, insufficient resources/access, or no durable destination for new setup | Go directly to [tujia-synonym-lite](../../tujia-synonym-lite/SKILL.md); execute exact queries, without first trying the full BGE pipeline | 检索模式：Skill-based（概念扩展＋静态词典精确查询；没有运行 embedding） |
+| Readable static export/supplied evidence, insufficient resources/access, or no durable destination for new setup | Use [synonym-lite](../../tujia-synonym-lite/SKILL.md) with an actually available lookup route, without first trying the full BGE pipeline | 检索模式：Skill-based after real lookup; identify supplied evidence separately |
 | Both engines actually execute | Keep the engine and query provenance for each result | 检索模式：Mixed |
 
 Verify availability before claiming a mode. Report the observed engine and current query result; mode placement and final presentation follow the output policy. Base the mode label on the current query result. If a later operation encounters an unforeseen blocker, stop at that stage and use static lookup; preserve reusable files and record the reason rather than restarting setup.
@@ -40,6 +41,8 @@ Inspect the index manifest for the exact model/revision, pooling, dimensions, ch
 
 ## Text-only dictionary lookup
 
+For a URL-only reader, first use [published HTML](web-evidence.md). Coverage is limited to actual listings. Use the shard procedure below when a tool can resolve the bucket or its exact path has been supplied; otherwise report that route unavailable rather than inventing FNV results.
+
 Use the [static manifest](../lexicon/manifest.json) and its UTF-8 shards when a text-only connector cannot decompress the canonical gzip. The UTF-8 shards provide the text-only lookup route. For an unfamiliar compound, first expand its sense through [synonym-lite](../../tujia-synonym-lite/SKILL.md).
 
 1. Normalize the query with NFKC, casefold and trim.
@@ -60,7 +63,9 @@ The export is versioned, not live by assumption. Check revision, SHA-256 and ent
 <a id="read-grammar-section"></a>
 ## Read a linked grammar section
 
-Open the tujia.biz link beside the relevant rule in a grammar topic. For text-only access to the dynamic page, fetch [grammar-reviewed-data.js](https://tujia.biz/grammar-reviewed-data.js): `REVIEWED_GRAMMAR` groups chapters under `north` and `south`, and `GRAMMAR_ANCHORS` maps each anchor to its chapter. Read the target chapter's `html` and locate the linked anchor's passage. Reuse the retrieved chapter for related questions.
+First read the relevant bundled grammar topic and reuse its cited rules and complete examples. Follow the matching tujia.biz link for a named missing condition or conflict; reading the original site again is not a prerequisite for using a compiled quotation. If the page is unreadable, retain that status and continue with supported bundled evidence. The [raw reference grammar](https://raw.githubusercontent.com/luggroo/bizic-dictionary/main/docs/reference-grammar.md) is a larger fallback for a specific anchor, not a default download for every sentence. Preserve its revision separately if known. A reader search miss or truncated excerpt does not prove that a construction is absent.
+
+With a tool that can actually inspect serialized chapter data, [grammar-reviewed-data.js](https://tujia.biz/grammar-reviewed-data.js) is another route: `REVIEWED_GRAMMAR` groups chapters under `north` and `south`, and `GRAMMAR_ANCHORS` maps anchors to chapters. This is optional and does not require executing JavaScript in the webpage-only route. Reuse any successfully retrieved chapter.
 
 ## Misses, scores and cost
 

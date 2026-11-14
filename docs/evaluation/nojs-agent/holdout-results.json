@@ -1,0 +1,124 @@
+{
+  "skill_revision": "3ecafe77d2b276aa0ca3ba5330f80d9d22e8d848",
+  "producer": "nojs_final_holdout",
+  "reviewer": "nojs_benchmark_review",
+  "positive_score": 8,
+  "positive_maximum": 8,
+  "challenge_handling_passes": 6,
+  "challenge_completed_translations": 0,
+  "connected_speech_verified": false,
+  "positives": [
+    {
+      "id": "HN",
+      "source_text": "你不想回家。",
+      "dialect": "north",
+      "pinyin": "ní cū hxí cá dá",
+      "ipa": "ɲi²⁴ tsʰu⁵⁵ ɣɨ²⁴ tsʰa²⁴ ta²⁴",
+      "notation": "source citation tones; connected speech unverified",
+      "kind": "productive_composition",
+      "citation": "Brassett 2006:129–130; same-source pronoun examples",
+      "score": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "HS",
+      "source_text": "今天我打算买猪。",
+      "dialect": "south",
+      "pinyin": "mùniàn ngo zzìlòn pūddè",
+      "ipa": "mu²¹ȵian²¹ ŋo³¹ dzɿ²¹loŋ²¹ pʰu⁵³de²¹",
+      "notation": "compiled reference pair; connected speech unverified",
+      "kind": "compiled_example_with_chinese_paraphrase",
+      "citation": "向亮 2017:96",
+      "score": [
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "challenges": [
+    {
+      "id": "H1",
+      "dialect": "north",
+      "source_text": "明天他会来。",
+      "intended_reading": "纯预测，不表示能力或已有计划",
+      "status": "incomplete_structural_draft",
+      "gap": "Future/irrealis evidence exists, but tomorrow and the source-realized future predicate for come were not obtained.",
+      "review": "pass_scoped_gap_handling"
+    },
+    {
+      "id": "H1",
+      "dialect": "south",
+      "source_text": "明天他会来。",
+      "intended_reading": "纯预测，不表示能力或已有计划",
+      "status": "incomplete_structural_draft",
+      "gap": "Planning/skill examples do not establish pure prediction; compatible lexical and predicate forms remain unresolved.",
+      "review": "pass_scoped_gap_handling"
+    },
+    {
+      "id": "H2",
+      "dialect": "north",
+      "source_text": "我已经冷了两天，现在仍然冷。",
+      "intended_reading": "持续冷感，温度没有下降",
+      "status": "incomplete_structural_draft",
+      "gap": "Personal coldness with two-day duration and current persistence lacks a complete same-source construction; ongoing cooling changes the meaning.",
+      "review": "pass_scoped_gap_handling"
+    },
+    {
+      "id": "H2",
+      "dialect": "south",
+      "source_text": "我已经冷了两天，现在仍然冷。",
+      "intended_reading": "持续冷感，温度没有下降",
+      "status": "incomplete_structural_draft",
+      "gap": "Residence-duration evidence does not establish the cold-state duration construction.",
+      "review": "pass_scoped_gap_handling"
+    },
+    {
+      "id": "H3",
+      "dialect": "north",
+      "source_text": "气球胀起来了。",
+      "intended_reading": "物体体积变大，不是腹内胀满",
+      "status": "incomplete_structural_draft",
+      "gap": "Big and turn-into words alone do not license balloon expansion or the complete change-of-state predicate; balloon witness missing.",
+      "review": "pass_scoped_gap_handling"
+    },
+    {
+      "id": "H3",
+      "dialect": "south",
+      "source_text": "气球胀起来了。",
+      "intended_reading": "物体体积变大，不是腹内胀满",
+      "status": "incomplete_structural_draft",
+      "gap": "Physical expansion predicate, change-of-state construction and balloon witness were not obtained.",
+      "review": "pass_scoped_gap_handling"
+    }
+  ],
+  "access": {
+    "status": "unavailable",
+    "attempted_urls": [
+      "https://tujia.biz/text/catalog.json",
+      "https://tujia.biz/text/"
+    ],
+    "errors": [
+      "URL https://tujia.biz/text/catalog.json is not accessible via this tool.",
+      "URL https://tujia.biz/text/ is not accessible via this tool."
+    ],
+    "http_status": null
+  },
+  "calls": {
+    "web_dispatches": 5,
+    "opens": 16,
+    "unique_urls": 13,
+    "metric_origin": "participant-reported trace, not independently instrumented"
+  },
+  "execution": {
+    "local": "not_executed",
+    "page_js": "not_executed",
+    "conversion": "not_executed",
+    "constraint": "instruction-enforced simulation"
+  }
+}

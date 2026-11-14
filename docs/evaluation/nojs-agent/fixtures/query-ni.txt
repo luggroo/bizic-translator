@@ -1,0 +1,38 @@
+HOST-CAPTURED EVIDENCE; participant transport = supplied
+{
+  "url": "https://tujia.biz/text/lookup/zh/你.html",
+  "request_url": "https://tujia.biz/text/lookup/zh/%E4%BD%A0.html",
+  "fetched_at": "2026-11-13T23:44:39.956558+00:00",
+  "host_transport": "python_urllib_https",
+  "participant_transport": "supplied",
+  "page_js": "not_executed",
+  "http_status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 2212,
+  "html_sha256": "3e228e3f084fd92fcc33ff9c1a19376c2d13232020e4292311bf33ec65046390",
+  "status": "retrieved",
+  "extraction": "host_visible_text",
+  "text_sha256": "d6872ea03ecb08173586dd1a63adf09e6b62af64c46132c01ebea247f9060db7"
+}
+
+BEGIN ORIGINAL PAGE TEXT
+你 · 汉语义项跳到正文 · 文本目录
+你 · 汉语义项
+3 个词条。按本目录来源范围匹配汉语义项；具体用法见原始见证。
+Brassett 04、06
+Brassett 04 · brassett-2004
+ni2 · ni4 · nif
+w1599 https://tujia.biz/text/entry/w1599.html
+龙山语保
+中国语保 · 龙山 · yubao-60757
+ȵi33
+yubao-60757-v-1130 https://tujia.biz/text/entry/yubao-60757-v-1130.html
+南部土家语
+Tian 86 · stedt-cb523fc3dc
+ni³³
+stedt-rn-290272 https://tujia.biz/text/entry/stedt-rn-290272.html
+中国语保 · 泸溪潭溪 · yubao-60824
+ni33
+stedt-rn-290272 https://tujia.biz/text/entry/stedt-rn-290272.html
+资料版本 22cb01c6881a6922
+END ORIGINAL PAGE TEXT

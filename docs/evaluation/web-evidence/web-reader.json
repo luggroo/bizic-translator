@@ -1,0 +1,23 @@
+{
+  "status": "unavailable",
+  "started_at": "2026-11-13T21:32:36.533Z",
+  "finished_at": "2026-11-13T21:32:41.596Z",
+  "arguments": {
+    "open": [
+      {
+        "ref_id": "https://tujia.biz/text/"
+      }
+    ],
+    "response_length": "short"
+  },
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Internal Error ()\n【turn587668view0】 [wordlim: 200] Source: open({\"ref_id\":\"https://tujia.biz/text/\",\"lineno\":null}); \nURL https://tujia.biz/text/ is not accessible via this tool."
+      }
+    ],
+    "isError": false
+  },
+  "limitation": "This is the current conversation's actual webpage reader. No child URL was seeded or fetched after the directory failed. Result references are not backend HTTP request IDs."
+}

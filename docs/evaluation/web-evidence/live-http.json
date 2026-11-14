@@ -1,0 +1,512 @@
+{
+  "result": "PASS",
+  "recorded_at_utc": "2026-11-13T21:32:41.590844+00:00",
+  "transport": "Python urllib HTTP harness",
+  "hosted_model_test": false,
+  "seed": "https://tujia.biz/text/",
+  "data_version": "22cb01c6881a6922",
+  "requests": [
+    {
+      "url": "https://tujia.biz/text/",
+      "request_url": "https://tujia.biz/text/",
+      "discovered_on": null,
+      "http_status": 200,
+      "bytes": 6402,
+      "sha256": "a9cdacc9de81afdc70b9aa4b5cb3dcdca3ad64045f955d1158eb84f2cd1821b1",
+      "seconds": 0.3614
+    },
+    {
+      "url": "https://tujia.biz/text/lookup/zh/%E5%90%83.html",
+      "request_url": "https://tujia.biz/text/lookup/zh/%E5%90%83.html",
+      "discovered_on": "https://tujia.biz/text/",
+      "http_status": 200,
+      "bytes": 7915,
+      "sha256": "19c3ef9ea3eeef2fc9b6dad4b41455c12d48289959cb83d693e3220014446ca7",
+      "seconds": 0.3748
+    },
+    {
+      "url": "https://tujia.biz/text/entry/w684.html",
+      "request_url": "https://tujia.biz/text/entry/w684.html",
+      "discovered_on": "https://tujia.biz/text/lookup/zh/%E5%90%83.html",
+      "http_status": 200,
+      "bytes": 60248,
+      "sha256": "b0766ccae5d29b6306e831379c422bfd3ef202e0dbe48d93a9f75ae590921fd8",
+      "seconds": 0.2609
+    },
+    {
+      "url": "https://tujia.biz/text/entry/stedt-rn-43584.html",
+      "request_url": "https://tujia.biz/text/entry/stedt-rn-43584.html",
+      "discovered_on": "https://tujia.biz/text/lookup/zh/%E5%90%83.html",
+      "http_status": 200,
+      "bytes": 12956,
+      "sha256": "4dc7e16ce7a052cc3096b43d909cc268e89c5529fd6392829c8a3e90b68110a8",
+      "seconds": 0.3557
+    }
+  ],
+  "candidate_count": 4,
+  "witness_counts": {
+    "stedt-rn-43584": 3,
+    "w684": 18
+  },
+  "interactive_only_candidates": [
+    "https://tujia.biz/?id=yubao-60756-v-0439#words",
+    "https://tujia.biz/?id=yubao-60823-v-0439#words"
+  ],
+  "negative_cases": {
+    "苹果": "not_published, not lexical absence",
+    "truncated_directory_fixture": "partial, not zero matches"
+  },
+  "witnesses": [
+    {
+      "fields": {
+        "Witness ID": "w684",
+        "Entry ID": "w684",
+        "Chinese sense": "吃/咬",
+        "English sense": "to eat, bite",
+        "Original notation": "Brassett 数字调号",
+        "Source POS": "vt.",
+        "Witness dialect": "北部",
+        "Witness locality": "未记录 / Not recorded",
+        "Source": "Brassett 04",
+        "Source ID": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+        "Canonical source ID": "brassett-2004",
+        "Locator": "词条 684",
+        "Original Chinese gloss": "吃/咬"
+      },
+      "text": "见证 / Attestation w684 ga2 见证编号 / Witness ID w684 词条编号 / Entry ID w684 汉语义项 / Chinese sense 吃/咬 英语义项 / English sense to eat, bite 原记音方案 / Original notation Brassett 数字调号 词性（来源标签） / Source POS vt. 方言（该见证） / Witness dialect 北部 调查点（该见证） / Witness locality 未记录 / Not recorded 来源 / Source Brassett 04 来源编号 / Source ID 1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE 文献编号 / Canonical source ID brassett-2004 文献定位 / Locator 词条 684 来源汉语释义 / Original Chinese gloss 吃/咬 来源原件 / Source document ↗ 本见证关联记音 / Notations linked to this witness Brassett 记音 / Brassett notation ga² 记音记录处理 / Notation-record processing : 来源形式规范化 / Normalized source form · 1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE IPA ka²⁴ 记音记录处理 / Notation-record processing : 推导形式 / Derived form · brassett-phonetic 同形记音的合并记录包含多种处理依据；此元数据未逐条指定到见证。 / This merged notation record has multiple processing origins; its metadata does not assign an origin to each witness. 处理依据 / Methods : 推导形式 / Derived form · 来源原记音 / Source transcription 记音配置 / Profiles : brassett-phonetic · yubao-60757",
+      "url": "https://tujia.biz/text/entry/w684.html",
+      "data_version": "22cb01c6881a6922"
+    },
+    {
+      "fields": {
+        "Witness ID": "w3566",
+        "Entry ID": "w684",
+        "Chinese sense": "吃/咬",
+        "English sense": "eat, bite",
+        "Original notation": "Brassett 数字调号（英语表）",
+        "Source POS": "vt.",
+        "Witness dialect": "北部",
+        "Witness locality": "未记录 / Not recorded",
+        "Source": "Brassett 04",
+        "Source ID": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+        "Canonical source ID": "brassett-2004",
+        "Locator": "Sheet1!A796:C796",
+        "Original Chinese gloss": "未提供 / Not supplied",
+        "Chinese gloss provenance": "{\"method\":\"同词形同义项来源释义\",\"evidence\":\"w684\"}"
+      },
+      "text": "见证 / Attestation w3566 ga4 见证编号 / Witness ID w3566 词条编号 / Entry ID w684 汉语义项 / Chinese sense 吃/咬 英语义项 / English sense eat, bite 原记音方案 / Original notation Brassett 数字调号（英语表） 词性（来源标签） / Source POS vt. 方言（该见证） / Witness dialect 北部 调查点（该见证） / Witness locality 未记录 / Not recorded 来源 / Source Brassett 04 来源编号 / Source ID 165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO 文献编号 / Canonical source ID brassett-2004 文献定位 / Locator Sheet1!A796:C796 来源汉语释义 / Original Chinese gloss 未提供 / Not supplied 汉译依据 / Chinese gloss provenance {\"method\":\"同词形同义项来源释义\",\"evidence\":\"w684\"} 来源原件 / Source document ↗ 本见证关联记音 / Notations linked to this witness Brassett 记音 / Brassett notation ga² 记音记录处理 / Notation-record processing : 来源形式规范化 / Normalized source form · 1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE IPA ka²⁴ 记音记录处理 / Notation-record processing : 推导形式 / Derived form · brassett-phonetic 同形记音的合并记录包含多种处理依据；此元数据未逐条指定到见证。 / This merged notation record has multiple processing origins; its metadata does not assign an origin to each witness. 处理依据 / Methods : 推导形式 / Derived form · 来源原记音 / Source transcription 记音配置 / Profiles : brassett-phonetic · yubao-60757",
+      "url": "https://tujia.biz/text/entry/w684.html",
+      "data_version": "22cb01c6881a6922"
+    },
+    {
+      "fields": {
+        "Witness ID": "stedt-rn-456138",
+        "Entry ID": "w684",
+        "Chinese sense": "吃/咬",
+        "English sense": "eat, bite",
+        "Original notation": "Brassett 原文调号（STEDT）",
+        "Source POS": "vt.",
+        "Witness dialect": "北部",
+        "Witness locality": "未记录 / Not recorded",
+        "Source": "Brassett 04",
+        "Source ID": "stedt-07898ef938",
+        "Canonical source ID": "brassett-2004",
+        "Locator": "STEDT rn 456138 · 原文定位 未标明",
+        "Citation": "Brassett 04 Tujia",
+        "Original Chinese gloss": "未提供 / Not supplied",
+        "Chinese gloss provenance": "{\"method\":\"同词形同义项来源释义\",\"evidence\":\"w684\"}"
+      },
+      "text": "见证 / Attestation stedt-rn-456138 ga2 见证编号 / Witness ID stedt-rn-456138 词条编号 / Entry ID w684 汉语义项 / Chinese sense 吃/咬 英语义项 / English sense eat, bite 原记音方案 / Original notation Brassett 原文调号（STEDT） 词性（来源标签） / Source POS vt. 方言（该见证） / Witness dialect 北部 调查点（该见证） / Witness locality 未记录 / Not recorded 来源 / Source Brassett 04 来源编号 / Source ID stedt-07898ef938 文献编号 / Canonical source ID brassett-2004 文献定位 / Locator STEDT rn 456138 · 原文定位 未标明 原引文 / Citation Brassett 04 Tujia 来源汉语释义 / Original Chinese gloss 未提供 / Not supplied 汉译依据 / Chinese gloss provenance {\"method\":\"同词形同义项来源释义\",\"evidence\":\"w684\"} 来源原件 / Source document ↗ 英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。 本见证关联记音 / Notations linked to this witness Brassett 记音 / Brassett notation ga² 记音记录处理 / Notation-record processing : 来源形式规范化 / Normalized source form · 1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE IPA ka²⁴ 记音记录处理 / Notation-record processing : 推导形式 / Derived form · brassett-phonetic 同形记音的合并记录包含多种处理依据；此元数据未逐条指定到见证。 / This merged notation record has multiple processing origins; its metadata does not assign an origin to each witness. 处理依据 / Methods : 推导形式 / Derived form · 来源原记音 / Source transcription 记音配置 / Profiles : brassett-phonetic · yubao-60757",
+      "url": "https://tujia.biz/text/entry/w684.html",
+      "data_version": "22cb01c6881a6922"
+    },
+    {
+      "fields": {
+        "Witness ID": "w6726",
+        "Entry ID": "w684",
+        "Chinese sense": "吃/咬",
+        "English sense": "to eat, bite",
+        "Original notation": "叶氏拼写（转换表）",
+        "Source POS": "vt.",
+        "Witness dialect": "北部",
+        "Witness locality": "未记录 / Not recorded",
+        "Source": "Brassett 04",
+        "Source ID": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+        "Canonical source ID": "brassett-2004",
+        "Locator": "Sheet1!C844:G844",
+        "Original Chinese gloss": "吃/咬"
+      },
+      "text": "见证 / Attestation w6726 gaf 见证编号 / Witness ID w6726 词条编号 / Entry ID w684 汉语义项 / Chinese sense 吃/咬 英语义项 / English sense to eat, bite 原记音方案 / Original notation 叶氏拼写（转换表） 词性（来源标签） / Source POS vt. 方言（该见证） / Witness dialect 北部 调查点（该见证） / Witness locality 未记录 / Not recorded 来源 / Source Brassett 04 来源编号 / Source ID 1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF 文献编号 / Canonical source ID brassett-2004 文献定位 / Locator Sheet1!C844:G844 来源汉语释义 / Original Chinese gloss 吃/咬 来源原件 / Source document ↗ 叶式拼音与 Brassett 数字调号按转换表 A 列原词条编号对应，英语和汉语释义已逐行核对。此对应不是任意 IPA 的自动转换规则。 本见证关联记音 / Notations linked to this witness 叶氏拼音 / Ye spelling gaf 记音记录处理 / Notation-record processing : 来源原记音 / Source transcription · 1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+      "url": "https://tujia.biz/text/entry/w684.html",
+      "data_version": "22cb01c6881a6922"
+    },
+    {
+      "fields": {
+        "Witness ID": "stedt-rn-454305",
+        "Entry ID": "w684",
+        "Chinese sense": "吃",
+        "English sense": "eat",
+        "Original notation": "Brassett 原文调号（STEDT）",
+        "Source POS": "v",
+        "Witness dialect": "北部",
+        "Witness locality": "未记录 / Not recorded",
+        "Source": "Brassett 06",
+        "Source ID": "stedt-39f4cd9a6b",
+        "Canonical source ID": "brassett-2006",
+        "Locator": "STEDT rn 454305 · 原文定位 4.3",
+        "Source reference": "4.3",
+        "Citation": "Brassett 06 Tujia",
+        "Source-wide geography": "龙山、坡脚、他砂、靛房",
+        "Original Chinese gloss": "未提供 / Not supplied",
+        "Chinese gloss provenance": "{\"method\":\"英语释义编辑补译，未作田野核验\"}"
+      },
+      "text": "见证 / Attestation stedt-rn-454305 ga² 见证编号 / Witness ID stedt-rn-454305 词条编号 / Entry ID w684 汉语义项 / Chinese sense 吃 英语义项 / English sense eat 原记音方案 / Original notation Brassett 原文调号（STEDT） 词性（来源标签） / Source POS v 方言（该见证） / Witness dialect 北部 调查点（该见证） / Witness locality 未记录 / Not recorded 来源 / Source Brassett 06 来源编号 / Source ID stedt-39f4cd9a6b 文献编号 / Canonical source ID brassett-2006 文献定位 / Locator STEDT rn 454305 · 原文定位 4.3 原文定位 / Source reference 4.3 原引文 / Citation Brassett 06 Tujia 文献调查范围 / Source-wide geography 龙山、坡脚、他砂、靛房 来源汉语释义 / Original Chinese gloss 未提供 / Not supplied 汉译依据 / Chinese gloss provenance {\"method\":\"英语释义编辑补译，未作田野核验\"} 来源原件 / Source document ↗ 英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。 本见证关联记音 / Notations linked to this witness 叶氏拼音 / Ye spelling gaf 记音记录处理 / Notation-record processing : 推导形式 / Derived form · brassett-to-ye Brassett 记音 / Brassett notation ga² 记音记录处理 / Notation-record processing : 来源形式规范化 / Normalized source form · stedt-39f4cd9a6b IPA ka²⁴ 记音记录处理 / Notation-record processing : 推导形式 / Derived form · brassett-phonetic 同形记音的合并记录包含多种处理依据；此元数据未逐条指定到见证。 / This merged notation record has multiple processing origins; its metadata does not assign an origin to each witness. 处理依据 / Methods : 推导形式 / Derived form · 来源原记音 / Source transcription 记音配置 / Profiles : brassett-phonetic · yubao-60757",
+      "url": "https://tujia.biz/text/entry/w684.html",
+      "data_version": "22cb01c6881a6922"
+    },
+    {
+      "fields": {
+        "Witness ID": "stedt-rn-127179",
+        "Entry ID": "w684",
+        "Chinese sense": "吃",
+        "English sense": "eat",
+        "Original notation": "STEDT 原始记音",
+        "Source POS": "v",
+        "Witness dialect": "北部",
+        "Witness locality": "未记录 / Not recorded",
+        "Source": "Chen 86 TuBQ",
+        "Source ID": "stedt-24cc5bbb03",
+        "Locator": "STEDT rn 127179 · 原文定位 3.7.6",
+        "Source reference": "3.7.6",
+        "Citation": "Chen 86 TuBQ",
+        "Original Chinese gloss": "未提供 / Not supplied",
+        "Chinese gloss provenance": "{\"method\":\"英语释义编辑补译，未作田野核验\"}"
+      },
+      "text": "见证 / Attestation stedt-rn-127179 ka³⁵ 见证编号 / Witness ID stedt-rn-127179 词条编号 / Entry ID w684 汉语义项 / Chinese sense 吃 英语义项 / English sense eat 原记音方案 / Original notation STEDT 原始记音 词性（来源标签） / Source POS v 方言（该见证） / Witness dialect 北部 调查点（该见证） / Witness locality 未记录 / Not recorded 来源 / Source Chen 86 TuBQ 来源编号 / Source ID stedt-24cc5bbb03 文献定位 / Locator STEDT rn 127179 · 原文定位 3.7.6 原文定位 / Source reference 3.7.6 原引文 / Citation Chen 86 TuBQ 来源汉语释义 / Original Chinese gloss 未提供 / Not supplied 汉译依据 / Chinese gloss provenance {\"method\":\"英语释义编辑补译，未作田野核验\"} 来源原件 / Source document ↗ 英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。 本见证关联记音 / Notations linked to this witness IPA ka³⁵ 记音记录处理 / Notation-record processing : 来源原记音 / Source transcription · stedt-24cc5bbb03 同形记音的合并记录包含多种处理依据；此元数据未逐条指定到见证。 / This merged notation record has multiple processing origins; its metadata does not assign an origin to each witness. 处理依据 / Methods : 来源原记音 / Source transcription 记音配置 / Profiles : stedt-24cc5bbb03 · stedt-cb523fc3dc:north · stedt-610ab69a37 · stedt-7fd6565400",
+      "url": "https://tujia.biz/text/entry/w684.html",
+      "data_version": "22cb01c6881a6922"
+    },
+    {
+      "fields": {
+        "Witness ID": "stedt-rn-43440",
+        "Entry ID": "w684",
+        "Chinese sense": "吃",
+        "English sense": "eat",
+        "Original notation": "STEDT 原始记音",
+        "Source POS": "未记录 / Not recorded",
+        "Witness dialect": "北部",
+        "Witness locality": "未记录 / Not recorded",
+        "Source": "Tian 86",
+        "Source ID": "stedt-cb523fc3dc",
+        "Locator": "STEDT rn 43440 · 原文定位 未标明",
+        "Citation": "Tian 86",
+        "Original Chinese gloss": "未提供 / Not supplied",
+        "Chinese gloss provenance": "{\"method\":\"英语释义编辑补译，未作田野核验\"}"
+      },
+      "text": "见证 / Attestation stedt-rn-43440 ka³⁵ 见证编号 / Witness ID stedt-rn-43440 词条编号 / Entry ID w684 汉语义项 / Chinese sense 吃 英语义项 / English sense eat 原记音方案 / Original notation STEDT 原始记音 词性（来源标签） / Source POS 未记录 / Not recorded 方言（该见证） / Witness dialect 北部 调查点（该见证） / Witness locality 未记录 / Not recorded 来源 / Source Tian 86 来源编号 / Source ID stedt-cb523fc3dc 文献定位 / Locator STEDT rn 43440 · 原文定位 未标明 原引文 / Citation Tian 86 来源汉语释义 / Original Chinese gloss 未提供 / Not supplied 汉译依据 / Chinese gloss provenance {\"method\":\"英语释义编辑补译，未作田野核验\"} 来源原件 / Source document ↗ 英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。 本见证关联记音 / Notations linked to this witness IPA ka³⁵ 记音记录处理 / Notation-record processing : 来源原记音 / Source transcription · stedt-24cc5bbb03 同形记音的合并记录包含多种处理依据；此元数据未逐条指定到见证。 / This merged notation record has multiple processing origins; its metadata does not assign an origin to each witness. 处理依据 / Methods : 来源原记音 / Source transcription 记音配置 / Profiles : stedt-24cc5bbb03 · stedt-cb523fc3dc:north · stedt-610ab69a37 · stedt-7fd6565400",
+      "url": "https://tujia.biz/text/entry/w684.html",
+      "data_version": "22cb01c6881a6922"
+    },
+    {
+      "fields": {
+        "Witness ID": "stedt-rn-405933",
+        "Entry ID": "w684",
+        "Chinese sense": "吃",
+        "English sense": "eat",
+        "Original notation": "STEDT 原始记音",
+        "Source POS": "未记录 / Not recorded",
+        "Witness dialect": "北部",
+        "Witness locality": "未记录 / Not recorded",
+        "Source": "Huang and Dai 92 TBL",
+        "Source ID": "stedt-610ab69a37",
+        "Locator": "STEDT rn 405933 · 原文定位 1198.49",
+        "Source reference": "1198.49",
+        "Citation": "Huang and Dai 92 TBL",
+        "Original Chinese gloss": "未提供 / Not supplied",
+        "Chinese gloss provenance": "{\"method\":\"英语释义编辑补译，未作田野核验\"}"
+      },
+      "text": "见证 / Attestation stedt-rn-405933 ka³⁵ 见证编号 / Witness ID stedt-rn-405933 词条编号 / Entry ID w684 汉语义项 / Chinese sense 吃 英语义项 / English sense eat 原记音方案 / Original notation STEDT 原始记音 词性（来源标签） / Source POS 未记录 / Not recorded 方言（该见证） / Witness dialect 北部 调查点（该见证） / Witness locality 未记录 / Not recorded 来源 / Source Huang and Dai 92 TBL 来源编号 / Source ID stedt-610ab69a37 文献定位 / Locator STEDT rn 405933 · 原文定位 1198.49 原文定位 / Source reference 1198.49 原引文 / Citation Huang and Dai 92 TBL 来源汉语释义 / Original Chinese gloss 未提供 / Not supplied 汉译依据 / Chinese gloss provenance {\"method\":\"英语释义编辑补译，未作田野核验\"} 来源原件 / Source document ↗ 英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。 本见证关联记音 / Notations linked to this witness IPA ka³⁵ 记音记录处理 / Notation-record processing : 来源原记音 / Source transcription · stedt-24cc5bbb03 同形记音的合并记录包含多种处理依据；此元数据未逐条指定到见证。 / This merged notation record has multiple processing origins; its metadata does not assign an origin to each witness. 处理依据 / Methods : 来源原记音 / Source transcription 记音配置 / Profiles : stedt-24cc5bbb03 · stedt-cb523fc3dc:north · stedt-610ab69a37 · stedt-7fd6565400",
+      "url": "https://tujia.biz/text/entry/w684.html",
+      "data_version": "22cb01c6881a6922"
+    },
+    {
+      "fields": {
+        "Witness ID": "stedt-rn-207186",
+        "Entry ID": "w684",
+        "Chinese sense": "吃",
+        "English sense": "eat",
+        "Original notation": "STEDT 原始记音",
+        "Source POS": "未记录 / Not recorded",
+        "Witness dialect": "北部",
+        "Witness locality": "未记录 / Not recorded",
+        "Source": "Sun H 91 ZMYY",
+        "Source ID": "stedt-7fd6565400",
+        "Locator": "STEDT rn 207186 · 原文定位 533.38",
+        "Source reference": "533.38",
+        "Citation": "Sun H 91 ZMYY",
+        "Original Chinese gloss": "未提供 / Not supplied",
+        "Chinese gloss provenance": "{\"method\":\"英语释义编辑补译，未作田野核验\"}"
+      },
+      "text": "见证 / Attestation stedt-rn-207186 ka³⁵ 见证编号 / Witness ID stedt-rn-207186 词条编号 / Entry ID w684 汉语义项 / Chinese sense 吃 英语义项 / English sense eat 原记音方案 / Original notation STEDT 原始记音 词性（来源标签） / Source POS 未记录 / Not recorded 方言（该见证） / Witness dialect 北部 调查点（该见证） / Witness locality 未记录 / Not recorded 来源 / Source Sun H 91 ZMYY 来源编号 / Source ID stedt-7fd6565400 文献定位 / Locator STEDT rn 207186 · 原文定位 533.38 原文定位 / Source reference 533.38 原引文 / Citation Sun H 91 ZMYY 来源汉语释义 / Original Chinese gloss 未提供 / Not supplied 汉译依据 / Chinese gloss provenance {\"method\":\"英语释义编辑补译，未作田野核验\"} 来源原件 / Source document ↗ 英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。 本见证关联记音 / Notations linked to this witness IPA ka³⁵ 记音记录处理 / Notation-record processing : 来源原记音 / Source transcription · stedt-24cc5bbb03 同形记音的合并记录包含多种处理依据；此元数据未逐条指定到见证。 / This merged notation record has multiple processing origins; its metadata does not assign an origin to each witness. 处理依据 / Methods : 来源原记音 / Source transcription 记音配置 / Profiles : stedt-24cc5bbb03 · stedt-cb523fc3dc:north · stedt-610ab69a37 · stedt-7fd6565400",
+      "url": "https://tujia.biz/text/entry/w684.html",
+      "data_version": "22cb01c6881a6922"
+    },
+    {
+      "fields": {
+        "Witness ID": "stedt-rn-43443",
+        "Entry ID": "w684",
+        "Chinese sense": "狗咬",
+        "English sense": "bite (of dog)",
+        "Original notation": "STEDT 原始记音",
+        "Source POS": "未记录 / Not recorded",
+        "Witness dialect": "北部",
+        "Witness locality": "未记录 / Not recorded",
+        "Source": "Tian 86",
+        "Source ID": "stedt-cb523fc3dc",
+        "Locator": "STEDT rn 43443 · 原文定位 未标明",
+        "Citation": "Tian 86",
+        "Original Chinese gloss": "未提供 / Not supplied",
+        "Chinese gloss provenance": "{\"method\":\"英语释义编辑补译，未作田野核验\"}"
+      },
+      "text": "见证 / Attestation stedt-rn-43443 ka³⁵ 见证编号 / Witness ID stedt-rn-43443 词条编号 / Entry ID w684 汉语义项 / Chinese sense 狗咬 英语义项 / English sense bite (of dog) 原记音方案 / Original notation STEDT 原始记音 词性（来源标签） / Source POS 未记录 / Not recorded 方言（该见证） / Witness dialect 北部 调查点（该见证） / Witness locality 未记录 / Not recorded 来源 / Source Tian 86 来源编号 / Source ID stedt-cb523fc3dc 文献定位 / Locator STEDT rn 43443 · 原文定位 未标明 原引文 / Citation Tian 86 来源汉语释义 / Original Chinese gloss 未提供 / Not supplied 汉译依据 / Chinese gloss provenance {\"method\":\"英语释义编辑补译，未作田野核验\"} 来源原件 / Source document ↗ 英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。 本见证关联记音 / Notations linked to this witness IPA ka³⁵ 记音记录处理 / Notation-record processing : 来源原记音 / Source transcription · stedt-24cc5bbb03 同形记音的合并记录包含多种处理依据；此元数据未逐条指定到见证。 / This merged notation record has multiple processing origins; its metadata does not assign an origin to each witness. 处理依据 / Methods : 来源原记音 / Source transcription 记音配置 / Profiles : stedt-24cc5bbb03 · stedt-cb523fc3dc:north · stedt-610ab69a37 · stedt-7fd6565400",
+      "url": "https://tujia.biz/text/entry/w684.html",
+      "data_version": "22cb01c6881a6922"
+    },
+    {
+      "fields": {
+        "Witness ID": "stedt-rn-409562",
+        "Entry ID": "w684",
+        "Chinese sense": "蚊子叮咬",
+        "English sense": "bite (mosquito)",
+        "Original notation": "STEDT 原始记音",
+        "Source POS": "v.",
+        "Witness dialect": "北部",
+        "Witness locality": "未记录 / Not recorded",
+        "Source": "Huang and Dai 92 TBL",
+        "Source ID": "stedt-610ab69a37",
+        "Locator": "STEDT rn 409562 · 原文定位 1279.49",
+        "Source reference": "1279.49",
+        "Citation": "Huang and Dai 92 TBL",
+        "Original Chinese gloss": "未提供 / Not supplied",
+        "Chinese gloss provenance": "{\"method\":\"英语释义编辑补译，未作田野核验\"}"
+      },
+      "text": "见证 / Attestation stedt-rn-409562 ka³⁵ 见证编号 / Witness ID stedt-rn-409562 词条编号 / Entry ID w684 汉语义项 / Chinese sense 蚊子叮咬 英语义项 / English sense bite (mosquito) 原记音方案 / Original notation STEDT 原始记音 词性（来源标签） / Source POS v. 方言（该见证） / Witness dialect 北部 调查点（该见证） / Witness locality 未记录 / Not recorded 来源 / Source Huang and Dai 92 TBL 来源编号 / Source ID stedt-610ab69a37 文献定位 / Locator STEDT rn 409562 · 原文定位 1279.49 原文定位 / Source reference 1279.49 原引文 / Citation Huang and Dai 92 TBL 来源汉语释义 / Original Chinese gloss 未提供 / Not supplied 汉译依据 / Chinese gloss provenance {\"method\":\"英语释义编辑补译，未作田野核验\"} 来源原件 / Source document ↗ 英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。 本见证关联记音 / Notations linked to this witness IPA ka³⁵ 记音记录处理 / Notation-record processing : 来源原记音 / Source transcription · stedt-24cc5bbb03 同形记音的合并记录包含多种处理依据；此元数据未逐条指定到见证。 / This merged notation record has multiple processing origins; its metadata does not assign an origin to each witness. 处理依据 / Methods : 来源原记音 / Source transcription 记音配置 / Profiles : stedt-24cc5bbb03 · stedt-cb523fc3dc:north · stedt-610ab69a37 · stedt-7fd6565400",
+      "url": "https://tujia.biz/text/entry/w684.html",
+      "data_version": "22cb01c6881a6922"
+    },
+    {
+      "fields": {
+        "Witness ID": "stedt-rn-431370",
+        "Entry ID": "w684",
+        "Chinese sense": "咬",
+        "English sense": "bite",
+        "Original notation": "STEDT 原始记音",
+        "Source POS": "v.",
+        "Witness dialect": "北部",
+        "Witness locality": "未记录 / Not recorded",
+        "Source": "Huang and Dai 92 TBL",
+        "Source ID": "stedt-610ab69a37",
+        "Locator": "STEDT rn 431370 · 原文定位 1753.49",
+        "Source reference": "1753.49",
+        "Citation": "Huang and Dai 92 TBL",
+        "Original Chinese gloss": "未提供 / Not supplied",
+        "Chinese gloss provenance": "{\"method\":\"同英语释义的唯一已有汉译\",\"evidence\":\"w9850\"}"
+      },
+      "text": "见证 / Attestation stedt-rn-431370 ka³⁵ 见证编号 / Witness ID stedt-rn-431370 词条编号 / Entry ID w684 汉语义项 / Chinese sense 咬 英语义项 / English sense bite 原记音方案 / Original notation STEDT 原始记音 词性（来源标签） / Source POS v. 方言（该见证） / Witness dialect 北部 调查点（该见证） / Witness locality 未记录 / Not recorded 来源 / Source Huang and Dai 92 TBL 来源编号 / Source ID stedt-610ab69a37 文献定位 / Locator STEDT rn 431370 · 原文定位 1753.49 原文定位 / Source reference 1753.49 原引文 / Citation Huang and Dai 92 TBL 来源汉语释义 / Original Chinese gloss 未提供 / Not supplied 汉译依据 / Chinese gloss provenance {\"method\":\"同英语释义的唯一已有汉译\",\"evidence\":\"w9850\"} 来源原件 / Source document ↗ 英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。 本见证关联记音 / Notations linked to this witness IPA ka³⁵ 记音记录处理 / Notation-record processing : 来源原记音 / Source transcription · stedt-24cc5bbb03 同形记音的合并记录包含多种处理依据；此元数据未逐条指定到见证。 / This merged notation record has multiple processing origins; its metadata does not assign an origin to each witness. 处理依据 / Methods : 来源原记音 / Source transcription 记音配置 / Profiles : stedt-24cc5bbb03 · stedt-cb523fc3dc:north · stedt-610ab69a37 · stedt-7fd6565400",
+      "url": "https://tujia.biz/text/entry/w684.html",
+      "data_version": "22cb01c6881a6922"
+    },
+    {
+      "fields": {
+        "Witness ID": "stedt-rn-207288",
+        "Entry ID": "w684",
+        "Chinese sense": "咬",
+        "English sense": "bite",
+        "Original notation": "STEDT 原始记音",
+        "Source POS": "未记录 / Not recorded",
+        "Witness dialect": "北部",
+        "Witness locality": "未记录 / Not recorded",
+        "Source": "Sun H 91 ZMYY",
+        "Source ID": "stedt-7fd6565400",
+        "Locator": "STEDT rn 207288 · 原文定位 535.38",
+        "Source reference": "535.38",
+        "Citation": "Sun H 91 ZMYY",
+        "Original Chinese gloss": "未提供 / Not supplied",
+        "Chinese gloss provenance": "{\"method\":\"同英语释义的唯一已有汉译\",\"evidence\":\"w9850\"}"
+      },
+      "text": "见证 / Attestation stedt-rn-207288 ka³⁵ 见证编号 / Witness ID stedt-rn-207288 词条编号 / Entry ID w684 汉语义项 / Chinese sense 咬 英语义项 / English sense bite 原记音方案 / Original notation STEDT 原始记音 词性（来源标签） / Source POS 未记录 / Not recorded 方言（该见证） / Witness dialect 北部 调查点（该见证） / Witness locality 未记录 / Not recorded 来源 / Source Sun H 91 ZMYY 来源编号 / Source ID stedt-7fd6565400 文献定位 / Locator STEDT rn 207288 · 原文定位 535.38 原文定位 / Source reference 535.38 原引文 / Citation Sun H 91 ZMYY 来源汉语释义 / Original Chinese gloss 未提供 / Not supplied 汉译依据 / Chinese gloss provenance {\"method\":\"同英语释义的唯一已有汉译\",\"evidence\":\"w9850\"} 来源原件 / Source document ↗ 英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。 本见证关联记音 / Notations linked to this witness IPA ka³⁵ 记音记录处理 / Notation-record processing : 来源原记音 / Source transcription · stedt-24cc5bbb03 同形记音的合并记录包含多种处理依据；此元数据未逐条指定到见证。 / This merged notation record has multiple processing origins; its metadata does not assign an origin to each witness. 处理依据 / Methods : 来源原记音 / Source transcription 记音配置 / Profiles : stedt-24cc5bbb03 · stedt-cb523fc3dc:north · stedt-610ab69a37 · stedt-7fd6565400",
+      "url": "https://tujia.biz/text/entry/w684.html",
+      "data_version": "22cb01c6881a6922"
+    },
+    {
+      "fields": {
+        "Witness ID": "stedt-rn-220140",
+        "Entry ID": "w684",
+        "Chinese sense": "刺；蜇",
+        "English sense": "sting",
+        "Original notation": "STEDT 原始记音",
+        "Source POS": "v",
+        "Witness dialect": "北部",
+        "Witness locality": "未记录 / Not recorded",
+        "Source": "Sun H 91 ZMYY",
+        "Source ID": "stedt-7fd6565400",
+        "Locator": "STEDT rn 220140 · 原文定位 787.38",
+        "Source reference": "787.38",
+        "Citation": "Sun H 91 ZMYY",
+        "Original Chinese gloss": "未提供 / Not supplied",
+        "Chinese gloss provenance": "{\"method\":\"英语释义编辑补译，未作田野核验\"}"
+      },
+      "text": "见证 / Attestation stedt-rn-220140 ka³⁵ 见证编号 / Witness ID stedt-rn-220140 词条编号 / Entry ID w684 汉语义项 / Chinese sense 刺；蜇 英语义项 / English sense sting 原记音方案 / Original notation STEDT 原始记音 词性（来源标签） / Source POS v 方言（该见证） / Witness dialect 北部 调查点（该见证） / Witness locality 未记录 / Not recorded 来源 / Source Sun H 91 ZMYY 来源编号 / Source ID stedt-7fd6565400 文献定位 / Locator STEDT rn 220140 · 原文定位 787.38 原文定位 / Source reference 787.38 原引文 / Citation Sun H 91 ZMYY 来源汉语释义 / Original Chinese gloss 未提供 / Not supplied 汉译依据 / Chinese gloss provenance {\"method\":\"英语释义编辑补译，未作田野核验\"} 来源原件 / Source document ↗ 英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。 本见证关联记音 / Notations linked to this witness IPA ka³⁵ 记音记录处理 / Notation-record processing : 来源原记音 / Source transcription · stedt-24cc5bbb03 同形记音的合并记录包含多种处理依据；此元数据未逐条指定到见证。 / This merged notation record has multiple processing origins; its metadata does not assign an origin to each witness. 处理依据 / Methods : 来源原记音 / Source transcription 记音配置 / Profiles : stedt-24cc5bbb03 · stedt-cb523fc3dc:north · stedt-610ab69a37 · stedt-7fd6565400",
+      "url": "https://tujia.biz/text/entry/w684.html",
+      "data_version": "22cb01c6881a6922"
+    },
+    {
+      "fields": {
+        "Witness ID": "yubao-60757-v-0439",
+        "Entry ID": "w684",
+        "Chinese sense": "吃",
+        "English sense": "eat",
+        "Original notation": "IPA",
+        "Source POS": "未记录 / Not recorded",
+        "Witness dialect": "北部",
+        "Witness locality": "未记录 / Not recorded",
+        "Source": "中国语保 · 龙山",
+        "Source ID": "yubao-60757",
+        "Locator": "词汇 0439",
+        "Source-wide geography": "龙山",
+        "Original English gloss": "未提供 / Not supplied",
+        "English gloss provenance": "{\"method\":\"editorial-translation\",\"basis\":\"语保汉语调查词目与提示\",\"evidence\":[]}"
+      },
+      "text": "见证 / Attestation yubao-60757-v-0439 ka24 见证编号 / Witness ID yubao-60757-v-0439 词条编号 / Entry ID w684 汉语义项 / Chinese sense 吃 英语义项 / English sense eat 原记音方案 / Original notation IPA 词性（来源标签） / Source POS 未记录 / Not recorded 方言（该见证） / Witness dialect 北部 调查点（该见证） / Witness locality 未记录 / Not recorded 来源 / Source 中国语保 · 龙山 来源编号 / Source ID yubao-60757 文献定位 / Locator 词汇 0439 文献调查范围 / Source-wide geography 龙山 来源英语释义 / Original English gloss 未提供 / Not supplied 英译依据 / English gloss provenance {\"method\":\"editorial-translation\",\"basis\":\"语保汉语调查词目与提示\",\"evidence\":[]} 来源原件 / Source document ↗ ～饭 本见证关联记音 / Notations linked to this witness 叶氏拼音 / Ye spelling gaf 记音记录处理 / Notation-record processing : 编辑校订 / Editorial review · yubao-60757 IPA ka²⁴ 记音记录处理 / Notation-record processing : 推导形式 / Derived form · brassett-phonetic 同形记音的合并记录包含多种处理依据；此元数据未逐条指定到见证。 / This merged notation record has multiple processing origins; its metadata does not assign an origin to each witness. 处理依据 / Methods : 推导形式 / Derived form · 来源原记音 / Source transcription 记音配置 / Profiles : brassett-phonetic · yubao-60757 调号拼音 / Tone-marked spelling gá 记音记录处理 / Notation-record processing : 编辑校订 / Editorial review · yubao-60757",
+      "url": "https://tujia.biz/text/entry/w684.html",
+      "data_version": "22cb01c6881a6922"
+    },
+    {
+      "fields": {
+        "Witness ID": "yubao-60757-v-0763",
+        "Entry ID": "w684",
+        "Chinese sense": "咬",
+        "English sense": "bite",
+        "Original notation": "IPA",
+        "Source POS": "未记录 / Not recorded",
+        "Witness dialect": "北部",
+        "Witness locality": "未记录 / Not recorded",
+        "Source": "中国语保 · 龙山",
+        "Source ID": "yubao-60757",
+        "Locator": "词汇 0763",
+        "Source-wide geography": "龙山",
+        "Original English gloss": "未提供 / Not supplied",
+        "English gloss provenance": "{\"method\":\"editorial-translation\",\"basis\":\"语保汉语调查词目与提示\",\"evidence\":[]}"
+      },
+      "text": "见证 / Attestation yubao-60757-v-0763 ka24 见证编号 / Witness ID yubao-60757-v-0763 词条编号 / Entry ID w684 汉语义项 / Chinese sense 咬 英语义项 / English sense bite 原记音方案 / Original notation IPA 词性（来源标签） / Source POS 未记录 / Not recorded 方言（该见证） / Witness dialect 北部 调查点（该见证） / Witness locality 未记录 / Not recorded 来源 / Source 中国语保 · 龙山 来源编号 / Source ID yubao-60757 文献定位 / Locator 词汇 0763 文献调查范围 / Source-wide geography 龙山 来源英语释义 / Original English gloss 未提供 / Not supplied 英译依据 / English gloss provenance {\"method\":\"editorial-translation\",\"basis\":\"语保汉语调查词目与提示\",\"evidence\":[]} 来源原件 / Source document ↗ 狗～人 本见证关联记音 / Notations linked to this witness 叶氏拼音 / Ye spelling gaf 记音记录处理 / Notation-record processing : 编辑校订 / Editorial review · yubao-60757 IPA ka²⁴ 记音记录处理 / Notation-record processing : 推导形式 / Derived form · brassett-phonetic 同形记音的合并记录包含多种处理依据；此元数据未逐条指定到见证。 / This merged notation record has multiple processing origins; its metadata does not assign an origin to each witness. 处理依据 / Methods : 推导形式 / Derived form · 来源原记音 / Source transcription 记音配置 / Profiles : brassett-phonetic · yubao-60757 调号拼音 / Tone-marked spelling gá 记音记录处理 / Notation-record processing : 编辑校订 / Editorial review · yubao-60757",
+      "url": "https://tujia.biz/text/entry/w684.html",
+      "data_version": "22cb01c6881a6922"
+    },
+    {
+      "fields": {
+        "Witness ID": "yubao-60757-v-1715",
+        "Entry ID": "w684",
+        "Chinese sense": "叮",
+        "English sense": "bite (of a mosquito)",
+        "Original notation": "IPA",
+        "Source POS": "未记录 / Not recorded",
+        "Witness dialect": "北部",
+        "Witness locality": "未记录 / Not recorded",
+        "Source": "中国语保 · 龙山",
+        "Source ID": "yubao-60757",
+        "Locator": "词汇 1715",
+        "Source-wide geography": "龙山",
+        "Original English gloss": "未提供 / Not supplied",
+        "English gloss provenance": "{\"method\":\"editorial-translation\",\"basis\":\"语保汉语调查词目与提示\",\"evidence\":[]}"
+      },
+      "text": "见证 / Attestation yubao-60757-v-1715 ka24 见证编号 / Witness ID yubao-60757-v-1715 词条编号 / Entry ID w684 汉语义项 / Chinese sense 叮 英语义项 / English sense bite (of a mosquito) 原记音方案 / Original notation IPA 词性（来源标签） / Source POS 未记录 / Not recorded 方言（该见证） / Witness dialect 北部 调查点（该见证） / Witness locality 未记录 / Not recorded 来源 / Source 中国语保 · 龙山 来源编号 / Source ID yubao-60757 文献定位 / Locator 词汇 1715 文献调查范围 / Source-wide geography 龙山 来源英语释义 / Original English gloss 未提供 / Not supplied 英译依据 / English gloss provenance {\"method\":\"editorial-translation\",\"basis\":\"语保汉语调查词目与提示\",\"evidence\":[]} 来源原件 / Source document ↗ 蚊子～ 本见证关联记音 / Notations linked to this witness 叶氏拼音 / Ye spelling gaf 记音记录处理 / Notation-record processing : 编辑校订 / Editorial review · yubao-60757 IPA ka²⁴ 记音记录处理 / Notation-record processing : 推导形式 / Derived form · brassett-phonetic 同形记音的合并记录包含多种处理依据；此元数据未逐条指定到见证。 / This merged notation record has multiple processing origins; its metadata does not assign an origin to each witness. 处理依据 / Methods : 推导形式 / Derived form · 来源原记音 / Source transcription 记音配置 / Profiles : brassett-phonetic · yubao-60757 调号拼音 / Tone-marked spelling gá 记音记录处理 / Notation-record processing : 编辑校订 / Editorial review · yubao-60757",
+      "url": "https://tujia.biz/text/entry/w684.html",
+      "data_version": "22cb01c6881a6922"
+    },
+    {
+      "fields": {
+        "Witness ID": "yubao-60757-v-1716",
+        "Entry ID": "w684",
+        "Chinese sense": "蜇",
+        "English sense": "sting",
+        "Original notation": "IPA",
+        "Source POS": "未记录 / Not recorded",
+        "Witness dialect": "北部",
+        "Witness locality": "未记录 / Not recorded",
+        "Source": "中国语保 · 龙山",
+        "Source ID": "yubao-60757",
+        "Locator": "词汇 1716",
+        "Source-wide geography": "龙山",
+        "Original English gloss": "未提供 / Not supplied",
+        "English gloss provenance": "{\"method\":\"editorial-translation\",\"basis\":\"语保汉语调查词目与提示\",\"evidence\":[]}"
+      },
+      "text": "见证 / Attestation yubao-60757-v-1716 ka24 见证编号 / Witness ID yubao-60757-v-1716 词条编号 / Entry ID w684 汉语义项 / Chinese sense 蜇 英语义项 / English sense sting 原记音方案 / Original notation IPA 词性（来源标签） / Source POS 未记录 / Not recorded 方言（该见证） / Witness dialect 北部 调查点（该见证） / Witness locality 未记录 / Not recorded 来源 / Source 中国语保 · 龙山 来源编号 / Source ID yubao-60757 文献定位 / Locator 词汇 1716 文献调查范围 / Source-wide geography 龙山 来源英语释义 / Original English gloss 未提供 / Not supplied 英译依据 / English gloss provenance {\"method\":\"editorial-translation\",\"basis\":\"语保汉语调查词目与提示\",\"evidence\":[]} 来源原件 / Source document ↗ 蜂子～ 本见证关联记音 / Notations linked to this witness 叶氏拼音 / Ye spelling gaf 记音记录处理 / Notation-record processing : 编辑校订 / Editorial review · yubao-60757 IPA ka²⁴ 记音记录处理 / Notation-record processing : 推导形式 / Derived form · brassett-phonetic 同形记音的合并记录包含多种处理依据；此元数据未逐条指定到见证。 / This merged notation record has multiple processing origins; its metadata does not assign an origin to each witness. 处理依据 / Methods : 推导形式 / Derived form · 来源原记音 / Source transcription 记音配置 / Profiles : brassett-phonetic · yubao-60757 调号拼音 / Tone-marked spelling gá 记音记录处理 / Notation-record processing : 编辑校订 / Editorial review · yubao-60757",
+      "url": "https://tujia.biz/text/entry/w684.html",
+      "data_version": "22cb01c6881a6922"
+    },
+    {
+      "fields": {
+        "Witness ID": "stedt-rn-43584",
+        "Entry ID": "stedt-rn-43584",
+        "Chinese sense": "吃",
+        "English sense": "eat",
+        "Original notation": "STEDT 原始记音",
+        "Source POS": "未记录 / Not recorded",
+        "Witness dialect": "南部",
+        "Witness locality": "未记录 / Not recorded",
+        "Source": "Tian 86",
+        "Source ID": "stedt-cb523fc3dc",
+        "Locator": "STEDT rn 43584 · 原文定位 未标明",
+        "Citation": "Tian 86",
+        "Original Chinese gloss": "未提供 / Not supplied",
+        "Chinese gloss provenance": "{\"method\":\"英语释义编辑补译，未作田野核验\"}"
+      },
+      "text": "见证 / Attestation stedt-rn-43584 ɣɨe³⁵ 见证编号 / Witness ID stedt-rn-43584 词条编号 / Entry ID stedt-rn-43584 汉语义项 / Chinese sense 吃 英语义项 / English sense eat 原记音方案 / Original notation STEDT 原始记音 词性（来源标签） / Source POS 未记录 / Not recorded 方言（该见证） / Witness dialect 南部 调查点（该见证） / Witness locality 未记录 / Not recorded 来源 / Source Tian 86 来源编号 / Source ID stedt-cb523fc3dc 文献定位 / Locator STEDT rn 43584 · 原文定位 未标明 原引文 / Citation Tian 86 来源汉语释义 / Original Chinese gloss 未提供 / Not supplied 汉译依据 / Chinese gloss provenance {\"method\":\"英语释义编辑补译，未作田野核验\"} 来源原件 / Source document ↗ 英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。 本见证关联记音 / Notations linked to this witness IPA ɣɨe³⁵ 记音记录处理 / Notation-record processing : 来源原记音 / Source transcription · stedt-cb523fc3dc:south 处理依据 / Methods : 来源原记音 / Source transcription 记音配置 / Profiles : stedt-cb523fc3dc:south",
+      "url": "https://tujia.biz/text/entry/stedt-rn-43584.html",
+      "data_version": "22cb01c6881a6922"
+    },
+    {
+      "fields": {
+        "Witness ID": "stedt-rn-127328",
+        "Entry ID": "stedt-rn-43584",
+        "Chinese sense": "吃",
+        "English sense": "eat",
+        "Original notation": "STEDT 原始记音",
+        "Source POS": "v",
+        "Witness dialect": "南部",
+        "Witness locality": "未记录 / Not recorded",
+        "Source": "Chen 86 TuMQ",
+        "Source ID": "stedt-4fdbdbf516",
+        "Locator": "STEDT rn 127328 · 原文定位 3.7.6",
+        "Source reference": "3.7.6",
+        "Citation": "Chen 86 TuMQ",
+        "Original Chinese gloss": "未提供 / Not supplied",
+        "Chinese gloss provenance": "{\"method\":\"英语释义编辑补译，未作田野核验\"}"
+      },
+      "text": "见证 / Attestation stedt-rn-127328 ɣɯe³⁵ 见证编号 / Witness ID stedt-rn-127328 词条编号 / Entry ID stedt-rn-43584 汉语义项 / Chinese sense 吃 英语义项 / English sense eat 原记音方案 / Original notation STEDT 原始记音 词性（来源标签） / Source POS v 方言（该见证） / Witness dialect 南部 调查点（该见证） / Witness locality 未记录 / Not recorded 来源 / Source Chen 86 TuMQ 来源编号 / Source ID stedt-4fdbdbf516 文献定位 / Locator STEDT rn 127328 · 原文定位 3.7.6 原文定位 / Source reference 3.7.6 原引文 / Citation Chen 86 TuMQ 来源汉语释义 / Original Chinese gloss 未提供 / Not supplied 汉译依据 / Chinese gloss provenance {\"method\":\"英语释义编辑补译，未作田野核验\"} 来源原件 / Source document ↗ 英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。 本见证关联记音 / Notations linked to this witness IPA ɣɯe³⁵ 记音记录处理 / Notation-record processing : 来源原记音 / Source transcription · stedt-4fdbdbf516 处理依据 / Methods : 来源原记音 / Source transcription 记音配置 / Profiles : stedt-4fdbdbf516",
+      "url": "https://tujia.biz/text/entry/stedt-rn-43584.html",
+      "data_version": "22cb01c6881a6922"
+    },
+    {
+      "fields": {
+        "Witness ID": "yubao-60824-v-0439",
+        "Entry ID": "stedt-rn-43584",
+        "Chinese sense": "吃",
+        "English sense": "eat",
+        "Original notation": "IPA",
+        "Source POS": "未记录 / Not recorded",
+        "Witness dialect": "南部",
+        "Witness locality": "未记录 / Not recorded",
+        "Source": "中国语保 · 泸溪潭溪",
+        "Source ID": "yubao-60824",
+        "Locator": "词汇 0439",
+        "Source-wide geography": "泸溪潭溪",
+        "Original English gloss": "未提供 / Not supplied",
+        "English gloss provenance": "{\"method\":\"editorial-translation\",\"basis\":\"语保汉语调查词目与提示\",\"evidence\":[]}"
+      },
+      "text": "见证 / Attestation yubao-60824-v-0439 ɣe35 见证编号 / Witness ID yubao-60824-v-0439 词条编号 / Entry ID stedt-rn-43584 汉语义项 / Chinese sense 吃 英语义项 / English sense eat 原记音方案 / Original notation IPA 词性（来源标签） / Source POS 未记录 / Not recorded 方言（该见证） / Witness dialect 南部 调查点（该见证） / Witness locality 未记录 / Not recorded 来源 / Source 中国语保 · 泸溪潭溪 来源编号 / Source ID yubao-60824 文献定位 / Locator 词汇 0439 文献调查范围 / Source-wide geography 泸溪潭溪 来源英语释义 / Original English gloss 未提供 / Not supplied 英译依据 / English gloss provenance {\"method\":\"editorial-translation\",\"basis\":\"语保汉语调查词目与提示\",\"evidence\":[]} 来源原件 / Source document ↗ ～饭 本见证关联记音 / Notations linked to this witness IPA ɣe³⁵ 记音记录处理 / Notation-record processing : 来源原记音 / Source transcription · yubao-60824 处理依据 / Methods : 来源原记音 / Source transcription 记音配置 / Profiles : yubao-60824",
+      "url": "https://tujia.biz/text/entry/stedt-rn-43584.html",
+      "data_version": "22cb01c6881a6922"
+    }
+  ]
+}

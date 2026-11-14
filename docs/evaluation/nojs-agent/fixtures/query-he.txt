@@ -1,0 +1,44 @@
+HOST-CAPTURED EVIDENCE; participant transport = supplied
+{
+  "url": "https://tujia.biz/text/lookup/zh/喝.html",
+  "request_url": "https://tujia.biz/text/lookup/zh/%E5%96%9D.html",
+  "fetched_at": "2026-11-13T23:44:40.081557+00:00",
+  "host_transport": "python_urllib_https",
+  "participant_transport": "supplied",
+  "page_js": "not_executed",
+  "http_status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 2684,
+  "html_sha256": "f26dee2334c7f43dbf9ce6a2298892b169fae9d3bf5070a2db3d37c0788ea2a5",
+  "status": "retrieved",
+  "extraction": "host_visible_text",
+  "text_sha256": "8308a04f5e46de6a27f26144c17553933fc2ee225eb1c402c203f6a10bbbe366"
+}
+
+BEGIN ORIGINAL PAGE TEXT
+喝 · 汉语义项跳到正文 · 文本目录
+喝 · 汉语义项
+3 个词条。按本目录来源范围匹配汉语义项；具体用法见原始见证。
+Brassett 04、06
+Brassett 04 · brassett-2004
+hu3 · hu2 · hur
+w874 https://tujia.biz/text/entry/w874.html
+Brassett 06 · brassett-2006
+hu³
+w874 https://tujia.biz/text/entry/w874.html
+龙山语保
+中国语保 · 龙山 · yubao-60757
+ɸu21
+w874 https://tujia.biz/text/entry/w874.html
+南部土家语
+Chen 86 TuMQ · stedt-4fdbdbf516
+dzu̵³³
+stedt-rn-127329 https://tujia.biz/text/entry/stedt-rn-127329.html
+Tian 86 · stedt-cb523fc3dc
+dzu̵³³
+stedt-rn-127329 https://tujia.biz/text/entry/stedt-rn-127329.html
+中国语保 · 泸溪潭溪 · yubao-60824
+dzʉ55
+yubao-60824-v-0440 https://tujia.biz/text/entry/yubao-60824-v-0440.html
+资料版本 22cb01c6881a6922
+END ORIGINAL PAGE TEXT

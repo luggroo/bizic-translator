@@ -1,0 +1,130 @@
+{
+  "producer": "nojs_dictionary_relay",
+  "reviewer": "nojs_benchmark_review",
+  "skill_revision": "207d3e31ac4c89a82c73dcb363656eaf26763a7c",
+  "data_version": "22cb01c6881a6922",
+  "fixture_revisions": [
+    "d37accd3045229dc3e1d9ad11547284101e544b1",
+    "3ecafe77d2b276aa0ca3ba5330f80d9d22e8d848"
+  ],
+  "score": 8,
+  "maximum": 8,
+  "execution": {
+    "agent_local": "not_executed",
+    "agent_page_js": "not_executed",
+    "agent_conversion": "not_executed",
+    "host_capture": "python_urllib_https"
+  },
+  "complete_accent_spelling": false,
+  "connected_speech_verified": false,
+  "outputs": [
+    {
+      "id": "D1",
+      "source_text": "我吃饭。",
+      "dialect": "north",
+      "ipa": "ŋa²⁴ jɤ²¹ ka²⁴",
+      "pinyin": null,
+      "notation": "Published witness-linked IPA; citation tones",
+      "kind": "productive_composition",
+      "transport": "supplied",
+      "source_id": "stedt-39f4cd9a6b",
+      "canonical_source_id": "brassett-2006",
+      "grammar": "clause-patterns.md#basic-order",
+      "score": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "witnesses": [
+        {
+          "entry_id": "w1585",
+          "attestation_id": "stedt-rn-455189",
+          "original_form": "nga²",
+          "linked_ipa": "ŋa²⁴",
+          "sense": "1sg",
+          "locator": "7.4",
+          "locality": null,
+          "fixture": "fixtures/entry-w1585.txt"
+        },
+        {
+          "entry_id": "w2548",
+          "attestation_id": "stedt-rn-454514",
+          "original_form": "ye³",
+          "linked_ipa": "jɤ²¹",
+          "sense": "food, meal",
+          "locator": "4.4",
+          "locality": null,
+          "fixture": "fixtures/entry-w2548.txt"
+        },
+        {
+          "entry_id": "w684",
+          "attestation_id": "stedt-rn-454305",
+          "original_form": "ga²",
+          "linked_ipa": "ka²⁴",
+          "sense": "eat",
+          "locator": "4.3",
+          "locality": null,
+          "fixture": "fixtures/entry-w684.txt"
+        }
+      ],
+      "notation_provenance": "Meal IPA derived / brassett-phonetic; I/eat notation blocks merge source and derived histories without per-witness assignment.",
+      "source_scope": "龙山、坡脚、他砂、靛房; not an individual witness locality",
+      "comparison": "B04 corroborating witnesses stedt-rn-457139, stedt-rn-458211, stedt-rn-456138; w1476 cooked-food candidate inspected but not selected."
+    },
+    {
+      "id": "D2",
+      "source_text": "你喝水。",
+      "dialect": "south",
+      "ipa": "ni³³ tsʰe³⁵ dzʉ⁵⁵",
+      "pinyin": null,
+      "notation": "Published witness-linked IPA; citation tones",
+      "kind": "productive_composition",
+      "transport": "supplied",
+      "source_id": "yubao-60824",
+      "canonical_source_id": "yubao-60824",
+      "grammar": "clause-patterns.md#basic-order",
+      "score": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "witnesses": [
+        {
+          "entry_id": "stedt-rn-290272",
+          "attestation_id": "yubao-60824-v-1130",
+          "original_form": "ni33",
+          "linked_ipa": "ni³³",
+          "sense": "你",
+          "locator": "词汇 1130",
+          "locality": null,
+          "fixture": "fixtures/entry-stedt-rn-290272.txt"
+        },
+        {
+          "entry_id": "stedt-rn-289399",
+          "attestation_id": "yubao-60824-v-0062",
+          "original_form": "tshe35",
+          "linked_ipa": "tsʰe³⁵",
+          "sense": "水",
+          "locator": "词汇 0062",
+          "locality": null,
+          "fixture": "fixtures/entry-stedt-rn-289399.txt"
+        },
+        {
+          "entry_id": "yubao-60824-v-0440",
+          "attestation_id": "yubao-60824-v-0440",
+          "original_form": "dzʉ55",
+          "linked_ipa": "dzʉ⁵⁵",
+          "sense": "喝",
+          "locator": "词汇 0440",
+          "locality": null,
+          "fixture": "fixtures/entry-yubao-60824-v-0440.txt"
+        }
+      ],
+      "notation_provenance": "You/water notation blocks merge Tian and survey profiles without per-witness origin assignment; drink is survey-only.",
+      "source_scope": "泸溪潭溪; not an individual witness locality",
+      "comparison": "Drink witness v-0441 with tea prompt corroborates v-0440 alcohol prompt; water combination is productive."
+    }
+  ]
+}

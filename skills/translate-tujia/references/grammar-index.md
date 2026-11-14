@@ -1,6 +1,6 @@
 # 土家语翻译：语法检索入口 / Grammar lookup index
 
-按原文语义选择专题，读取该话题的规则、速查表、例句及对应 tujia.biz 章节；复用已核对的常见构式。
+按原文语义选择专题，读取相应规则与例句，复用已核对的常见构式。规则与完整例句足够时可直接组句；仅为具体缺项或来源冲突补读对应 tujia.biz 章节。简单陈述先看[基本语序](clause-patterns.md#basic-order)；无需逐篇读完所有专题。
 
 ## 按语义定位
 
@@ -10,7 +10,8 @@
 | 还、仍、还在、还没、尚未、还不必、仍能 | [体貌与情态 → 还](aspect-modality.md#still) | CONT、否定与情态作用域 |
 | 了、了……了、V了多久 | [体貌与情态 → “了”的选形](aspect-modality.md#le-selection) | 事件、状态变化、参照时点、持续与终点 |
 | 已经、过、刚刚、做完、曾经、不再 | [体貌与情态 → 完成与结果](aspect-modality.md#completion) | PFV、COMPL、PRF、EXP、结果状态、停止 |
-| 会、能、可以、得、没空、来不及 | [体貌与情态 → 能力](aspect-modality.md#ability) | 一般能力、熟练、体力、时间、许可 |
+| 会（预料发生）、将会、不会来（预测） | [体貌与情态 → 将然／预期](aspect-modality.md#prospective) | 预测与计划、意愿、技能分别检查；还需适用词干、否定与完整实现 |
+| 会（学会）、能、可以、得、没空、来不及 | [体貌与情态 → 能力](aspect-modality.md#ability) | 一般能力、熟练、体力、时间、许可 |
 | 想、愿意、必须、该、不必、不许、恐怕 | [体貌与情态 → 意愿／必要](aspect-modality.md#volition) | 意愿、义务、允许、判断、推测、否定 |
 | 来去、上下、进出、往返、携物移动 | [趋向后缀](direction-suffixes.md) | 移动者、路径、立足点、动作阶段与肯否定；来源分别选择 |
 | 多个谓词后成分、情态与否定连用 | [谓词成分组合](aspect-modality.md#predicate-slots) | 位置、互斥与高层否定 |
