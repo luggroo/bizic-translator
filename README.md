@@ -120,8 +120,8 @@ Each dictionary sense now embeds *both* its Chinese and English gloss as separat
 The original dictionary gzip is small on disk but unreadable through GitHub's UTF-8-only text connector. A scheduled GitHub Action exports a bounded, read-only index from a versioned public source commit:
 
 - `skills/translate-tujia/lexicon/manifest.json`: source revision, source checksum, entries, attestation count, field order and shard checksums
-- `skills/translate-tujia/lexicon/XX-000.jsonl`: one directly readable text shard per FNV-1a UTF-8 query bucket, currently all under 110 KB
-- `scripts/export-readable-lexicon.py`: standalone generator and lookup; Python stdlib only
+- `skills/translate-tujia/lexicon/XX-000.jsonl`: directly readable text shards selected by FNV-1a UTF-8 query bucket, each under 110 KB
+- `scripts/export-readable-lexicon.py`: exporter and lookup; building requires Node and the matching site converters, querying uses Python stdlib only
 
 ```bash
 python scripts/export-readable-lexicon.py lookup \
@@ -130,11 +130,17 @@ python scripts/export-readable-lexicon.py lookup \
 # Rebuild without hosting a public API (from the matching source checkout):
 python scripts/export-readable-lexicon.py build \
   --source .cache/bizic-data/site/dictionary.json.gz \
+  --metadata-source .cache/bizic-data/site/data.json.gz \
+  --site-root .cache/bizic-data/site \
   --output skills/translate-tujia/lexicon \
   --revision "$(git -C .cache/bizic-data rev-parse HEAD)"
 ```
 
-For an agent with GitHub text reads but no mounted Python data, read only the manifest and matching shard (not all shards); match normalized `k`. Row `r` is a compact array ordered by the manifest's `record_fields`: entry ID, attestation ID, source, Tujia form, Chinese/English sense, POS, dialect, locator, source reference and same-attestation notation. The full original witness is still in the canonical gzip and local semantic index. This text fallback is an **exact-lookup** resource and cannot be mislabeled as an embedding run.
+For an agent with GitHub text reads but no mounted Python data, read only the manifest and matching shard (not all shards); match normalized `k`. Row `r` is a compact array ordered by the manifest's `record_fields`.
+
+In **format 2**, `term` is the site's tone-marked spelling, generated at export time with the same revision's source-specific converters; unavailable spellings fall back to `/IPA/`, or a pronunciation gap when neither is available. `term_notation` identifies `accent`, `ipa` or `missing`. `notations` contains only same-attestation `accent` and `ipa`; `accent_provenance` records conversion profiles/methods, and `source_term` preserves the original witness for audit. Old source spellings remain exact-search keys alongside the generated spellings. The manifest records converter hashes and display counts. Rebuild format-1 shards to adopt this display contract.
+
+The full original witness is still in the canonical gzip and local semantic index. This text fallback is an **exact-lookup** resource and cannot be mislabeled as an embedding run.
 
 **DDoS protection:** there is deliberately no public per-query compute, gzip decompression, database scan, or embedding-inference endpoint. GitHub serves immutable/cacheable static files; translation routines cap the number of shard reads and reuse results. Generating/updating the assets is a scheduled offline job, with maximum input and decompressed sizes, maximum output file size and integrity hashes. This reduces origin work and abusive query amplification, though CDN services still need their provider's network-level anti-DDoS protection.
 

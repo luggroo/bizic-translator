@@ -20,6 +20,8 @@ class StaticLexicon:
     def __init__(self, directory):
         self.directory = Path(directory)
         self.manifest = json.loads((self.directory / 'manifest.json').read_text())
+        if self.manifest.get('format') != 2:
+            raise ValueError('Rebuild static lexicon as format 2 for site tone-marked spellings')
         self.shard_reads = 0
 
     @lru_cache(maxsize=64)

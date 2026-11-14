@@ -13,6 +13,7 @@ import hashlib
 import json
 import re
 import shutil
+import subprocess
 import tempfile
 import unicodedata
 from collections import defaultdict
@@ -22,6 +23,9 @@ MAX_COMPRESSED = 12_000_000
 MAX_DECOMPRESSED = 200_000_000
 MAX_SHARD_BYTES = 110_000
 MAX_QUERY_CHARS = 120
+CONVERTER_FILES = ('ipa-normalize.js', 'notation-profiles.js', 'notation-ui.js',
+                   'southern-notation.js', 'yubao.js', 'grammar-notation.js',
+                   'lexical-reviews.js', 'spelling-boundaries.js')
 
 
 def normalize(value):
@@ -87,12 +91,32 @@ def source_catalog(metadata_source):
     }
 
 
-def build(source, output, revision="", max_bytes=MAX_SHARD_BYTES, metadata_source=None):
+def convert_display_forms(data, site_root):
+    """Resolve site spellings at build time; readers need neither Node nor converters."""
+    script = Path(__file__).with_name('tujia-lex-spelling.cjs')
+    result = subprocess.run(['node', str(script), str(site_root), '--site-root', '--static'],
+                            input=json.dumps(data, ensure_ascii=False), text=True,
+                            capture_output=True, check=True, timeout=180)
+    rows = json.loads(result.stdout)
+    by_id = {row['attestation_id']: row for row in rows}
+    expected = {a['id'] for entry in data['words'] for a in entry['attestations']}
+    if len(rows) != len(by_id) or set(by_id) != expected:
+        raise ValueError('Site converter did not return every attestation exactly once')
+    return by_id
+
+
+def build(source, output, revision="", max_bytes=MAX_SHARD_BYTES, metadata_source=None,
+          site_root=None):
     source, output = Path(source), Path(output)
     if not 4_096 <= max_bytes <= MAX_SHARD_BYTES:
         raise ValueError("max_bytes outside safe bounds")
     data = read_dictionary(source)
     catalog = source_catalog(metadata_source)
+    site_root = Path(site_root) if site_root else source.parent
+    converter_hashes = {name: hashlib.sha256((site_root / name).read_bytes()).hexdigest()
+                        for name in CONVERTER_FILES}
+    display = convert_display_forms(data, site_root)
+    display_counts = {'accent': 0, 'ipa': 0, 'missing': 0}
     buckets = defaultdict(list)
     attestation_ids = set()
     entry_ids = set()
@@ -111,30 +135,48 @@ def build(source, output, revision="", max_bytes=MAX_SHARD_BYTES, metadata_sourc
             matched = {scheme: [n.get("text", "") for n in values if aid in n.get("attestationIds", [])]
                        for scheme, values in notations.items()}
             matched = {k: v for k, v in matched.items() if v}
+            resolved = display[aid]
+            accents = list(dict.fromkeys(v['text'] for v in resolved['accent']))
+            ipa = list(dict.fromkeys(resolved['ipa']))
+            if accents:
+                term, term_notation = ' / '.join(accents), 'accent'
+            elif ipa:
+                term, term_notation = ' / '.join('/' + v.strip('/') + '/' for v in ipa), 'ipa'
+            else:
+                term, term_notation = '⟦待核：读音⟧', 'missing'
+            display_counts[term_notation] += 1
+            visible = {k: v for k, v in {'accent': accents, 'ipa': ipa}.items() if v}
             # Compact source-backed preview: original full fields remain in the
             # canonical gzip and complete semantic-index inspection records.
             # Fixed positional arrays avoid repeating large field names
             # 81k+ times in the GitHub-text-readable fallback.
-            record = [entry_id, aid, att.get("source", ""), att.get("term", ""),
+            record = [entry_id, aid, att.get("source", ""), term,
                       att.get("zh", ""), att.get("en", ""), att.get("pos", ""),
                       att.get("dialect", ""), att.get("locator", ""),
-                      att.get("sourceRef", ""), matched]
+                      att.get("sourceRef", ""), visible, att.get('term', ''),
+                      term_notation, resolved['accent']]
             all_spellings = [s for values in matched.values() for s in values]
+            all_spellings.extend(accents + ipa)
             for key in search_keys(att, all_spellings):
                 buckets[bucket_of(key)].append({"k": key, "r": record})
     output.parent.mkdir(parents=True, exist_ok=True)
     stage = Path(tempfile.mkdtemp(prefix=".static-lexicon-", dir=output.parent))
-    manifest = {"format": 1, "source": "luggroo/bizic-dictionary/site/dictionary.json.gz",
+    manifest = {"format": 2, "source": "luggroo/bizic-dictionary/site/dictionary.json.gz",
                 "revision": revision, "source_sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
                 "metadata_source_sha256": hashlib.sha256(Path(metadata_source).read_bytes()).hexdigest()
                     if metadata_source else None,
                 "sources": catalog,
+                "display_policy": "term is site tone-marked spelling; /IPA/ only when unavailable",
+                "display_counts": display_counts,
+                "site_converter_sha256": converter_hashes,
+                "adapter_sha256": hashlib.sha256(Path(__file__).with_name('tujia-lex-spelling.cjs').read_bytes()).hexdigest(),
                 "dictionary_entries": len(entry_ids), "dictionary_attestations": len(attestation_ids),
                 "index_keys": sum(len(v) for v in buckets.values()),
                 "algorithm": "FNV-1a(normalized UTF-8), top byte; NFKC + casefold + strip",
                 "shard_limit_bytes": max_bytes,
                 "record_fields": ["entry_id", "attestation_id", "source", "term", "zh", "en",
-                                  "pos", "dialect", "locator", "source_ref", "notations"],
+                                  "pos", "dialect", "locator", "source_ref", "notations",
+                                  "source_term", "term_notation", "accent_provenance"],
                 "buckets": {}}
     try:
         for bucket, rows in sorted(buckets.items()):
@@ -182,6 +224,8 @@ def lookup(directory, query, limit=20):
         raise ValueError("query must be 1..120 characters")
     directory = Path(directory)
     manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
+    if manifest.get('format') != 2:
+        raise ValueError('Rebuild static lexicon as format 2 for site tone-marked spellings')
     files = manifest["buckets"].get(bucket_of(key), [])
     result = []
     for info in files:
@@ -208,6 +252,7 @@ def main():
     b.add_argument("--output", required=True)
     b.add_argument("--revision", default="")
     b.add_argument("--metadata-source", help="Matching versioned site/data.json.gz source catalog")
+    b.add_argument("--site-root", help="Matching versioned site directory with converters; defaults to source parent")
     b.add_argument("--max-bytes", type=int, default=MAX_SHARD_BYTES)
     q = sub.add_parser("lookup")
     q.add_argument("--directory", required=True)
@@ -215,7 +260,7 @@ def main():
     q.add_argument("--limit", type=int, default=20)
     args = parser.parse_args()
     if args.command == "build":
-        manifest = build(args.source, args.output, args.revision, args.max_bytes, args.metadata_source)
+        manifest = build(args.source, args.output, args.revision, args.max_bytes, args.metadata_source, args.site_root)
         print(json.dumps({k: manifest[k] for k in ("dictionary_entries", "dictionary_attestations", "index_keys")}))
     else:
         print(json.dumps(lookup(args.directory, args.query, args.limit), ensure_ascii=False, indent=2))

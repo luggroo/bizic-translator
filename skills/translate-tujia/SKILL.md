@@ -11,6 +11,8 @@ Translate the full meaning into readable Tujia, preserving participants, events,
 
 Follow the requested dialect, locality, audience and register; otherwise use Northern/Longshan and state that basis once. Prepare Northern and Southern versions separately when both are requested. Establish the task through [task setup](references/translation-workflow.md#establish-the-task). Use the designated dictionary, corpus and reference grammar at [tujia.biz](https://tujia.biz/), local tools and supplied materials under the [source rules](references/evidence.md).
 
+静态降级（含无执行工具的网页检索）只输出已核定的调号拼音；缺少可靠拼音时就地写来源 `/IPA/`，不另列整句 IPA。调号拼音只复用同见证的站点／参考配对，或实际运行站点来源专属转换器取得，禁止从 Brassett 原书字母或裸 IPA 手拟。静态词典 v2 的 `term` 已统一为调号拼音或 `/IPA/`；`source_term` 仅供溯源，两者皆缺才标局部读音待核。详见[记音核验](references/notation-audit.md)。
+
 ## Translation workflow
 
 **Without execution:** take the [three-pass text route](references/web-evidence.md#three-passes). Reuse complete supplied or already-read evidence, read only the relevant grammar topic, and look up unresolved words in `tujia.biz/text/`. Do not read every reference or retry dynamic grammar links to validate an already cited rule. The checks below still apply; they are not five mandatory tool rounds.

@@ -6,6 +6,7 @@ on:
   push:
     paths:
       - scripts/export-readable-lexicon.py
+      - scripts/tujia-lex-spelling.cjs
       - .github/workflows/update-static-lexicon.yml
 
 permissions:
@@ -21,7 +22,10 @@ jobs:
     timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
-      - name: Fetch one versioned public dictionary file
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Fetch versioned dictionary and matching site converters
         shell: bash
         run: |
           set -euo pipefail
@@ -30,17 +34,24 @@ jobs:
             "https://api.github.com/repos/luggroo/bizic-dictionary/commits/main" | \
             python -c 'import json,sys; print(json.load(sys.stdin)["sha"])')"
           test "${#REVISION}" -eq 40
+          mkdir -p "${RUNNER_TEMP}/bizic/site"
           curl --fail --silent --show-error --location --retry 2 --max-time 60 \
             --max-filesize 12000000 \
             "https://raw.githubusercontent.com/luggroo/bizic-dictionary/${REVISION}/site/dictionary.json.gz" \
-            -o "${RUNNER_TEMP}/dictionary.json.gz"
+            -o "${RUNNER_TEMP}/bizic/site/dictionary.json.gz"
           curl --fail --silent --show-error --location --retry 2 --max-time 60 \
             --max-filesize 12000000 \
             "https://raw.githubusercontent.com/luggroo/bizic-dictionary/${REVISION}/site/data.json.gz" \
-            -o "${RUNNER_TEMP}/data.json.gz"
+            -o "${RUNNER_TEMP}/bizic/site/data.json.gz"
+          for module in ipa-normalize notation-profiles notation-ui southern-notation yubao grammar-notation lexical-reviews spelling-boundaries; do
+            curl --fail --silent --show-error --location --retry 2 --max-time 60 \
+              --max-filesize 12000000 \
+              "https://raw.githubusercontent.com/luggroo/bizic-dictionary/${REVISION}/site/${module}.js" \
+              -o "${RUNNER_TEMP}/bizic/site/${module}.js"
+          done
           python scripts/export-readable-lexicon.py build \
-            --source "${RUNNER_TEMP}/dictionary.json.gz" \
-            --metadata-source "${RUNNER_TEMP}/data.json.gz" \
+            --source "${RUNNER_TEMP}/bizic/site/dictionary.json.gz" \
+            --metadata-source "${RUNNER_TEMP}/bizic/site/data.json.gz" \
             --output skills/translate-tujia/lexicon \
             --revision "${REVISION}"
       - name: Test shard coverage, source isolation, and bilingual embedding indexing
@@ -48,7 +59,7 @@ jobs:
         run: |
           set -euo pipefail
           python -m pip install --quiet "numpy>=1.26,<3" "pytest>=8,<9"
-          PYTHONPATH=src python -m pytest -q tests/test_static_and_embedding_coverage.py
+          PYTHONPATH=src python -m pytest -q tests/test_static_and_embedding_coverage.py --data-root "${RUNNER_TEMP}/bizic"
       - name: Audit EVERY real dictionary entry and attestation before embedding
         shell: bash
         run: |
@@ -58,7 +69,7 @@ jobs:
           import os
           from tujia_lex.data import lexical_records, read_json
           from tujia_lex.index import semantic_texts
-          source = Path(os.environ["RUNNER_TEMP"]) / "dictionary.json.gz"
+          source = Path(os.environ["RUNNER_TEMP"]) / "bizic/site/dictionary.json.gz"
           words = read_json(source)["words"]
           lexical = lexical_records(source)
           source_entries = {w["id"] for w in words}

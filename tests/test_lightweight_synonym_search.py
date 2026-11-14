@@ -83,6 +83,7 @@ def test_exact_lookup_and_provenance(tmp_path):
     shard = f"{bucket}-000.jsonl"
     (tmp_path / shard).write_bytes(content)
     manifest = {
+        "format": 2,
         "revision": "test",
         "record_fields": ["entry_id", "attestation_id", "source", "term", "zh", "en",
                           "pos", "dialect", "locator", "source_ref", "notations"],

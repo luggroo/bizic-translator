@@ -49,6 +49,8 @@ Use the [static manifest](../lexicon/manifest.json) and its UTF-8 shards when a 
 2. Compute FNV-1a over its UTF-8 bytes: start at 2166136261; XOR each byte, multiply by 16777619 modulo 2^32; take the high byte as two hexadecimal digits.
 3. Read only the files named by `manifest.buckets[hex]`. Match `k` exactly and decode `r` using `manifest.record_fields`.
 4. Resolve `manifest.sources[r[2]].canonical_id`. Preserve entry ID, attestation ID, form, senses, POS, dialect, locator, source reference and same-attestation notations. An unmapped source has unknown scope.
+**展示规则（format 2）：** `term` 已在导出时统一为站点调号拼音；不能完整转换的条目已改用同见证 `/IPA/`，两者皆缺则为局部读音缺口。`term_notation` 标明记音类型，`notations` 只含 `accent`／`ipa`。`source_term` 是来源原字面，供溯源，不用于译文展示；原拼写仍可作检索键。直接使用 `term`，无需在静态环境运行转换器。详见 [notation audit](notation-audit.md)。静态降级不另列 IPA 栏。
+
 5. Deduplicate shard reads and cache results. If a shard is unreadable, retry the correct manifest/bucket or use an authorized local dictionary; report **lookup unavailable** until a query succeeds.
 
 With a local runtime:

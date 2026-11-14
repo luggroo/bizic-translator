@@ -6,6 +6,10 @@ Use this page for the final format, transcription and progress updates. [Return 
 
 For an audit-only or explanation-only task, present the requested analysis. For a translation, present every source sentence, line and meaningful clause in order. Put the complete translation first. Follow the user's requested format; otherwise use **调号拼音 + IPA**, clause aligned. Use numbering or a two-column table for longer passages and separate Northern and Southern versions. Show **叶氏拼音 only when the user explicitly requests it**.
 
+**静态降级（Skill-based，含网页检索）覆盖双栏默认：只交已核定调号拼音；缺拼音处就地写来源 `/IPA/`，不另列整句 IPA。** 整句只有 IPA 时直接写 `/〈原句 IPA〉/`。两者皆缺才标局部读音待核，不能手拟拼音。用户明确的记音要求优先。
+
+以下双栏示意用于非静态模式：
+
 ```text
 1. 调号拼音：〈完整译句〉
    IPA：/〈对应 IPA〉/
