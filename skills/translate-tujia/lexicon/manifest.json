@@ -2978,7 +2978,7 @@
     "term_notation",
     "accent_provenance"
   ],
-  "revision": "072046c39261cf536e0ce29f06779cd3eeb99219",
+  "revision": "5c148a2bfe860969375c16821f22bb25222ab7d8",
   "shard_limit_bytes": 110000,
   "site_converter_sha256": {
     "grammar-notation.js": "d6f67134d1c6e3bef16ccc58381f35dab90bbb50a0907260eb8133019627e144",
