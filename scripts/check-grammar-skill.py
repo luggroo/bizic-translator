@@ -243,9 +243,12 @@ def run(root, *, without_static_lexicon=False):
 
     clause = (references / 'clause-patterns.md').read_text(encoding='utf-8')
     modifier = (references / 'nie-niexi.md').read_text(encoding='utf-8')
-    for example in ('luán nie árē', 'lò cái'):
+    for example in ('luán nie árē', 'luán niexi árē', 'lò cái'):
         assert example in clause and example in modifier, (
             f'Missing positive property-modifier example: {example}')
+    for example in ('asi-nie za', 'asi-nie-çi za'):
+        assert example in modifier, (
+            f'Missing Feng (2025) adjective alternation: {example}')
     assert '例27a' in modifier and '例27b' in modifier, (
         'Nominalization exceptions require contrasting attested examples')
 
