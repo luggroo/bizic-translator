@@ -1,6 +1,8 @@
-# 土家语体貌与情态：按汉语语义检索 / Aspect & modality
+# 土家语体貌与情态：按意义检索 / Aspect & modality
 
 **速查：** [将然／临近](#prospective) · [还](#still) · [“了”与完成](#le-selection) · [能力](#ability) · [意愿](#volition) · [后缀位置](#predicate-slots) · [合音](#predicate-fusion) · [趋向](#direction) · [南部](#south)
+
+按原文表达的意义选择构式；下列汉语标题和释义用于定位语义，也适用于其他源语言。读土家语原文时，用这些构式分析体貌与情态，再译成目标语言。
 
 按[语法入口](grammar-index.md)定位相应语义小节。 按谓词类别、语义范围与后缀位置选择组合；在龙山默认先用 Brassett 2006，2004 为辅助。新译文的格式见[输出规范](output.md)；原例保留来源记音。B06 = Brassett、Brassett & Lu（2006）；[补充] = 网站参考语法中的未刊口语“吃中饭”，按未刊补充材料归属。各例保留来源与调查点。
 
