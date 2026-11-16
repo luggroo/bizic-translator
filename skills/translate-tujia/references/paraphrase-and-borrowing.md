@@ -1,5 +1,7 @@
 # Paraphrase and Chinese insertions
 
+Apply these borrowing choices when translating **into Tujia from any supported source language**. Chinese insertions reflect the documented Tujia contact-language strategy; they do not restrict the source language. When translating out of Tujia, interpret any Chinese material already in the source and render its meaning in the requested target language.
+
 Read when composing a paraphrase or filling a lexical gap. Follow the [complete-version format](output.md#deliver-the-requested-result), the [shared semantic plan](semantic-decomposition.md), [source evidence](evidence.md) and the [grammar index](grammar-index.md).
 
 ## Express the intended meaning

@@ -1,11 +1,11 @@
 ---
 name: tujia-synonym-lite
-description: No-model, low-cost semantic-bridge retrieval for Tujia translation; expands difficult Chinese/English phrases into meaning-aware exact queries against versioned Bizic dictionary shards and documents actual witnesses.
+description: No-model, low-cost semantic-bridge retrieval for Tujia translation; expands difficult expressions from any model-supported language into meaning-aware Chinese/English exact queries against versioned Bizic dictionary shards and documents actual witnesses.
 ---
 
 # Tujia synonym-lite / 土家语轻量级近义概念检索
 
-Use **Skill-based concept expansion and actual dictionary exact lookup** when the BGE runtime is unavailable. Both routes use [semantic decomposition](../translate-tujia/references/semantic-decomposition.md). Deliver the complete translation first and give one short overall quality note; report the actual retrieval mode at the end.
+Use **Skill-based concept expansion and actual dictionary exact lookup** when the BGE runtime is unavailable. Both routes use [semantic decomposition](../translate-tujia/references/semantic-decomposition.md). Deliver the complete translation in the requested target language first; add a specific note only when it affects understanding, and report the actual retrieval mode at the end.
 
 Choose this route using the [environment preflight](../translate-tujia/references/runtime-lifecycle.md): use reusable BGE assets when present; otherwise use the static dictionary route, or provision BGE once when execution and durable storage are available.
 
@@ -40,7 +40,7 @@ With webpage access, query the [published text dictionary](../translate-tujia/re
 
 ## Semantic decomposition → constructional recomposition
 
-The shared algorithm is described once in [semantic-decomposition.md](../translate-tujia/references/semantic-decomposition.md); it applies to Embedding and Skill-based retrieval alike. Convert Chinese lexical concepts into ordinary events, participants and grammatical constructions **before** giving up on native vocabulary.
+The shared algorithm is described once in [semantic-decomposition.md](../translate-tujia/references/semantic-decomposition.md); it applies to Embedding and Skill-based retrieval alike. Convert source-language lexical concepts into ordinary events, participants and grammatical constructions, then derive Chinese or English lookup keys **before** giving up on native vocabulary.
 
 | Chinese expression | Semantic rewrite | Proposed composition | Transformation |
 | --- | --- | --- | --- |

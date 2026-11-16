@@ -5,15 +5,15 @@ Use this shared query plan for BGE embedding search and `tujia-synonym-lite` sta
 <a id="a-translate-the-underlying-situation-not-the-source-word-shape"></a>
 ## A. Identify the underlying situation
 
-For an unfamiliar Chinese/English/Japanese expression, identify:
+For an unfamiliar expression in any model-supported source language, identify:
 - What is being referred to: entity, person, action, instrument, substance, location, state, result, event, or judgment?
 - Core predicates and their arguments: who acts, on what, where, for whom, with what instrument?
 - What relations are essential (negation, possibility, modality, aspect, comparison, direction)?
 - What information may safely be generalized, and what contrast must be preserved?
 
-**Generate one compact, labeled query plan:** original expression and intended sense → everyday paraphrases → predicates, lexical heads and participants → relation words, sentence operators and required construction. Cover the source's question, assertion and focus relations as well as its content words. Search Chinese and English glosses with discriminative queries and retain the role each query serves. Check synonym candidates against their source-supported senses, argument frames and contextual range through [sense and coverage](sense-and-coverage.md); broader and narrower matches remain distinct from equivalents.
+**Generate one compact, labeled query plan:** original expression and intended sense → everyday paraphrases → predicates, lexical heads and participants → relation words, sentence operators and required construction. Cover the source's question, assertion and focus relations as well as its content words. Use the intended meaning to formulate Chinese or English lookup queries, preserving distinctions made in the original language. These queries are internal retrieval bridges; deliver in the requested target language. Search Chinese and English glosses with discriminative queries and retain the role each query serves. Check synonym candidates against their source-supported senses, argument frames and contextual range through [sense and coverage](sense-and-coverage.md); broader and narrower matches remain distinct from equivalents.
 
-| Operation | Chinese input | Semantic bridge | Candidate construction / test |
+| Operation | Example input (Chinese) | Semantic bridge | Candidate construction / test |
 | --- | --- | --- | --- |
 | Event → agent/participant nominalization | 路人 | 在路上走的人 | `la hxi ma` (hypothesis: road + walk + person nominalizer) |
 | Event → object or instrument | 玩具 | 玩的东西 | retrieve the attested noun first; compare [lexicalized ci and productive xi](nie-niexi.md) for a descriptive alternative |

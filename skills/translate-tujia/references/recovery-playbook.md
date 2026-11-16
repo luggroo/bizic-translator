@@ -24,7 +24,7 @@ Use this page to select the next action when retrieval, grammar or transcription
 | Conflicting witnesses | Inspect the full attestation, linked notation and adjacent text; prefer the better-supported local record. | A selected complete form with its source retained. |
 | Related story or cultural summary | Retrieve continuous passages for matching events and participants. | The requested story's names, causes and ending. |
 | New sentence | Apply a productive construction with matching event roles and predicate class. | A complete composed clause. |
-| Chinese function word | Identify aspect, modality, direction, comparison, focus, negation or clause relation; follow [grammar-index.md](grammar-index.md). | Predicate morphology, particles or linked clauses. |
+| Source-language function word or grammatical meaning | Identify aspect, modality, direction, comparison, focus, negation or clause relation; follow [grammar-index.md](grammar-index.md). | Predicate morphology, particles or linked clauses. |
 | `liex` / `mor` / `bor` selection | Compare whole events, manner and maintained background in [event-linking.md](event-linking.md). | The matching event relation. |
 | Negation and modality | Determine scope, inspect positive/negative pairs and predicate-component order. | A supported combined predicate or two simpler clauses. |
 | Property word | Inspect predicate, modifier and independent nominal forms in [clause-patterns.md](clause-patterns.md). | The form for the intended syntactic role. |

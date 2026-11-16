@@ -4,7 +4,7 @@ Read for a complex clause, revision, or detailed grammatical audit. Start with t
 
 ## Establish the task
 
-- Use the requested dialect and locality, including an unambiguous target established in the conversation. With no narrower target, proceed provisionally with Northern/Longshan materials and state that basis once. Translate Northern and Southern separately when both are requested.
+- Establish the source and target languages. For other languages → Tujia, use the requested dialect and locality, including an unambiguous target established in the conversation; without a narrower target, use Northern/Longshan and state that basis once. Translate Northern and Southern separately when both are requested. For Tujia → other languages, identify the source variety from its text and provenance, then use [reverse translation](reverse-translation.md); apply the grammatical checks below to understand the source rather than imposing Tujia word order on the target language.
 - Identify audience, register and any notation override, then apply [output](output.md). Separate meaning from meter, rhyme, line count and terminology; explain a trade-off when it affects the result.
 - For revision, preserve the supplied text and edit the requested span. Distinguish the author's choices from independently attested forms.
 
@@ -46,6 +46,6 @@ Choose classifiers by the Tujia head noun's attested semantic class. Search orig
 
 Preserve meaningful repetition, address terms and voice. In extended prose, consult same-register passages for topic continuity, pronouns, parallel clauses, degree expressions and repetition.
 
-Match remaining Chinese content words to the [retrieved candidate record](evidence.md#retrieval-status-and-draft-reconciliation). For poetry and songs, verify the intended image, voice and emotional relation using [paraphrase choices](paraphrase-and-borrowing.md#express-the-intended-meaning), then check rhythm and line structure.
+When translating into Tujia, match remaining untranslated content words and proposed insertions to the [retrieved candidate record](evidence.md#retrieval-status-and-draft-reconciliation). For poetry and songs, verify the intended image, voice and emotional relation using [paraphrase choices](paraphrase-and-borrowing.md#express-the-intended-meaning), then check rhythm and line structure.
 
 Back-translation can expose semantic drift; grammaticality and naturalness require their own evidence.

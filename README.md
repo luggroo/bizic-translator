@@ -2,7 +2,7 @@
 
 ## Reading Tujia with spelling differences
 
-For Tujia-to-Chinese translation, [the reverse-translation guide](skills/translate-tujia/references/reverse-translation.md) checks word boundaries before treating an unfamiliar joined spelling as a missing word. The local reader tolerates the documented hx/zero-onset, velar i/ei, high/falling tone and two-syllable tone-pattern differences; affix-tone relaxation is explicit and limited to dictionary-marked affixes. Original forms, source witnesses and every accepted difference stay visible.
+For Tujia-to-other-language translation, [the reverse-translation guide](skills/translate-tujia/references/reverse-translation.md) checks word boundaries before treating an unfamiliar joined spelling as a missing word. The local reader tolerates the documented hx/zero-onset, velar i/ei, high/falling tone and two-syllable tone-pattern differences; affix-tone relaxation is explicit and limited to dictionary-marked affixes. Original forms, source witnesses and every accepted difference stay visible.
 
 ```sh
 python scripts/reverse-lookup.py --query soxtir --notation ye
@@ -17,7 +17,7 @@ The reader uses the bundled static dictionary and Python's standard library. It 
 
 本项目提供[双向土家语翻译 Skill](skills/translate-tujia/SKILL.md)，结合[土家语词典、语法和语料](https://tujia.biz/)组织译文、核对来源。The skill translates in both directions using source-linked dictionaries, grammar and texts.
 
-`tujia-lex` retrieves Tujia lexical senses and attested constructions from Chinese queries. It combines literal lookup with a real BGE embedding model and keeps each result's source, dialect, locality, spelling and citation available for inspection.
+`tujia-lex` retrieves Tujia lexical senses and attested constructions using Chinese and English gloss queries. For input in another language, derive matching lookup queries from its intended meaning; the lookup language does not determine the translation language. It combines literal lookup with a real BGE embedding model and keeps each result's source, dialect, locality, spelling and citation available for inspection.
 
 Lexical similarity supplies candidates. Translation still requires checking meaning, predicate class, argument structure, modality, negation and source compatibility. The reusable [translate-tujia Skill](skills/translate-tujia/SKILL.md) describes that workflow.
 

@@ -69,7 +69,7 @@ Track retrieval and candidate use separately:
 | A suitable candidate was retrieved but left unused in the draft | Reconcile it with the draft and use it, or record a specific contextual or stylistic reason for the existing choice. |
 | Components are available while the complete phrase is unattested | Check the productive construction, compose the phrase and record the basis for the composition. |
 
-Before delivery, compare remaining Chinese content words with this record. In an audit, assess lexical retrieval, word order, marker function and literary paraphrase independently; a single span can have findings on several dimensions. Query counts describe effort, while the checked sources and senses describe coverage.
+When translating into Tujia, compare remaining untranslated content words and proposed insertions with this record before delivery. When translating out of Tujia, check each selected sense and construction against its rendering in the requested target language. In an audit, assess lexical retrieval, word order, marker function and literary paraphrase independently; a single span can have findings on several dimensions. Query counts describe effort, while the checked sources and senses describe coverage.
 
 When a likely source has broken extraction, inspect the corresponding tujia.biz record, same-source attestations and relevant original pages or images. Preserve newly recovered book-only material through the procedure above, then compose from the verified components.
 

@@ -1,5 +1,7 @@
 # Translation through a text reader
 
+For input in any model-supported language, derive Chinese or English dictionary queries from its meaning. The published lookup routes below describe dictionary access, not a restriction on source or target languages. For Tujia → other languages, recover source forms through [reverse translation](reverse-translation.md) and render the selected meaning in the requested language.
+
 Use this route with webpage reading and no local execution, or an explicit webpage-only request. The dictionary at [tujia.biz/text/](https://tujia.biz/text/) serves text in HTML without page JavaScript. Execution, gzip decoding, hashing and arbitrary REST access are unnecessary. An access failure remains specific to the actual reader and URL; readable HTML cannot remove a platform access restriction.
 
 <a id="three-passes"></a>
