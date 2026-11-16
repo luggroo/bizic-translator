@@ -121,6 +121,44 @@ The selected `site/dictionary.json.gz` is fully enumerated: **every dictionary e
 
 Each dictionary sense now embeds *both* its Chinese and English gloss as separate vectors; retrieval takes the best score per sense and keeps its evidence. Original Tujia spellings, IPA, source IDs, locality, tone and notation are **retained and exact-searchable**, not embedded as though phonetic strings were semantic definitions. Records sharing a gloss may reuse a vector without losing attestation links. **Index schema v2 requires a rebuild from schema v1**.
 
+## Website / translation Skill compatibility contract
+
+The public website is the canonical data source, while the translation Skill stores a
+**versioned, read-only** export. The website build publishes
+[`/text/contract.json`](https://tujia.biz/text/contract.json) with SHA-256 hashes of
+`dictionary.json.gz`, `data.json.gz`, every required notation converter, and sorted
+entry/attestation/source identity fingerprints. Existing
+[`/text/catalog.json`](https://tujia.biz/text/catalog.json) lookup and entry routes remain
+unchanged. The contract is a build artifact, not an additional query-time dependency.
+
+[The source verifier](scripts/verify-site-contract.py) checks the canonical gzip inputs
+and the complete text lexicon on a **single pinned upstream commit**: every source
+attestation must occur in the shards, with identical entry/source IDs, original
+forms, meanings, POS, dialect, source locators and source-linked display fields.
+It also verifies file sizes, shard hashes, normalized lookup buckets and required
+exact-query keys. The optional `--contract-file` compares against a published
+website contract from the **same source snapshot**.
+
+The [static lexicon updater](.github/workflows/update-static-lexicon.yml) checks
+the public source daily. It skips regeneration when the source data, converters,
+adapter and shards have not changed. Before automatic regeneration it
+**blocks deleted or reassigned existing entry/attestation/source identities**;
+intentional breaking migrations require separately reviewed changes. A changed
+meaning or tone conversion can be regenerated but cannot quietly retain the
+old source hash. The normal translation Skill continues using cached/static
+data or its separately validated BGE index; no browser, web modernization
+runtime, public compute API or per-query model server is introduced.
+
+For a manual verification with a matching checked-out upstream site:
+
+```sh
+python scripts/verify-site-contract.py \
+  --source PATH/site/dictionary.json.gz \
+  --metadata-source PATH/site/data.json.gz \
+  --site-root PATH/site \
+  --directory skills/translate-tujia/lexicon
+```
+
 ## Text-only GitHub fallback (no dynamic search server)
 
 The original dictionary gzip is small on disk but unreadable through GitHub's UTF-8-only text connector. A scheduled GitHub Action exports a bounded, read-only index from a versioned public source commit:
