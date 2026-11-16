@@ -15,7 +15,7 @@ Translate the full meaning into readable Tujia, preserving participants, events,
 
 Follow the requested dialect, locality, audience and register; otherwise use Northern/Longshan and state that basis once. Prepare Northern and Southern versions separately when both are requested. Establish the task through [task setup](references/translation-workflow.md#establish-the-task). Use the designated dictionary, corpus and reference grammar at [tujia.biz](https://tujia.biz/), local tools and supplied materials under the [source rules](references/evidence.md).
 
-默认逐句交付：一句土家语，紧接一句对应的源语言原文。询问用户是否需要每个词的 gloss（词义和语法标注）；需要时可提供逐词对齐的 PDF。具体排版、询问时机及记音规则见 [output policy](references/output.md)。
+按 [output policy](references/output.md) 交付：源语言在上、土家语在下；默认只用调号拼音，用户要 IPA 时只用 IPA。gloss 与 PDF 也遵循同一记音选择。
 
 完成整句后再说明疑点：有证据的词和能产句式直接用于构句；尚无合适本族语词时，把最小的汉语成分放入土家语语序中的对应位置。新句按有依据的能产规则组织；按 [缺口处理](references/paraphrase-and-borrowing.md#complete-before-qualifying)完成检索、改写和构句，再用简短注释交代具体不确定性。
 

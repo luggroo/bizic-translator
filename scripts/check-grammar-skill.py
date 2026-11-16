@@ -229,8 +229,14 @@ def run(root, *, without_static_lexicon=False):
             assert report["mode"] == "skill_based" and report["embedding_run"] is False
             assert report["candidate_results"][0]["query"] == word
 
-    assert "调号拼音 + IPA" in all_text
-    assert "叶氏拼音" in all_text and "only when the user explicitly" in all_text
+    output = (references / 'output.md').read_text(encoding='utf-8')
+    template = re.search(r'```text\n(.*?)\n```', output, re.S)
+    assert template, 'Missing ordinary translation template'
+    lines = [line.strip() for line in template.group(1).splitlines() if line.strip()]
+    assert len(lines) == 2 and '源语言：' in lines[0] and '土家语：' in lines[1], (
+        'Ordinary translations must put source first and use one target notation')
+    assert '默认只用调号拼音' in output and '用户要 IPA 时只用 IPA' in output
+    assert '用户明确要求' in output and '叶氏拼音' in output
 
     subprocess.run([sys.executable, str(root / "scripts/lint-grammar-references.py"),
                     "--root", str(root)], cwd=root, check=True)
