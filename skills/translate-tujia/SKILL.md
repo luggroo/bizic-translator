@@ -17,7 +17,7 @@ Follow the requested dialect, locality, audience and register; otherwise use Nor
 
 按 [output policy](references/output.md) 交付：源语言在上、土家语在下。普通译文默认用调号拼音，**没有固定声调的词缀与格助词可不标调**；用户要 IPA 时只用 IPA。gloss（含 PDF）固定按“拼音 → IPA → gloss”三行逐词对齐；叶式拼音仅在用户要求时参照 Feng 的规则或对应例句处理。
 
-**先交付完整可读的译文。** 使用适合语境的词汇和能产构式；缺词时按[改写与借用](references/paraphrase-and-borrowing.md#complete-before-qualifying)用土家语表达或最小汉语插入填补。普通交付只需一条总体质量说明；具体错误或会改变译意的争议才单独解释。
+**先交付完整可读的译文。** 用适合语境的词汇和能产构式；缺词时按[改写与借用](references/paraphrase-and-borrowing.md#complete-before-qualifying)用土家语改写或最小汉语插入。**Skill 里的语法规则写用法和例句；例外给具体来源例句及适用条件。** 普通交付最后只需一条总体质量说明。
 
 无执行工具、环境检查确认本地检索不可用，或用户明确指定时，采用[静态降级](references/runtime-lifecycle.md)。
 
