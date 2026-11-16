@@ -143,3 +143,45 @@ def test_missing_adapter_rebuild_is_rejected(workspace):
     path.write_text(json.dumps(data))
     with pytest.raises(ContractError, match="adapter changed"):
         check(workspace, inputs_only=True)
+
+
+def test_id_stability_accepts_additions(workspace):
+    source, metadata, _, output, words, _, write_gzip = workspace
+    write_gzip(source, {"words": words + [
+        {"id": "w3", "attestations": [
+            {"id": "a4", "source": "brassett-2006", "term": "lo", "zh": "新词"}]}
+    ]})
+    report = CONTRACT["verify_identity_stability"](source, metadata, output)
+    assert report["status"] == "additive-compatible"
+    assert report["old_attestations"] == 3 and report["new_attestations"] == 4
+
+
+def test_id_stability_blocks_deleted_witness(workspace):
+    source, metadata, _, output, words, _, write_gzip = workspace
+    write_gzip(source, {"words": words[:1]})
+    with pytest.raises(ContractError, match="Removing existing attestation IDs"):
+        CONTRACT["verify_identity_stability"](source, metadata, output)
+
+
+def test_id_stability_blocks_reassigned_source(workspace):
+    source, metadata, _, output, words, _, write_gzip = workspace
+    words[0]["attestations"][0]["source"] = "south-test"
+    write_gzip(source, {"words": words})
+    with pytest.raises(ContractError, match="Changed entry/source ownership"):
+        CONTRACT["verify_identity_stability"](source, metadata, output)
+
+
+def test_id_stability_blocks_removed_source_id(workspace):
+    source, metadata, _, output, _, _, write_gzip = workspace
+    write_gzip(metadata, {"sources": [{"id": "brassett-2006"}],
+                          "sourceVariants": [], "sourceAliases": {}})
+    with pytest.raises(ContractError, match="Removing public source IDs"):
+        CONTRACT["verify_identity_stability"](source, metadata, output)
+
+
+def test_id_stability_refuses_corrupt_previous_shards(workspace):
+    source, metadata, _, output, _, manifest, _ = workspace
+    filename = next(iter(manifest["buckets"].values()))[0]["path"]
+    (output / filename).write_text("tampered", encoding="utf-8")
+    with pytest.raises(ContractError, match="Previous shard cannot be trusted"):
+        CONTRACT["verify_identity_stability"](source, metadata, output)
