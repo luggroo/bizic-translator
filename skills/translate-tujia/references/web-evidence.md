@@ -52,4 +52,4 @@ Use published witness-linked spelling/IPA pairs or already paired reference exam
 
 Match meaning and construction: **“会开车”** uses learned ability, while **“明天会来”** uses prediction; **“躺着”** uses a maintained-state frame, while **“气球胀起来”** uses a change-of-state frame. Select the corresponding aspect/modal frame, then use [native paraphrase or minimal Chinese insertion](paraphrase-and-borrowing.md#complete-before-qualifying) for remaining lexical gaps.
 
-Use the [ordinary output format](output.md): complete translation, one overall quality note and optional gloss/PDF follow-up. Keep search provenance and query diagnostics in the evidence record, shown only for requested audits.
+Use the [ordinary output format](output.md): complete translation, specific notes only when needed and optional gloss/PDF follow-up. Keep search provenance and query diagnostics in the evidence record, shown only for requested audits.

@@ -2,6 +2,8 @@
 
 Read when starting lexical retrieval, checking runtime availability, or diagnosing a missing word. Both engines use the [same semantic plan](semantic-decomposition.md). Source selection follows [evidence.md](evidence.md); ordinary output follows [output.md](output.md).
 
+For Tujia input, use [reverse translation](reverse-translation.md) before deciding that a word is absent. Preserve whole-word and segmented readings, then compare bounded pronunciation variants with `python scripts/reverse-lookup.py --query soxtir --notation ye`. This local route uses actual witnesses and edit costs, not embedding scores.
+
 <a id="runtime-verification"></a>
 ## Choose the executable route
 

@@ -7,6 +7,7 @@ Use this page to select the next action when retrieval, grammar or transcription
 
 | Situation | Action | Continue with |
 | --- | --- | --- |
+| Tujia spelling has no suitable whole-entry match | Check [word boundaries and pronunciation variants](reverse-translation.md); inspect whole-entry and segmented candidates together. | Source-backed senses with the original spelling, matched variant and specific differences retained. |
 | Webpage reading but no execution | Follow [text dictionary evidence](web-evidence.md) from its directory and actual URLs. | Inspected witnesses or a specific access/coverage gap; local execution remains unexecuted. |
 | Partial directory, unpublished query, or interactive-only candidate | Distinguish `partial`, `not_published` and `unavailable`; use the catalog's published templates, a relevant index or another available evidence source. | A supported phrase or visible Chinese span; unseen IDs and zero matches are not inferred. |
 | Dictionary access fails but grammar/reference evidence is readable | Reuse cited complete examples and productive rules; label the separate document statuses in the [evidence pack](evidence-pack.md). | Supported clauses continue, with precise remaining gaps. |

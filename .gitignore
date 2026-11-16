@@ -26,3 +26,4 @@ dist/
 !/scripts/verify-challenge-gold.py
 !/scripts/render-compositional-evaluation.py
 !/scripts/render-challenge-translations.py
+!/scripts/reverse-lookup.py

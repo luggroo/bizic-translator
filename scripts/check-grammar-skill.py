@@ -211,7 +211,7 @@ def run(root, *, without_static_lexicon=False):
     shared = (references / "semantic-decomposition.md").read_text(encoding="utf-8")
     assert "shared" in shared.lower() and "retrieval.md" in shared and "nie-niexi.md" in shared
     assert "semantic-decomposition.md" in lite_text
-    assert "one overall quality note" in all_text
+    assert "仅在实质改写、借用或未决歧义影响理解时" in all_text
     assert "检索模式：Embedding" in all_text and "检索模式：Skill-based" in all_text
     for word, expected_form in (
         ("路人", "la hxi ma"), ("香味", "气味"), ("玩具", "geci-xi"),
@@ -233,8 +233,8 @@ def run(root, *, without_static_lexicon=False):
     template = re.search(r'```text\n(.*?)\n```', output, re.S)
     assert template, 'Missing ordinary translation template'
     lines = [line.strip() for line in template.group(1).splitlines() if line.strip()]
-    assert len(lines) == 2 and '源语言：' in lines[0] and '土家语：' in lines[1], (
-        'Ordinary translations must put source first and use one target notation')
+    assert len(lines) == 2 and '原文：' in lines[0] and '译文：' in lines[1], (
+        'Ordinary translations must put the source before the target in either direction')
     assert '默认调号拼音' in output and '用户要 IPA 时只用 IPA' in output
     assert '没有固定声调' in output and '允许无调书写' in output, (
         'Unfixed-tone suffixes and case particles must be allowed to omit tone')
