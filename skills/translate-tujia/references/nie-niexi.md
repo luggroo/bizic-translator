@@ -11,11 +11,12 @@ https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu
 - **显式中心名词前**：Feng 第6页例13“妈妈喂的猫”用 `V-nie＋猫` 或 `V-nie-xi＋猫`；第7页例14–15“扔碗的孩子／他扔的碗”还见 `V-xi＋N`。
 - **独立指称与名词前修饰**：Feng 第10页例27a“昨天下蛋的那只”用 `lie-nie-xi`；例27b“昨天下蛋的鸡”用 `lie-nie＋鸡`。
 - **内置中心语关系从句**：Feng 第7页例16“破了的碗”用 `xi` 或 `niexi`；按附录 B 的枢轴论元角色安排词序。
-- 第 5 页例 9–10，消息、声音等复杂名词修饰从句可见 nie、xi、niexi 交替。选形参照相同结构的例句。
+- **短式形容词直接对照（第4页表1、例8）**：`asi-nie za` = `asi-nie-çi za`“白鸡”，结构为 `A-nie(-çi) N`；`asi za` 与 `asi-çi za` 在该组中不合语法。
+- 第5页例9–10：消息、声音等复杂名词修饰从句可见 nie、xi、niexi 交替。
 
 ## 翻译时的选择
 
-**北部性质词**：普通性质词用 **`性质词＋nie＋N`**，例如 `luán nie árē`“杂乱的声音”；已记录的直接修饰词形用 **`N＋Adj`**，例如 `lò cái`“好人”。显式中心词的关系从句可用 `V-nie＋N` 或 `V-nie-xi＋N`；独立指称用 `V-nie-xi`。参见[性质词决策](clause-patterns.md#property-decision)。
+**北部短式性质词**：**`A＋nie＋N`** 与 **`A＋niexi＋N`** 都是正常定语结构。Feng（2025:4，例8）实录 `asi-nie za` 和 `asi-nie-çi za`（白鸡）；“杂乱的声音”因此可译 **`luán niexi árē`** 或 `luán nie árē`。有独立直接修饰用例的长式形容词用 `N＋Adj`，如 `lò cái`“好人”。带显式中心词的关系从句可用 `V-nie＋N` 或 `V-nie-xi＋N`；独立指称参见 Feng 例27a `V-nie-xi`。参见[性质词决策](clause-patterns.md#property-decision)。
 
 参考语法：[名物化的基本形式](https://tujia.biz/#grammar/north/106?grammarAnchor=north-nominal-forms)、[用短语或从句修饰名词](https://tujia.biz/#grammar/north/106?grammarAnchor=north-relative-clauses)、[修饰名词与独立指称](https://tujia.biz/#grammar/north/106?grammarAnchor=north-modifier-and-independent-reference)。
 
