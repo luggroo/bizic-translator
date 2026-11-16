@@ -33,31 +33,36 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Fetch versioned dictionary and matching site converters
+      - name: Checkout canonical public source at one immutable revision
+        uses: actions/checkout@v4
+        with:
+          repository: luggroo/bizic-dictionary
+          path: _source
+          persist-credentials: false
+          fetch-depth: 1
+          sparse-checkout: |
+            site/dictionary.json.gz
+            site/data.json.gz
+            site/ipa-normalize.js
+            site/notation-profiles.js
+            site/notation-ui.js
+            site/southern-notation.js
+            site/yubao.js
+            site/grammar-notation.js
+            site/lexical-reviews.js
+            site/spelling-boundaries.js
+          sparse-checkout-cone-mode: false
+      - name: Prepare pinned dictionary and matching site converters
         id: source
         shell: bash
         run: |
           set -euo pipefail
-          REVISION="$(curl --fail --silent --show-error --location --retry 2 --max-time 30 \
-            -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/luggroo/bizic-dictionary/commits/main" | \
-            python -c 'import json,sys; print(json.load(sys.stdin)["sha"])')"
+          REVISION="$(git -C _source rev-parse HEAD)"
           test "${#REVISION}" -eq 40
           echo "revision=${REVISION}" >> "${GITHUB_OUTPUT}"
           mkdir -p "${RUNNER_TEMP}/bizic/site"
-          curl --fail --silent --show-error --location --retry 2 --max-time 60 \
-            --max-filesize 12000000 \
-            "https://raw.githubusercontent.com/luggroo/bizic-dictionary/${REVISION}/site/dictionary.json.gz" \
-            -o "${RUNNER_TEMP}/bizic/site/dictionary.json.gz"
-          curl --fail --silent --show-error --location --retry 2 --max-time 60 \
-            --max-filesize 12000000 \
-            "https://raw.githubusercontent.com/luggroo/bizic-dictionary/${REVISION}/site/data.json.gz" \
-            -o "${RUNNER_TEMP}/bizic/site/data.json.gz"
-          for module in ipa-normalize notation-profiles notation-ui southern-notation yubao grammar-notation lexical-reviews spelling-boundaries; do
-            curl --fail --silent --show-error --location --retry 2 --max-time 60 \
-              --max-filesize 12000000 \
-              "https://raw.githubusercontent.com/luggroo/bizic-dictionary/${REVISION}/site/${module}.js" \
-              -o "${RUNNER_TEMP}/bizic/site/${module}.js"
+          for file in dictionary.json.gz data.json.gz ipa-normalize.js notation-profiles.js notation-ui.js southern-notation.js yubao.js grammar-notation.js lexical-reviews.js spelling-boundaries.js; do
+            cp "_source/site/${file}" "${RUNNER_TEMP}/bizic/site/${file}"
           done
       - name: Detect source, converter or shard drift
         id: drift
