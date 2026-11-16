@@ -175,7 +175,9 @@ def test_directive_choice_contract():
         assert example in directives, f'Attested contrast missing {example}'
     assert '李启群等（2021）' in directives and 'ku⁵⁵' in directives
     assert '方向' in directives and 'speech_act' in directives
-    assert '不从这些实例推出任意' in directives
+    assert '按完整例句组合' in directives
+    for example in ('例193：现在别回家', '例190：别再坐着', '例200：现在把它做完'):
+        assert example in directives, f'Missing concrete directive exception: {example}'
 
 
 def test_gu_is_not_an_automatic_fusion_rule():
