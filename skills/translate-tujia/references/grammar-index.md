@@ -18,7 +18,7 @@
 | 多个谓词后成分、情态与否定连用 | [谓词成分组合](aspect-modality.md#predicate-slots) | 位置、互斥与高层否定 |
 | -i的去义、位移、将行与过去用法 | [-i用法](aspect-modality.md#i-functions) | 位移／位移兼将行／纯将行，及作用域 |
 | 连读55／21、助词前调变化 | [助词变调](aspect-modality.md#particle-sandhi) | 引用基记与语流实现，成分所属组 |
-| 词干变化、未然态 -i、韵母合音 | [未然态词形变化](aspect-modality.md#predicate-fusion) | 只按有词形证据的 -i 音变构词，不将 liao／diu 等推导自 gu |
+| 词干变化、未然态 -i、韵母合音 | [未然态词形变化](aspect-modality.md#predicate-fusion) | `gá`“吃”＋未然 -i → `gái`；`liau`／`diu` 用其词条完整形式 |
 | 也、还、再、另外的追加义 | [追加与焦点](clause-patterns.md#addition) | 追加事件／数量与持续意义分别处理 |
 | 一边……一边、……着……、……后、接着、然后、用…… | [事件与从句链接](event-linking.md) | 完整事件、方式、持续背景与工具 |
 | 因为、所以、因此、然后、不然、否则；本土连接词 | [事件链接 → 连接词](event-linking.md#connectives) | āimǒ 因果、āiliē 先后、āitā 否定条件 |
