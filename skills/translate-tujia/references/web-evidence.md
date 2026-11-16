@@ -27,7 +27,7 @@ Constructing a URL from a **published template and an observed key/ID** is suppo
 
 The complete dialect tables establish presence within their export when actually read to completion. They do not replace witness pages. A truncated extraction or reader `find` miss cannot establish absence. Query summaries and entry headings may aggregate sources; inspect each chosen witness's own meaning, original form, scheme, dialect, locality and citation. `Source ID`, canonical source ID, entry ID and attestation ID are different fields. Unknown locality stays unknown.
 
-For Northern evidence, inspect Brassett 2006 then 2004 where available, followed by localized Longshan material for gaps/conflicts. Retain each source's search status. An already cited 2006 construction can be used directly; an unavailable comparison is a recorded limitation, not a reason to discard it. For Southern evidence, keep Tian, Chen, Xiang, Li and survey forms at their own recorded scope. A shared dialect label alone does not license mixing tones, pronouns or suffix allomorphs.
+For Northern evidence, prioritize Brassett 2006 → Brassett 2004 → localized Longshan examples, then other source-labeled Northern records. For Southern evidence, select forms from Tian, Chen, Xiang, Li or a named survey locality as appropriate. Reuse a complete construction already cited in the topic reference.
 
 ## Access and stopping rules
 
@@ -50,6 +50,6 @@ Reusing or recombining published forms is not transcription conversion. A new su
 
 Use published witness-linked spelling/IPA pairs or already paired reference examples. Keep original/derived labels; a reference's published derived spelling is usable with that attribution even though the current agent did not run a converter. For this static route, output tone-marked spelling only, using source `/IPA/` locally wherever reliable spelling is unavailable; omit a separate full-sentence IPA line. A complete supported IPA sentence can be presented directly as `/IPA/`. Both missing means a local pronunciation gap. Never hand-convert raw IPA or Brassett letters into display spelling. Follow [notation audit](notation-audit.md).
 
-Match construction and meaning explicitly. “不会开车” alone does not license predictive “不会来”; “躺着/拴着” does not license dynamic progressive; physiological “肚子胀” does not establish “气球胀起来”. For insufficient evidence, follow [complete-before-qualifying](paraphrase-and-borrowing.md#complete-before-qualifying): search or paraphrase, then compose with minimal Chinese insertions in Tujia word order where needed. Deliver the best provisional arrangement for the complete clause and identify its specific uncertainty in a note.
+Match meaning and construction: **“会开车”** uses learned ability, while **“明天会来”** uses prediction; **“躺着”** uses a maintained-state frame, while **“气球胀起来”** uses a change-of-state frame. Select the corresponding aspect/modal frame, then use [native paraphrase or minimal Chinese insertion](paraphrase-and-borrowing.md#complete-before-qualifying) for remaining lexical gaps.
 
-Use the [ordinary output format](output.md). Report actual page reads, compiled references and supplied excerpts separately. Detailed packs belong to requested audits; no fake CLI, conversion, embedding, locality or original-book verification claims.
+Use the [ordinary output format](output.md): complete translation, one overall quality note and optional gloss/PDF follow-up. Keep search provenance and query diagnostics in the evidence record, shown only for requested audits.
