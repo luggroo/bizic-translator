@@ -235,8 +235,19 @@ def run(root, *, without_static_lexicon=False):
     lines = [line.strip() for line in template.group(1).splitlines() if line.strip()]
     assert len(lines) == 2 and '源语言：' in lines[0] and '土家语：' in lines[1], (
         'Ordinary translations must put source first and use one target notation')
-    assert '默认只用调号拼音' in output and '用户要 IPA 时只用 IPA' in output
-    assert '用户明确要求' in output and '叶氏拼音' in output
+    assert '默认调号拼音' in output and '用户要 IPA 时只用 IPA' in output
+    assert '没有固定声调' in output and '允许无调书写' in output, (
+        'Unfixed-tone suffixes and case particles must be allowed to omit tone')
+    assert '主动询问一次' in output and 'gloss 或对齐 PDF' in output
+    assert '用户明确要求' in output and '叶式拼音' in output
+
+    clause = (references / 'clause-patterns.md').read_text(encoding='utf-8')
+    modifier = (references / 'nie-niexi.md').read_text(encoding='utf-8')
+    for example in ('luán nie árē', 'lò cái'):
+        assert example in clause and example in modifier, (
+            f'Missing positive property-modifier example: {example}')
+    assert '例27a' in modifier and '例27b' in modifier, (
+        'Nominalization exceptions require contrasting attested examples')
 
     subprocess.run([sys.executable, str(root / "scripts/lint-grammar-references.py"),
                     "--root", str(root)], cwd=root, check=True)
