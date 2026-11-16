@@ -13,7 +13,7 @@ Read for a complex clause, revision, or detailed grammatical audit. Start with t
 
 分析阶段建立内部记录：源语名词短语 → 中心名词／省略的所指 → 每个修饰语及其作用范围 → 修饰类型 → 目标词形与预期语序。先确定哪个性质属于哪个中心词，再决定词形和位置。记录留在内部草稿，不加进普通译文。
 
-- 有中心词：已记录的长式／同形兼类词用 `N＋Adj`，例如 `lò cái`“好人”；普通性质词用 `性质词＋nie＋N`，例如 `luán nie árē`“杂乱的声音”；关系从句另用相应的 `nie/niexi` 构式，见[性质词决策](clause-patterns.md#property-decision)。
+- 有中心词：短式性质词用 **`A＋nie(-xi)＋N`**，如 Feng（2025:4，例8）`asi-nie za / asi-nie-xi za`“白鸡”；拟译 `luán niexi árē / luán nie árē`“杂乱的声音”。有直接定语例证的长式／同形兼类词用 `N＋Adj`，如 `lò cái`“好人”。关系从句另按[nie/niexi 构式](nie-niexi.md)选择。
 - 没有显式中心词：区分性质谓语与独立指称“好的／长的”；独立指称按相应例句选择派生式或名物化，性质谓语按谓词用法选形。
 - 多层修饰分别确定数量、程度、领属与关系从句的作用范围；北部直接定语形容词一般后置，性质词连接结构一般前置。词缀和格助词没有固定声调时可不标调。
 
@@ -28,7 +28,7 @@ Before composing or adopting a paraphrase, classify source-language adverbs and 
 | Linked events and direction | Use [event relations](event-linking.md#event-relations) to select clause linkage, and [directional constructions](direction-suffixes.md) for movement and spatial relations. |
 | Negation | Distinguish negative existence or possession, factual negation, intention or prediction negation, negative ability, prohibition, and negative copulas. Determine what is negated and check whole-predicate evidence for combinations of lexical negative predicates with other negative or modal forms. Match the intended double-negation scope. |
 | Nominalization and linking | Determine whether the construction refers to an event, proposition, participant, object, place, or a modifier of an explicit head. Select each linking or nominalizing form by its attested function, argument gap, head position and referent. |
-| Property predicates and adjectives | Anchor the head. Use **N＋Adj** for a directly attested adjective (`lò cái`“好人”); otherwise **property＋nie＋N** (`luán nie árē`“杂乱的声音”). Use **V-nie-xi** for independent reference (Feng example 27a), and the corresponding linked clause before an explicit head (Feng example 13). |
+| Property predicates and adjectives | Anchor the head. For short-form adjectives use **A＋nie(-xi)＋N**, with **both** `nie` and `niexi` licensed by Feng (2025:4, ex.8): `asi-nie za / asi-nie-xi za` “white chicken”; `luán niexi árē` is a parallel composition. For attested long-form direct adjectives use **N＋Adj** (`lò cái` “good person”). For independent reference use the **V-nie-xi** construction in Feng ex.27a. |
 
 Use the cached [predicate constructions](aspect-modality.md), [relation-marker frames](clause-patterns.md), [nominalization choices](nie-niexi.md) and [event-linking patterns](event-linking.md). Match roles, scope and predicate class, then apply the supported construction directly. Resolve a new source conflict through [notation audit](notation-audit.md); preserve established rules in their topics. For broader context, use the Northern predicate overview, reference-grammar §§4.2–4.7 and chapter 6, or the corresponding Southern sections. Use [recovery](recovery-playbook.md) for unresolved applicability.
 
