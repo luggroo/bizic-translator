@@ -6,6 +6,7 @@
 
 | 语义触发 | 专题 | 主要区分 |
 | --- | --- | --- |
+| 请、命令、别、吧、现在就做、停止、拿来／拿走、保持…… | [祈使与指令](directives.md#choose) | 裸式、gu、do、bo、xie／lie、禁止及有证据的组合 |
 | 快要、就要、将要、马上、正要、开始、快……完 | [体貌与情态 → 将然／临近](aspect-modality.md#prospective) | 将来意图、动作将开始、接近终点 |
 | 还、仍、还在、还没、尚未、还不必、仍能 | [体貌与情态 → 还](aspect-modality.md#still) | CONT、否定与情态作用域 |
 | 了、了……了、V了多久 | [体貌与情态 → “了”的选形](aspect-modality.md#le-selection) | 事件、状态变化、参照时点、持续与终点 |
@@ -17,12 +18,12 @@
 | 多个谓词后成分、情态与否定连用 | [谓词成分组合](aspect-modality.md#predicate-slots) | 位置、互斥与高层否定 |
 | -i的去义、位移、将行与过去用法 | [-i用法](aspect-modality.md#i-functions) | 位移／位移兼将行／纯将行，及作用域 |
 | 连读55／21、助词前调变化 | [助词变调](aspect-modality.md#particle-sandhi) | 引用基记与语流实现，成分所属组 |
-| 词干变化、缩合、合音 | [谓词合音](aspect-modality.md#predicate-fusion) | 构形分析与记录的完整词形 |
+| 词干变化、未然态 -i、韵母合音 | [未然态词形变化](aspect-modality.md#predicate-fusion) | 只按有词形证据的 -i 音变构词，不将 liao／diu 等推导自 gu |
 | 也、还、再、另外的追加义 | [追加与焦点](clause-patterns.md#addition) | 追加事件／数量与持续意义分别处理 |
 | 一边……一边、……着……、……后、接着、然后、用…… | [事件与从句链接](event-linking.md) | 完整事件、方式、持续背景与工具 |
 | 因为、所以、因此、然后、不然、否则；本土连接词 | [事件链接 → 连接词](event-linking.md#connectives) | āimǒ因果、āiliē先后、āitā否定条件；建议另核 |
 | 当……时、如果……就、虽然……但是 | [小句关系](event-linking.md#event-relations) | 时间、条件、让步与焦点背景 |
-| 不、没、别、不是、没有、禁止 | [否定](clause-patterns.md#negation) | 事实／意愿否定、禁止、否定判断、存在否定 |
+| 不、没、别、不是、没有、禁止 | [否定](clause-patterns.md#negation) | 事实／意愿否定、否定判断、存在否定；具体祈使与禁止转[指令](directives.md#prohibition) |
 | 是、有、在、宾语、话题、SOV | [句型](clause-patterns.md#clause-types) | 判断、存在、事件与论元关系 |
 | 红、好、漂亮、长、大的、吃的、那只 | [性质词与名词化](clause-patterns.md#nominalization) | 状态谓词、定语形式与名词化 |
 | 给谁、对谁、从哪儿、向哪儿、谁的、格助词 | [关系标记](clause-patterns.md#case-frames) | 语义角色、短语边界与标记位置 |
@@ -39,4 +40,4 @@
 
 规范化例句表使用 `调号拼音 | IPA | 汉义 | 出处`，每行按同一 attestation 配对，保留地点、页码和例号。来源原引文保留原记音；派生展示记录转换方法，缺失音调进入记音核验。分别标明 Brassett 2006、其他北部、南部、未刊补充材料及生产性组句。
 
-专题分别维护体貌与情态、事件链接、句型与名词短语、名物化的选择规则；词汇与词形存入 `lexicon/manifest.json` 所指的来源记录，记音冲突由 notation audit 核验。
+专题分别维护祈使指令、体貌与情态、事件链接、句型与名词短语、名物化的选择规则；词汇与词形存入 `lexicon/manifest.json` 所指的来源记录，记音冲突由 notation audit 核验。
