@@ -8,6 +8,15 @@ Read for a complex clause, revision, or detailed grammatical audit. Start with t
 - Identify audience, register and any notation override, then apply [output](output.md). Separate meaning from meter, rhyme, line count and terminology; explain a trade-off when it affects the result.
 - For revision, preserve the supplied text and edit the requested span. Distinguish the author's choices from independently attested forms.
 
+<a id="head-anchoring"></a>
+## 先锚定中心词与修饰范围
+
+分析阶段建立内部记录：源语名词短语 → 中心名词／省略的所指 → 每个修饰语及其作用范围 → 修饰类型 → 目标词形与预期语序。先确定哪个性质属于哪个中心词，再决定词形和位置。记录留在内部草稿，不加进普通译文。
+
+- 有中心词：区分直接形容词、性质词连接结构、带论元的关系从句及名词修饰语，按[性质词决策](clause-patterns.md#property-decision)选择。
+- 没有显式中心词：区分性质谓语与独立指称“好的／长的”；独立指称按相应例句选择派生式或名物化，性质谓语按谓词用法选形。
+- 多层修饰逐层锚定；数量、程度、领属和关系从句各自确定范围。北部直接形容词通常在中心名词后；名词修饰语通常在中心名词前。关系从句及性质词连接结构的前后位置和标记按来源近例处理。
+
 ## Validate grammatical applicability
 
 Before composing or adopting a paraphrase, classify source-language adverbs and auxiliaries by meaning: '快要做' (imminent onset) vs '快做完' (imminent endpoint); '还在' vs '还没' vs '还不必'; '会' (trained skill, possibility, prediction) vs '可以' (permission); '已经' (current result) vs '做过' (experience). Use the [grammar index](grammar-index.md) to find the relevant discussion and examples. For each operation, establish meaning, scope, selected predicate or phrase, attachment, order and combination restrictions. The checks below establish grammatical applicability beyond a dictionary gloss or suffix list.
@@ -19,7 +28,7 @@ Before composing or adopting a paraphrase, classify source-language adverbs and 
 | Linked events and direction | Use [event relations](event-linking.md#event-relations) to select clause linkage, and [directional constructions](direction-suffixes.md) for movement and spatial relations. |
 | Negation | Distinguish negative existence or possession, factual negation, intention or prediction negation, negative ability, prohibition, and negative copulas. Determine what is negated and check whole-predicate evidence for combinations of lexical negative predicates with other negative or modal forms. Match the intended double-negation scope. |
 | Nominalization and linking | Determine whether the construction refers to an event, proposition, participant, object, place, or a modifier of an explicit head. Select each linking or nominalizing form by its attested function, argument gap, head position and referent. |
-| Property predicates and adjectives | Classify the lexical form from its grammar and usage as a predicate, attributive modifier or independent nominal expression. Select the attested short or derived form for that role, checking any required linker or nominalization. |
+| Property predicates and adjectives | Anchor the head first. Distinguish a direct adjective after its head, a property predicate, an independent nominal expression, a linked property modifier, and a relative clause. Select the source-attested form, order and linker through the [decision table](clause-patterns.md#property-decision); suffix appearance alone does not establish word class or position. |
 
 Use the cached [predicate constructions](aspect-modality.md), [relation-marker frames](clause-patterns.md), [nominalization choices](nie-niexi.md) and [event-linking patterns](event-linking.md). Match roles, scope and predicate class, then apply the supported construction directly. Resolve a new source conflict through [notation audit](notation-audit.md); preserve established rules in their topics. For broader context, use the Northern predicate overview, reference-grammar §§4.2–4.7 and chapter 6, or the corresponding Southern sections. Use [recovery](recovery-playbook.md) for unresolved applicability.
 

@@ -4,24 +4,39 @@ Use this page for the final format, transcription and progress updates. [Return 
 
 ## Deliver the requested result
 
-For an audit-only or explanation-only task, present the requested analysis. For a translation, present every source sentence, line and meaningful clause in order. Put the complete translation first. Follow the user's requested format; otherwise use **调号拼音 + IPA**, clause aligned. Use numbering or a two-column table for longer passages and separate Northern and Southern versions. Show **叶氏拼音 only when the user explicitly requests it**.
+For an audit-only or explanation-only task, present the requested analysis. For a translation, follow the user's requested format; otherwise alternate **one Tujia sentence, then its source-language sentence** throughout the text. Preserve the source wording and order; the second line is the original, not a back-translation. Keep the source sentence together if its translation needs several shorter clauses. Number sentence pairs in longer passages and separate Northern and Southern versions, each with its own source lines. Show **叶氏拼音 only when the user explicitly requests it**.
 
-**静态降级（Skill-based，含网页检索）覆盖双栏默认：只交已核定调号拼音；缺拼音处就地写来源 `/IPA/`，不另列整句 IPA。** 整句只有 IPA 时直接写 `/〈原句 IPA〉/`。两者皆缺才标局部读音待核，不能手拟拼音。用户明确的记音要求优先。
+非静态模式保留 **调号拼音 + IPA**：土家语行用调号拼音，来源对应的 IPA 作为附加行置于每组土家语／源语言句子之后。用户明确的记音要求优先。
 
-以下双栏示意用于非静态模式：
+**静态降级（Skill-based，含网页检索）覆盖上述记音默认：土家语行只交已核定调号拼音；缺拼音处就地写来源 `/IPA/`，不另列整句 IPA。** 整句只有 IPA 时直接写 `/〈原句 IPA〉/`。两者皆缺才标局部读音待核，不能手拟拼音。用户明确的记音要求优先。
+
+以下逐句示意用于非静态模式；静态模式按上面的记音规则处理土家语行并省略附加 IPA 行：
 
 ```text
-1. 调号拼音：〈完整译句〉
-   IPA：/〈对应 IPA〉/
+1. 土家语：〈完整译句，调号拼音〉
+   源语言：〈对应的原文句子〉
+   IPA：/〈土家语对应 IPA〉/
+
+2. 土家语：〈下一句译文，调号拼音〉
+   源语言：〈下一句原文〉
+   IPA：/〈土家语对应 IPA〉/
 
 检索模式：Embedding / Skill-based / Mixed
 ```
 
 In Chinese-language explanations, use the full name 汉语, including 汉语—土家语对照 labels. Preserve original quotations and bibliographic titles.
 
+## Optional word-by-word gloss and aligned PDF
+
+每次翻译任务中，若用户尚未说明 gloss 偏好，询问一次：“需要每个词的 gloss（词义和语法标注）吗？需要的话，也可以排成逐词对齐的 PDF。”可在开始翻译时询问并继续翻译，或在交付逐句对照译文后询问；不因等待这一可选回答而停下翻译。沿用本任务中已说明的偏好，用户已要求或拒绝时不再重复询问。
+
+用户需要 gloss 时，为每句土家语补充词形与 gloss 的逐词对齐，词汇义和语法成分都要覆盖。词内只有在材料支持词素切分时才细分；切分行与 gloss 行保持相同的边界标记。保留声调、来源记音及不确定性，未核实的分析就地标明，不为填满 gloss 猜测词义或语法功能。源语言原文仍保留为完整句子，不按土家语语序重写。
+
+用户选择 PDF 时，制作可下载的对齐 PDF。每句按“土家语原句 → 源语言原句 → 逐词／词素切分行及对应 gloss 行”排版，用固定列宽或表格让每个单位与其 gloss 对齐；长句按单位成组换行，保持对应关系。用支持汉字、调号、组合字符和 IPA 的字体，检查导出后字符完整、行列对齐且同组内容未被分页拆散。只在实际生成并检查文件后交付 PDF 链接。
+
 Report 检索模式：Embedding after current BGE inference, 检索模式：Skill-based after static lookup, or Mixed when both ran. Keep scores, rejected alternatives and verification logs for requested translation reviews or evidence audits.
 
-For [webpage-only evidence](web-evidence.md), disclose the evidence actually used: `Skill-based（网页静态词典；本地未执行）`, `Skill-based（技能参考；本地未执行）`, or `Skill-based（提供的页面文本；本地未执行）`. Combine these descriptions when appropriate. Keep failed dictionary access separate from successfully read grammar. If no applicable evidence was obtained, report `检索状态：未取得证据` with the access/coverage gap. Keep unsupported spans visible as `⟦汉语插入：…⟧` or `⟦待核：…⟧`; if the whole construction is unsupported, label the complete Chinese structural draft rather than implying a completed Tujia translation.
+For [webpage-only evidence](web-evidence.md), disclose the evidence actually used: `Skill-based（网页静态词典；本地未执行）`, `Skill-based（技能参考；本地未执行）`, or `Skill-based（提供的页面文本；本地未执行）`. Combine these descriptions when appropriate. Keep failed dictionary access separate from successfully read grammar. If no applicable evidence was obtained, report `检索状态：未取得证据` with the access/coverage gap. Follow [complete-before-qualifying](paraphrase-and-borrowing.md#complete-before-qualifying): compose every clause, place minimal Chinese insertions in Tujia word order, and explain specific remaining uncertainties after the translation. Keep the completed provisional wording in the translation and identify its evidence limits in a note. Label newly composed constructions as productive drafts and distinguish them from attested quotations.
 
 Explain a material paraphrase or Chinese insertion briefly when it helps the reader understand the translation. Write selected Chinese insertions directly in Chinese characters. For an unsupported lexical choice, use an attested synonym, productive native paraphrase or Chinese insertion. Present findings established by the materials and the work performed.
 

@@ -17,6 +17,15 @@ For poetry and songs, use interpretive paraphrase, an explicit metaphor or a rec
 
 ## Fill remaining lexical slots
 
+<a id="complete-before-qualifying"></a>
+### 先完成构句，再说明疑点
+
+1. 对尚未译出的内容区分词汇、语义、句式和读音问题。先查完整义项，再查日常说法、词义成分及相关连续语料；中文查询漏检时补查英语释义和同源见证。已找到且适合语境的词须落实到译文。一次零命中记为该次查询未检得，并继续检查相关义项和已返回候选。
+2. 复合表达可以拆为动作、参与者及结果，再用有依据的能产构式重组新句。逐项核对因果、否定、程度、指代和数量，选择与语境相符的词义。
+3. 检索和改写后仍缺词，保留最小的汉语词或词素，并把它放在土家语构式的对应槽位。动宾表达分别安排宾语和谓语；同时落实修饰语、工具、领属、比较基准、条件、否定及体貌的位置。正文交付完整构句，具体疑点置于句后注释。
+4. 句式仍有疑点时，先改成更简单、关系明确的短句；尚有疑点的地方给出最佳暂拟排列，在句后注释中说明哪一处关系或标记需核实。暂拟排列标作生产性拟译，词形、声调和规则各自对应实际证据。
+5. 交付前逐一检查正文中的汉语成分：是否已有可用词被遗漏，能否用已知成分重组，是否已放在土家语语序中。最终提供覆盖全文的拟译，用一条总注或少量句号对应注释记录剩余问题。“待核”表示具体分析的证据限制，不充当未翻译内容的占位符。
+
 After the bounded source checks, place Chinese words into the best-supported Tujia construction. Consult same-dialect examples of loans and code-switching for nouns, predicates, modifiers and connectors. Match noun-phrase order and classifiers to the selected construction. Arrange objects and predicates in the dialect's applicable SOV or marked frame, and attach negation, aspect, modality and stem changes in their licensed positions.
 
 For a compositional Chinese verb–object expression, identify the object and predicate separately and rebuild their relation in Tujia order. Prefer a suitable attested Tujia verb. A missing noun or verb can remain in Chinese characters. Keep established lexicalized compounds and names together when their usage supports that treatment. Use a whole Chinese numeral–classifier phrase when that is the supported borrowing pattern.

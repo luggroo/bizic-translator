@@ -12,6 +12,8 @@ When an exact query misses, preserve the intended sense and try a common lexical
 
 Maintain a short coverage ledger: meaning unit → chosen witness → actual target span. Include predicates and their arguments, pronouns, numbers, classifiers, comparison standards, locations and relations. For a rejected candidate, retain the specific sense or source mismatch.
 
+For every property expression, include its head (or independent referent), predicate/modifier role, chosen full form and actual target position. Audit direct adjectives after their heads, noun modifiers before their heads, and linked/relative constructions against their own examples through [property decisions](clause-patterns.md#property-decision). Recheck the scope of each modifier in nested noun phrases and distinguish same-form adjectives from property predicates by the full construction.
+
 Build an unfamiliar phrase from supported parts. Keep its attested words and grammatical frame in the draft, with the smallest remaining Chinese insertion or marked gap. Check lexical support and construction support separately: uncertainty in one suffix or attachment leaves the supported noun, number or predicate available for use. Mark an unverified construction at its precise span and preserve the intended semantic relation.
 
 Before declaring a lexical gap, check the original query, the bounded expansions and already returned candidates. Use “not retrieved” for a failed search, “retrieved but not adopted” for an unused suitable witness, and “not established in the checked resources” when the available evidence remains insufficient. These diagnoses guide different next steps.

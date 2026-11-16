@@ -245,7 +245,9 @@ natural, candidate-matched and single-query budgets. Its full-record catalog
 preserves dictionary witnesses and separately identified survey records. Static
 shards cover the dictionary; they do not include the additional survey vocabulary
 available to BGE. Per-case construction drafts are research traces in original
-source notation. Ordinary translations follow the skill: complete Tujia first,
-tone-marked Pinyin and IPA, with one final quality note.
+source notation. Ordinary translations alternate one Tujia sentence with its
+source-language sentence. The skill asks whether word-by-word glosses are wanted
+and offers an aligned PDF when they are. See the [output policy](skills/translate-tujia/references/output.md)
+for notation and optional quality notes.
 
 [逐例审阅 60 个最终候选译式（调号拼音与 IPA）](docs/evaluation/compositional/challenge-translations.md)。
