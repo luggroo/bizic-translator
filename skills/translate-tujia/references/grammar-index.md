@@ -21,7 +21,7 @@
 | 词干变化、未然态 -i、韵母合音 | [未然态词形变化](aspect-modality.md#predicate-fusion) | 只按有词形证据的 -i 音变构词，不将 liao／diu 等推导自 gu |
 | 也、还、再、另外的追加义 | [追加与焦点](clause-patterns.md#addition) | 追加事件／数量与持续意义分别处理 |
 | 一边……一边、……着……、……后、接着、然后、用…… | [事件与从句链接](event-linking.md) | 完整事件、方式、持续背景与工具 |
-| 因为、所以、因此、然后、不然、否则；本土连接词 | [事件链接 → 连接词](event-linking.md#connectives) | āimǒ因果、āiliē先后、āitā否定条件；建议另核 |
+| 因为、所以、因此、然后、不然、否则；本土连接词 | [事件链接 → 连接词](event-linking.md#connectives) | āimǒ 因果、āiliē 先后、āitā 否定条件 |
 | 当……时、如果……就、虽然……但是 | [小句关系](event-linking.md#event-relations) | 时间、条件、让步与焦点背景 |
 | 不、没、别、不是、没有、禁止 | [否定](clause-patterns.md#negation) | 事实／意愿否定、否定判断、存在否定；具体祈使与禁止转[指令](directives.md#prohibition) |
 | 是、有、在、宾语、话题、SOV | [句型](clause-patterns.md#clause-types) | 判断、存在、事件与论元关系 |
