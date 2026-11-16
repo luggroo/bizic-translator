@@ -9,7 +9,7 @@
 
 南部同样以主语—宾语—动词为基本语序。《土家语三种句式的类型学特征》（2019）76页例27（泸溪且己）为 /ŋo³¹ ɲi³¹ doŋ²¹ dʑian²¹ ʕɯ¹³/（我｜你｜铜钱｜还），说明该例的间接宾语在直接宾语前。这个语序依据不使且己的代词音值自动适用于其他南部来源。
 
-上述两段引自已整理的[参考语法](https://raw.githubusercontent.com/luggroo/bizic-dictionary/4a9f521e7eaec4d5cea5b0bc82702da604a8ea39/docs/reference-grammar.md) `north-19-1`、`south-15-2`；属于参考语法转引，不表示本次读取了原书。
+以上基本语序来源：[参考语法](https://raw.githubusercontent.com/luggroo/bizic-dictionary/4a9f521e7eaec4d5cea5b0bc82702da604a8ea39/docs/reference-grammar.md) `north-19-1`、`south-15-2`。
 
 <a id="negation"></a>
 ## 1. 否定：事实、判断、意愿、禁止，分别选形
@@ -191,4 +191,4 @@ suàn 与 bí／bíkuī 分属“小”的不同词根，分别保留来源及�
 
 ## nie 与 niexi：显式中心词和独立指称
 
-参见 [nie、niexi 与独立指称](nie-niexi.md)。用途物可按语境表达为“开瓶子的”一类名词化短语，按语境选择独立名词化或显式中心名词。Feng（2025）例27的独立指称 niexi 不能省 xi；带显式中心词的例27b可用 nie。领属表达、内置关系从句及其他动词短语的替换条件分别核查。
+用途词和独立指称按[nie／niexi 构式](nie-niexi.md)选择：Feng 例27a“昨天下蛋的那只”用 `V-nie-xi`，例27b“昨天下蛋的鸡”用 `V-nie＋N`；“开瓶子的（东西）”可用动作短语名物化。
