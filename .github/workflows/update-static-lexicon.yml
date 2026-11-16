@@ -2,10 +2,18 @@ name: Update readable Tujia lexicon
 on:
   workflow_dispatch:
   schedule:
-    - cron: "27 8 * * 2"
+    - cron: "27 8 * * *"
+  pull_request:
+    paths:
+      - scripts/verify-site-contract.py
+      - scripts/export-readable-lexicon.py
+      - scripts/tujia-lex-spelling.cjs
+      - tests/test_site_contract.py
+      - .github/workflows/update-static-lexicon.yml
   push:
     paths:
       - scripts/export-readable-lexicon.py
+      - scripts/verify-site-contract.py
       - scripts/tujia-lex-spelling.cjs
       - .github/workflows/update-static-lexicon.yml
 
@@ -26,6 +34,7 @@ jobs:
         with:
           node-version: '22'
       - name: Fetch versioned dictionary and matching site converters
+        id: source
         shell: bash
         run: |
           set -euo pipefail
@@ -34,6 +43,7 @@ jobs:
             "https://api.github.com/repos/luggroo/bizic-dictionary/commits/main" | \
             python -c 'import json,sys; print(json.load(sys.stdin)["sha"])')"
           test "${#REVISION}" -eq 40
+          echo "revision=${REVISION}" >> "${GITHUB_OUTPUT}"
           mkdir -p "${RUNNER_TEMP}/bizic/site"
           curl --fail --silent --show-error --location --retry 2 --max-time 60 \
             --max-filesize 12000000 \
@@ -49,11 +59,37 @@ jobs:
               "https://raw.githubusercontent.com/luggroo/bizic-dictionary/${REVISION}/site/${module}.js" \
               -o "${RUNNER_TEMP}/bizic/site/${module}.js"
           done
-          python scripts/export-readable-lexicon.py build \
-            --source "${RUNNER_TEMP}/bizic/site/dictionary.json.gz" \
-            --metadata-source "${RUNNER_TEMP}/bizic/site/data.json.gz" \
-            --output skills/translate-tujia/lexicon \
-            --revision "${REVISION}"
+      - name: Detect source, converter or shard drift
+        id: drift
+        shell: bash
+        run: |
+          if python scripts/verify-site-contract.py \\
+            --source "${RUNNER_TEMP}/bizic/site/dictionary.json.gz" \\
+            --metadata-source "${RUNNER_TEMP}/bizic/site/data.json.gz" \\
+            --site-root "${RUNNER_TEMP}/bizic/site" \\
+            --directory skills/translate-tujia/lexicon; then
+            echo "update_needed=false" >> "${GITHUB_OUTPUT}"
+          else
+            echo "update_needed=true" >> "${GITHUB_OUTPUT}"
+          fi
+      - name: Rebuild only if canonical inputs, notation or shards changed
+        if: steps.drift.outputs.update_needed == 'true'
+        shell: bash
+        run: |
+          python scripts/export-readable-lexicon.py build \\
+            --source "${RUNNER_TEMP}/bizic/site/dictionary.json.gz" \\
+            --metadata-source "${RUNNER_TEMP}/bizic/site/data.json.gz" \\
+            --site-root "${RUNNER_TEMP}/bizic/site" \\
+            --output skills/translate-tujia/lexicon \\
+            --revision "${{ steps.source.outputs.revision }}"
+      - name: Verify all static shards and the complete canonical witness set
+        shell: bash
+        run: |
+          python scripts/verify-site-contract.py \\
+            --source "${RUNNER_TEMP}/bizic/site/dictionary.json.gz" \\
+            --metadata-source "${RUNNER_TEMP}/bizic/site/data.json.gz" \\
+            --site-root "${RUNNER_TEMP}/bizic/site" \\
+            --directory skills/translate-tujia/lexicon
       - name: Test shard coverage, source isolation, and bilingual embedding indexing
         shell: bash
         run: |
@@ -90,6 +126,7 @@ jobs:
           python scripts/export-readable-lexicon.py lookup \
             --directory skills/translate-tujia/lexicon --query "好" --limit 5 > /dev/null
       - name: Commit updated text-only shards, if necessary
+        if: github.event_name != 'pull_request'
         shell: bash
         run: |
           set -euo pipefail
