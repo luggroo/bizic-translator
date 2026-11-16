@@ -14,7 +14,7 @@
 | 看 | bà | /pa⁵¹/ | ba⁴ | rn453773 | c1.4:block005；c2.4:block006（2） |
 | 有 | xié | /ɕiɛ²⁴/ | xie² | rn454792 | c1.2:block003；c1.2:block008（2） |
 
-《土家语文库》sourceID：`15hgNztDGzK22XFSM26p2uJkftxyyG80I`。`c章.篇:block序号`指语料正文按空行划分的语境；数量是已核不同语境的下限，不代表全库频率。文库目录顶层方言未标明，各篇调查点依元数据；跨文本重复只佐证用法，读音以所列词典见证为据。词条见证rn453839等来自Brassett（2006）；rn457542来自Brassett（2004）。
+《土家语文库》sourceID：`15hgNztDGzK22XFSM26p2uJkftxyyG80I`。`c章.篇:block序号`按语料段落定位；频率和调查点按每条语料元数据读取。Brassett（2006）的词条见证为 rn453839 等；Brassett（2004）为 rn457542。
 
 **zí：当、变成。rī：做、工作。** “变成”见rn453839的change及上列正文。“当”据未刊词义修订，独立例句出处尚缺。“做／工作”分别见rn457542的work, do与rn453874的work；B06:137例200另有do释义。
 
