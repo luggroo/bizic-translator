@@ -24,7 +24,7 @@ For poetry and songs, use interpretive paraphrase, an explicit metaphor or a rec
 2. 复合表达可以拆为动作、参与者及结果，再用有依据的能产构式重组新句。逐项核对因果、否定、程度、指代和数量，选择与语境相符的词义。
 3. 检索和改写后仍缺词，保留最小的汉语词或词素，并把它放在土家语构式的对应槽位。动宾表达分别安排宾语和谓语；同时落实修饰语、工具、领属、比较基准、条件、否定及体貌的位置。正文交付完整构句，具体疑点置于句后注释。
 4. 句式仍有疑点时，先改成更简单、关系明确的短句；尚有疑点的地方给出最佳暂拟排列，在句后注释中说明哪一处关系或标记需核实。暂拟排列标作生产性拟译，词形、声调和规则各自对应实际证据。
-5. 交付前逐一检查正文中的汉语成分：是否已有可用词被遗漏，能否用已知成分重组，是否已放在土家语语序中。最终提供覆盖全文的拟译，用一条总注或少量句号对应注释记录剩余问题。“待核”表示具体分析的证据限制，不充当未翻译内容的占位符。
+5. 交付前把汉语插入与候选词条逐项比对；已有合适土家语形式就替换。最终交付覆盖全文的译文，后附一条简短质量说明。
 
 After the bounded source checks, place Chinese words into the best-supported Tujia construction. Consult same-dialect examples of loans and code-switching for nouns, predicates, modifiers and connectors. Match noun-phrase order and classifiers to the selected construction. Arrange objects and predicates in the dialect's applicable SOV or marked frame, and attach negation, aspect, modality and stem changes in their licensed positions.
 
