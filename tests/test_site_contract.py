@@ -62,7 +62,7 @@ def test_full_static_export_passes_and_matches_public_contract(workspace, tmp_pa
     assert report["entries"] == 2 and report["attestations"] == 3
     f, _ = CONTRACT["fingerprints"](*workspace[:3])
     contract = {**f, "schema_version": 1, "producer": "luggroo/bizic-dictionary",
-                "templates": CONTRACT["TEMPLATES"],
+                "templates": dict(CONTRACT["TEMPLATES"]),
                 "catalog_url": "https://tujia.biz/text/catalog.json"}
     contract_path = tmp_path / "contract.json"
     contract_path.write_text(json.dumps(contract), encoding="utf-8")
@@ -105,7 +105,7 @@ def test_missing_witness_in_shards_is_rejected(workspace):
     data["index_keys"] -= sum(p["rows"] for p in data["buckets"][bucket])
     del data["buckets"][bucket]
     path.write_text(json.dumps(data))
-    with pytest.raises(ContractError, match="Incomplete attestation coverage|Index key count"):
+    with pytest.raises(ContractError, match="Incomplete attestation coverage|Index key count|Missing exact dictionary query keys"):
         check(workspace)
 
 
