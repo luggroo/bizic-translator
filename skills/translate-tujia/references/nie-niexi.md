@@ -15,6 +15,8 @@ https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu
 
 ## 翻译时的选择
 
+**性质词修饰的默认入口（北部）**：先查同方言同词形是否有直接定语用例；有明确记录的长式形容词、以及确有实例的同形兼类词，才可按直接修饰语序使用。否则，当性质词修饰**显式中心名词**时，优先采用 **性质词＋niě＋N**；相同构式资料支持时可采用 **性质词＋niěxi＋N**，不是无条件把 niě 与 niěxi 互换。**性质谓语**本身不因这个规则强制名物化；**独立指称**使用相应名物化分析。例：“乱的声音”拟作 `luán niě árē`（非原始例句），而不能只根据 `luán`“乱”词义生成 `árē luán`。详细选择见[性质词决策](clause-patterns.md#property-decision)。
+
 参考语法：[名物化的基本形式](https://tujia.biz/#grammar/north/106?grammarAnchor=north-nominal-forms)、[用短语或从句修饰名词](https://tujia.biz/#grammar/north/106?grammarAnchor=north-relative-clauses)、[修饰名词与独立指称](https://tujia.biz/#grammar/north/106?grammarAnchor=north-modifier-and-independent-reference)。
 
 相关专题：[nie-xi 与显式中心词](https://tujia.biz/#grammar/north/106?grammarAnchor=north-niexi-explicit-head)、[关系、补足与状语小句中的名物化](https://tujia.biz/#grammar/north/106?grammarAnchor=north-clausal-nominalization-distribution)、[xi 的工具名物化](https://tujia.biz/#grammar/north/106?grammarAnchor=north-tool-nominalization)与[ci 的词汇化工具名词](https://tujia.biz/#grammar/north/106?grammarAnchor=north-ci-tool-names)。
