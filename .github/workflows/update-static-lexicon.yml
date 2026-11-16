@@ -77,6 +77,16 @@ jobs:
           else
             echo "update_needed=true" >> "${GITHUB_OUTPUT}"
           fi
+      - name: Refuse unattended breaking ID or source migrations
+        if: steps.drift.outputs.update_needed == 'true'
+        shell: bash
+        run: |
+          python scripts/verify-site-contract.py \
+            --source "${RUNNER_TEMP}/bizic/site/dictionary.json.gz" \
+            --metadata-source "${RUNNER_TEMP}/bizic/site/data.json.gz" \
+            --site-root "${RUNNER_TEMP}/bizic/site" \
+            --directory skills/translate-tujia/lexicon \
+            --check-previous-identities
       - name: Rebuild only if canonical inputs, notation or shards changed
         if: steps.drift.outputs.update_needed == 'true'
         shell: bash
