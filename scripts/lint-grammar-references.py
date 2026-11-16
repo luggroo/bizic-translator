@@ -22,7 +22,7 @@ NORTH = {"55": "H", "44": "H", "24": "R", "35": "R", "325": "R",
 SOUTH = {"55": "H", "53": "H", "51": "H", "35": "R",
          "21": "F", "13": "L", "33": "", "31": ""}
 
-EXAMPLE_FILES = ("event-linking.md", "clause-patterns.md", "aspect-modality.md")
+EXAMPLE_FILES = ("event-linking.md", "clause-patterns.md", "aspect-modality.md", "directives.md")
 
 
 def cells(line: str) -> list[str]:
@@ -49,7 +49,7 @@ def ipa_tones(text: str, *, southern=False) -> list[str]:
 def lint(root: Path) -> tuple[int, int]:
     refs = root / "skills/translate-tujia/references"
     expected = ("grammar-index.md", "event-linking.md", "clause-patterns.md",
-                "aspect-modality.md", "notation-audit.md")
+                "aspect-modality.md", "directives.md", "notation-audit.md")
     for name in expected:
         if not (refs / name).is_file():
             raise AssertionError(f"Missing grammar reference: {name}")
