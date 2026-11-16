@@ -63,10 +63,10 @@ jobs:
         id: drift
         shell: bash
         run: |
-          if python scripts/verify-site-contract.py \\
-            --source "${RUNNER_TEMP}/bizic/site/dictionary.json.gz" \\
-            --metadata-source "${RUNNER_TEMP}/bizic/site/data.json.gz" \\
-            --site-root "${RUNNER_TEMP}/bizic/site" \\
+          if python scripts/verify-site-contract.py \
+            --source "${RUNNER_TEMP}/bizic/site/dictionary.json.gz" \
+            --metadata-source "${RUNNER_TEMP}/bizic/site/data.json.gz" \
+            --site-root "${RUNNER_TEMP}/bizic/site" \
             --directory skills/translate-tujia/lexicon; then
             echo "update_needed=false" >> "${GITHUB_OUTPUT}"
           else
@@ -76,19 +76,19 @@ jobs:
         if: steps.drift.outputs.update_needed == 'true'
         shell: bash
         run: |
-          python scripts/export-readable-lexicon.py build \\
-            --source "${RUNNER_TEMP}/bizic/site/dictionary.json.gz" \\
-            --metadata-source "${RUNNER_TEMP}/bizic/site/data.json.gz" \\
-            --site-root "${RUNNER_TEMP}/bizic/site" \\
-            --output skills/translate-tujia/lexicon \\
+          python scripts/export-readable-lexicon.py build \
+            --source "${RUNNER_TEMP}/bizic/site/dictionary.json.gz" \
+            --metadata-source "${RUNNER_TEMP}/bizic/site/data.json.gz" \
+            --site-root "${RUNNER_TEMP}/bizic/site" \
+            --output skills/translate-tujia/lexicon \
             --revision "${{ steps.source.outputs.revision }}"
       - name: Verify all static shards and the complete canonical witness set
         shell: bash
         run: |
-          python scripts/verify-site-contract.py \\
-            --source "${RUNNER_TEMP}/bizic/site/dictionary.json.gz" \\
-            --metadata-source "${RUNNER_TEMP}/bizic/site/data.json.gz" \\
-            --site-root "${RUNNER_TEMP}/bizic/site" \\
+          python scripts/verify-site-contract.py \
+            --source "${RUNNER_TEMP}/bizic/site/dictionary.json.gz" \
+            --metadata-source "${RUNNER_TEMP}/bizic/site/data.json.gz" \
+            --site-root "${RUNNER_TEMP}/bizic/site" \
             --directory skills/translate-tujia/lexicon
       - name: Test shard coverage, source isolation, and bilingual embedding indexing
         shell: bash
