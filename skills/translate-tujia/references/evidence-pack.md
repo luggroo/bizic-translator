@@ -42,6 +42,6 @@ An absent attestation ID is compatible with a cited grammar example. Use its wor
 
 Linked notation records retain their exact witness IDs, scheme and derivation metadata. Aggregate titles and display spellings are discovery hints until a record/reference establishes the pairing. Canonical IDs resolve source aliases; they do not supply missing locality or replace attestation IDs.
 
-Keep skill revision, live data version and document checksum separate. A copied checksum is observed provenance, not verification performed by this agent. Reuse compatible records during a task; when versions conflict, inspect the affected forms rather than silently calling the pack a single snapshot.
+Record skill revision, live data version and document checksum as separate fields. For version conflicts, inspect the affected forms and keep reusable compatible records.
 
 Report access status, translation completeness and grammatical support separately. A supported IPA-only clause can be complete in meaning with a missing display spelling. A Chinese structural draft preserves meaning but is not a completed Tujia translation.
