@@ -13,9 +13,9 @@ Read for a complex clause, revision, or detailed grammatical audit. Start with t
 
 分析阶段建立内部记录：源语名词短语 → 中心名词／省略的所指 → 每个修饰语及其作用范围 → 修饰类型 → 目标词形与预期语序。先确定哪个性质属于哪个中心词，再决定词形和位置。记录留在内部草稿，不加进普通译文。
 
-- 有中心词：区分**有同方言同词形直接定语证据**的形容词、默认用 niě／有依据的 niěxi 连接的性质词、带论元的关系从句及名词修饰语，按[性质词决策](clause-patterns.md#property-decision)选择。词典只给性质义或谓词用例时，不能推断其可以裸修饰名词。
+- 有中心词：已记录的长式／同形兼类词用 `N＋Adj`，例如 `lò cái`“好人”；普通性质词用 `性质词＋nie＋N`，例如 `luán nie árē`“杂乱的声音”；关系从句另用相应的 `nie/niexi` 构式，见[性质词决策](clause-patterns.md#property-decision)。
 - 没有显式中心词：区分性质谓语与独立指称“好的／长的”；独立指称按相应例句选择派生式或名物化，性质谓语按谓词用法选形。
-- 多层修饰逐层锚定；数量、程度、领属和关系从句各自确定范围。北部**已证直接形容词**通常在中心名词后；**无裸修饰依据的性质词默认在中心名词前用 niě（有据时可用 niěxi）连接**；名词修饰名词另按名词关系规则，不能混作性质词例外。连接的前后位置和标记按来源近例处理。
+- 多层修饰分别确定数量、程度、领属与关系从句的作用范围；北部直接定语形容词一般后置，性质词连接结构一般前置。词缀和格助词没有固定声调时可不标调。
 
 ## Validate grammatical applicability
 
@@ -28,7 +28,7 @@ Before composing or adopting a paraphrase, classify source-language adverbs and 
 | Linked events and direction | Use [event relations](event-linking.md#event-relations) to select clause linkage, and [directional constructions](direction-suffixes.md) for movement and spatial relations. |
 | Negation | Distinguish negative existence or possession, factual negation, intention or prediction negation, negative ability, prohibition, and negative copulas. Determine what is negated and check whole-predicate evidence for combinations of lexical negative predicates with other negative or modal forms. Match the intended double-negation scope. |
 | Nominalization and linking | Determine whether the construction refers to an event, proposition, participant, object, place, or a modifier of an explicit head. Select each linking or nominalizing form by its attested function, argument gap, head position and referent. |
-| Property predicates and adjectives | Anchor the head first. Treat a bare attributive adjective after its head as **licensed only by a same-dialect, same-form direct-modifier attestation**; otherwise default to a linked property phrase with **niě** (or **niěxi** where the relevant construction is supported) before an explicit head. Distinguish property predicates, independent nominal expressions and relative clauses. Check the [decision table](clause-patterns.md#property-decision); dictionary gloss or suffix appearance alone does not license bare modification. |
+| Property predicates and adjectives | Anchor the head. Use **N＋Adj** for a directly attested adjective (`lò cái`“好人”); otherwise **property＋nie＋N** (`luán nie árē`“杂乱的声音”). Use **V-nie-xi** for independent reference (Feng example 27a), and the corresponding linked clause before an explicit head (Feng example 13). |
 
 Use the cached [predicate constructions](aspect-modality.md), [relation-marker frames](clause-patterns.md), [nominalization choices](nie-niexi.md) and [event-linking patterns](event-linking.md). Match roles, scope and predicate class, then apply the supported construction directly. Resolve a new source conflict through [notation audit](notation-audit.md); preserve established rules in their topics. For broader context, use the Northern predicate overview, reference-grammar §§4.2–4.7 and chapter 6, or the corresponding Southern sections. Use [recovery](recovery-playbook.md) for unresolved applicability.
 
