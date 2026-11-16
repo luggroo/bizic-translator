@@ -157,3 +157,34 @@ def test_lexicon_export_detects_missing_and_corrupt_shards(tmp_path):
     shard.unlink()
     with pytest.raises(AssertionError, match='Missing lexicon shard'):
         qa.validate_lexicon(tmp_path)
+
+
+def test_directive_choice_contract():
+    """Regression: directive constructions are meaning-led, not suffix-menu guesses."""
+    root = ROOT / 'skills/translate-tujia'
+    main = (root / 'SKILL.md').read_text(encoding='utf-8')
+    index = (root / 'references/grammar-index.md').read_text(encoding='utf-8')
+    directives = (root / 'references/directives.md').read_text(encoding='utf-8')
+    assert 'references/directives.md#choose' in main
+    assert 'directives.md#choose' in index
+    for item in ('裸 `V`', '`V-gu`', '`V-do`', '`V-bo`',
+                 '`V-xie`', '`V-lie(DIR)`', '`ta + V`'):
+        assert item in directives, f'Directive selection lost {item}'
+    for example in ('B06:90例110', 'B06:90例113', 'B06:135例190',
+                    'B06:135例193', 'B06:137例200'):
+        assert example in directives, f'Attested contrast missing {example}'
+    assert '李启群等（2021）' in directives and 'ku⁵⁵' in directives
+    assert '方向' in directives and 'speech_act' in directives
+    assert '不从这些实例推出任意' in directives
+
+
+def test_gu_is_not_an_automatic_fusion_rule():
+    refs = ROOT / 'skills/translate-tujia/references'
+    aspect = (refs / 'aspect-modality.md').read_text(encoding='utf-8')
+    direction = (refs / 'direction-suffixes.md').read_text(encoding='utf-8')
+    for candidate in ('lie＋gu → liao', 'di＋gu → diu', 'da＋gu → dao',
+                      'ta＋gu → tao', 'ta ti＋gu → ta tiu'):
+        assert candidate not in aspect, f'Obsolete productive derivation: {candidate}'
+    assert '延续、当前相关、新情况' not in aspect
+    assert '原书分析为`di²+gu²`' not in direction
+    assert '[未然态合音](aspect-modality.md#predicate-fusion)' in direction
