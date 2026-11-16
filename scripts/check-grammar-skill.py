@@ -12,7 +12,7 @@ from urllib.parse import unquote, urlsplit
 
 
 NAMES = ("grammar-index.md", "event-linking.md", "clause-patterns.md",
-         "aspect-modality.md", "notation-audit.md")
+         "aspect-modality.md", "directives.md", "notation-audit.md")
 
 
 def markdown_body(text):
