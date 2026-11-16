@@ -200,6 +200,68 @@ def validate(source, metadata_source, site_root, directory, *,
             "shard_files": sum(map(len, buckets.values()))}
 
 
+def verify_identity_stability(source, metadata_source, directory):
+    """Block silent removals/reassignments of IDs when regenerating static shards.
+
+    Editorial content changes or additive entries are permitted; changed identities
+    require an explicit reviewed migration rather than an unattended scheduled push.
+    """
+    source, metadata_source, directory = map(Path, (source, metadata_source, directory))
+    old_manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
+    require(old_manifest.get("format") == 2 and old_manifest.get("record_fields") == FIELDS,
+            "Cannot verify previous ID schema")
+    old_witnesses = {}
+    for bucket, files in old_manifest["buckets"].items():
+        for part in files:
+            name = part["path"]
+            require(bool(re.fullmatch(r"[0-9a-f]{2}-[0-9]{3}\.jsonl", name))
+                    and name.startswith(bucket + "-"), "Unsafe previous shard path")
+            payload = (directory / name).read_bytes()
+            require(len(payload) == part["bytes"] and sha(payload) == part["sha256"],
+                    "Previous shard cannot be trusted: " + name)
+            lines = payload.decode("utf-8").splitlines()
+            require(len(lines) == part["rows"], "Previous shard row count changed")
+            for line in lines:
+                row = json.loads(line)["r"]
+                require(isinstance(row, list) and len(row) == len(FIELDS),
+                        "Invalid previous witness row")
+                attestation = row[1]
+                identity = (row[0], row[2])
+                if attestation in old_witnesses:
+                    require(old_witnesses[attestation] == identity,
+                            "Contradictory previous witness identity: " + str(attestation))
+                old_witnesses[attestation] = identity
+    require(bool(old_witnesses), "No prior witnesses available for migration check")
+    new_dictionary = EXPORTER["read_dictionary"](source)
+    new_records = {}
+    for entry in new_dictionary["words"]:
+        for a in entry["attestations"]:
+            require(a["id"] not in new_records, "Duplicate new attestation ID")
+            new_records[a["id"]] = (entry["id"], a.get("source", ""))
+    deleted = set(old_witnesses) - set(new_records)
+    require(not deleted, "Removing existing attestation IDs requires migration: " +
+            ", ".join(sorted(deleted)[:5]))
+    remapped = [aid for aid, identity in old_witnesses.items()
+                if new_records[aid] != identity]
+    require(not remapped, "Changed entry/source ownership requires migration: " +
+            ", ".join(sorted(remapped)[:5]))
+    old_entries = {entry for entry, _ in old_witnesses.values()}
+    new_entries = {entry["id"] for entry in new_dictionary["words"]}
+    require(old_entries.issubset(new_entries),
+            "Removing existing entry IDs requires migration")
+    previous_sources = old_manifest.get("sources", {})
+    new_sources = EXPORTER["source_catalog"](metadata_source)
+    removed_sources = set(previous_sources) - set(new_sources)
+    require(not removed_sources, "Removing public source IDs requires migration: " +
+            ", ".join(sorted(removed_sources)[:5]))
+    changed_aliases = [sid for sid, old in previous_sources.items()
+                       if old.get("canonical_id") != new_sources[sid].get("canonical_id")]
+    require(not changed_aliases, "Changing canonical source aliases requires migration: " +
+            ", ".join(sorted(changed_aliases)[:5]))
+    return {"status": "additive-compatible", "old_attestations": len(old_witnesses),
+            "new_attestations": len(new_records), "new_entries": len(new_entries)}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", required=True)
@@ -207,11 +269,14 @@ def main():
     parser.add_argument("--site-root", required=True)
     parser.add_argument("--directory", required=True)
     parser.add_argument("--inputs-only", action="store_true")
+    parser.add_argument("--check-previous-identities", action="store_true")
     parser.add_argument("--contract-file", help="Optional published /text/contract.json")
     args = parser.parse_args()
     try:
-        result = validate(args.source, args.metadata_source, args.site_root, args.directory,
-                          inputs_only=args.inputs_only, contract_file=args.contract_file)
+        result = (verify_identity_stability(args.source, args.metadata_source, args.directory)
+                  if args.check_previous_identities else
+                  validate(args.source, args.metadata_source, args.site_root, args.directory,
+                           inputs_only=args.inputs_only, contract_file=args.contract_file))
     except (ContractError, ValueError, KeyError, OSError, TypeError) as error:
         print("CONTRACT_MISMATCH: " + str(error), file=sys.stderr)
         return 2
