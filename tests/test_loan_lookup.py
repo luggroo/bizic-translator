@@ -52,10 +52,17 @@ def test_inventory():
   assert count>4000
 
 def test_n_l_before_medials_but_y_still_unrounds():
- assert lookup('连')['ipa']=='liɛ̃²¹'
- assert lookup('脸')['ipa']=='liɛ̃⁵¹'
- assert lookup('年')['ipa']=='ɲiɛ̃²¹'
- assert lookup('娘')['ipa']=='ɲiɛ̃²¹'
- assert map_reading(['jishou','tɕyan1','',''],'north')['ipa']=='tɕiɛ̃⁵⁵'
+ assert lookup('连')['ipa']=='liã²¹'
+ assert lookup('脸')['ipa']=='liã⁵¹'
+ assert lookup('年')['ipa']=='ɲiã²¹'
+ assert lookup('娘')['ipa']=='ɲiã²¹'
+ assert map_reading(['jishou','tɕyan1','',''],'north')['ipa']=='tɕiã⁵⁵'
  assert map_reading(['jishou','tɕya1','',''],'north')['ipa']=='tɕia⁵⁵'
  assert map_reading(['jishou','tɕyei1','',''],'north')['ipa']=='tɕiɛ⁵⁵'
+
+def test_north_all_ian_iang_yan_yang_merge_to_ia_nasal():
+ for source,rimes in [('yongshun',['iɛn','iaŋ']),('jishou',['ian','iaŋ','yan','yaŋ'])]:
+  for r in rimes:
+   x=map_reading([source,'tɕ'+r+'1','',''],'north')
+   assert x['ipa']=='tɕiã⁵⁵'
+   assert x['romanization']=='jiān'

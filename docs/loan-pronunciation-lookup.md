@@ -30,3 +30,5 @@ python3 scripts/lookup-loan.py 难 --target north --choices '{"0":"lan5"}'
 北部i前保留n/l对立。永顺本字记ȵi而吉首本字明确记li时，采用吉首li恢复l，如李、梨；泥、女仍保留鼻音。返回selection_reason说明这一选读，原表不改写。
 
 北部y仍按既定规则变i，包含介音；不新增i/y圆唇对立。需要保留的是这些元音、介音组合前的n/l区别：永顺ȵi…（或ȵy…）与吉首本字li…／ly…对应时，采用吉首l声母。南部y的原规则不变。
+
+北部ian／iang／üan／üang统一为/iã/，拼音ian；永顺iɛn也按此对应。该规则保留前面的n/l对立，如连/liã/与年/ɲiã/。南部映射不变。
