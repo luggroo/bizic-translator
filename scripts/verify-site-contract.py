@@ -118,6 +118,10 @@ def validate(source, metadata_source, site_root, directory, *,
     fingerprints_, witnesses = fingerprints(source, metadata_source, site_root)
     manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
     verify_inputs(manifest, fingerprints_)
+    entry_notes = {entry["id"]: entry["editorialNotes"]
+                   for entry in EXPORTER["read_dictionary"](source)["words"]
+                   if entry.get("editorialNotes")}
+    require(manifest.get("entry_notes", {}) == entry_notes, "Editorial notes differ from canonical source")
     require(manifest.get("sources") == EXPORTER["source_catalog"](metadata_source),
             "Source catalog or canonical source aliases changed")
     if contract_file:

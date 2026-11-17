@@ -177,6 +177,8 @@ def build(source, output, revision="", max_bytes=MAX_SHARD_BYTES, metadata_sourc
                 "record_fields": ["entry_id", "attestation_id", "source", "term", "zh", "en",
                                   "pos", "dialect", "locator", "source_ref", "notations",
                                   "source_term", "term_notation", "accent_provenance"],
+                "entry_notes": {entry["id"]: entry["editorialNotes"]
+                                for entry in data["words"] if entry.get("editorialNotes")},
                 "buckets": {}}
     try:
         for bucket, rows in sorted(buckets.items()):

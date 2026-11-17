@@ -2935,6 +2935,30 @@
     "missing": 1240
   },
   "display_policy": "term is site tone-marked spelling; /IPA/ only when unavailable",
+  "entry_notes": {
+    "w1329": [
+      {
+        "donor": "里",
+        "donorVariety": "汉语（方言待核）",
+        "id": "chinese-loan-w1329",
+        "kind": "借词来源",
+        "reviewedForms": [
+          {
+            "ipa": "li⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "scope": "whole",
+        "text": "方位词 lī /li⁵⁵/ 借自汉语「里」，表示「里、里面」。",
+        "wordIds": [
+          "w1329"
+        ]
+      }
+    ]
+  },
   "format": 2,
   "index_keys": 99931,
   "metadata_source_sha256": "7e380eb315516cb26484e16996fd3fe502bae0ac4531bd4176879e15a62bc2dc",
@@ -2954,7 +2978,7 @@
     "term_notation",
     "accent_provenance"
   ],
-  "revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+  "revision": "da8190b73c20f2728dab5683f902fb4dc5b315aa",
   "shard_limit_bytes": 110000,
   "site_converter_sha256": {
     "grammar-notation.js": "d6f67134d1c6e3bef16ccc58381f35dab90bbb50a0907260eb8133019627e144",
@@ -2967,7 +2991,7 @@
     "yubao.js": "5774f029ff4d0c07ece07b019b812c1ca89925b3d7c1302622af313cef6c701b"
   },
   "source": "luggroo/bizic-dictionary/site/dictionary.json.gz",
-  "source_sha256": "4bf197417bbd6ecca792d405cab0b6046873c3b39757ac583d79ccadd0bfa82c",
+  "source_sha256": "7fd9d51af2af64988fba3f45a5443a9a08af6f67bba749434d4914e6605b6ee1",
   "sources": {
     "1-dr9QHHpr4zjN1OZDN9PmoTxNa7hSt7G": {
       "canonical_id": "1-dr9QHHpr4zjN1OZDN9PmoTxNa7hSt7G",

@@ -27,3 +27,11 @@
 | 糍粑；年糕（日语「餅」） | bābā | /pa⁵⁵pa⁵⁵/ | [w204](https://tujia.biz/text/entry/w204.html)；Brassett 2004；Brassett 2006 rn454447，4.4 |
 
 「年糕」是该词条新增的汉语对应释义；检索日语「餅」时同时查「糍粑／年糕／glutinous rice cake」。
+
+## 方位词
+
+| 义项 | 调号拼音 | IPA | 借词来源与词条 |
+| --- | --- | --- | --- |
+| 里；里面 | lī | /li⁵⁵/ | 汉语「里」；[w1329](https://tujia.biz/text/entry/w1329.html)，Brassett 2004 |
+
+同义的 wótū /wɔ²⁴tʰu⁵⁵/（w2395）另列，按各自词条核对来源。

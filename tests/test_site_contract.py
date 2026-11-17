@@ -185,3 +185,21 @@ def test_id_stability_refuses_corrupt_previous_shards(workspace):
     (output / filename).write_text("tampered", encoding="utf-8")
     with pytest.raises(ContractError, match="Previous shard cannot be trusted"):
         CONTRACT["verify_identity_stability"](source, metadata, output)
+
+
+def test_editorial_notes_survive_static_export_and_reject_loss(workspace):
+    from tujia_lex.static import StaticLexicon
+    source, metadata, site, output, words, _, write_gzip = workspace
+    note = {"id": "chinese-loan-w1", "text": "借自汉语", "wordIds": ["w1"]}
+    words[0]["editorialNotes"] = [note]
+    write_gzip(source, {"words": words})
+    EXPORT["build"](source, output, revision="1" * 40,
+                    metadata_source=metadata, site_root=site)
+    assert check(workspace)["status"] == "verified"
+    assert StaticLexicon(output).search("吃")[0]["editorial_notes"] == [note]
+    manifest_path = output / "manifest.json"
+    manifest = json.loads(manifest_path.read_text())
+    manifest.pop("entry_notes")
+    manifest_path.write_text(json.dumps(manifest))
+    with pytest.raises(ContractError, match="Editorial notes"):
+        check(workspace)

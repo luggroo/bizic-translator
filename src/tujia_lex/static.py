@@ -46,6 +46,7 @@ class StaticLexicon:
         results = []
         for raw in self._bucket(bucket_of(query)).get(normalize(query), []):
             row = dict(zip(self.manifest['record_fields'], raw))
+            row['editorial_notes'] = self.manifest.get('entry_notes', {}).get(row['entry_id'], [])
             original = str(row.get('dialect', ''))
             scope = 'north' if '北' in original and '南' not in original else ('south' if '南' in original and '北' not in original else 'unknown')
             if dialect not in (None, 'any') and scope != dialect:
