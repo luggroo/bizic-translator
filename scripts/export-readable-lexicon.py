@@ -105,6 +105,14 @@ def convert_display_forms(data, site_root):
     return by_id
 
 
+def editorial_notes(data):
+    """Include survey-only notes while retaining canonical entry annotations."""
+    result = dict(data.get("editorialNotesByWordId", {}))
+    result.update({entry["id"]: entry["editorialNotes"]
+                   for entry in data["words"] if entry.get("editorialNotes")})
+    return result
+
+
 def build(source, output, revision="", max_bytes=MAX_SHARD_BYTES, metadata_source=None,
           site_root=None):
     source, output = Path(source), Path(output)
@@ -177,8 +185,7 @@ def build(source, output, revision="", max_bytes=MAX_SHARD_BYTES, metadata_sourc
                 "record_fields": ["entry_id", "attestation_id", "source", "term", "zh", "en",
                                   "pos", "dialect", "locator", "source_ref", "notations",
                                   "source_term", "term_notation", "accent_provenance"],
-                "entry_notes": {entry["id"]: entry["editorialNotes"]
-                                for entry in data["words"] if entry.get("editorialNotes")},
+                "entry_notes": editorial_notes(data),
                 "buckets": {}}
     try:
         for bucket, rows in sorted(buckets.items()):

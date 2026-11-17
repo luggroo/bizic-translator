@@ -105,8 +105,9 @@ def lexical_records(dictionary, catalog=None, aliases=None):
     return records
 
 
-def survey_records(repo):
+def survey_records(repo, entry_notes=None):
     lexical, sentences = [], []
+    entry_notes = entry_notes or {}
     for name in read_json(Path(repo) / "site/yubao-manifest.json"):
         path = Path(repo) / "site" / name
         d = read_json(path)
@@ -116,10 +117,12 @@ def survey_records(repo):
         for row in d.get("words", []):
             serial, zh, ipa, *rest = row
             rid = f"survey-word:{point}:{serial}"
+            public_id = f"yubao-{point}-v-{str(serial).zfill(4)}"
             lexical.append({**base, "id": rid, "kind": "lexicon", "record_type": "survey_lexeme",
                             "entry_id": rid, "text": zh, "zh": zh, "en": "", "pos": "",
                             "forms": [ipa], "ipa": ipa, "notations": {}, "attestations": [],
                             "annotation": rest[0] if rest else "", "raw_row": row,
+                            "editorial_notes": entry_notes.get(public_id, []),
                             "citation": f"{name}, words, {serial}", "sources": [{"id": base["source"],
                             "canonical_id": base["source"], "locator": f"{name}:words:{serial}"}],
                             "lexical_fields": [zh, ipa]})
@@ -233,7 +236,8 @@ def collect(repo, dictionary=None, include_surveys=True):
     repo = Path(repo)
     catalog, aliases = source_catalog(repo)
     lex = lexical_records(dictionary or repo / "site/dictionary.json.gz", catalog, aliases)
-    survey_lex, sentences = survey_records(repo)
+    entry_notes = read_json(dictionary or repo / "site/dictionary.json.gz").get("editorialNotesByWordId", {})
+    survey_lex, sentences = survey_records(repo, entry_notes)
     records = lex + (survey_lex if include_surveys else []) + sentences + longshan_records(repo) + grammar_records(repo) + corpus_records(repo)
     ids = [r["id"] for r in records]
     if len(ids) != len(set(ids)):
