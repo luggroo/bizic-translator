@@ -44,7 +44,9 @@ def test_north_initial_conditioned_in_rime():
  assert lookup('停')['ipa']=='tʰɜ̃²¹'
  assert lookup('丁')['ipa']=='tɜ̃⁵⁵'
  assert lookup('零')['ipa']=='lɜ̃²¹' # Yongshun lɛn2 already maps this way
+ assert lookup('灵')['ipa']=='lɜ̃²¹' # Jishou lin2
  assert lookup('令')['ipa']=='lɜ̃²⁴' # Jishou lin5 now follows the same rule
+ assert lookup('宁')['ipa']=='ɲĩ²¹' # Traditional 寧 alias from Jishou ȵin2
  assert lookup('凝',sense='凝固')['ipa']=='ɲĩ²¹'
  assert lookup('平')['ipa']=='pʰĩ²¹'
  assert lookup('李')['ipa']=='li⁵¹'

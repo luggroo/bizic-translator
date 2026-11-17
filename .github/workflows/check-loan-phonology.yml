@@ -1,0 +1,35 @@
+name: Test Chinese-loan phonology
+
+on:
+  pull_request:
+    paths:
+      - 'data/loan-sources/**'
+      - 'src/tujia_lex/loan_lookup.py'
+      - 'src/tujia_lex/loan_data/**'
+      - 'tests/test_loan_lookup.py'
+      - '.github/workflows/check-loan-phonology.yml'
+  push:
+    paths:
+      - 'data/loan-sources/**'
+      - 'src/tujia_lex/loan_lookup.py'
+      - 'src/tujia_lex/loan_data/**'
+      - 'tests/test_loan_lookup.py'
+      - '.github/workflows/check-loan-phonology.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  loan-phonology:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install tests
+        run: python -m pip install -e . 'pytest>=8,<9'
+      - name: Check northern and southern loan mapping
+        run: python -m pytest tests/test_loan_lookup.py -q
