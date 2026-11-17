@@ -13,7 +13,7 @@ Translate in either direction, preserving participants, events, time, quantity, 
 
 Follow the requested source and target languages, dialect, locality, audience and register. When translating into Tujia without a dialect preference, use Northern/Longshan and state that basis once. When reading Tujia, identify its variety from the text and source. Prepare Northern and Southern versions separately when both are requested. Establish the task through [task setup](references/translation-workflow.md#establish-the-task). Use the designated dictionary, corpus and reference grammar at [tujia.biz](https://tujia.biz/), local tools and supplied materials under the [source rules](references/evidence.md).
 
-按 [output policy](references/output.md) 交付：原文在上、译文在下。土家语译文默认用调号拼音，**没有固定声调的词缀与格助词可不标调**；用户要 IPA 时只用 IPA。gloss（含 PDF）固定按“拼音 → IPA → gloss”三行逐词对齐；叶式拼音仅在用户要求时参照 Feng 的规则或对应例句处理。
+按 [output policy](references/output.md) 交付：原文在上、译文在下。土家语译文默认用调号拼音，**没有固定声调的词缀与格助词可不标调**；用户要 IPA 时只用 IPA。gloss（含 PDF）逐句另起行，每句固定按“拼音 → IPA → gloss”三行逐词对齐；叶式拼音仅在用户要求时参照 Feng 的规则或对应例句处理。
 
 **先交付完整可读的译文。** 译入土家语时，用适合语境的词汇和能产构式；缺词时按[改写与借用](references/paraphrase-and-borrowing.md#complete-before-qualifying)用土家语改写或最小汉语插入。**Skill 里的语法规则写用法和例句；例外给具体来源例句及适用条件。** 只说明影响理解的具体问题；确有必要时在末尾合并说明一次。
 
