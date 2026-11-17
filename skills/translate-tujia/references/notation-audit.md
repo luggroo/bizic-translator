@@ -45,3 +45,9 @@
 记录出处、地点、attestation ID、拼写／IPA 与实际采用的形式；查明的新规则保存到对应专题。普通译文按 [output.md](output.md) 交付，调值缺口与语法分歧集中在总体说明。
 
 [参考语法原表](https://github.com/luggroo/bizic-dictionary/blob/main/docs/reference-grammar.md) · [源转换器](https://github.com/luggroo/bizic-dictionary/blob/main/site/grammar-notation.js)
+
+<a id="word-boundaries"></a>
+
+## 译文与gloss的词界
+
+按网站审定词界，独立词用空格；动词变位与名物化用连字符。能愿内部整体，否定单独切分；xige按前面的谓语结构-xi与独立ge处理。具体形式采用[整体成分表](output.md#modal-components)。
