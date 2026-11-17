@@ -16,6 +16,6 @@ def build():
  for label,raw,hist in json.loads((S/'jiefangyan.json').read_text()):
   c=re.split('[（(]',label)[0]
   for v in sorted({c,a.convert(c)}):add(v,['jiefangyan',raw,label if c!=label else '',hist])
- obj={'entries':entries,'aliases':{k:sorted(v) for k,v in aliases.items()},'sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(S.iterdir())}}
+ obj={'entries':entries,'aliases':{k:sorted(v) for k,v in aliases.items()},'sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(S / name for name in ('yongshun.tsv', 'jishou.tsv', 'jiefangyan.json', 'UPSTREAM-LICENSE'))}}
  raw=json.dumps(obj,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode();(O/'characters.json.gz').write_bytes(gzip.compress(raw,mtime=0));print(len(entries),len(gzip.compress(raw,mtime=0)))
 if __name__=='__main__':build()

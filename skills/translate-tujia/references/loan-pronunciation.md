@@ -1,48 +1,26 @@
-# 新拟汉借词的离线补音
+# 汉借词读音：直接查最终映射表
 
-先查容易取得、适合语境的土家语词和已记录借词，采用其原词形。专业术语、机构名、人名、书名等缺项可直接用汉借词，放入目标方言的语序和构式；不为避免借词而反复扩大改写。
+先采用词库已有词项的记音。缺项、新拟借词和人名等直接查附带的南北映射表；运行时只需汉字、目标方言及必要的分义，不需要知道读音来自哪份字表或哪个同音字。
 
-## 查询
-
-在仓库根目录运行，运行时只需Python标准库，不联网、不下载模型：
+从仓库根目录运行：
 
 ```bash
-python3 scripts/lookup-loan.py 玩具 --target north
+python3 scripts/lookup-loan.py 珙 --target north
 python3 scripts/lookup-loan.py 军 --target south
 python3 scripts/lookup-loan.py 难 --target north --sense 患难
-python3 scripts/lookup-loan.py 难 --target north --choices '{"0":"lan5"}'
+python3 scripts/lookup-loan.py 难 --target north --choices '{"0":"lán"}'
 ```
 
-- `resolved`：整词采用返回的 `romanization`／`ipa`，保留各字的原音、来源及转换记录。
-- `missing-character`：任何一字在两份字表均缺，整个借词只写汉字，不标部分发音，也不拼出无调的整词读音。
-- `needs-selection`：根据原表分义选择候选，用 `--sense` 或位置→原始读音的 `--choices` 复查。原表无分义时结合语境选读；无法判断则整个词保留汉字。
-- 词界按实际借词确定。不能为给已命中的字标音，把一个缺字词临时拆小。正常短语可按既有词界查询。
-- 无法运行查询时保留整词汉字，记录 `not_executed`，不声称已查到拟音。已记录借词仍可采用实际见证。
+个人安装的技能使用 `python3 <skill-root>/scripts/lookup-loan.py`，参数相同。命令只用 Python 标准库，直接读取附带的 `readings.json.gz` 或 `assets/loan-readings.json.gz`，不联网、不加载模型，也不在运行时推导字音。
 
-## 方言、声韵和声调
+| 返回状态 | 下一步 |
+| --- | --- |
+| `resolved` | 整词采用 `romanization`／`ipa`；按词合并内部音节，保留词界。 |
+| `needs-selection` | 用当前语境的 `--sense` 选择分义；仍有多个候选时，以字位置和表中最终拼音／IPA 的 `--choices` 选读。例如“患难”选 `lán`，“困难”选 `lǎn`。 |
+| `missing-character` | 任一字无映射时，整个词保留汉字，整词 IPA 和拼音留空。例如某词一字有音、一字无音时，不输出半个词的发音。 |
 
-| 项目 | 北部龙山／碗米坡 | 南部泸溪 |
-| --- | --- | --- |
-| 字表优先级 | 永顺→吉首 | 解放岩→吉首 |
-| 阴平／阳平／上声／去声 | 55／21／51／24 | 33／21／55／13 |
-| 浊塞音、浊塞擦音 | 吉首b、d、g、dz、dʑ→pʰ、tʰ、kʰ、tsʰ、tɕʰ | 保留 |
-| y | 包括介音均按规则变i | 保留 |
-| n／l | i、y及其介音组合前保留区别；永顺本字合为ȵi…而吉首本字有li…／ly…时用吉首l声母 | 使用本点记音，不套北部修复 |
-| in／en（按声母） | 吉首in在t、tʰ、d、l后→ɜ̃（丁、亭、令）；在ȵ（北部ɲ）等其余声母后仍→ĩ（凝、平）。永顺ɛn、吉首ən→ɜ̃。保留北部鼻化元音，不照抄汉语-n韵尾 | 按南部各自映射 |
-| an／ang | 统一ã，拼音an | 按南部各自映射 |
-| ian／iang／üan／üang | 统一iã，拼音ian；永顺iɛn也同 | 不套北部合并规则 |
-| uan／uang | 统一uã，拼音uan | 按南部各自映射 |
-| 永顺ɛ | ei | 不适用 |
-| io | iau，整韵匹配；ioŋ另列 | 不套北部规则 |
-| f／hu | 拼写统一hu，保留来源IPA，不能把拼写合并当作原音全变x | 保留南部读音 |
-| 解放岩ɛi | 不适用 | ai；古入声字改ei（字表历史调类），或按具体分义选吉首读音 |
-| 解放岩əɯ | 不适用 | 统一ɯ |
-| 军的yn／ỹ | 按北部映射 | ỹ |
+多音字的候选直接列最终读音；不用查询或解释来源。表中分义用于消歧，候选优先级已经在离线整理时确定。北部、南部各查自己的表，不相互套用。
 
-吉首去声编号5，解放岩去声编号4，不能把编号直接当调值。规则按整韵应用，不在别的韵母内部做子串替换。可执行的完整映射以 `src/tujia_lex/loan_data/rules.json` 和 `loan_lookup.py` 为准。已收词条和既有语流调值不被这些默认值覆盖。
+人名按实际语境选择多音字读法；例如前缀“阿”的表内候选需按称谓／人名语境选择。将 `needs-selection` 与 `missing-character` 分开处理，前者已有候选，可继续选读。
 
-## 译文与证据
-
-北部和南部各用自己的代词、名词、关系从句、判断、体貌和语序。借词替换的是词汇槽位，不是把一份北部译文换成南部字音。
-
-证据记录区分 `attested`（已有词条见证）和 `proposed-loan-mapping`（本表新拟补音）。拟音保留源字、原读音、所选分义、调查点、目标读音及转换步骤；不把新拟借词写成已获记录的土家语词。普通交付只需一次简短说明实际采用了借词补音，详细证据留作审校。
+完整 UTF-8 表格为[北部表](https://github.com/luggroo/bizic-translator/blob/main/data/loan-readings-north.tsv)、[南部表](https://github.com/luggroo/bizic-translator/blob/main/data/loan-readings-south.tsv)，列为“汉字、调号拼音、IPA、分义”。整理时先保留直接记录，再用小学堂《洪武正韵》、韵典网《洪武正韵牋》及汉字音典《蒙古字韵》《中原音韵》的同音组补缺；整理证据独立保存，不进入运行时查询。

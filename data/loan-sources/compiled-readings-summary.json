@@ -1,0 +1,59 @@
+{
+  "source_order": [
+    "hongwu-sinica",
+    "hongwu-jian",
+    "menggu",
+    "zhongyuan"
+  ],
+  "homophones_sha256": "fcf940db5d349884e52c3194e75fb9b178e45ac7efdd9024266a0b854106b51c",
+  "readings_sha256": "c148477d6df660c761917b86870ac8c65066ec7ab1e06fc79af738b0e25570c3",
+  "targets": {
+    "north": {
+      "direct_characters": 4621,
+      "direct_unambiguous_anchors": 4382,
+      "hongwu-sinica": {
+        "added_characters": 6537,
+        "ambiguous_characters": 917
+      },
+      "hongwu-jian": {
+        "added_characters": 344,
+        "ambiguous_characters": 52
+      },
+      "menggu": {
+        "added_characters": 1128,
+        "ambiguous_characters": 113
+      },
+      "zhongyuan": {
+        "added_characters": 388,
+        "ambiguous_characters": 61
+      },
+      "total_characters": 13018,
+      "total_readings": 14874,
+      "added_characters": 8397
+    },
+    "south": {
+      "direct_characters": 4605,
+      "direct_unambiguous_anchors": 4405,
+      "hongwu-sinica": {
+        "added_characters": 6556,
+        "ambiguous_characters": 1039
+      },
+      "hongwu-jian": {
+        "added_characters": 343,
+        "ambiguous_characters": 49
+      },
+      "menggu": {
+        "added_characters": 1128,
+        "ambiguous_characters": 128
+      },
+      "zhongyuan": {
+        "added_characters": 391,
+        "ambiguous_characters": 54
+      },
+      "total_characters": 13023,
+      "total_readings": 15051,
+      "added_characters": 8418
+    }
+  },
+  "policy": "Direct readings first; same-tone historical homophones fill gaps. Exclude donors with multiple historical groups (a modern reading may belong to another historical sense). Use only original unambiguous anchors, never inferred donors. Independent donor majority; ties remain multiple candidates."
+}

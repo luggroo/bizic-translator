@@ -1,4 +1,5 @@
-from tujia_lex.loan_lookup import lookup,map_reading,assets
+from tujia_lex.loan_lookup import lookup
+from tujia_lex.loan_build import map_reading, assets
 
 def test_whole_word_missing():
  r=lookup('百𰻞');assert r['ipa'] is None and r['romanization'] is None and r['display']=='百𰻞' and 'characters' not in r
@@ -7,7 +8,7 @@ def test_polyphones():
  assert lookup('难')['status']=='needs-selection'
  assert lookup('难',sense='困难')['ipa']=='lã²¹'
  assert lookup('难',sense='患难')['ipa']=='lã²⁴'
- assert lookup('难',choices={0:'lan5'})['ipa']=='lã²⁴'
+ assert lookup('难',choices={0:'lán'})['ipa']=='lã²⁴'
 
 def test_register():
  assert lookup('家',sense='家庭')['ipa']=='tɕia⁵⁵'
@@ -22,10 +23,10 @@ def test_north():
 def test_north_i_keeps_l_and_n_distinct():
  assert lookup('李')['ipa']=='li⁵¹'
  assert lookup('李')['romanization']=='lì'
- assert lookup('李')['characters'][0]['reading']['source']=='jishou'
+ assert 'source' not in lookup('李')['characters'][0]['reading']
  assert lookup('梨')['ipa']=='li²¹'
- assert lookup('泥')['ipa']=='ɲi²¹'
- assert lookup('女')['ipa']=='ɲi⁵¹'
+ assert lookup('泥')['ipa']=='ȵi²¹'
+ assert lookup('女')['ipa']=='ȵi⁵¹'
 
 def test_north_initial_conditioned_in_rime():
  # Baojing-type onset condition is adapted into Northern Tujia nasal vowels,
@@ -46,8 +47,8 @@ def test_north_initial_conditioned_in_rime():
  assert lookup('零')['ipa']=='lɜ̃²¹' # Yongshun lɛn2 already maps this way
  assert lookup('灵')['ipa']=='lɜ̃²¹' # Jishou lin2
  assert lookup('令')['ipa']=='lɜ̃²⁴' # Jishou lin5 now follows the same rule
- assert lookup('宁')['ipa']=='ɲĩ²¹' # Traditional 寧 alias from Jishou ȵin2
- assert lookup('凝',sense='凝固')['ipa']=='ɲĩ²¹'
+ assert lookup('宁')['ipa']=='ȵĩ²¹' # Traditional 寧 alias from Jishou ȵin2
+ assert lookup('凝',sense='凝固')['ipa']=='ȵĩ²¹'
  assert lookup('平')['ipa']=='pʰĩ²¹'
  assert lookup('李')['ipa']=='li⁵¹'
 
@@ -63,7 +64,7 @@ def test_variants():
  assert lookup('军','south')['ipa']==lookup('軍','south')['ipa']
 
 def test_backup():
- r=lookup('玩具');assert r['status']=='resolved' and all(x['reading']['source']=='jishou' for x in r['characters'])
+ r=lookup('玩具');assert r['status']=='resolved' and all(set(x['reading']) == {'romanization', 'ipa', 'senses'} for x in r['characters'])
 
 def test_inventory():
  for target,sources in [('north',['yongshun','jishou']),('south',['jiefangyan','jishou'])]:
@@ -79,8 +80,8 @@ def test_inventory():
 def test_n_l_before_medials_but_y_still_unrounds():
  assert lookup('连')['ipa']=='liã²¹'
  assert lookup('脸')['ipa']=='liã⁵¹'
- assert lookup('年')['ipa']=='ɲiã²¹'
- assert lookup('娘')['ipa']=='ɲiã²¹'
+ assert lookup('年')['ipa']=='ȵiã²¹'
+ assert lookup('娘')['ipa']=='ȵiã²¹'
  assert map_reading(['jishou','tɕyan1','',''],'north')['ipa']=='tɕiã⁵⁵'
  assert map_reading(['jishou','tɕya1','',''],'north')['ipa']=='tɕia⁵⁵'
  assert map_reading(['jishou','tɕyei1','',''],'north')['ipa']=='tɕiɛ⁵⁵'
@@ -91,3 +92,37 @@ def test_north_all_ian_iang_yan_yang_merge_to_ia_nasal():
    x=map_reading([source,'tɕ'+r+'1','',''],'north')
    assert x['ipa']=='tɕiã⁵⁵'
    assert x['romanization']=='jiān'
+
+
+def test_historical_homophones_fill_missing_graphs():
+ assert lookup('朵')['romanization']=='dò'
+ assert lookup('朵')['ipa']==lookup('朶')['ipa']
+ assert lookup('珙')['romanization']=='gòng'
+ assert lookup('女儿会')['status']=='resolved'
+
+def test_only_compiled_table_is_required(tmp_path, monkeypatch):
+ import shutil
+ import tujia_lex.loan_lookup as runtime
+ shutil.copy(runtime.D / 'readings.json.gz', tmp_path / 'readings.json.gz')
+ monkeypatch.setattr(runtime, 'D', tmp_path)
+ runtime.readings.cache_clear()
+ try:
+  assert runtime.lookup('珙')['romanization']=='gòng'
+  assert runtime.lookup('难',sense='患难')['ipa']=='lã²⁴'
+  assert runtime.lookup('百𰻞')['status']=='missing-character'
+ finally:
+  runtime.readings.cache_clear()
+
+def test_runtime_table_has_no_provenance():
+ from tujia_lex.loan_lookup import readings
+ for target in ['north','south']:
+  assert len(readings()[target])>12000
+  for rows in readings()[target].values():
+   for row in rows:
+    assert set(row)=={'romanization','ipa','sense','priority'}
+
+def test_final_reading_choices_and_orthography():
+ assert lookup('难',choices={0:'lán'})['ipa']=='lã²⁴'
+ assert lookup('难',choices={0:'lã²⁴'})['ipa']=='lã²⁴'
+ assert lookup('難',sense='患難')['ipa']=='lã²⁴'
+ assert lookup('难',choices={0:'missing'})['status']=='needs-selection'

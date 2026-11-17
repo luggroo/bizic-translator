@@ -10,6 +10,7 @@ requires-python = ">=3.10"
 dependencies = []
 
 [project.optional-dependencies]
+loan-build = ["opencc-python-reimplemented>=0.1.7,<1"]
 embedding = ["numpy>=1.26,<3", "torch>=2.6,<3", "transformers==4.51.3", "huggingface-hub==0.30.2", "safetensors>=0.5.3"]
 test = ["pytest>=8,<9", "numpy>=1.26,<3"]
 

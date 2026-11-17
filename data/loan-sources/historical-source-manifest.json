@@ -1,0 +1,35 @@
+{
+  "hongwu-sinica": {
+    "source": "小學堂《洪武正韻》",
+    "official_url": "https://xiaoxue.iis.sinica.edu.tw/ccrdata/",
+    "official_download": "https://xiaoxue.iis.sinica.edu.tw/ccrdata/file/ccr03_yunshu_data_xlsx.zip",
+    "mirror": "https://github.com/jengzang/dialects-build/blob/main/data/dependency/洪武正韻.xlsx",
+    "mirror_revision": "bf42fcce4d2ea3b7f7a00fb775ba5988045b6b7f",
+    "sha256": "6b26266f4b4f9eda63403a43e20d4f25b47e95cea1ef5f50e6b158755e19e329",
+    "main_records": 14561,
+    "graph_strings": 10591,
+    "group_key": "声调＋清浊＋小学堂拟音；同一字的各读音分别建组",
+    "note": "公开副本保留字号与四张工作表；官方批量包当前IP封锁，未取得其原文件散列供逐字节比较。"
+  },
+  "hongwu-jian": {
+    "source": "韻典網《洪武正韻牋》正文",
+    "url": "https://ytenx.org/tcyts/",
+    "revision": "f5720947e9b92034bc4428bd94a8d414ebe559a8",
+    "path": "ytenx/sync/tcenghyonhtsen/Dzih.txt",
+    "group_key": "正文小韵编号；不读取另列的古音、逸字或释义"
+  },
+  "menggu": {
+    "source": "漢字音典《蒙古字韻》",
+    "url": "https://github.com/osfans/MCPDict/blob/master/tools/tables/output/蒙古字韻.tsv",
+    "revision": "f0e06fc5317cc4e898807b4fd0565129db4b619e",
+    "records": 9733,
+    "group_key": "完整拟音＋调类；中原音韵使用第一列完整拟音方案，不混合方案"
+  },
+  "zhongyuan": {
+    "source": "漢字音典《中原音韻》",
+    "url": "https://github.com/osfans/MCPDict/blob/master/tools/tables/output/中原音韻.tsv",
+    "revision": "f0e06fc5317cc4e898807b4fd0565129db4b619e",
+    "records": 6041,
+    "group_key": "完整拟音＋调类；中原音韵使用第一列完整拟音方案，不混合方案"
+  }
+}
