@@ -14,6 +14,7 @@ dist/
 # Only the reusable evaluation is published; local case studies stay local.
 /docs/*
 !/docs/semantic-retrieval-evaluation.md
+!/docs/static-route-latency.md
 !/docs/evaluation/
 /scripts/*
 !/scripts/download-embedding-model.py

@@ -82,7 +82,7 @@ class RetrievalSession:
                 self.cache.popitem(last=False)
         return result, {'cache_hit': cached, 'seconds': time.perf_counter() - start}
 
-    def run(self, plan: QueryPlan, route='C', *, budget='natural', top_k=20, candidate_budget=20, hybrid_static=True):
+    def run(self, plan: QueryPlan, route='D', *, budget='natural', top_k=20, candidate_budget=20, hybrid_static=True):
         if route not in 'ABCDE' or len(route) != 1 or budget not in {'natural', 'matched'}:
             raise ValueError('invalid route or budget')
         if not 1 <= top_k <= 100 or not 1 <= candidate_budget <= 1000:
@@ -128,8 +128,11 @@ class RetrievalSession:
             r['selection_status'] = 'rejected' if r['rejection'] else ('component_evidence' if r['supported_components'] else 'unresolved_neighbor')
         # A/B preserve original ordering. C balances queries, without gold-aware reranking.
         if route in 'CD':
+            first_query = {}
+            for i, trace in enumerate(traces):
+                first_query.setdefault(trace['query'], i)
             candidates.sort(key=lambda r: (min(p['rank'] for p in r['provenance']),
-                min(i for i,t in enumerate(traces) if any(p['query'] == t['query'] for p in r['provenance'])), -r['rrf'], r['id']))
+                min(first_query[p['query']] for p in r['provenance']), -r['rrf'], r['id']))
         elif route == 'E':
             candidates.sort(key=lambda r: (bool(r['rejection']), not bool(r['supported_components']),
                                            -r['rrf'], source_priority(r), r['id']))

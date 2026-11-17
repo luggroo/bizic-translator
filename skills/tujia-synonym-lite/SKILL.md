@@ -5,11 +5,9 @@ description: No-model, low-cost semantic-bridge retrieval for Tujia translation;
 
 # Tujia synonym-lite / 土家语轻量级近义概念检索
 
-Use **Skill-based concept expansion and actual dictionary exact lookup** when the BGE runtime is unavailable. Both routes use [semantic decomposition](../translate-tujia/references/semantic-decomposition.md). Deliver the complete translation in the requested target language first; add a specific note only when it affects understanding, and report the actual retrieval mode at the end.
+Use **Skill-based concept expansion and actual dictionary exact lookup** as the default translation retrieval route. Both routes use [semantic decomposition](../translate-tujia/references/semantic-decomposition.md). Deliver the complete translation in the requested target language first; add a specific note only when it affects understanding, and report the actual retrieval mode at the end.
 
-Choose this route using the [environment preflight](../translate-tujia/references/runtime-lifecycle.md): use reusable BGE assets when present; otherwise use the static dictionary route, or provision BGE once when execution and durable storage are available.
-
-Record the actual available lookup route and its assets. When an essential runtime, model or durable storage resource is missing, select the static text/shard route from the recovery table below.
+Use local static shards or published text evidence directly. Reuse one reader and the [translation query ledger](../translate-tujia/references/execution-state.md#query-ledger) for the whole task. Only an explicit embedding/BGE request enters the separate [embedding preflight](../translate-tujia/references/runtime-lifecycle.md).
 
 ## Failure → recovery (follow before expanding search)
 
@@ -17,7 +15,7 @@ Use [the translator's recovery router](../translate-tujia/references/recovery-pl
 
 | Trigger | Instead → |
 | --- | --- |
-| Environment preflight selects static-only | Use the [text dictionary route](../translate-tujia/references/web-evidence.md) when URL reading exists; otherwise use readable static/supplied evidence. Label actual lookup **Skill-based**, with no cosine score. Missing assets alone do not require fallback when capability and durable provisioning are established. |
+| Default translation lookup | Use the [text dictionary route](../translate-tujia/references/web-evidence.md) when URL reading exists; otherwise use readable static/supplied evidence. Label actual lookup **Skill-based**, with no cosine score. |
 | Original compound is absent | Query a plain paraphrase, predicate, participant/object head, and necessary relation using `--related` if not in `concepts.json`. |
 | No static shard was readable | Recalculate the bucket from NFKC/casefold UTF-8 and inspect `manifest.json`; if the export is missing, use an authorized local dictionary/corpus checkout. Report **lookup unavailable**, rather than **zero matches**. |
 | A hypernym or example loses meaning | Add the missing species/property/action as a modifier or a second clause, or reject the candidate and try another verified witness. |
@@ -36,7 +34,7 @@ With webpage access, query the [published text dictionary](../translate-tujia/re
 4. **Select witnesses by meaning and source**, not just the match count. For Northern Longshan start with Brassett (2006), then 2004; broaden to attested Longshan/northern evidence with explicit provenance. Resolve the source alias using `manifest.sources[r[2]].canonical_id`. Keep each spelling with its own attestation and source; check an explicitly Longshan or Brassett witness and label any Northern/Southern borrowing as such.
 5. **Compose with target-language grammar.** Read `../translate-tujia/references/semantic-decomposition.md` plus the relevant topic in `../translate-tujia/references/clause-patterns.md` or `aspect-modality.md`; determine the intended nominalized participant/object and confidently reuse productive syntax. Keep exact-attestation distinctions in the audit, not repeated beside the fluent translation.
 6. **Deliver the translation first.** Follow the main skill's [output rules](../translate-tujia/references/output.md): source above target; gloss in Pinyin → IPA → gloss alignment; non-fixed-tone suffixes and case particles may be left unmarked. Use versioned `term` and its paired IPA; keep `source_term` for internal provenance. Show the retrieval mode and one overall quality note. Keep detailed query traces for explicit retrieval audits.
-7. **Bound cost:** normally 8–12 targeted queries, deduplicated buckets and cached results. If no native equivalent emerges, paraphrase productively or use the smallest meaningful Chinese insertion. For each citation, copy the retrieved witness ID; for missing tones use the source-aligned notation audit and mark the local missing span; for scores report ‘Skill-based (no embedding score)’.
+7. **Bound cost:** normally 8–12 distinct targeted queries per concept in total across scripts and tools, including literal lookup; reuse completed queries, deduplicated buckets and cached results. Stop when required semantic slots have supported witnesses and the construction is resolved; use the remaining budget only for a named gap. If no native equivalent emerges, paraphrase productively or use the smallest meaningful Chinese insertion. For each citation, copy the retrieved witness ID; for missing tones use the source-aligned notation audit and mark the local missing span; for scores report ‘Skill-based (no embedding score)’.
 
 ## Semantic decomposition → constructional recomposition
 
@@ -67,7 +65,7 @@ For a short input, query the original term, a plain paraphrase, the core predica
 译文：...（完整自然的拟译；最后统一一条质量说明）
 ```
 
-This subskill is a fallback **retrieval workflow**; `tujia-lex` BGE remains the preferred retrieval implementation whenever its model and compatible full index can genuinely run.
+This is the default retrieval workflow. BGE remains available through an explicit embedding request; a static miss alone does not switch engines.
 
 ## Shared executable planner
 

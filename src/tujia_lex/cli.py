@@ -8,11 +8,9 @@ import sys
 import urllib.request
 from pathlib import Path
 
-from .data import collect, read_json
-from .index import Index, build_index
-
 
 def fetch(url, output):
+    from .data import read_json
     path = Path(output)
     path.parent.mkdir(parents=True, exist_ok=True)
     raw = urllib.request.urlopen(url, timeout=120).read()
@@ -47,7 +45,7 @@ def main(argv=None):
     s = sub.add_parser("search")
     s.add_argument("query")
     s.add_argument("--index", required=True)
-    s.add_argument("--mode", choices=["exact", "semantic"], default="semantic")
+    s.add_argument("--mode", choices=["exact", "semantic"], default="exact", help="Semantic inference requires explicit --mode semantic")
     s.add_argument("--kind", choices=["lexicon", "construction"], default="lexicon")
     s.add_argument("--model-path", default="BAAI/bge-base-zh-v1.5")
     s.add_argument("--dialect", choices=["north", "south", "unknown"])
@@ -63,7 +61,7 @@ def main(argv=None):
     p.add_argument("--context", default="")
     p.add_argument("--interpretation", type=Path, help="JSON semantic interpretation for an opaque/contextual sense")
     p.add_argument("--dialect", choices=["north", "south", "any"], default="north")
-    p.add_argument("--route", choices=list("ABCDE"), default="C")
+    p.add_argument("--route", choices=list("ABCDE"), default="D")
     p.add_argument("--index")
     p.add_argument("--model-path", default="BAAI/bge-base-zh-v1.5")
     p.add_argument("--lexicon", default="skills/translate-tujia/lexicon")
@@ -79,6 +77,8 @@ def main(argv=None):
         if args.command == "fetch-dictionary":
             out = fetch(args.url, args.output)
         elif args.command == "build":
+            from .data import collect, read_json
+            from .index import build_index
             from .embedding import BGEEncoder
             records = collect(args.repo, args.dictionary)
             # Assert full dictionary coverage before spending CPU on embeddings.
@@ -109,13 +109,17 @@ def main(argv=None):
             from .retrieval import RetrievalSession
             from .static import StaticLexicon
             from .constructions import compose
-            from .index import load_index
             interpretation = json.loads(args.interpretation.read_text()) if args.interpretation else None
             shared = plan(args.query, args.context, args.dialect, interpretation=interpretation, max_queries=args.max_queries)
             if args.dry_run:
                 out = shared.to_dict()
             else:
-                index = load_index(str(Path(args.index).resolve())) if args.index else None
+                index = None
+                if args.route in "ABCE":
+                    if not args.index:
+                        raise ValueError("--index is required for routes A, B, C and E")
+                    from .index import load_index
+                    index = load_index(str(Path(args.index).resolve()))
                 encoder = None
                 if args.route in "BCE":
                     from .embedding import load_encoder
@@ -124,6 +128,7 @@ def main(argv=None):
                 out = RetrievalSession(index, encoder, static).run(shared, args.route, budget=args.budget, top_k=args.top_k)
                 out["composition"] = compose(shared, out["candidates"])
         else:
+            from .index import Index
             index = Index(args.index)
             if args.command == "inspect":
                 out = index.manifest if args.record_id is None else next((r for r in index.records if r["id"] == args.record_id), None)

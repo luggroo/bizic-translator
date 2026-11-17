@@ -3,7 +3,7 @@
 
 Use this page to select the next action when retrieval, grammar or transcription needs another route. Apply it to the main Skill and the synonym-lite route.
 
-**Fast path:** source meaning → Brassett 2006/2004 → BGE or synonym-lite → original witness → relevant grammar topic → complete clause. Reuse records and loaded assets throughout.
+**Fast path:** source meaning → Brassett 2006/2004 → static synonym-lite (BGE only when explicitly requested) → original witness → relevant grammar topic → complete clause. Reuse records and loaded assets throughout.
 
 | Situation | Action | Continue with |
 | --- | --- | --- |
@@ -15,7 +15,7 @@ Use this page to select the next action when retrieval, grammar or transcription
 | Text-only tools with a gzip dictionary | Prefer [published text pages](web-evidence.md); read UTF-8 shards through [retrieval](retrieval.md) when their paths can actually be resolved. | Exact source-linked witnesses. |
 | Source or web material unavailable | Read the matching local source record or authorized supplied material; inspect its citation and full attestation. | Available source-linked words and constructions. |
 | Book-only grammar | Prepare a reference-grammar addition proposal or add a reusable skill entry with forms, conditions, examples and citations; follow [source maintenance](evidence.md#book-only-findings). | A rule future translations can use directly. |
-| Missing BGE assets | Run [environment preflight](runtime-lifecycle.md), inspect existing assets and select reuse, setup or static retrieval. | The available retrieval engine. |
+| Missing BGE assets during an explicit embedding task | Run [environment preflight](runtime-lifecycle.md), inspect existing assets and select reuse, setup or static retrieval. | The available retrieval engine. |
 | Model/index identity | Check manifest, source revision, model metadata and a current query. | 检索模式：Embedding after inference; otherwise static lookup. |
 | Reusable asset storage | Record paths and lifecycle in `.local/tujia-runtime.json`; use retained storage for reusable assets and temporary paths for scratch/tests. | Reused assets or static lookup while storage is arranged. |
 | Compound or literary expression | Use [semantic decomposition](semantic-decomposition.md) to retrieve paraphrases, predicates, participants and results. | An equivalent native construction. |

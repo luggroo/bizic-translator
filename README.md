@@ -20,7 +20,7 @@ The reader uses the bundled static dictionary and Python's standard library. It 
 
 本项目提供[双向土家语翻译 Skill](skills/translate-tujia/SKILL.md)，结合[土家语词典、语法和语料](https://tujia.biz/)组织译文、核对来源。The skill translates in both directions using source-linked dictionaries, grammar and texts.
 
-`tujia-lex` retrieves Tujia lexical senses and attested constructions using Chinese and English gloss queries. For input in another language, derive matching lookup queries from its intended meaning; the lookup language does not determine the translation language. It combines literal lookup with a real BGE embedding model and keeps each result's source, dialect, locality, spelling and citation available for inspection.
+`tujia-lex` retrieves Tujia lexical senses and attested constructions using Chinese and English gloss queries. For input in another language, derive matching lookup queries from its intended meaning; the lookup language does not determine the translation language. By default it uses static exact lookup with semantic decomposition; an explicit embedding request can use a real BGE model. Both routes keep each result's source, dialect, locality, spelling and citation available for inspection.
 
 Lexical similarity supplies candidates. Translation still requires checking meaning, predicate class, argument structure, modality, negation and source compatibility. The reusable [translate-tujia Skill](skills/translate-tujia/SKILL.md) describes that workflow.
 
@@ -53,13 +53,19 @@ Run `python scripts/check-grammar-skill.py` from the repository or full offline 
 
 ## Two retrieval modes (always disclose which ran)
 
-`translate-tujia` first performs an [environment and persistence preflight](skills/translate-tujia/references/runtime-lifecycle.md), before installing packages, downloading weights or building an index. Reuse a compatible existing installation first, including offline. Provision missing assets only when execution, resources, download access and a durable destination are established; otherwise go directly to static lookup. A real model query must return actual scores, IDs and source witnesses.
+`translate-tujia` defaults to static dictionary lookup and bounded semantic expansion, including when BGE is already installed. Ordinary translation skips model, resource and storage preflight. `tujia-lex plan EXPRESSION` defaults to route D; `search` defaults to exact mode over the optional persisted index and requires the index dependencies from `.[embedding]`. Static `plan` and synonym-lite use only Python’s standard library.
 
-When the environment cannot run/install BGE, it invokes the separate [tujia-synonym-lite skill](skills/tujia-synonym-lite/SKILL.md), backed by [a bounded concept-expansion map](skills/tujia-synonym-lite/concepts.json) and the existing static dictionary shards. This is **human/skill guided near-synonym/paraphrase/component expansion plus exact attestation lookup**, never embedding. Both the first substantive progress update and final translation explicitly say which retrieval mode was used.
+Embedding is a separate opt-in route: explicitly select `plan --route B/C/E` or `search --mode semantic`. Only then follow the [embedding lifecycle](skills/translate-tujia/references/runtime-lifecycle.md), reusing compatible assets before provisioning missing ones. Install ML dependencies with `pip install '.[embedding]'`; the default package has no ML dependencies. A static miss does not automatically enable inference.
+
+Both routes keep actual witnesses and source metadata. Use the [execution state](skills/translate-tujia/references/execution-state.md) to pin evidence, share a per-concept query budget across tools, and retain structured translations for gloss, webpage and PDF follow-ups. Report the engine actually used after successful retrieval.
+
+See [local latency measurements and validation limits](docs/static-route-latency.md).
 
 Run the lightweight mode locally, without ML dependencies:
 
 ```bash
+# Batch concepts in one process to reuse verified shards:
+python scripts/lightweight-synonym-search.py '经济损失' '路人' '香味' --dialect north
 python scripts/lightweight-synonym-search.py '经济损失' --dialect north
 python scripts/lightweight-synonym-search.py '路人' --dialect north
 python scripts/lightweight-synonym-search.py '香味' --dialect north
@@ -74,9 +80,9 @@ The static shard files must be present (they are tracked in this repo; the defau
 
 
 
-## Install
+## Optional embedding installation
 
-Before running these commands, inspect existing application/model/index paths and their manifests. A complete compatible installation needs a query, not another install. For missing assets, confirm Python/CPU/RAM/free disk and required download access, then select provider-documented persistent storage. Record asset paths, versions and retention evidence in the Git-ignored `.local/tujia-runtime.json`; future agents read it first. See the [runtime lifecycle](skills/translate-tujia/references/runtime-lifecycle.md) for the reuse-ready / provisionable / static-only decision.
+Only for an explicit embedding request. Before running these commands, inspect existing application/model/index paths and their manifests. A complete compatible installation needs a query, not another install. For missing assets, confirm Python/CPU/RAM/free disk and required download access, then select provider-documented persistent storage. Record asset paths, versions and retention evidence in the Git-ignored `.local/tujia-runtime.json`; future agents read it first. See the [runtime lifecycle](skills/translate-tujia/references/runtime-lifecycle.md) for the reuse-ready / provisionable / static-only decision.
 
 The relative `.venv` and `.cache` paths below are appropriate only inside a retained checkout or with an established durable backup/restore route. Directory names do not prove persistence. If a cloud workspace's lifetime is unclear, seek a persistent volume, reusable environment snapshot or authorized artifact destination before a new large setup. Use `/tmp` only for scratch/probes/tests, not as the sole home of reusable models, data, indexes or the application. An offline environment with all assets present can still run; an unsupported environment should use static retrieval without attempting this pipeline.
 
@@ -110,15 +116,15 @@ The model downloader pins `BAAI/bge-base-zh-v1.5` revision `f03589ceff5aac7111bd
 .venv/bin/tujia-lex search 守候 --index .cache/bge-index --mode exact
 
 # Real semantic candidates within a preferred source collection.
-.venv/bin/tujia-lex search 守候 --index .cache/bge-index \
+.venv/bin/tujia-lex search 守候 --mode semantic --index .cache/bge-index \
   --model-path .cache/models/bge-base-zh-v1.5 --source brassett-2004 --dialect north
 
 # Construction retrieval is a distinct result type.
-.venv/bin/tujia-lex search '用刀切肉，工具在动作前面' --index .cache/bge-index \
+.venv/bin/tujia-lex search '用刀切肉，工具在动作前面' --mode semantic --index .cache/bge-index \
   --model-path .cache/models/bge-base-zh-v1.5 --kind construction --dialect north
 
 # A specific survey point.
-.venv/bin/tujia-lex search '用刀切肉' --index .cache/bge-index \
+.venv/bin/tujia-lex search '用刀切肉' --mode semantic --index .cache/bge-index \
   --model-path .cache/models/bge-base-zh-v1.5 --kind construction --point 60757
 
 .venv/bin/tujia-lex inspect --index .cache/bge-index
@@ -274,7 +280,7 @@ an `Interpretation` through the Python API or `--interpretation FILE.json`:
 
 This interpretation is engine-independent. It can express direct synonyms,
 paraphrases, required components, optional heads, argument gaps, negation, modality
-and aspect. Production sessions reuse loaded models/indexes, encoded queries and
+and aspect. Explicit embedding sessions reuse loaded models/indexes and encoded queries; default static sessions reuse
 verified static buckets. The default cap is ten distinct planned queries; hybrid
 retrieval uses at most twenty engine searches. Missing or incompatible BGE assets
 raise an error rather than producing substitute similarity scores.

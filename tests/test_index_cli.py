@@ -36,7 +36,7 @@ def test_actual_model_index_search_provenance_and_cli(repo, tmp_path, real_encod
     assert all(r["dialect"] == "north" for r in index.search("好", encoder=real_encoder, dialect="north"))
     filtered = index.search("守候", encoder=real_encoder, source="brassett-2004", pos="vt.")
     assert all(r["pos"] == "vt." and any(s["canonical_id"] == "brassett-2004" for s in r["sources"]) for r in filtered)
-    result = subprocess.run([sys.executable, "-m", "tujia_lex.cli", "search", "守候", "--index", str(target),
+    result = subprocess.run([sys.executable, "-m", "tujia_lex.cli", "search", "守候", "--mode", "semantic", "--index", str(target),
                              "--model-path", real_encoder.model_path], capture_output=True, text=True)
     assert result.returncode == 0, result.stderr
     assert json.loads(result.stdout)["results"][0]["retrieval_mode"] == "semantic"

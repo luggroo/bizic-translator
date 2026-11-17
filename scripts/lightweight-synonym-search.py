@@ -7,29 +7,17 @@ queries; composing a phrase and judging synonyms remain translation decisions.
 from __future__ import annotations
 
 import argparse
-import importlib.util
 import json
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
-from tujia_lex.query_plan import plan
-from tujia_lex.static import StaticLexicon
+from tujia_lex.query_plan import plan, normalize
+from tujia_lex.static import StaticLexicon, bucket_of
 
 DEFAULT_LEXICON = ROOT / "skills/translate-tujia/lexicon"
 DEFAULT_CONCEPTS = ROOT / "skills/tujia-synonym-lite/concepts.json"
-
-# Reuse the existing FNV sharding, hash verification, and exact-match lookup.
-_spec = importlib.util.spec_from_file_location(
-    "bizic_export_readable_lexicon", ROOT / "scripts/export-readable-lexicon.py"
-)
-if _spec is None or _spec.loader is None:
-    raise RuntimeError("Missing static lexicon reader")
-_module = importlib.util.module_from_spec(_spec)
-_spec.loader.exec_module(_module)
-lookup = _module.lookup
-normalize = _module.normalize
 
 
 def candidate_queries(query: str, concept_map: dict, related: str = "", max_queries: int = 10):
@@ -60,23 +48,24 @@ def is_in_dialect(value: str, wanted: str | None) -> bool:
 
 
 def run(query: str, directory: Path, concept_path: Path, related: str = "",
-        dialect: str = "north", max_queries: int = 10, limit_per_query: int = 4):
+        dialect: str = "north", max_queries: int = 10, limit_per_query: int = 4, *,
+        lexicon: StaticLexicon | None = None):
     if not 1 <= limit_per_query <= 10:
         raise ValueError("limit_per_query must be 1..10")
     concepts = json.loads(concept_path.read_text(encoding="utf-8"))
-    manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
+    if not 1 <= max_queries <= 12:
+        raise ValueError("max_queries must be 1..12")
+    lexicon = lexicon if lexicon is not None else StaticLexicon(directory)
+    manifest = lexicon.manifest
     fields = manifest["record_fields"]
-    required = ("entry_id", "attestation_id", "source", "term", "zh", "en", "pos", "dialect",
-                "locator", "source_ref")
-    field_idx = {field: fields.index(field) for field in required}
-    concept, queries = candidate_queries(query, concepts, related, max_queries)
+    concept = concepts.get("concepts", {}).get(query, {})
     shared = plan(query, dialect=dialect, related=[x.strip() for x in related.split(",") if x.strip()],
                   max_queries=max_queries)
-    lexicon = StaticLexicon(directory)
+    queries = [{"query": q.query, "relation": q.relation} for q in shared.queries]
     results = []
     for candidate in queries:
         # Exact matching; lookup validates the SHA-256 and file sizes before returning rows.
-        cached_rows = lexicon._bucket(_module.bucket_of(candidate["query"]))
+        cached_rows = lexicon._bucket(bucket_of(candidate["query"]))
         raw_rows = cached_rows.get(normalize(candidate["query"]), [])[:100]
         matches = []
         for raw in raw_rows:
@@ -114,7 +103,7 @@ def run(query: str, directory: Path, concept_path: Path, related: str = "",
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("query")
+    p.add_argument("query", nargs="+", help="One concept or a batch sharing verified shard reads")
     p.add_argument("--directory", type=Path, default=DEFAULT_LEXICON)
     p.add_argument("--concepts", type=Path, default=DEFAULT_CONCEPTS)
     p.add_argument("--related", default="", help="Comma-separated extra concept or paraphrase queries")
@@ -122,8 +111,11 @@ def main():
     p.add_argument("--max-queries", type=int, default=10)
     p.add_argument("--limit-per-query", type=int, default=4)
     args = p.parse_args()
-    result = run(args.query, args.directory, args.concepts, args.related,
-                 args.dialect, args.max_queries, args.limit_per_query)
+    lexicon = StaticLexicon(args.directory)
+    results = [run(query, args.directory, args.concepts, args.related,
+                   args.dialect, args.max_queries, args.limit_per_query, lexicon=lexicon)
+               for query in args.query]
+    result = results[0] if len(results) == 1 else {"mode": "skill_based", "results": results}
     print(json.dumps(result, ensure_ascii=False, indent=2))
 
 

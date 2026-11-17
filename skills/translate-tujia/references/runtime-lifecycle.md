@@ -1,4 +1,6 @@
-# Environment preflight and durable reuse
+# Optional embedding route: environment preflight and durable reuse
+
+Enter only when the user explicitly requests embedding/BGE or selects an embedding route (B/C/E). Ordinary translation uses static evidence even when models are already installed; skip this preflight entirely. An unsuccessful static lookup does not authorize embedding setup.
 
 Read **before installing, downloading or building**. Decide from cheap environment checks; do not test suitability by running the entire setup pipeline. [Retrieval](retrieval.md) describes the queries after this decision.
 
@@ -27,6 +29,6 @@ Keep the application environment, pinned model, dictionary snapshot and complete
 
 Record a local `.local/tujia-runtime.json` registry (ignored by Git) with absolute application/Python/model/index/data paths, model revision and checksum, dictionary revision, index manifest identity, storage scope, persistence evidence and restore instructions. Use `workspace_only` or `unknown` when lifetime is unverified, not `durable`. Keep credentials out of the registry. Store a nonsecret restore pointer with the persistent workspace/environment configuration so a later agent can find the registry and assets; a pointer in a disposable checkout alone is insufficient.
 
-Future tasks read the registry first, validate compatibility and reuse assets. Keep one encoder/index session across a query batch; on process restart reload existing files, not the download/build pipeline. Rebuild only the incompatible index when model/data/schema changes, preserving the known-good version until the replacement validates. If setup encounters an unforeseen blocker, stop at that stage, retain reusable assets, record the blocker and switch to static lookup.
+Future explicitly requested embedding tasks read the registry first, validate compatibility and reuse assets. Keep one encoder/index session across a query batch; on process restart reload existing files, not the download/build pipeline. Rebuild only the incompatible index when model/data/schema changes, preserving the known-good version until the replacement validates. If setup encounters an unforeseen blocker, stop at that stage, retain reusable assets, record the blocker and switch to static lookup.
 
 Persistence makes assets reusable; it does not prove inference ran. Announce Embedding only after a current real query succeeds using an expression from the current task, following [output rules](output.md). Imports, model loading and planner output alone do not establish query execution; zero matches from a successful query do not mean the runtime failed.

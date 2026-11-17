@@ -1,23 +1,21 @@
 # Retrieval modes and commands
 
-Read when starting lexical retrieval, checking runtime availability, or diagnosing a missing word. Both engines use the [same semantic plan](semantic-decomposition.md). Source selection follows [evidence.md](evidence.md); ordinary output follows [output.md](output.md).
+Read when starting lexical retrieval or diagnosing a missing word. Default to static lookup; inspect model availability only for an explicit embedding request. Both engines use the [same semantic plan](semantic-decomposition.md). Source selection follows [evidence.md](evidence.md); ordinary output follows [output.md](output.md).
 
 For Tujia input, use [reverse translation](reverse-translation.md) before deciding that a word is absent. Preserve whole-word and segmented readings, then compare bounded pronunciation variants with `python scripts/reverse-lookup.py --query soxtir --notation ye`. This local route uses actual witnesses and edit costs, not embedding scores.
 
 <a id="runtime-verification"></a>
 ## Choose the executable route
 
-First perform the [environment and storage preflight](runtime-lifecycle.md). Installation/build is an outcome of that assessment, not a probe to discover whether the environment is suitable. Find existing assets and their registry before creating anything.
+Use local static shards when execution is available, otherwise the [text dictionary](web-evidence.md). Reuse supplied witnesses, one manifest and one `StaticLexicon`/`RetrievalSession` across a batch. Keep the [shared query ledger](execution-state.md#query-ledger) across scripts and tool calls.
 
-Retain observed checks, paths and reasons. Distinguish **not checked**, **missing but provisionable**, **verified usable**, and **blocked**; inspect installation resources and access for missing assets. A concrete capability/access/storage blocker is sufficient for direct static retrieval without a failed full setup. An explicit user choice of static retrieval overrides the BGE preference. Reassess only affected checks when access or assets change. Record zero matches from a successful scoped query as a retrieval result.
-
-| Available environment | Action | Disclosure |
+| Request / environment | Action | Disclosure |
 | --- | --- | --- |
-| Webpage reader with no execution, or explicit webpage-only task | Read the [text dictionary and its actual links](web-evidence.md); keep coverage separate from access failure | 检索模式：Skill-based（网页静态词典；本地未执行） after successful lookup |
-| Executable runtime with compatible existing model/index, including offline or read-only assets | Validate and query the existing installation; reuse loaded assets | 检索模式：Embedding（BGE 实际运行） |
-| Missing assets; preflight confirms execution/resources/download access and durable storage | Provision only what is missing at the durable destination, register it, then query | 检索模式：Embedding only after successful current inference |
-| Readable static export/supplied evidence, insufficient resources/access, or no durable destination for new setup | Use [synonym-lite](../../tujia-synonym-lite/SKILL.md) with an actually available lookup route, without first trying the full BGE pipeline | 检索模式：Skill-based after real lookup; identify supplied evidence separately |
-| Both engines actually execute | Keep the engine and query provenance for each result | 检索模式：Mixed |
+| Ordinary translation with readable local shards | `tujia-lex plan EXPRESSION` (default D), or synonym-lite | Skill-based after actual lookup |
+| Webpage reader or explicit webpage-only task | Read [published static evidence](web-evidence.md) | Skill-based; local execution not performed |
+| Explicit embedding/BGE or route B/C/E | Run the separate [embedding preflight](runtime-lifecycle.md), reuse compatible assets, then query | Embedding after successful inference |
+| Explicit hybrid route E | Run both engines; retain per-query provenance | Mixed after both execute |
+| Lookup unavailable | Use readable supplied evidence or another authorized static route; retain the access failure | Identify the evidence actually used |
 
 Verify availability before claiming a mode. Report the observed engine and current query result; mode placement and final presentation follow the output policy. Base the mode label on the current query result. If a later operation encounters an unforeseen blocker, stop at that stage and use static lookup; preserve reusable files and record the reason rather than restarting setup.
 
@@ -27,12 +25,12 @@ Commands below run from the **bizic-translator repository/package root**, not th
 
 | Task | Command | Result |
 | --- | --- | --- |
-| Planned embedding retrieval | `tujia-lex plan EXPRESSION --route C --index INDEX --model-path MODEL` | Separate original and rewritten BGE queries; preserved raw baseline |
-| Planned static lookup | `tujia-lex plan EXPRESSION --route D` | Same plan, exact shard witnesses; no cosine scores |
+| Explicit embedding retrieval | `tujia-lex plan EXPRESSION --route C --index INDEX --model-path MODEL` | Separate original and rewritten BGE queries; preserved raw baseline |
+| Default static lookup | `tujia-lex plan EXPRESSION` | Same plan, exact shard witnesses; no cosine scores |
 | Hybrid | `tujia-lex plan EXPRESSION --route E --index INDEX --model-path MODEL` | Both engines, candidate selection and construction checks |
 | Literal baseline | `tujia-lex search '守候' --index INDEX --mode exact` | Whole-field match; `--substring` is a separately labeled baseline |
-| Raw lexical BGE query | `tujia-lex search '守候' --index INDEX --model-path MODEL --dialect north` | Ranked neighbors; use `--source brassett-2006` or `brassett-2004` for source comparisons |
-| Construction retrieval | `tujia-lex search '用刀切菜，工具在动作前面' --index INDEX --model-path MODEL --kind construction --dialect north` | Sentence blocks, extracted passages and grammar sections with distinct evidence levels |
+| Explicit raw BGE query | `tujia-lex search '守候' --mode semantic --index INDEX --model-path MODEL --dialect north` | Ranked neighbors; use `--source brassett-2006` or `brassett-2004` for source comparisons |
+| Construction retrieval | `tujia-lex search '用刀切菜，工具在动作前面' --mode semantic --index INDEX --model-path MODEL --kind construction --dialect north` | Sentence blocks, extracted passages and grammar sections with distinct evidence levels |
 | Original witness | `tujia-lex inspect --index INDEX RECORD_ID` | Forms, attestation links, source, locality and citation |
 
 `src/tujia_lex/query_plan.py` supplies the reusable planner; `scripts/lightweight-synonym-search.py` shares it. Productive rules preserve new arguments and scoped negation/TAM. For an opaque or contextual meaning outside those rules, supply an explicit `Interpretation` with `--interpretation FILE.json`. Use `--context` to retain audit context and `--interpretation` to supply the semantic analysis. [concepts.json](../../tujia-synonym-lite/concepts.json) supplies example query plans.
@@ -58,6 +56,7 @@ Use the [static manifest](../lexicon/manifest.json) and its UTF-8 shards when a 
 With a local runtime:
 
 ```sh
+python scripts/lightweight-synonym-search.py '原词' '另一个概念' --dialect north
 python scripts/lightweight-synonym-search.py '原词' --directory skills/translate-tujia/lexicon --related '候选1,候选2'
 python scripts/export-readable-lexicon.py lookup --directory skills/translate-tujia/lexicon --query '好'
 ```
@@ -77,6 +76,6 @@ Separate a missed existing entry from a missing lexicalization: inspect full-ind
 
 For an explicit audit, report original/rewritten queries, query-local scores, raw ranks, witness IDs, forms, senses, sources and accepted/rejected candidates. Label synonym, paraphrase, component, hypernym and example relations. Only actual embedding queries have cosine scores; RRF is a combination statistic. Use the CLI's source-notation draft and slot checks internally, then compose the Pinyin/IPA translation.
 
-Keep each unfamiliar concept to one literal lookup and one bounded expansion batch (normally 8–12 deduplicated lite queries). Cover the relevant Chinese and English senses, components and continuous-text contexts within that budget; record coverage and [reconcile suitable candidates with the draft](evidence.md#retrieval-status-and-draft-reconciliation). For a grammar question, use one routed topic and one relevant contrast; expand for a specific unresolved role or scope conflict. Reuse manifests, loaded models, indexes and cached witnesses. [Recovery actions](recovery-playbook.md) supply the next step when a route fails.
+Keep each unfamiliar concept to one literal lookup and one bounded expansion batch (normally 8–12 deduplicated lite queries in total across scripts and tool calls, including earlier literal and expanded queries). Cover the relevant Chinese and English senses, components and continuous-text contexts within that budget; record coverage and [reconcile suitable candidates with the draft](evidence.md#retrieval-status-and-draft-reconciliation). For a grammar question, use one routed topic and one relevant contrast; expand for a specific unresolved role or scope conflict. Reuse manifests, loaded models, indexes and cached witnesses. [Recovery actions](recovery-playbook.md) supply the next step when a route fails.
 
 For public serving, build embeddings and shards offline and serve bounded, cacheable artifacts. Move dictionary-wide scans, index building, gzip decompression and expensive inference to local/offline jobs instead of doing them per incoming public request. Use request limits; serve static assets through the provider’s caching and request controls.

@@ -10,7 +10,7 @@ When an exact query misses, preserve the intended sense and try a common lexical
 
 ## Put retrieved evidence into the sentence
 
-Maintain a short coverage ledger: meaning unit → chosen witness → actual target span. Include predicates and their arguments, pronouns, numbers, classifiers, comparison standards, locations and relations. For a rejected candidate, retain the specific sense or source mismatch.
+Maintain a short coverage ledger: meaning unit → chosen witness → target wording or contextually recoverable omission. Include predicates and their arguments, pronouns, numbers, classifiers, comparison standards, locations and relations. For a rejected candidate, retain the specific sense or source mismatch. Identify participants during analysis, then follow the target language’s omission patterns; a recoverable subject or possessor need not have a separate written span. See [ellipsis and context](ellipsis.md).
 
 For every property expression, include its head (or independent referent), predicate/modifier role, chosen full form and actual target position. Audit direct adjectives after their heads, noun modifiers before their heads, and linked/relative constructions against their own examples through [property decisions](clause-patterns.md#property-decision). Recheck the scope of each modifier in nested noun phrases and distinguish same-form adjectives from property predicates by the full construction.
 
