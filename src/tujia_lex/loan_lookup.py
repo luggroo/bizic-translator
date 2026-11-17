@@ -7,7 +7,7 @@ ORDER={'north':['yongshun','jishou'],'south':['jiefangyan','jishou']}
 INITIALS=sorted('tɕʰ tsʰ tʂʰ pʰ tʰ kʰ dʑ dʐ dz tɕ tʂ ts ȵ ɲ ŋ ɡ g p b t d k m n l f s z ʂ ʐ ɕ ʑ x ɣ v w j ʔ'.split(),key=len,reverse=True)
 SUP=str.maketrans('0123456789','⁰¹²³⁴⁵⁶⁷⁸⁹')
 ON={'tɕʰ':'q','tsʰ':'c','pʰ':'p','tʰ':'t','kʰ':'k','tɕ':'j','ts':'z','p':'b','t':'d','k':'g','m':'m','n':'n','ɲ':'n','ŋ':'ng','l':'l','s':'s','z':'r','ɕ':'x','x':'h','ɣ':'hx','j':'y','w':'w','ʑ':'y','f':'hu','ʔ':"'",'':''}
-NR={'i':'i','ɨ':'i','ɿ':'i','a':'a','ia':'ia','u':'u','ai':'ai','iau':'iao','au':'ao','ua':'ua','uai':'uai','ei':'ei','ɔ':'o','uɔ':'o','uei':'ui','iu':'iu','ou':'ou','iɛ':'ie','iɛ̃':'ian','ã':'an','uã':'uan','ĩ':'in','ɜ̃':'en','uɜ̃':'un','ɔ̃':'ong','iɔ̃':'iong'}
+NR={'i':'i','ɨ':'i','ɿ':'i','a':'a','ia':'ia','u':'u','ai':'ai','iau':'iao','au':'ao','ua':'ua','uai':'uai','ei':'ei','ɔ':'o','uɔ':'o','uei':'ui','iu':'iu','ou':'ou','iɛ':'ie','iɛ̃':'ian','ã':'an','uã':'uan','ĩ':'in','ɜ̃':'en','uɜ̃':'un','ɔ̃':'ong','iɔ̃':'iong','ya':'üa','yɛ':'üe','yɛ̃':'üan'}
 SR={'i':'i','ɿ':'i','a':'a','ia':'ia','ai':'ai','ei':'ei','e':'e','au':'au','iau':'iau','ɯ':'eu','ĩ':'in','u':'u','ua':'ua','o':'o','io':'io','iã':'ian','uai':'uai','ẽ':'en','uei':'uei','õ':'on','ã':'an','uã':'uan','ya':'üa','iɯ':'ieu','uẽ':'uen','y':'ü','iõ':'ion','yã':'üan','ỹ':'ün','yẽ':'üen','ye':'üe','ie':'ie'}
 @lru_cache(maxsize=1)
 def assets():return json.loads(gzip.decompress((D/'characters.json.gz').read_bytes())),json.loads((D/'rules.json').read_text())

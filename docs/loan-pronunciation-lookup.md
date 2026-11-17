@@ -16,7 +16,7 @@ python3 scripts/lookup-loan.py 难 --target north --choices '{"0":"lan5"}'
 ## 对应约定
 
 - 北部调类阴平／阳平／上声／去声→55／21／51／24；南部→33／21／55／13。吉首去声编号5，解放岩编号4。
-- 北部浊塞音、浊塞擦音改送气，y→i，an/aŋ合并为ã；in与ɛn/ən分为ĩ与ɜ̃；永顺ɛ→ei；io→iau，整韵匹配。
+- 北部浊塞音、浊塞擦音改送气，单元音韵母y→i（介音y另列保留），an/aŋ合并为ã；in与ɛn/ən分为ĩ与ɜ̃；永顺ɛ→ei；io→iau，整韵匹配。
 - 北部f/hu拼写统一hu，源IPA仍保留，不把原f一律伪写为x。
 - 南部解放岩ɛi→ai，古入声字取ei；əɯ统一ɯ；军对应ỹ；保留浊音及y。
 - 完整映射在src/tujia_lex/loan_data/rules.json。此前两候选条目未另指定的，以首个候选作补音默认。ɚ与ɛ˞尚无唯一对应，保留未解决状态。
@@ -28,3 +28,5 @@ python3 scripts/lookup-loan.py 难 --target north --choices '{"0":"lan5"}'
 重建：python3 scripts/build-loan-table.py。仅重建需要opencc-python-reimplemented生成简繁别名；运行时不需要。压缩表包含输入SHA256；固定排序和gzip时间戳保证可复现。
 
 北部i前保留n/l对立。永顺本字记ȵi而吉首本字明确记li时，采用吉首li恢复l，如李、梨；泥、女仍保留鼻音。返回selection_reason说明这一选读，原表不改写。
+
+介音i和y分别保留。北部单元音韵母y→i不扩展到含y介音的韵母：ia／ya分别保留，ian／yan→iɛ̃／yɛ̃，iei／yei→iɛ／yɛ；拼写分别用i／ü。南部吉首iei／yei→ie／ye，也保留介音区别。
