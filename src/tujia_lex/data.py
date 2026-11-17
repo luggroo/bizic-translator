@@ -99,6 +99,7 @@ def lexical_records(dictionary, catalog=None, aliases=None):
                             "locations": list(loc), "point": point,
                             "forms": list(dict.fromkeys(a["term"] for a in witnesses)),
                             "notations": notation, "attestations": witnesses, "sources": sources,
+                            "editorial_notes": entry.get("editorialNotes", []),
                             "citation": f"Dictionary entry {eid}; " + "; ".join(a["id"] for a in witnesses),
                             "lexical_fields": [zh, en] + [a["term"] for a in witnesses]})
     return records
