@@ -27,6 +27,29 @@ def test_north_i_keeps_l_and_n_distinct():
  assert lookup('泥')['ipa']=='ɲi²¹'
  assert lookup('女')['ipa']=='ɲi⁵¹'
 
+def test_north_initial_conditioned_in_rime():
+ # Baojing-type onset condition is adapted into Northern Tujia nasal vowels,
+ # not copied as Chinese coda -n or rounded vowels.
+ for initial,tone,expected in [
+  ('tin1','55','tɜ̃⁵⁵'),
+  ('tʰin1','55','tʰɜ̃⁵⁵'),
+  ('din2','21','tʰɜ̃²¹'),
+  ('lin2','21','lɜ̃²¹'),
+  ('ȵin2','21','ɲĩ²¹'),
+  ('pʰin2','21','pʰĩ²¹'),
+ ]:
+  x=map_reading(['jishou',initial,'',''],'north')
+  assert x['tone']==tone and x['ipa']==expected
+ assert lookup('亭')['ipa']=='tʰɜ̃²¹'
+ assert lookup('停')['ipa']=='tʰɜ̃²¹'
+ assert lookup('丁')['ipa']=='tɜ̃⁵⁵'
+ assert lookup('零')['ipa']=='lɜ̃²¹' # Yongshun lɛn2 already maps this way
+ assert lookup('令')['ipa']=='lɜ̃²⁴' # Jishou lin5 now follows the same rule
+ assert lookup('凝',sense='凝固')['ipa']=='ɲĩ²¹'
+ assert lookup('平')['ipa']=='pʰĩ²¹'
+ assert lookup('李')['ipa']=='li⁵¹'
+
+
 def test_south():
  assert lookup('军','south')['ipa']=='tɕỹ³³'
  assert map_reading(['jiefangyan','tʰəɯ3','','上'],'south')['ipa']=='tʰɯ⁵⁵'

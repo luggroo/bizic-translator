@@ -37,6 +37,9 @@ def map_reading(row,target):
  else:
   mapping=rules['south_jiefangyan_rimes' if source=='jiefangyan' else 'south_jishou_rimes'];new={'ɡ':'g','ȵ':'ɲ','tʂ':'ts','dʐ':'dz','ʂ':'s','ʐ':'z','v':'w'}.get(o,o)
  rr=mapping.get(r)
+ # Northern loan phonology: dental/alveolar stops and l merge -in into /ɜ̃/.
+ # Palatal nasal ȵ keeps /ĩ/; evaluate the source onset before devoicing.
+ if target=='north':rr=rules.get('north_conditioned_rimes',{}).get(r,{}).get(o,rr)
  if rr is None:return None
  if target=='south' and source=='jiefangyan' and hist=='入' and r=='ɛi':rr='ei'
  if target=='north' and rr=='i':

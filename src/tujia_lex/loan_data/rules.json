@@ -47,6 +47,14 @@
     "ɛ˞": null,
     "yaŋ": "iã"
   },
+  "north_conditioned_rimes": {
+    "in": {
+      "t": "ɜ̃",
+      "tʰ": "ɜ̃",
+      "d": "ɜ̃",
+      "l": "ɜ̃"
+    }
+  },
   "south_jishou_rimes": {
     "i": "i",
     "a": "a",
