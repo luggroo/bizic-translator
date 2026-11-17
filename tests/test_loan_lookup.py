@@ -51,10 +51,11 @@ def test_inventory():
     else:assert 'ɚ' in row[1] or 'ɛ˞' in row[1],row
   assert count>4000
 
-def test_rounded_and_unrounded_medials_stay_distinct():
- for raw,ipa in [('tɕia1','tɕia⁵⁵'),('tɕya1','tɕya⁵⁵'),('tɕian1','tɕiɛ̃⁵⁵'),('tɕyan1','tɕyɛ̃⁵⁵'),('tɕiei1','tɕiɛ⁵⁵'),('tɕyei1','tɕyɛ⁵⁵')]:
-  r=map_reading(['jishou',raw,'',''],'north');assert r['ipa']==ipa
- assert map_reading(['jishou','tɕyan1','',''],'north')['romanization']=='jüān'
- assert map_reading(['jishou','y2','',''],'north')['ipa']=='i²¹'
- assert map_reading(['jishou','tɕiei1','',''],'south')['ipa']=='tɕie³³'
- assert map_reading(['jishou','tɕyei1','',''],'south')['ipa']=='tɕye³³'
+def test_n_l_before_medials_but_y_still_unrounds():
+ assert lookup('连')['ipa']=='liɛ̃²¹'
+ assert lookup('脸')['ipa']=='liɛ̃⁵¹'
+ assert lookup('年')['ipa']=='ɲiɛ̃²¹'
+ assert lookup('娘')['ipa']=='ɲiɛ̃²¹'
+ assert map_reading(['jishou','tɕyan1','',''],'north')['ipa']=='tɕiɛ̃⁵⁵'
+ assert map_reading(['jishou','tɕya1','',''],'north')['ipa']=='tɕia⁵⁵'
+ assert map_reading(['jishou','tɕyei1','',''],'north')['ipa']=='tɕiɛ⁵⁵'

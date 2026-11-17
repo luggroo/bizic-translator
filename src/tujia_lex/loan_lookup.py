@@ -7,7 +7,7 @@ ORDER={'north':['yongshun','jishou'],'south':['jiefangyan','jishou']}
 INITIALS=sorted('tɕʰ tsʰ tʂʰ pʰ tʰ kʰ dʑ dʐ dz tɕ tʂ ts ȵ ɲ ŋ ɡ g p b t d k m n l f s z ʂ ʐ ɕ ʑ x ɣ v w j ʔ'.split(),key=len,reverse=True)
 SUP=str.maketrans('0123456789','⁰¹²³⁴⁵⁶⁷⁸⁹')
 ON={'tɕʰ':'q','tsʰ':'c','pʰ':'p','tʰ':'t','kʰ':'k','tɕ':'j','ts':'z','p':'b','t':'d','k':'g','m':'m','n':'n','ɲ':'n','ŋ':'ng','l':'l','s':'s','z':'r','ɕ':'x','x':'h','ɣ':'hx','j':'y','w':'w','ʑ':'y','f':'hu','ʔ':"'",'':''}
-NR={'i':'i','ɨ':'i','ɿ':'i','a':'a','ia':'ia','u':'u','ai':'ai','iau':'iao','au':'ao','ua':'ua','uai':'uai','ei':'ei','ɔ':'o','uɔ':'o','uei':'ui','iu':'iu','ou':'ou','iɛ':'ie','iɛ̃':'ian','ã':'an','uã':'uan','ĩ':'in','ɜ̃':'en','uɜ̃':'un','ɔ̃':'ong','iɔ̃':'iong','ya':'üa','yɛ':'üe','yɛ̃':'üan'}
+NR={'i':'i','ɨ':'i','ɿ':'i','a':'a','ia':'ia','u':'u','ai':'ai','iau':'iao','au':'ao','ua':'ua','uai':'uai','ei':'ei','ɔ':'o','uɔ':'o','uei':'ui','iu':'iu','ou':'ou','iɛ':'ie','iɛ̃':'ian','ã':'an','uã':'uan','ĩ':'in','ɜ̃':'en','uɜ̃':'un','ɔ̃':'ong','iɔ̃':'iong'}
 SR={'i':'i','ɿ':'i','a':'a','ia':'ia','ai':'ai','ei':'ei','e':'e','au':'au','iau':'iau','ɯ':'eu','ĩ':'in','u':'u','ua':'ua','o':'o','io':'io','iã':'ian','uai':'uai','ẽ':'en','uei':'uei','õ':'on','ã':'an','uã':'uan','ya':'üa','iɯ':'ieu','uẽ':'uen','y':'ü','iõ':'ion','yã':'üan','ỹ':'ün','yẽ':'üen','ye':'üe','ie':'ie'}
 @lru_cache(maxsize=1)
 def assets():return json.loads(gzip.decompress((D/'characters.json.gz').read_bytes())),json.loads((D/'rules.json').read_text())
@@ -52,13 +52,13 @@ def character_candidates(c,target):
  for canonical in table['aliases'].get(c,[c]):
   for row in table['entries'].get(canonical,[]):
    if row[0] in ORDER[target] and tuple(row) not in seen:rows.append((row,map_reading(row,target)));seen.add(tuple(row))
- # Northern Tujia distinguishes n/l before i. Yongshun merges some of these
+ # Northern Tujia distinguishes n/l before i, y and their medial combinations. Yongshun merges some of these
  # characters as ȵi (李/梨 versus 泥); use the same character's Jishou li
  # witness to recover l, rather than changing every ȵi into li.
- recover_l = target=='north' and any(r[0]=='yongshun' and re.fullmatch(r'ȵi[1-6]',r[1]) for r,m in rows)
- preferred = [(r,m) for r,m in rows if recover_l and r[0]=='jishou' and re.fullmatch(r'li[1-6]',r[1]) and m]
+ recover_l = target=='north' and any(r[0]=='yongshun' and re.fullmatch(r'ȵ[iy].*[1-6]',r[1]) for r,m in rows)
+ preferred = [(r,m) for r,m in rows if recover_l and r[0]=='jishou' and re.fullmatch(r'l[iy].*[1-6]',r[1]) and m]
  if preferred:
-  for r,m in preferred:m['selection_reason']='i前保留n/l区别：吉首本字li校正永顺合流ȵi'
+  for r,m in preferred:m['selection_reason']='i/y及其介音组合前保留n/l：采用吉首本字l声母'
  return sorted(rows,key=lambda pair:-1 if pair in preferred else ORDER[target].index(pair[0][0]))
 def sense_matches(c,sense,context):
  table=assets()[0]
