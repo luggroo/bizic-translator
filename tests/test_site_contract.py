@@ -187,7 +187,9 @@ def test_id_stability_refuses_corrupt_previous_shards(workspace):
         CONTRACT["verify_identity_stability"](source, metadata, output)
 
 
-def test_editorial_notes_survive_static_export_and_reject_loss(workspace):
+def test_editorial_notes_survive_static_export_and_reject_loss(workspace, monkeypatch):
+    import sys
+    monkeypatch.syspath_prepend(str(HERE / "src"))
     from tujia_lex.static import StaticLexicon
     source, metadata, site, output, words, _, write_gzip = workspace
     note = {"id": "chinese-loan-w1", "text": "借自汉语", "wordIds": ["w1"]}
