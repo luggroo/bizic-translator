@@ -19,6 +19,14 @@ def test_north():
  assert map_reading(['jishou','fu1','',''],'north')['romanization']=='hū'
  assert map_reading(['jishou','bi2','',''],'north')['ipa']=='pʰi²¹'
 
+def test_north_i_keeps_l_and_n_distinct():
+ assert lookup('李')['ipa']=='li⁵¹'
+ assert lookup('李')['romanization']=='lì'
+ assert lookup('李')['characters'][0]['reading']['source']=='jishou'
+ assert lookup('梨')['ipa']=='li²¹'
+ assert lookup('泥')['ipa']=='ɲi²¹'
+ assert lookup('女')['ipa']=='ɲi⁵¹'
+
 def test_south():
  assert lookup('军','south')['ipa']=='tɕỹ³³'
  assert map_reading(['jiefangyan','tʰəɯ3','','上'],'south')['ipa']=='tʰɯ⁵⁵'

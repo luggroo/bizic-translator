@@ -26,3 +26,5 @@ python3 scripts/lookup-loan.py 难 --target north --choices '{"0":"lan5"}'
 永顺、吉首原表取MCPDict提交1f0809e2e16804de703300d00fb544971bbccb6e，随附原许可证。解放岩仅提取[用户提供比较表](https://docs.google.com/spreadsheets/d/14fu7gGShQaebYwx2KkqXhttrqw7yZNpM/edit)中的字、解放岩读音、中古声调。原始数据在data/loan-sources。用户授权将这些提取数据发布到本公开仓库。
 
 重建：python3 scripts/build-loan-table.py。仅重建需要opencc-python-reimplemented生成简繁别名；运行时不需要。压缩表包含输入SHA256；固定排序和gzip时间戳保证可复现。
+
+北部i前保留n/l对立。永顺本字记ȵi而吉首本字明确记li时，采用吉首li恢复l，如李、梨；泥、女仍保留鼻音。返回selection_reason说明这一选读，原表不改写。

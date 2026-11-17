@@ -52,7 +52,14 @@ def character_candidates(c,target):
  for canonical in table['aliases'].get(c,[c]):
   for row in table['entries'].get(canonical,[]):
    if row[0] in ORDER[target] and tuple(row) not in seen:rows.append((row,map_reading(row,target)));seen.add(tuple(row))
- return sorted(rows,key=lambda pair:ORDER[target].index(pair[0][0]))
+ # Northern Tujia distinguishes n/l before i. Yongshun merges some of these
+ # characters as ȵi (李/梨 versus 泥); use the same character's Jishou li
+ # witness to recover l, rather than changing every ȵi into li.
+ recover_l = target=='north' and any(r[0]=='yongshun' and re.fullmatch(r'ȵi[1-6]',r[1]) for r,m in rows)
+ preferred = [(r,m) for r,m in rows if recover_l and r[0]=='jishou' and re.fullmatch(r'li[1-6]',r[1]) and m]
+ if preferred:
+  for r,m in preferred:m['selection_reason']='i前保留n/l区别：吉首本字li校正永顺合流ȵi'
+ return sorted(rows,key=lambda pair:-1 if pair in preferred else ORDER[target].index(pair[0][0]))
 def sense_matches(c,sense,context):
  table=assets()[0]
  def canon(s):return ''.join(min(table['aliases'].get(x,[x])) for x in s)
