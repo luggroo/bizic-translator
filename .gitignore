@@ -27,3 +27,7 @@ dist/
 !/scripts/render-compositional-evaluation.py
 !/scripts/render-challenge-translations.py
 !/scripts/reverse-lookup.py
+
+!/scripts/lookup-loan.py
+!/scripts/build-loan-table.py
+!/docs/loan-pronunciation-lookup.md

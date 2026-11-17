@@ -1,5 +1,8 @@
 # Bizic Translator · 土家语翻译
 
+[汉借词离线补音查询](docs/loan-pronunciation-lookup.md)：北部永顺→吉首，南部解放岩→吉首，保留多音分义；一字缺失，整词不标发音。
+
+
 ## Reading Tujia with spelling differences
 
 For Tujia-to-other-language translation, [the reverse-translation guide](skills/translate-tujia/references/reverse-translation.md) checks word boundaries before treating an unfamiliar joined spelling as a missing word. The local reader tolerates the documented hx/zero-onset, velar i/ei, high/falling tone and two-syllable tone-pattern differences; affix-tone relaxation is explicit and limited to dictionary-marked affixes. Original forms, source witnesses and every accepted difference stay visible.

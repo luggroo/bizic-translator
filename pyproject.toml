@@ -14,6 +14,7 @@ test = ["pytest>=8,<9"]
 
 [project.scripts]
 tujia-lex = "tujia_lex.cli:main"
+tujia-loan = "tujia_lex.loan_lookup:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -21,3 +22,6 @@ where = ["src"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 markers = ["model: runs real pretrained inference; needs --model-path"]
+
+[tool.setuptools.package-data]
+tujia_lex = ["loan_data/*.json", "loan_data/*.json.gz"]
