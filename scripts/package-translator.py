@@ -17,8 +17,9 @@ if out.exists() and not a.update:
 paths = [root / name for name in [
     '.gitignore', 'README.md', 'pyproject.toml', 'requirements-evaluation.txt',
     'skills/translate-tujia/SKILL.md', 'docs/semantic-retrieval-evaluation.md',
+    'docs/loan-pronunciation-lookup.md',
 ]]
-for folder in ['src', 'tests', 'docs/evaluation', 'skills/translate-tujia/references', 'skills/tujia-synonym-lite'] + (
+for folder in ['data/loan-sources', 'src', 'tests', 'docs/evaluation', 'skills/translate-tujia/references', 'skills/tujia-synonym-lite'] + (
     ['skills/translate-tujia/lexicon'] if a.include_static_lexicon else []
 ):
     paths += [f for f in (root/folder).rglob('*') if f.is_file()
@@ -29,6 +30,7 @@ for name in ['download-embedding-model.py', 'evaluate-semantic-retrieval.py',
              'fetch-dictionary.py', 'render-semantic-evaluation.py',
              'tujia-lex-spelling.cjs', 'package-translator.py', 'export-readable-lexicon.py',
              'lightweight-synonym-search.py', 'evaluate-compositional-retrieval.py',
+             'lookup-loan.py', 'build-loan-table.py',
              'verify-challenge-gold.py', 'render-compositional-evaluation.py',
              'render-challenge-translations.py', 'reverse-lookup.py', 'check_gloss_labels.py']:
     paths.append(root/'scripts'/name)

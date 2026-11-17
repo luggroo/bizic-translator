@@ -11,6 +11,8 @@
 - 静态分片 v2 的 `term` 已在导出时统一为调号拼音或 `/IPA/`，`term_notation` 为 `accent`、`ipa` 或 `missing`；`notations` 只含同见证的 `accent` 与 `ipa`，数组顺序不构成逐项配对证据。`source_term` 仅供溯源，旧版分片须重建。
 
 
+新拟汉借词另按[离线补音](loan-pronunciation.md)查询；所得为 `proposed-loan-mapping`，保留源字音与整词缺字处理，不能作为已有词条见证。
+
 ## 1. 来源与显示
 
 - 引例表使用 `汉义 | 调号拼音 | IPA | 来源 | 解释`，保留完整例句或最小片段、词界、子句顺序、页码和例号。

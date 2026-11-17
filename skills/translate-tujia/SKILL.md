@@ -23,6 +23,8 @@ Follow the requested source and target languages, dialect, locality, audience an
 
 **从土家语译出：** 先按[反向翻译](references/reverse-translation.md)恢复可能的词界；整词和分词候选并列检查。精确查询无合适结果时，依次比较 hx 声母有无、舌根音后 i/ei、高调/降调、已识别词缀的异调及指定双音节调型。保留原记音与检索变体，结合语法和上下文选义，再用目标语言组织译文。
 
+词库缺项时按[汉借词补音](references/loan-pronunciation.md)调用离线字表；一字缺失则整词只写汉字，不标部分发音。北部、南部分别使用自己的声韵、声调和句法。
+
 ## Translation workflow
 
 分析时识别参与者和领有关系；成句时，语境明确且目标语允许省略的成分保持省略。消歧、对比、强调或语法需要时再显写。用[省略与上下文的例句](references/ellipsis.md)核对，覆盖检查也接受由语境明确表达的角色。

@@ -24,7 +24,7 @@ For poetry and songs, use interpretive paraphrase, an explicit metaphor or a rec
 
 1. 对尚未译出的内容区分词汇、语义、句式和读音问题。先查完整义项，再查日常说法、词义成分及相关连续语料；中文查询漏检时补查英语释义和同源见证。已找到且适合语境的词须落实到译文。一次零命中记为该次查询未检得，并继续检查相关义项和已返回候选。
 2. 复合表达可以拆为动作、参与者及结果，再用有依据的能产构式重组新句。逐项核对因果、否定、程度、指代和数量，选择与语境相符的词义。
-3. 检索和改写后仍缺词，保留最小的汉语词或词素，并把它放在土家语构式的对应槽位。动宾表达分别安排宾语和谓语；同时落实修饰语、工具、领属、比较基准、条件、否定及体貌的位置。正文交付完整构句，具体疑点置于句后注释。
+3. 常见土家语词和已有借词优先采用；专业术语、专名等缺项可大胆借用，按[汉借词补音](loan-pronunciation.md)取得整词读音，并把它放在土家语构式的对应槽位。动宾表达分别安排宾语和谓语；同时落实修饰语、工具、领属、比较基准、条件、否定及体貌的位置。正文交付完整构句，具体疑点置于句后注释。
 4. 句式仍有疑点时，先改成更简单、关系明确的短句；尚有疑点的地方给出最佳暂拟排列，在句后注释中说明哪一处关系或标记需核实。暂拟排列标作生产性拟译，词形、声调和规则各自对应实际证据。
 5. 交付前把汉语插入与候选词条逐项比对；已有合适土家语形式就替换。最终交付覆盖全文的译文；实质改写或借用影响理解时，集中附一条简短说明。
 
@@ -32,7 +32,7 @@ After the bounded source checks, place Chinese words into the best-supported Tuj
 
 For a compositional Chinese verb–object expression, identify the object and predicate separately and rebuild their relation in Tujia order. Prefer a suitable attested Tujia verb. A missing noun or verb can remain in Chinese characters. Keep established lexicalized compounds and names together when their usage supports that treatment. Use a whole Chinese numeral–classifier phrase when that is the supported borrowing pattern.
 
-Write proposed Chinese insertions as plain Chinese characters, using their script as the visual distinction. Supply Tujia pronunciation and tone for source-supported forms. Keep the provenance of established loans, quoted usage and newly proposed insertions in the internal evidence record. Productive analogous patterns can support a new insertion; a complete proposed clause can also use the best-supported provisional arrangement with a concise note about any essential construction uncertainty.
+For proposed Chinese loans, follow [offline loan pronunciation](loan-pronunciation.md). Use the complete mapped pronunciation only after every character is resolved; if any character is missing, retain the whole word in Chinese characters without pronunciation. Supply recorded Tujia pronunciation and tone for attested forms. Keep the provenance of established loans, quoted usage and newly proposed insertions in the internal evidence record. Productive analogous patterns can support a new insertion; a complete proposed clause can also use the best-supported provisional arrangement with a concise note about any essential construction uncertainty.
 
 ## Reconcile candidates with the completed draft
 
