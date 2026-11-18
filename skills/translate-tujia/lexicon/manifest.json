@@ -16457,7 +16457,7 @@
     "term_notation",
     "accent_provenance"
   ],
-  "revision": "feee483373335f43e8923f90a613620093c6d1e6",
+  "revision": "1eb53ad7fc5f78a035d4127d6ed250d327c4fe90",
   "shard_limit_bytes": 110000,
   "site_converter_sha256": {
     "grammar-notation.js": "d6f67134d1c6e3bef16ccc58381f35dab90bbb50a0907260eb8133019627e144",
@@ -16467,7 +16467,7 @@
     "notation-ui.js": "07f670c2d34e3a6be49eaccd00dfd39646b10561e85b84eb3268c3ba89cf7cb8",
     "southern-notation.js": "fcb8697ad52a3b71e285f28d2054f58527ac6a92bdbd6cd939ba91deed898109",
     "spelling-boundaries.js": "1e6a513bca1eb2c8b5820e1e0e0b8b1af05e11d382bf921a20fddf8dd54a71e1",
-    "yubao.js": "5774f029ff4d0c07ece07b019b812c1ca89925b3d7c1302622af313cef6c701b"
+    "yubao.js": "ec408a063bca13e587d24286748c20da6dbd6cfd4cba47c78ac4cfe013f578c5"
   },
   "source": "luggroo/bizic-dictionary/site/dictionary.json.gz",
   "source_sha256": "7a090fdd4a77a3921aa818ee5a7ec03d4d87b8b839cf37e00ca32dfc3a4a5156",
