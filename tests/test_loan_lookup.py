@@ -13,6 +13,22 @@ def test_polyphones():
 def test_register():
  assert lookup('家',sense='家庭')['ipa']=='tɕia⁵⁵'
 
+def test_register_sources_and_regional_priority():
+ from tujia_lex.loan_lookup import local_readings
+ def find(char, tag=None):
+  return local_readings(char, tag)['characters'][0]['readings']
+ frame = find('架')
+ assert [(r['city'], r['source_reading'], r['register'], r['input_key']) for r in frame] == [
+  ('吉首', 'ka5', '白', 'ga'), ('重庆', 'tɕia5', None, 'jia')]
+ assert '葡萄~' in frame[0]['note'] and frame[0]['source_url'].endswith('#L1703')
+ assert find('架', '文') == []
+ assert [r['input_key'] for r in find('夹', '白')] == ['ga']
+ assert [r['input_key'] for r in find('夾', '文')] == ['jia']
+ assert len(find('家')) == 2 and all(r['city'] == '吉首' for r in find('家'))
+ assert find('提', '白')[0]['source_reading'] == 'tiaŋ1'
+ assert find('漂', '白') == []  # “~白” is an example word.
+ assert local_readings('架𰻞')['characters'][1]['readings'] == []
+
 def test_north():
  assert lookup('百')['ipa']=='pei²¹'
  assert lookup('新')['ipa']=='ɕĩ⁵⁵'

@@ -8,6 +8,10 @@ on:
       - 'src/tujia_lex/loan_build.py'
       - 'scripts/build-loan-readings.py'
       - 'scripts/build-loan-table.py'
+      - 'scripts/build-local-readings.py'
+      - 'scripts/export-register-table.py'
+      - 'data/han-registers.*'
+      - 'skills/translate-tujia/assets/local-readings.json.gz'
       - 'data/loan-readings-*.tsv'
       - 'src/tujia_lex/loan_data/**'
       - 'skills/translate-tujia/assets/loan-readings.json.gz'
@@ -21,6 +25,10 @@ on:
       - 'src/tujia_lex/loan_build.py'
       - 'scripts/build-loan-readings.py'
       - 'scripts/build-loan-table.py'
+      - 'scripts/build-local-readings.py'
+      - 'scripts/export-register-table.py'
+      - 'data/han-registers.*'
+      - 'skills/translate-tujia/assets/local-readings.json.gz'
       - 'data/loan-readings-*.tsv'
       - 'src/tujia_lex/loan_data/**'
       - 'skills/translate-tujia/assets/loan-readings.json.gz'
@@ -48,4 +56,7 @@ jobs:
       - name: Check compiled tables are current
         run: |
           python scripts/build-loan-readings.py
+          python scripts/build-local-readings.py
+          python scripts/export-register-table.py --tsv data/han-registers.tsv
+          git diff --exit-code -- data/han-registers.tsv src/tujia_lex/loan_data/local-readings.json.gz skills/translate-tujia/assets/local-readings.json.gz
           git diff --exit-code -- src/tujia_lex/loan_data/readings.json.gz data/loan-readings-north.tsv data/loan-readings-south.tsv data/loan-sources/homophone-build-audit.json.gz data/loan-sources/compiled-readings-summary.json skills/translate-tujia/assets/loan-readings.json.gz skills/translate-tujia/scripts/lookup-loan.py

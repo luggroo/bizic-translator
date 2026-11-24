@@ -27,6 +27,8 @@ Follow the requested source and target languages, dialect, locality, audience an
 
 词库缺项时按[汉借词读音](references/loan-pronunciation.md)直接查附带的南北最终映射表；运行时不需要来源、同音参照字或历时推导。多音字按语境或表内最终读音选读；一字缺失则整词只写汉字，不标部分发音。
 
+查汉字文白异读时，用 `scripts/lookup-loan.py 字 --local-readings`。逐读先查吉首，缺读再查重庆。按原注区分文、白，并保留未标明归属的异读。例如「架」在吉首标白读，用于「葡萄架」，重庆另录一读。两条各附调查点、原记音和出处。
+
 ## Translation workflow
 
 分析时识别参与者和领有关系；成句时，语境明确且目标语允许省略的成分保持省略。消歧、对比、强调或语法需要时再显写。用[省略与上下文的例句](references/ellipsis.md)核对，覆盖检查也接受由语境明确表达的角色。

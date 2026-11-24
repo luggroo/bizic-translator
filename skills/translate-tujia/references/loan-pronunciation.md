@@ -9,9 +9,13 @@ python3 scripts/lookup-loan.py 珙 --target north
 python3 scripts/lookup-loan.py 军 --target south
 python3 scripts/lookup-loan.py 难 --target north --sense 患难
 python3 scripts/lookup-loan.py 难 --target north --choices '{"0":"lán"}'
+python3 scripts/lookup-loan.py 架 --local-readings
+python3 scripts/lookup-loan.py 鞋 --register 白
 ```
 
 个人安装的技能使用 `python3 <skill-root>/scripts/lookup-loan.py`，参数相同。命令只用 Python 标准库，直接读取附带的 `readings.json.gz` 或 `assets/loan-readings.json.gz`，不联网、不加载模型，也不在运行时推导字音。
+
+查询文白用字时，`--local-readings` 读取随技能附带的 `local-readings.json.gz`。结果按字列出吉首原音和重庆补读。看 `source_reading` 和 `note` 核对调查点记音与用例，看 `input_key` 获取北部键盘的无调检索音。`register` 的空值表示原表未标文白。比如「鞋」的吉首原注明列文、白两读。按用例选词时可以查 `--register 文` 或 `--register 白`。[完整文白表](https://github.com/luggroo/bizic-translator/blob/main/data/han-registers.xlsx)
 
 | 返回状态 | 下一步 |
 | --- | --- |

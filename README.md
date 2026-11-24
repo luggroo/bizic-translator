@@ -1,5 +1,7 @@
 # Bizic Translator · 土家语翻译
 
+查汉字文白读音，先取吉首原注，再用重庆补同字的缺读。工作簿的每条读音都能回到《汉字音典》原表。[下载吉首、重庆文白表](data/han-registers.xlsx) · [查询用法](docs/loan-pronunciation-lookup.md)
+
 [汉借词离线补音查询](docs/loan-pronunciation-lookup.md)：北部永顺→吉首，南部解放岩→吉首，保留多音分义；一字缺失，整词不标发音。
 
 

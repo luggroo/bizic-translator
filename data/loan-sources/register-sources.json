@@ -1,0 +1,12 @@
+{
+  "jishou": {
+    "label": "吉首",
+    "url": "https://github.com/osfans/MCPDict/blob/da0bd03ec9417f0edfdf7aeba6c21cf693df43cf/tools/tables/output/吉首.tsv",
+    "sha256": "897a94b30f87f0e5b1c88a5728afeea8620c472038fcaecc0705e06c185fe6ee"
+  },
+  "chongqing": {
+    "label": "重庆",
+    "url": "https://github.com/osfans/MCPDict/blob/da0bd03ec9417f0edfdf7aeba6c21cf693df43cf/tools/tables/output/重慶.tsv",
+    "sha256": "d9aa9bc1bda3dbaeaf6819c54af831a6b67ed4dd4e554cc82330958eb6a713a7"
+  }
+}

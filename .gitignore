@@ -32,5 +32,7 @@ dist/
 !/scripts/lookup-loan.py
 !/scripts/build-loan-table.py
 !/scripts/build-loan-readings.py
+!/scripts/build-local-readings.py
+!/scripts/export-register-table.py
 !/scripts/check_gloss_labels.py
 !/docs/loan-pronunciation-lookup.md
