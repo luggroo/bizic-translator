@@ -15,7 +15,7 @@ python3 scripts/lookup-loan.py 鞋 --register 白
 
 个人安装的技能使用 `python3 <skill-root>/scripts/lookup-loan.py`，参数相同。命令只用 Python 标准库，直接读取附带的 `readings.json.gz` 或 `assets/loan-readings.json.gz`，不联网、不加载模型，也不在运行时推导字音。
 
-查询文白用字时，`--local-readings` 读取随技能附带的 `local-readings.json.gz`。结果按字列出吉首原音和重庆补读。看 `source_reading` 和 `note` 核对调查点记音与用例，看 `input_key` 获取北部键盘的无调检索音。`register` 的空值表示原表未标文白。比如「鞋」的吉首原注明列文、白两读。按用例选词时可以查 `--register 文` 或 `--register 白`。[完整文白表](https://github.com/luggroo/bizic-translator/blob/main/data/han-registers.xlsx)
+查询文白用字时，`--local-readings` 读取随技能附带的 `local-readings.json.gz`。`input_key` 是北部键盘的无调检索音，`source_reading` 是当地记音。`witnesses` 逐一列出来源与用例。比如第 39 页「架」的吉首两读都有例词，分别是「十字架儿」和「吵架」。查询 `--register 文` 或 `--register 白` 可按明确的文白依据筛选。重庆的补读保留其当地原注。核查范围包括《吉首方言研究》第 37–40 页、《汉字音典》吉首和重庆两份字表。中古音类线索另页可筛查。[文白对照工作簿](https://github.com/luggroo/bizic-translator/blob/main/data/han-registers.xlsx)
 
 | 返回状态 | 下一步 |
 | --- | --- |

@@ -9,6 +9,7 @@ on:
       - 'scripts/build-loan-readings.py'
       - 'scripts/build-loan-table.py'
       - 'scripts/build-local-readings.py'
+      - 'scripts/screen-velar-second.py'
       - 'scripts/export-register-table.py'
       - 'data/han-registers.*'
       - 'skills/translate-tujia/assets/local-readings.json.gz'
@@ -26,6 +27,7 @@ on:
       - 'scripts/build-loan-readings.py'
       - 'scripts/build-loan-table.py'
       - 'scripts/build-local-readings.py'
+      - 'scripts/screen-velar-second.py'
       - 'scripts/export-register-table.py'
       - 'data/han-registers.*'
       - 'skills/translate-tujia/assets/local-readings.json.gz'
@@ -52,11 +54,12 @@ jobs:
       - name: Install tests
         run: python -m pip install -e '.[loan-build]' 'pytest>=8,<9'
       - name: Check northern and southern loan mapping
-        run: python -m pytest tests/test_loan_lookup.py -q
+        run: python -m pytest tests/test_loan_lookup.py tests/test_velar_components.py data/loan-sources/velar-second/test_screen.py -q
       - name: Check compiled tables are current
         run: |
           python scripts/build-loan-readings.py
           python scripts/build-local-readings.py
+          python scripts/screen-velar-second.py --check
           python scripts/export-register-table.py --tsv data/han-registers.tsv
           git diff --exit-code -- data/han-registers.tsv src/tujia_lex/loan_data/local-readings.json.gz skills/translate-tujia/assets/local-readings.json.gz
           git diff --exit-code -- src/tujia_lex/loan_data/readings.json.gz data/loan-readings-north.tsv data/loan-readings-south.tsv data/loan-sources/homophone-build-audit.json.gz data/loan-sources/compiled-readings-summary.json skills/translate-tujia/assets/loan-readings.json.gz skills/translate-tujia/scripts/lookup-loan.py

@@ -25,22 +25,35 @@ def local_readings(word, register=None):
     table = local_table()
     results = []
     for position, char in enumerate(word):
-        choices, jishou = [], set()
+        choices, readings_by_ipa = [], {}
         for row in table['characters'].get(char, []):
-            if register and row['register'] != register:
-                continue
-            # Two local transcriptions can share a Northern keyboard key.
-            # Prefer Jishou only when the attested reading itself is the same.
-            identity = row['ipa']
-            if row['city'] == 'jishou':
-                jishou.add(identity)
-            elif identity in jishou:
-                continue
-            source = table['sources'][row['city']]
-            choices.append(dict(city=source['label'], source_graph=row['graph'],
-                                source_reading=row['ipa'], register=row['register'] or None,
-                                note=row['note'], input_key=row['key'], north_spelling=row['north_spelling'],
-                                source_url=source['url'] + '#L' + str(row['line'])))
+            readings_by_ipa.setdefault(row['ipa'], []).append(row)
+        for ipa, rows in readings_by_ipa.items():
+            # A matching Chongqing sound can corroborate an IPA form. Register
+            # and usage belong to the source that actually identifies them.
+            local = [r for r in rows if r['city'] == 'jishou'] or rows
+            tags = list(dict.fromkeys(r['register'] for r in local if r['register'])) or ['']
+            for tag in tags:
+                if register and tag != register:
+                    continue
+                primary = next(r for r in local if r['register'] == tag)
+                witnesses = []
+                for r in rows:
+                    if r['city'] == primary['city'] and r['register'] not in ('', tag):
+                        continue
+                    source_id = r.get('source', r['city'])
+                    source = table['sources'][source_id]
+                    witnesses.append(dict(city=source['label'], source=source_id,
+                                          title=source.get('title', '《汉字音典》' + source['label'] + '字表'),
+                                          page=r.get('page'), graph=r['graph'], register=r['register'] or None,
+                                          note=r['note'], comment=r.get('comment', ''),
+                                          source_url=source['url'] + '#L' + str(r['line'])))
+                primary_source = table['sources'][primary.get('source', primary['city'])]
+                choices.append(dict(city=primary_source['label'], source_graph=primary['graph'],
+                                    source_reading=ipa, register=tag or None, note=primary['note'],
+                                    input_key=primary['key'], north_spelling=primary['north_spelling'],
+                                    page=primary.get('page'), witnesses=witnesses,
+                                    source_url=primary_source['url'] + '#L' + str(primary['line'])))
         results.append(dict(position=position, character=char, readings=choices))
     return dict(word=word, register=register, characters=results)
 

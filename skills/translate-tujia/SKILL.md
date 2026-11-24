@@ -27,7 +27,7 @@ Follow the requested source and target languages, dialect, locality, audience an
 
 词库缺项时按[汉借词读音](references/loan-pronunciation.md)直接查附带的南北最终映射表；运行时不需要来源、同音参照字或历时推导。多音字按语境或表内最终读音选读；一字缺失则整词只写汉字，不标部分发音。
 
-查汉字文白异读时，用 `scripts/lookup-loan.py 字 --local-readings`。逐读先查吉首，缺读再查重庆。按原注区分文、白，并保留未标明归属的异读。例如「架」在吉首标白读，用于「葡萄架」，重庆另录一读。两条各附调查点、原记音和出处。
+查汉字文白异读时，用 `scripts/lookup-loan.py 字 --local-readings`。逐读先查吉首，缺读再查重庆。`witnesses` 列出原书和字表各自的用例、文白标记与出处。「架」在吉首白读 `ka5`（十字架儿、葡萄架），文读 `tɕia5`（吵架）。两个键盘检索音分别是 `ga` 和 `jia`。原书中同一字依用法有多组对照时，要按例词选读。
 
 ## Translation workflow
 

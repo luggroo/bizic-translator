@@ -31,7 +31,8 @@ for name in ['download-embedding-model.py', 'evaluate-semantic-retrieval.py',
              'fetch-dictionary.py', 'render-semantic-evaluation.py',
              'tujia-lex-spelling.cjs', 'package-translator.py', 'export-readable-lexicon.py',
              'lightweight-synonym-search.py', 'evaluate-compositional-retrieval.py',
-             'lookup-loan.py', 'build-loan-table.py', 'build-loan-readings.py', 'build-local-readings.py', 'export-register-table.py',
+             'lookup-loan.py', 'build-loan-table.py', 'build-loan-readings.py', 'build-local-readings.py',
+             'export-register-table.py', 'screen-velar-second.py', 'build-velar-components.py',
              'verify-challenge-gold.py', 'render-compositional-evaluation.py',
              'render-challenge-translations.py', 'reverse-lookup.py', 'check_gloss_labels.py']:
     paths.append(root/'scripts'/name)

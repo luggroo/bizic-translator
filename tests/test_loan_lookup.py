@@ -19,9 +19,17 @@ def test_register_sources_and_regional_priority():
   return local_readings(char, tag)['characters'][0]['readings']
  frame = find('架')
  assert [(r['city'], r['source_reading'], r['register'], r['input_key']) for r in frame] == [
-  ('吉首', 'ka5', '白', 'ga'), ('重庆', 'tɕia5', None, 'jia')]
- assert '葡萄~' in frame[0]['note'] and frame[0]['source_url'].endswith('#L1703')
- assert find('架', '文') == []
+  ('吉首', 'ka5', '白', 'ga'), ('吉首', 'tɕia5', '文', 'jia')]
+ assert frame[0]['page'] == frame[1]['page'] == 39
+ assert frame[0]['note'] == '十字～儿' and frame[1]['note'] == '吵～'
+ assert any('葡萄~' in w['note'] and w['source_url'].endswith('#L1703') for w in frame[0]['witnesses'])
+ assert [(w['city'], w['register']) for w in frame[1]['witnesses']] == [('吉首','文'), ('重庆',None)]
+ assert find('架', '文') == frame[1:]
+ assert [(r['input_key'], r['note']) for r in find('稼') if r['city']=='吉首'] == [('ga','庄～'),('jia','庄～')]
+ assert {r['source_reading'] for r in find('间') if r['page'] == 39} == {'kan1','kan5','tɕian1','tɕian5'}
+ assert {'kai5', 'tɕiei3'} <= {r['source_reading'] for r in find('解', '文')}
+ tooth = find('牙', '白')[0]
+ assert {w['page'] for w in tooth['witnesses'] if w['source']=='li2002'} == {37,40}
  assert [r['input_key'] for r in find('夹', '白')] == ['ga']
  assert [r['input_key'] for r in find('夾', '文')] == ['jia']
  assert len(find('家')) == 2 and all(r['city'] == '吉首' for r in find('家'))
