@@ -29,10 +29,9 @@ def local_readings(word, register=None):
         for row in table['characters'].get(char, []):
             if register and row['register'] != register:
                 continue
-            # Compare the adapted input syllable plus the original tone category.
-            # Keep differing local readings, and preserve all labelled Jishou uses.
-            tone = re.search(r'\d+$', row['ipa'])
-            identity = (row['key'] or row['ipa'], tone[0] if tone else '')
+            # Two local transcriptions can share a Northern keyboard key.
+            # Prefer Jishou only when the attested reading itself is the same.
+            identity = row['ipa']
             if row['city'] == 'jishou':
                 jishou.add(identity)
             elif identity in jishou:
